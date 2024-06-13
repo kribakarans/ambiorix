@@ -1,0 +1,17 @@
+{
+    "a string": "mystring",
+    "a boolean": true,
+    "another boolean": false,
+    "a map": {
+        "a submap": {
+            "an integer": 1234,
+            "a list of integers": [1, 2, 3, 4],
+            "a list of maps": [ 
+                { "day": "Monday",
+                  "food": "pancakes" },
+                { "day": "Friday",
+                  "food": "pasta" }
+            ]
+        }
+    }
+}

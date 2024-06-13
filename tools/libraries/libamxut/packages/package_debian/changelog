@@ -1,0 +1,107 @@
+libamxut (1.7.0) unstable; urgency=medium
+
+  * support setting absolute time in unittests
+
+ -- SAH bot <sahbot@softathome.com>  Mon, 06 May 2024 10:02:16 +0000
+
+libamxut (1.6.1) unstable; urgency=medium
+
+  * nano seconds calculated wrong when updating clock
+
+ -- SAH bot <sahbot@softathome.com>  Thu, 11 Apr 2024 14:31:32 +0000
+
+libamxut (1.6.0) unstable; urgency=medium
+
+  * read json to variant
+
+ -- SAH bot <sahbot@softathome.com>  Thu, 22 Feb 2024 17:34:26 +0000
+
+libamxut (1.5.0) unstable; urgency=medium
+
+  * Mock the clock
+
+ -- SAH bot <sahbot@softathome.com>  Wed, 21 Feb 2024 13:08:55 +0000
+
+libamxut (1.4.5) unstable; urgency=medium
+
+  * [amxut] use transaction to set dm parameters
+
+ -- SAH bot <sahbot@softathome.com>  Mon, 11 Dec 2023 12:04:23 +0000
+
+libamxut (1.4.4) unstable; urgency=medium
+
+  * [libamxut] add dm support for boolean parameters
+
+ -- SAH bot <sahbot@softathome.com>  Mon, 23 Oct 2023 10:17:00 +0000
+
+libamxut (1.4.3) unstable; urgency=medium
+
+  * amxut new dm assert always fails on subobject
+
+ -- SAH bot <sahbot@softathome.com>  Mon, 18 Sep 2023 04:50:42 +0000
+
+libamxut (1.4.2) unstable; urgency=medium
+
+  * [libamxut] Handle events before cleanup
+
+ -- SAH bot <sahbot@softathome.com>  Mon, 11 Sep 2023 13:31:17 +0000
+
+libamxut (1.4.1) unstable; urgency=medium
+
+  * Issue HOP-4307 [libamxut] Expand amxut functionality
+
+ -- SAH bot <sahbot@softathome.com>  Thu, 07 Sep 2023 10:55:28 +0000
+
+libamxut (1.4.0) unstable; urgency=medium
+
+  * Support (u)int8+(u)int16 datamodel parameter assert
+
+ -- SAH bot <sahbot@softathome.com>  Wed, 16 Aug 2023 13:24:49 +0000
+
+libamxut (1.3.0) unstable; urgency=medium
+
+  * provide simple .odl loading and datamodel parameter asserts
+
+ -- SAH bot <sahbot@softathome.com>  Wed, 26 Jul 2023 19:33:57 +0000
+
+libamxut (1.2.2) unstable; urgency=medium
+
+  * [amx][prpl]Implementation of the LANConfigSecurity module
+
+ -- SAH bot <sahbot@softathome.com>  Fri, 16 Jun 2023 04:03:45 +0000
+
+libamxut (1.2.1) unstable; urgency=medium
+
+  * [amx][prpl]Implementation of the LANConfigSecurity module
+
+ -- SAH bot <sahbot@softathome.com>  Fri, 16 Jun 2023 03:58:00 +0000
+
+libamxut (1.2.0) unstable; urgency=medium
+
+  * Move fake timers to libamxut (+ unittest them)
+
+ -- SAH bot <sahbot@softathome.com>  Thu, 08 Jun 2023 05:48:16 +0000
+
+libamxut (1.1.0) unstable; urgency=medium
+
+  * Support sahtrace
+
+ -- SAH bot <sahbot@softathome.com>  Tue, 06 Jun 2023 07:57:47 +0000
+
+libamxut (1.0.1) unstable; urgency=medium
+
+
+ -- SAH bot <sahbot@softathome.com>  Tue, 23 May 2023 12:27:39 +0000
+
+libamxut (1.0.0) unstable; urgency=medium
+
+  * Make unittest setup reusable
+
+ -- SAH bot <sahbot@softathome.com>  Tue, 23 May 2023 09:58:09 +0000
+
+libamxut (0.0.0) unstable; urgency=medium
+
+  * Initial release
+
+ -- SoftAtHome <support.opensource@softathome.com>  Sat, 19 Oct 2019 16:29:17 +0100
+ 

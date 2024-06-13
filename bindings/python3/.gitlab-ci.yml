@@ -1,0 +1,13 @@
+variables:
+  OSS_IMAGE: "softathome/oss-bus-tester:v0.0.2"
+  BUILD_DEPS: libamxc libamxb libamxd libevent-dev python3-dev
+  TEST_DEPS: mod-amxb-ubus mod-amxb-pcb amxrt
+  BUILD_TARGET: python-amx
+  PC_BUILD_PACKAGE: "off"
+  PC_DEPLOY_PACKAGE: "off"
+  PC_CROSS_COMPILATION: "off"
+  PC_CHECK_UNIT_TEST: "on"
+  PC_DOC_GEN: "off"
+
+include:
+  - remote: 'https://gitlab.com/soft.at.home/ci/gitlab-ci/raw/main/ambiorix-default-pipeline.yml'

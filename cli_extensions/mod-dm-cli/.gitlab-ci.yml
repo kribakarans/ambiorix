@@ -1,0 +1,8 @@
+variables:
+  BUILD_DEPS: libamxc libamxt libamxm libamxp libamxd libamxb libamxo
+  BUILD_TARGET: mod-dm-cli
+  PC_DOC_GEN: "off"
+  PC_CHECK_UNIT_TEST: "on"
+
+include:
+  - remote: 'https://gitlab.com/soft.at.home/ci/gitlab-ci/raw/main/ambiorix-default-pipeline.yml'

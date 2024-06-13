@@ -1,0 +1,9 @@
+variables:
+  BUILD_TARGET: mod-amxb-dummy
+  SAH_CI_IMAGE: "registry.gitlab.com/soft.at.home/docker/sah-nte:latest"
+  PC_RUN_TEST: "on"  
+  PC_PACKAGE_DEPS: libamxc=2.0.0 libamxb=4.9.3 libamxd=6.5.0
+  SAH_NTE_IMAGE: $SAH_CI_IMAGE
+
+include:
+  - remote: 'https://gitlab.com/soft.at.home/ci/gitlab-ci/raw/main/ambiorix-default-pipeline.yml'

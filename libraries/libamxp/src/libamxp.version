@@ -1,0 +1,3 @@
+CODEABI_1.0 { 
+    global: amxp_*; amxc_var_*;
+    local: *yy*; };

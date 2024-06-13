@@ -1,0 +1,17 @@
+%populate {
+    object SSH.Server {
+        instance add(Alias = "test-server-1") {
+            parameter Status = "Running";
+            parameter Enable = true;
+            parameter Port = 1001;
+        }
+        instance add(Alias = "test-server-2") {
+            parameter Status = "Stopped";
+            parameter Enable = false;
+            parameter Port = 1002;
+            object TestReference {
+                parameter Reference = "SSH.Server.1.TestObject.";
+            }
+        }
+    }
+}

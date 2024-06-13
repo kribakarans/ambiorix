@@ -1,0 +1,36 @@
+%define {
+    object LocalAgent {
+        %read-only csv_string SupportedThresholdOperator = "Rise,Fall,Eq,NotEq";
+
+        object Threshold[] {
+            on action validate call threshold_instance_is_valid;
+            on action destroy call threshold_instance_cleanup;
+
+            %unique %key string Alias;
+            bool Enable = false;
+            string OperatingMode {
+                default "Normal";
+                on action validate call check_enum ["Normal", "Single"];
+            }
+            string ReferencePath;
+            string ThresholdParam;
+            string ThresholdOperator {
+                default "Rise";
+                on action validate call check_is_in "LocalAgent.SupportedThresholdOperator";
+            }
+            string ThresholdValue;
+
+            event Triggered;
+        }
+    }
+}
+
+%populate {
+    on event "dm:object-changed" call threshold_changed
+        filter 'object starts with "LocalAgent.Threshold."';
+
+    on event "dm:instance-added" call threshold_added
+        filter 'object == "LocalAgent.Threshold."';
+
+    on event "*" call print_event;
+}

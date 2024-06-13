@@ -1,0 +1,42 @@
+[
+    {
+        "John Doe": {
+            "Age": 51,
+            "Favorite Movies": [ "The Last Crusade", "Return Of The Jedi", "Jaws"]
+        },
+        "Jane Doe": {
+            "Age": 48,
+            "Favorite Movies": [ "A Fish Called Wanda", "In The Name Of The Rose"]
+        }
+    },
+    {
+        "Author": "Isaac Asimov",
+        "Science-fiction": [ "I, Robot", "The End Of Eternity", "Foundation" ],
+        "Science": {
+            "The Earth And Away": [ "Life's Bottleneck", "Of Capture and Escape" ],
+            "The Solar System": [ "Catskills in the Sky", "Beyond Pluto" ]
+        }
+    },
+    {
+        "Author": "Arthur C. Clarck",
+        "Science-fiction": [ "Expedition to Earth", "The Wind from the Sun" ],
+        "Awards": {
+            "Academy Award": [
+                {
+                  "shared": true,
+                  "year": 1969
+                }
+            ],
+            "Hugo": [
+                {
+                    "year": 1974,
+                    "novel": "Rendezvous with Rama"
+                },
+                {
+                    "year": 1980,
+                    "novel": "The Fountains of Paradise"
+                }
+            ]
+        }
+    }
+]

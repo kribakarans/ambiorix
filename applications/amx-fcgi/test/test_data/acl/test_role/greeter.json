@@ -1,0 +1,9 @@
+{
+    "Greeter.": {
+        "Order": 1,
+        "Param": "r-xn",
+        "Obj": "rwxn",
+        "InstantiatedObj": "rwxn",
+        "CommandEvent": "rwxn"
+    }
+}

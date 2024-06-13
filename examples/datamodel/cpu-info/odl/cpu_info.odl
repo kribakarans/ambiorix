@@ -1,0 +1,34 @@
+%config {
+    // amxo parser config-options
+    import-dbg = true;
+
+    // Application specific settings
+    // persistent storage location
+    rw_data_path = "${prefix}/etc/config";
+
+    // main files
+    definition_file = "${name}_definition.odl";
+    extra_file = "${name}_extra.odl";
+    save_file = "${rw_data_path}/${name}/${name}.odl";
+    defaults_file = "${name}_defaults.odl";
+
+    // cpu info field name mapping
+    cpu_field_names = {
+        vendor_id = "VendorId",
+        cpu_family = "Family",
+        cpu_MHz = "MHz",
+        model_name = "ModelName",
+        model = "Model",
+        processor = "ID"
+    };
+}
+
+import "${name}.so" as "${name}";
+
+include "${definition_file}";
+#include "${extra_file}";
+?include "${save_file}":"${defaults_file}";
+
+%define {
+    entry-point cpu_info.cpu_main;
+}

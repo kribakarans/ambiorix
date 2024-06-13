@@ -1,0 +1,8 @@
+variables:
+  DOC_GEN_CMD: "make doc"
+  BUILD_DEPS: libamxc libamxp
+  BUILD_TARGET: libamxt
+  PC_DOC_GEN: "off" 
+
+include:
+  - remote: 'https://gitlab.com/soft.at.home/ci/gitlab-ci/raw/main/ambiorix-default-pipeline.yml'

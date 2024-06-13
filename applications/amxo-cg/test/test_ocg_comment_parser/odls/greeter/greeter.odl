@@ -1,0 +1,29 @@
+#!/usr/bin/amxrt
+
+%config {
+    // Application name
+    name = "greeter";
+
+    // add listen socket
+    listen = [ "pcb:/tmp/greeter.sock" ];
+
+    // Application specific settings
+    // persistent storage location
+    storage-path = "${rw_data_path}/${name}/";
+    odl = {
+        load-dm-events = false,
+        dm-save = true,
+        dm-save-on-changed = true,
+        dm-save-delay = 1000,
+        directory = "${storage-path}/odl"
+    };
+
+    // main files
+    definition_file = "${name}_definition.odl";
+    extra_file = "${name}_extra.odl";
+    defaults_file = "${name}_defaults.odl";
+}
+
+include "${definition_file}";
+#include "${extra_file}";
+include "${defaults_file}";

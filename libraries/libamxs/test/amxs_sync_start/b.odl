@@ -1,0 +1,20 @@
+object B {
+    object object_B {
+        string param_B = "I am B";
+    }
+
+    object B_template[] {
+        uint32 param_B = 42;
+    }
+
+    uint32 param_B = 666;
+}
+
+%populate {
+    object B.B_template {
+        instance add(1) {}
+        instance add(2) {
+            parameter param_B = 8888;
+        }
+    }
+}

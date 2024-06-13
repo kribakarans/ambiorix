@@ -1,0 +1,17 @@
+Source: libamxc
+Section: devel
+Priority: optional
+Maintainer: peter.deherdt <peter.deherdt@softathome.com>
+
+Package: libamxc
+Architecture: amd64
+Depends: ${shlibs:Depends}
+Description: C based data containers
+ This c-library provides a generic and re-usable interface
+ for data containers:
+   - dynamic array (can shrink and grow)
+   - double linked lists
+   - hash table (key - value pair)
+   - queues and stacks 
+   - variant (generic wrapper for any data)
+ 

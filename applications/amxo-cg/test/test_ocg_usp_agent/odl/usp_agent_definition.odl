@@ -1,0 +1,1043 @@
+
+
+%define {
+    /**
+     * This object contains general information about the User Services Platform (USP) Agent itself. For information related to the Device that hosts the Agent,
+     * please reference the DeviceInfo object.
+     * NOTE: The Vendor Log File table (DeviceInfo.VendorLogFile) details are located on the DeviceInfo object.
+     */
+    object LocalAgent {
+        /**
+         * Global enable switch of the USP Agent
+         */
+        %persistent bool Enable {
+             default false;
+        }
+        /**
+         * The unique USP identifier for this USP Agent.
+         */
+        %read-only string EndpointID;
+
+        /**
+         * The current USP Agent software version; not the version of the overall device firmware, 
+         * which is located in DeviceInfo.SoftwareVersion.
+         * To allow version comparisons, this element SHOULD be in the form of dot-delimited integers,
+         * where each successive integer represents a more minor category of variation.
+         * For example, 3.0.21 where the components mean: Major.Minor.Build.
+         */
+        %read-only string SoftwareVersion;
+
+        /**
+         * Time in seconds since the USP Agent was last restarted (either via a reset of the software or reboot of the underlying device).
+         */
+        %read-only uint32 UpTime {
+            on action read call uptime_onRead;
+        }
+
+        /**
+         * Comma-separated list (at least 1 items) of strings. USP Message Transfer Protocols supported by this USP Agent. 
+         * The USP Agent MUST support at least one Protocol. Each list item is an enumeration of:
+         * * CoAP (See [RFC7252]): Not supported
+         * * WebSocket (See [RFC6455]) : Not supported
+         * STOMP (See [STOMP1.2]): Not supported
+         * MQTT
+         * IMTP
+         */
+        %read-only csv_string SupportedProtocols = "MQTT";
+
+        /**
+         * Comma-separated list of strings, each entry is an algorithm for calculating firgerprints that is supported by the Agent.
+         * Each list item is an enumeration of:
+         * * SHA-1 (As specified in [RFC3174])
+         * * SHA-224 (As specified in [RFC6234])
+         * * SHA-256 (As specified in [RFC6234])
+         * * SHA-384 (As specified in [RFC6234])
+         * * SHA-512 (As specified in [RFC6234]) 
+         */
+        %read-only string SupportedFingerprintAlgorithms;
+
+        /**
+         * Comma-separated list of strings, each entry is a threshold operation for Threshold.{i}.ThresholdOperator supported 
+         * by the Agent.
+         * Each list item is an enumeration of:
+
+         * * Rise (Parameter value changes from below the Threshold.{i}.ThresholdValue to a value above)
+         * * Fall (Parameter value changes from above the Threshold.{i}.ThresholdValue to a value below)
+         * * Cross (Parameter value either changes from above the Threshold.{i}.ThresholdValue to a value below or vice versa)
+         * * Eq (Parameter value changes from any value to the Threshold.{i}.ThresholdValue)
+         * * NotEq (Parameter value changes from the Threshold.{i}.ThresholdValue to any other value) 
+         */
+        %read-only csv_string SupportedThresholdOperator = "Rise,Fall,Eq,NotEq";
+
+        /**
+         * Comma-separated list of strings, each entry is a subtype component of the service type that is advertised for the device
+         * using mDNS as defined in [RFC6762].
+         */
+        %persistent string AdvertisedDeviceSubtypes;
+
+        /**
+         * The acceptable amount of time in seconds between the alteration of the Agent's Subscriptions (e.g. updated subscription,
+         * new subscription, removed subscription, etc.) and the notifications related to those subscriptions being delivered.
+         * For example, if this parameter is set to 30 seconds, then once a Subscription has been updated, the Agent has 30 seconds
+         * before it needs to start delivering notifications based on the updated version of the Subscription
+         * (instead of the old version of the Subscription).
+         */
+        %persistent uint32 MaxSubscriptionChangeAdoptionTime;
+
+        /**
+         * Save data model to a reboot persistent file
+         * @return none
+         * @error none
+         * @version V10.0
+         */
+        bool save();
+
+        /**
+         * Message Transfert Protocols (MTPs) used by the local Agent.
+         *
+         */
+        %persistent object MTP[] {
+            counted with MTPNumberOfEntries;
+            on action destroy call mtp_instance_cleanup;
+
+            /**
+             * A non-volatile unique key used to reference this instance. Alias provides a mechanism for a Controller
+            to label this instance
+             * for future reference.
+             * The following mandatory constraints MUST be enforced:
+             * * The value MUST NOT be empty.
+             * * The value MUST start with a letter.
+             * * If the value is not assigned by the Controller at creation time, the Agent MUST assign a value with an "cpe-" prefix.
+             * The value MUST NOT change once it's been assigned.
+             */
+            %unique %key %persistent string Alias;
+
+            /**
+             * Enable/Disable this MTP instance.
+             * If this MTP instance is to be disabled and currently used for communication with the requesting controller, the agent has
+             * to send the request response first, before disabling it.
+             */
+            %persistent bool Enable;
+
+            /**
+             * The current operational state of the MTP instance. Enumeration of:
+             * * Up
+             * * Down (Value when this MTP instance cannot establish communication)
+             * * Error (Value when this MTP instance is misconfigured, OPTIONAL) 
+             */
+            string Status {
+               on action validate call check_enum [ "Up", "Down", "Error" ];
+               default "Down";
+            }
+
+            /**
+             * The value MUST be a member of the list reported by the Device.LocalAgent.SupportedProtocols parameter. The Message Transport Protocol (MTP)
+             * to be used for communications by a USP Endpoint.
+             * currently only MQTT is supported
+             */
+            %persistent %read-only string Protocol {
+                on action validate call check_is_in "LocalAgent.SupportedProtocols";
+                default "MQTT";
+            }
+
+            /**
+             * This parameter, when true, enables the advertisement of DNS-SD services defined for this MTP instance using mDNS as defined in [RFC6762].
+             * This parameter cannot be set to true if there are multiple MTP instances with the same value of the Protocol parameter. 
+             * When true, the hostname advertised in the SRV record MUST be a Fully Qualified Domain Name (FQDN).
+             * The interfaces that advertise these DNS-SD services are restriced to the set of interfaces associated with this MTP instance and the 
+             * interfaces defined by the DNS.SD.AdvertisedInterfaces parameter.
+             * MDNS discovery is currently not supported
+             */
+            %persistent %read-only bool EnableMDNS = false;
+
+            /**
+             * If the USP Endpoint uses the MQTT Message Transport Protocol (MTP), then this object contains MQTT Client 
+             * specific configuration parameters related to how the Agent communicates with the MQTT broker.
+             */
+            %persistent object MQTT {
+
+                /**
+                 * The value MUST be the Path Name of a row in the MQTT.Client table. A reference to the MQTT Client used
+                 * by this Agent when communicating via the MQTT MTP.
+                 */
+                %persistent string Reference {
+                    on action validate call check_is_object_ref;
+                    on action write call set_object_ref;
+                    on action destroy call destroy_object_ref;
+                }
+
+                /**
+                 * The Agent's configured "reply to" topic. When MQTT 5.0 is being used, this value is put in the 
+                 * PUBLISH Response Topic property for all PUBLISH packets with a USP Record, if no Response Information
+                 * (value recorded in ResponseTopicDiscovered) is included in the CONNACK. When MQTT 3.1.1 is being used,
+                 * this value is put at the end of the PUBLISH Topic Name property (as specified in 
+                 * [Section "MQTT Binding"/TR-369]. If the value of ResponseTopicConfigured is not a subset
+                 * (wildcarded or precise match) of any of the Reference MQTT.Client.{i}.Subscription.{i}.Topic values
+                 * the Agent MUST subscribe to this Topic. The value MUST NOT contain any wild card characters (“+”, “#”).
+                 */
+                %persistent string ResponseTopicConfigured;
+
+                /**
+                 * Duplicate of Reference MQTT.Client.{i}.ResponseInformation. This is the value of the CONNACK Response
+                 * Information property supplied by a MQTT 5.0 server and is used by a MQTT 5.0 client as the basis for the
+                 * PUBLISH Response Topic property for all PUBLISH packets that expect a response. If a value is received
+                 * from the MQTT 5.0 server, it will be used instead of any value configured in ResponseTopicConfigured.
+                 */
+                %persistent string ResponseTopicDiscovered;
+
+                /**
+                 * The Agent MUST use this QoS value when sending a USP Record on this MTP.
+                 * If the referenced MQTT Client uses MQTT 5.0 and the MQTT server only indicates support for a QoS value
+                 * in the CONNACK Maximum QoS property lower than this QoS value, the Agent MUST use the highest QoS value
+                 * that is supported by the server.
+                 */
+                %persistent uint32 PublishQoS;
+            }
+        }
+
+        /**
+         * Each instance of this table represents a Threshold Event that is triggered by a threshold test.
+         * For example:
+         * ReferencePath: Device.Ethernet.[Enable==1].Stats.
+         * ThresholdParam: BytesSent
+         * ThresholdOperator: Rise
+         * ThresholdValue: 100000
+         * Would trigger a Triggered! Event whenever a value of a parameter matching Device.Ethernet.[Enable==1].Stats.BytesSent rises from below to above 100000.
+         * At most one entry in this table can exist with a given value for Alias. On creation of a new table entry, 
+         * the Agent MUST choose an initial value for Alias such that the new entry does not conflict with any existing entries.
+         * The non-functional key parameter Alias is immutable and therefore MUST NOT change once it's been assigned.
+         */
+        %persistent object Threshold[] {
+            counted with ThresholdNumberOfEntries;
+            on action validate call threshold_instance_is_valid;
+            on action destroy call threshold_instance_cleanup;
+        
+            /**
+             * [Alias] A non-volatile unique key used to reference this instance.
+             * Alias provides a mechanism for a Controller to label this instance for future reference.
+             * The following mandatory constraints MUST be enforced:
+             * The value MUST NOT be empty.
+             * The value MUST start with a letter.
+             * If the value is not assigned by the Controller at creation time, the Agent MUST assign a value with an "cpe-" prefix. 
+             * The value MUST NOT change once it's been assigned.
+             */
+            %unique %key %persistent string Alias;
+
+            /**
+             * Enable/Disable this Threshold instance.
+             * If the Threshold instance is disabled, the Triggered! Event will not be invoked, even if there is a LocalAgent.Subscription.{i}.
+             * instance that references it
+             */
+            %persistent bool Enable = false;
+ 
+            /**
+             * Determines whether to disable this Threshold instance after the Triggered! Event has been invoked. Enumeration of:
+             * * Normal (The Threshold will generate events as long as the Enable is true)
+             * * Single (After invoking the Triggered! Event, the Enable parameter will be automatically set to false) 
+             */
+            %persistent string OperatingMode {
+                on action validate call check_enum [ "Normal", "Single" ];
+                default "Normal";
+            }
+
+            /**
+             * The combination of ReferencePath and ThresholdParam create the reference to the parameter being checked for the threshold test.
+             * ReferencePath can be either an Object Path or a Search Path.
+             */
+             %persistent string ReferencePath;
+
+            /**
+             * The combination of ReferencePath and ThresholdParam create the reference to the parameter being checked for the threshold test.
+             * ThresholdParam is the name of the Parameter in the context of ReferencePath.
+             */
+             %persistent string ThresholdParam;
+
+            /**
+             * The value MUST be a member of the list reported by the Device.LocalAgent.SupportedThresholdOperator parameter.
+             * The operator used for the threshold test.
+             */
+             %persistent string ThresholdOperator {
+                 on action validate call check_is_in "LocalAgent.SupportedThresholdOperator";
+                 default "Rise";
+             }
+
+             /**
+              * The Value used for the threshold test.
+              */
+             %persistent string ThresholdValue;
+
+             event Triggered;
+        }
+
+        /**
+         * Each instance of this table represents a USP Controller that has access to this USP Agent.
+         * At most one entry in this table can exist with a given value for EndpointID, or with a given value for Alias. 
+         * On creation of a new table entry, the Agent MUST choose an initial value for Alias such that the new entry does not conflict with any existing entries.
+         * The non-functional key parameter Alias is immutable and therefore MUST NOT change once it's been assigned.
+         */
+        %persistent object Controller[] {
+            counted with ControllerNumberOfEntries;
+            on action destroy call controller_instance_cleanup;
+
+            /**
+             * [Alias] A non-volatile unique key used to reference this instance. Alias provides a mechanism for a Controller to label this instance for future reference.
+             * The following mandatory constraints MUST be enforced:
+             * The value MUST NOT be empty.
+             * The value MUST start with a letter.
+             * If the value is not assigned by the Controller at creation time, the Agent MUST assign a value with an "cpe-" prefix. 
+             * The value MUST NOT change once it's been assigned.
+             */
+            %unique %key %persistent string Alias;
+           
+            /**
+             * The unique USP identifier for this USP Controller.
+             */
+            %persistent string EndpointID;
+
+            /**
+             * Information about the configuration state of an Agent as it pertains to the Controller instance.
+             * This is not information related to an operator's installation or usage of the protocol, that information is maintained in ProvisioningCode.
+             * This parameter could be used in scenarios where the Controller needs to perform some kind of initialization or periodic configuration monitoring.
+             * For example, a Controller might perform some initial configuration of an Agent on first contact (perhaps to configure the Subscriptions).
+             * The Controller could inspect this parameter to determine the current state of the Agent's configuration, allowing the Controller
+             * to streamline the configuration process.
+             */
+            %persistent string ControllerCode;
+
+            /**
+             * Identifying information which MAY be used by the Controller instance to determine Controller instance specific customization and provisioning parameters.
+             */
+            %persistent string ProvisioningCode;
+
+            /**
+             * Enable/Disable this Controller instance.
+             * If the Controller instance is to be disabled, the USP Endpoint MUST terminate the MTP connection.
+             * When false, messages (notifications) are not sent to the remote endpoint represented by this Controller instance,
+             * and any MTP session establishment are refused.
+             */
+             %persistent bool Enable;
+
+            /**
+             * Each list item MUST be the Path Name of a row in the Device.LocalAgent.ControllerTrust.Role table. If the referenced object is deleted,
+             * the corresponding item MUST be removed from the list. Comma-separated list of strings, each entry is a Role that has been assigned 
+             * to this Controller instance by means other than the LocalAgent.ControllerTrust.Credential.{i}.Role parameter.
+             */
+            %persistent string AssignedRole;
+
+            /**
+             * Each list item MUST be the Path Name of a row in the Device.LocalAgent.ControllerTrust.Role table. If the referenced object is deleted,
+             * the corresponding item MUST be removed from the list. Comma-separated list of strings, each entry is a Role that has been assigned to
+             * this Controller instance from the LocalAgent.ControllerTrust.Credential.{i}.Role parameter associated with the CA credential
+             * (LocalAgent.ControllerTrust.Credential.{i}.Credential) used to validate the Controller certificate.
+             */
+            %persistent %read-only string InheritedRole;
+
+            /**
+             * The value MUST be the Path Name of a row in the Certificate table. If the referenced object is deleted,
+             * the parameter value MUST be set to an empty string.
+             * Comma-separated list of strings, the set of certificates from Certificate.{i} that a Controller can present for use in authenticating
+             * the identity of this Controller instance
+             */
+            %persistent string Credential;
+
+            /**
+             * If a Periodic Event Notification Subscription instance is associated with this USP Controller, 
+             * then this is the duration in seconds of the interval for which the USP Agent MUST attempt to issue a Periodic Notification to the USP Controller.
+             */
+            %persistent uint32 PeriodicNotifInterval;
+
+            /**
+             * If a Periodic Event Notification Subscription instance is associated with this USP Controller, then this is an absolute time reference in UTC to
+             * determine when the USP Agent will issue a Periodic Notification. Each Periodic Notification MUST occur at this reference time plus or minus an 
+             * integer multiple of the PeriodicNotifInterval.
+             * PeriodicNotifTime is used only to set the phase of the Periodic Event Notifications. The actual value of PeriodicNotifTime can be arbitrarily
+             * far into the past or future.
+             * For example, if PeriodicNotifInterval is 86400 (a day) and if PeriodicNotifTime is set to UTC midnight on some day (in the past, present, or future) 
+             * then Periodic Notifications will be sent every day at UTC midnight. These MUST begin on the very next midnight,
+             * even if PeriodicNotifTime refers to a day in the future.
+             * The Unknown Time value defined in [Section 3.2/TR-106] indicates that no particular time reference is specified. That is, the USP Agent MAY 
+             * locally choose the time reference, and needs only to adhere to the specified PeriodicNotifInterval.
+             * If absolute time is not available to the USP Agent, its Periodic Notification behavior MUST be the same as if the PeriodicNotifTime parameter
+             * was set to the Unknown Time value.
+             */
+            %persistent datetime PeriodicNotifTime;
+
+            /**
+             * This parameter is related to the retry mechanism for Notifications.
+             * Configures the first retry wait interval, in seconds, as specified in [Section "Responses to Notifications and Notification Retry"/TR-369].
+             * A value of 5 corresponds to the default behavior.
+             * The USP Agent MUST use a random value between USPNotifRetryMinimumWaitInterval and
+             * (USPNotifRetryMinimumWaitInterval * USPNotifRetryIntervalMultiplier / 1000) as the first retry wait interval. 
+             * Other values in the retry pattern MUST be calculated using this value as a starting point.
+             */
+            %persistent uint32 USPNotifRetryMinimumWaitInterval = 5;
+
+            /**
+             * This parameter is related to the retry mechanism for Notifications.
+             * Configures the retry interval multiplier as specified in [Section "Responses to Notifications and Notification Retry"/TR-369].
+             * This value is expressed in units of 0.001. Hence the values of the multiplier range between 1.000 and 65.535.
+             * A value of 2000 corresponds to the default behavior.
+             * The USP Agent MUST use a random value between USPNotifRetryMinimumWaitInterval and 
+             * (USPNotifRetryMinimumWaitInterval * USPNotifRetryIntervalMultiplier / 1000) as the first retry wait interval. 
+             * Other values in the retry pattern MUST be calculated using this value as a starting point.
+             */
+            %persistent uint32 USPNotifRetryIntervalMultiplier = 2000;
+
+            /** 
+             * Schedule a Timer! event on the associated Controller.
+             * @param DelaySeconds The number of seconds from the time this command is invoked until the Agent initiates a Timer! Event notification 
+             * (based on the associated subscriptions).
+             * @return no return value defined.
+             */
+            void ScheduleTimer(%in %mandatory uint32 DelaySeconds);
+
+            /**
+             * This command is issued to allow a Controller to add a new certificate for itself. This can be useful when the current certificate is 
+             * expiring or has become compromised. This command creates a new entry in Certificate and adds a reference to the new entry to the Controller's 
+             * Controller.{i}.Credential. The Agent will use the Serial Number and Issuer fields from the input Certificate to populate the 
+             * Certificate.{i}.SerialNumber and Certificate.{i}.Issuer parameters. If Certificate already has an instance with the same
+             * Certificate.{i}.SerialNumber and Certificate.{i}.Issuer parameters, this command will fail. 
+             * To replace an instance with the same Certificate.{i}.SerialNumber and Certificate.{i}.Issuer, the existing instance must first be deleted.
+             *
+             * @param Alias [Alias] An optional input the Controller can use to specify the Certificate.{i}.Alias value for the added entry. 
+             * If provided as an input and the value already exists in Certificate.{i}, this commmand will fail.
+             * @param Certificate The X.509 certificate in Privacy-enhanced Electronic Mail (PEM) [RFC7468] format.
+             */ 
+            void AddMyCertificate(%in %mandatory string Alias, %in %mandatory string Certificate);
+
+            /**
+             * Requests the Agent to send an OnBoardRequest notification to this Controller.
+             */
+            void SendOnBoardRequest();
+
+            /**
+             * Each instance of this table represents a MTP used by this Controller.
+             * At most one entry in this table can exist with a given value for Alias, or with a given value for Protocol.
+             * On creation of a new table entry, the Agent MUST choose an initial value for Alias such that the new entry does not conflict with any existing entries.
+             * The non-functional key parameter Alias is immutable and therefore MUST NOT change once it's been assigned.
+             */
+            %persistent object MTP[] {
+                on action destroy call mtp_instance_cleanup;
+
+                /**
+                 * [Alias] A non-volatile unique key used to reference this instance. Alias provides a mechanism for a Controller to label this instance for future reference.
+                 * The following mandatory constraints MUST be enforced:
+                 * The value MUST NOT be empty. 
+                 * The value MUST start with a letter.
+                 * If the value is not assigned by the Controller at creation time, the Agent MUST assign a value with an "cpe-" prefix. 
+                 * The value MUST NOT change once it's been assigned.
+                 */
+                %unique %key %persistent string Alias;
+
+                /**
+                 * Enable/Disable this MTP instance.
+                 * If this MTP instance is to be disabled and currently used for communication with the requesting controller, 
+                 * the agent has to send the request response first, before disabling it.
+                 */
+                %persistent bool Enable;
+
+                /**
+                 * The value MUST be a member of the list reported by the Device.LocalAgent.SupportedProtocols parameter.
+                 * The Message Transport Protocol (MTP) to be used for communications by a USP Endpoint.
+                 */
+                %persistent string Protocol {
+                    on action validate call check_is_in "LocalAgent.SupportedProtocols";
+                    default "MQTT";
+                }
+
+                /**
+                 * If the USP Endpoint uses the MQTT Message Transport Protocol (MTP), then this object contains MQTT Client specific configuration parameters
+                 * related to how this Controller communicates with the MQTT broker.
+                 */
+                %persistent object MQTT {
+                    /**
+                     * The value MUST be the Path Name of a row in the MQTT.Client table. A reference to the MQTT Client used by this Controller
+                     * when communicating via the MQTT MTP.
+                     */
+                    %persistent string Reference;
+
+                    /**
+                     * The topic name the USP Controller has subscribed to, to be used for Notify messages send by the USP Agent.
+                     */
+                    %persistent string Topic;
+                }
+
+                /**
+                 * Internal MTP, to be defined by prpl/BBF
+                 */
+                %persistent object IMTP {
+
+                    /**
+                     * URI path to file to connect to USP controller
+                     */
+                    %persistent string URI;
+                }
+
+                /**
+                 * The policy defined in this object determines the conditions under which the USP Agent notifies a USP Controller,
+                 * that has an appropriate Subscription, of the completion of file transfers.
+                 */
+                object TransferCompletePolicy {
+                    /**
+                     * Indicates the transfer results that MUST be included when the USP Agent notifies a USP Controller of file transfers.
+                     * Transfer results omitted from this list MUST NOT be included when the USP Agent notifies a USP Controller. 
+                     * Enumeration of:
+                     * * Success (The autonomous file transfer completed successfully; i.e., the TransferComplete! event's TransferComplete!.FaultCode was zero)
+                     * * Failure (The autonomous file transfer did not complete successfully; i.e., the the TransferComplete! event's TransferComplete!.FaultCode was non-zero)
+                     * * Both (Success and Failure) 
+                     */
+                    string ResultTypeFilter {
+                        on action validate call check_enum [ "", "Success", "Failure", "Both" ];
+                        default "";
+                    }
+                }
+
+                /**
+                 * This table provides the Controller with the ability to dictate the Parameters that are delivered via Boot! events.
+                 * Any Parameter (identified by ParameterName) contained in this table MUST be included within the param_map element of the Boot! event.
+                 * At most one entry in this table can exist with a given value for ParameterName, or with a given value for Alias.
+                 * On creation of a new table entry, the Agent MUST choose an initial value for Alias such that the new entry does not conflict with any existing entries.
+                 * The non-functional key parameter Alias is immutable and therefore MUST NOT change once it's been assigned.
+                 */
+                object BootParameter[] {
+
+                    /** 
+                     * [Alias] A non-volatile unique key used to reference this instance. Alias provides a mechanism for a Controller to label this instance for future reference.                     * The following mandatory constraints MUST be enforced:
+                     * The value MUST NOT be empty.
+                     * The value MUST start with a letter.
+                     * If the value is not assigned by the Controller at creation time, the Agent MUST assign a value with an "cpe-" prefix. 
+                     * The value MUST NOT change once it's been assigned.
+                     */
+                    %unique %key %persistent string Alias;
+
+                    /** 
+                     * Enables or disables this BootParameter.
+                     */
+                    bool Enable;
+ 
+                    /** 
+                     * A pattern that describes the Parameter(s) to be included in the param_map element of a Boot! event. 
+                     * Specifically, patterns with wildcards (an "*" character) in place of Instance Identifiers are allowed.
+                     * If the pattern does not match any existing Parameters at the time that the Agent is creating the Boot! event,
+                     * then this BootParameter instance is not included in the param_map of the Boot! event.
+                     */
+                    string ParameterName;
+                }
+
+                /**
+                 * The E2ESession object represents the End to End (E2E) Session Context functionality for this Controller.{i} object instance.
+                 */
+                object E2ESession {
+                    /**
+                     * Enable/Disable this E2ESession instance.
+                     * When true, Session Context is used when exchanging USP Records with the remote endpoint represented by this Controller.{i} object instance.
+                     * When false, Session Context is not used when exchanging USP Records with the remote endpoint represented by this Controller.{i} object instance.
+                     */
+                    
+                    %persistent bool Enable;
+
+                    /**
+                     * The current status of the Session Context. Enumeration of:
+                     * * Up
+                     * * Negotiating (A new Session Context is being negotiated (i.e., a USP Record with sequence_id of 0 and session_id not previously
+                     *        used with this remote endpoint was sent and response has not yet been received), OPTIONAL)
+                     * * Down
+                     */
+                    %read-only string Status {
+                         on action validate call check_enum [ "", "Up", "Negotiating", "Down" ];
+                         default "";
+                     }
+
+                     /**
+                      * The duration in seconds in which the current Session Context will expire since the last session-related activity 
+                      * (e.g., Message sent or received, Session Context start or restart).
+                      * A value of 0 means session expiration is disabled.
+                      */
+                     uint32 SessionExpiration = 0;
+
+                     /**
+                      * Configures the first retry wait interval, in seconds, as specified in [Section "Failure Handling in the Session Context"/TR-369].
+                      * A value of 5 corresponds to the default behavior that is described in [TR-369].
+                      * The USP Agent MUST use a random value between SessionRetryMinimumWaitInterval and 
+                      * (SessionRetryMinimumWaitInterval * SessionRetryIntervalMultiplier / 1000) as the first retry wait interval. 
+                      * Other values in the retry pattern MUST be calculated using this value as a starting point.
+                      */
+                     uint32 SessionRetryMinimumWaitInterval = 5;
+
+                     /**
+                      * Configures the retry interval multiplier as specified in [Section "Failure Handling in the Session Context"/TR-369].
+                      * This value is expressed in units of 0.001. Hence the values of the multiplier range between 1.000 and 65.535.
+                      * A value of 2000 corresponds to the default behavior that is described in [TR-369].
+                      * The USP Agent MUST use a random value between SessionRetryMinimumWaitInterval and 
+                      * (SessionRetryMinimumWaitInterval * SessionRetryIntervalMultiplier / 1000) as the first retry wait interval. 
+                      * Other values in the retry pattern MUST be calculated using this value as a starting point.
+                      */
+                     uint32 SessionRetryIntervalMultiplier = 2000;
+
+                     /**
+                      * The current retry count of the Session Context. When zero (0), the Session Context is not in a retry state.
+                      */
+                     uint32 CurrentRetryCount;
+
+                     /**
+                      * The maximum size, in bytes, of the Record (payload(s) and headers) that can be transmitted to the remote endpoint. 
+                      * The smallest size, which can be configured is 512 bytes. 
+                      * A value of 0 means that the segmentation function is effectively disabled.
+                      */
+                     uint32 SegmentedPayloadChunkSize;
+
+                     /**
+                      * The maximum times that a USP Endpoint attempts to retransmit the requested USP Record to the remote endpoint.
+                      * If the maximum tries is met for any requested USP Record, the USP Endpoint will restart the E2E Session.
+                      * A value of -1 means that the USP Endpoint will always attempt to retransmit the requested USP Record.
+                      * A value of 0 means that the USP Endpoint will not attempt to retransmit the requested USP Record and will restart the E2E Session.axRetransmitTries
+                      */
+                     int32 MaxRetransmitTries;
+
+                     /**
+                      * The security mechanism to use when exchanging the payload of the Record with the remote endpoint. Enumeration of:
+                      * * Plaintext
+                      * * TLS (The payload is encrypted at the originating endpoint and decrypted at the receiving endpoint using TLS. 
+                      *   The procedures for using TLS in a Session Context is defined in [TR-369]) 
+                      */
+                     string PayloadSecurity {
+                         on action validate call check_enum [ "Plaintext", "TLS" ];
+                         default "TLS";
+                     }
+
+                     /**
+                      * If the E2ESession is enabled then this command will either request to start or restart a Session Context with the remote endpoint.
+                      * If the E2ESession is not enabled and there is an active Session Context then this command will terminate that Session Context with the remote endpoint.
+                      * If the E2ESession is not enabled and there is no active Session Context then this command does nothing.
+                      */
+                     void Reset();
+                }
+            }
+        }
+
+        /**
+         * A Subscription dictates how a USP Agent issues USP Notification Messages to a USP Controller.
+         * At most one entry in this table can exist with a given value for Alias, or with the same values for Recipient and ID. 
+         * On creation of a new table entry, the Agent MUST choose initial values for Alias and Recipient such that the new entry does not conflict with any existing entries. The non-functional key parameters Alias, Recipient and ID are immutable and therefore MUST NOT change once they've been assigned.
+         */
+        object Subscription[] {
+            on action validate call check_subscription;
+            on action destroy call subscription_cleanup;
+
+            counted with SubscriptionNumberOfEntries;
+
+            /**
+             * [Alias] A non-volatile unique key used to reference this instance. Alias provides a mechanism for a Controller to label this instance for future reference.
+             * The following mandatory constraints MUST be enforced:
+             * The value MUST NOT be empty.
+             * The value MUST start with a letter.
+             * If the value is not assigned by the Controller at creation time, the Agent MUST assign a value with an "cpe-" prefix. 
+             * The value MUST NOT change once it's been assigned.             
+             */
+            %unique %key %persistent string Alias;
+
+            /**
+             * Enables/disables this Subscription. A disabled entry MUST NOT be processed by the USP Agent.
+             */
+            %persistent bool Enable;
+
+            /**
+             * The value MUST be the Path Name of the Controller instance that will receive the Notification associated with this Subscription.
+             * If the referenced object is deleted, this instance MUST also be deleted (so the parameter value will never be an empty string).
+             * The value of this parameter is automatically populated by the USP Agent upon Subscription creation using the reference to the USP
+             * Controller that created the instance.
+             */
+            %persistent string Recipient;
+
+            /**
+             * Unique identifier of the Subscription itself, which is specific to the USP Controller that creates the instance of the Subscription.
+             * This value is also populated in the subscription_id element of every Notification message sent from a USP Agent to a USP Controller.
+             */
+            %persistent string ID;
+
+            /**
+             * The date and time when this instance of Subscription was created. This is internally used by the TimeToLive parameter to determine 
+             * the expiration of this Subscription instance.
+             * The value of this parameter is automatically populated by the USP Agent upon Subscription creation.
+             */
+            %persistent datetime CreationDate;
+
+            /**
+             * Type of Notification message that will be sent to the USP Controller specified by Recipient when this Subscription is triggered.
+             * Enumeration of:
+             * * ValueChange
+             * * ObjectCreation
+             * * ObjectDeletion
+             * * OperationComplete
+             * * Event 
+             */
+            %persistent string NotifType {
+                on action validate call check_enum [ "", "ValueChange", "ObjectCreation", "ObjectDeletion", "OperationComplete", "Event" ];
+                default "";
+            }
+
+            /** 
+             * Comma-separated list of strings (maximum item length 256). Each entry in the list is a Path Name, Search Path, Command reference, 
+             * or Event reference that determines the element(s) of the data model that the Subscription is applicable to.
+             * Different values of the NotifType parameter will cause the Subscription to interact with ReferenceList differently. 
+             * For example, an instance of Subscription with ValueChange will utilize the value of this parameter differently than an instance with Event.
+             * Once the value of the ReferenceList is written, the value cannot be changed as the Subscription instance is considered to be immutable. 
+             * If the value of a non-empty ReferenceList parameter needs to change, the Subscription instance MUST be deleted and a new Subscription instance created.
+             * The following bullet points describe what is allowed as a value of ReferenceList based on the different values of the NotifType parameter:
+
+             * ValueChange: may be either a Path Name or Search Path; if an Object Path (one type of Path Name) then it is treated like a filter match such that all 
+             * supported parameters in all objects below this point will be relevant for the subscription.
+             * ObjectCreation: may be either a Path Name or Search Path as long as it only refers to a Multi-Instance Object; only the referenced Multi-Instance Objects 
+             * will be relevant for the subscription.
+             * * ObjectDeletion: may be either a Path Name or Search Path as long as it only refers to instances of a Multi-Instance Object; 
+             *   only the referenced instances (wildcard references all instances over time) of the Multi-Instance Objects will be relevant for the subscription.
+             * * OperationComplete: may be either a Path Name, Search Path, or Command reference; if an Object Path (one type of Path Name) then it is treated 
+             *   like a filter match such that all supported data model commands in all objects below this point will be relevant for the subscription.
+             * * Event: may be either a Path Name, Search Path, or Event reference; if an Object Path (one type of Path Name) then it is treated like a filter 
+             * match such that all supported Events in all objects below this point will be relevant for the subscription.
+             */
+            %persistent csv_string ReferenceList;
+
+            /**
+             * Determines whether or not this Subscription remains after the USP Agent is restarted (either via a reset of the software or reboot of the underlying device).
+             * If true, this Subscription stays in existence until either a Delete message removes it or the TimeToLive parameter expires.
+             * If false, this Subscription is automatically removed by the USP Agent whenever it is restarted.
+             */
+            %persistent bool Persistent;
+
+            /**
+             * Specifies the duration of time (in seconds) that this Subscription remains in existence. After TimeToLive has expired, 
+             * this Subscription instance is automatically removed by the USP Agent.
+             * If the value of TimeToLive is 0, then this parameter is ignored and this Subscription stays in existence until either a
+             * Delete message removes it or the Persistent parameter determines that it needs to be removed.
+             * If the value of TimeToLive is greater than 0, then this parameter determines the length of time (from Subscription creation)
+             * until it will be automatically removed by the USP Agent (unless the Persistent parameter is false and the USP Agent is restarted,
+             * in which case it will be removed before the TimeToLive expiration). NOTE: This paramater does not count down as time moves forward;
+             * it will always read back with the same value that it was last set to.
+             * If the USP Agent is incapable of maintaining absolute time then TimeToLive will automatically expire if the USP Agent is restarted
+             * (either via a reset of the software or reboot of the underlying device) before TimeToLive expiration.
+             */
+            %persistent uint32 TimeToLive;
+
+            /**
+              * Specifies whether or not the USP Agent attempts to re-deliver the Notification in the event that it could not be delivered to the USP Controller.
+              * When NotifRetry is true, the USP Agent MUST retry the delivery of the Notification. 
+              * This implies that the Notification MUST be generated with the "send_resp" flag set to true such that the USP Agent knows when the Notification
+              * has been successfully delivered. The retry attempt(s) are performed using the retry algorithm defined in [Section "Responses to Notifications and
+              * Notification Retry"/TR-369]. 
+              * When NotifRetry is false, the USP Agent MUST NOT retry the delivery of the Notification, and SHOULD generate the notification with "send_resp" flag set to false.
+              */
+            %persistent bool NotifRetry;
+
+            /**
+             * Specifies the duration of time (in seconds) that the Notification associated with this Subscription will continue to be retried.
+             * After NotifExpiration has expired, if the Notification has still not been successfully delivered then the USP Agent MUST stop attempting 
+             * to re-deliver the Notification.
+             * If NotifRetry is set to false then this parameter is ignored.
+             * If NotifRetry is set to true and the value of NotifExpiration is 0, then the USP Agent will attempt to re-deliver the Notification until
+             * it has been successfully delivered or until the USP Agent is restarted (either via a reset of the software or reboot of the underlying device).
+             * If NotifRetry is set to true and the value of NotifExpiration is greater than 0, then the USP Agent will attempt to re-deliver the Notification                                 * until either it has been successfully delivered, until the length of time (from the time tha the Notification was initially attempted to be delivered) 
+             * specified in this parameter expires, or until the USP Agent is restarted (either via a reset of the software or reboot of the underlying device).
+             * NOTE: This paramater does not count down as time moves forward; it will always read back with the same value that it was last set to.
+             */
+            %persistent uint32 NotifExpiration;
+        }
+
+        /**
+         * Request instances are created using USP Operate messages. Only Operate messages with async=true will create a Request instance in the data model.
+         * When the command of the Operate completes, then this Request instance is removed from this table.
+         * At most one entry in this table can exist with all the same values for Originator, Command and CommandKey, or with a given value for Alias.
+         * The non-functional key parameter Alias is immutable and therefore MUST NOT change once it's been assigned.
+         */
+        object Request[] {
+            counted with RequestNumberOfEntries;
+
+            /**
+             * [Alias] A non-volatile unique key used to reference this instance. Alias provides a mechanism for a Controller to label this instance for future reference.
+             * The following mandatory constraints MUST be enforced:
+             * The value MUST NOT be empty.
+             * The value MUST start with a letter.
+             * If the value is not assigned by the Controller at creation time, the Agent MUST assign a value with an "cpe-" prefix. 
+             * The value MUST NOT change once it's been assigned.
+             */
+            %unique %key %persistent string Alias;
+
+            /**
+             * The USP Endpoint Identifier that originated the command.
+             */
+            string Originator;
+
+            /**
+             * The command to be executed. This parameter is a Path Name that addresses a Command in an Object or Object Instance.
+             * The command is a result of the evaluation of the command argument of an Operate message.
+             */
+            string Command;
+
+            /**
+             * The command_key from the USP Operate message.
+             */
+            string CommandKey;
+          
+            /**
+             * The operational status of the request to execute the command. Enumeration of:
+             * * Requested (The command has been requested but is currently not executing)
+             * * Active (The command is currently executing)
+             * * Canceling (The command has been requested to be canceled)
+             * * Canceled (The command has successfully been canceled)
+             * * Success (The command has successfully been completed its execution)
+             * * Error (The command has unsuccessfully completed its execution or has unsuccessfully been canceled)
+             */
+            string Status {
+                on action validate call check_enum [ "", "Requested", "Active", "Canceling", "Canceled", "Success", "Error" ];
+                default "";
+            }
+            
+            /**
+             * Request cancelation of this Request's command.
+             * This command completes immediately. If successful, Status will immediately change to Canceling and will change to Canceled when the cancelation is complete.
+             * @return none;
+             */
+            void Cancel();
+        }
+
+        /**
+         * This command is issued to allow a Controller (with the proper permissions) to add a new certificate to Certificate.{i}.·
+         * This does not automatically produce a trust relationship with the host identified by the Certificate.
+         * To produce a trust relationship, an entry is required to exist in Controller.{i}.Credential or·
+         * ControllerTrust.Credential.{i}.Credential that references the new Certificate.{i} entry.·
+         * The Agent will use the Serial Number and Issuer fields from the input Certificate to populate the Certificate.{i}.SerialNumber
+         * and Certificate.{i}.Issuer parameters. If Certificate already has an instance with the same Certificate.{i}.SerialNumber and·
+         * Certificate.{i}.Issuer parameters, this command will fail. To replace an instance with the same Certificate.{i}.SerialNumber and
+         * Certificate.{i}.Issuer, the existing instance must first be deleted.
+         * @param Alias [Alias] An optional input the Controller can use to specify the Certificate.{i}.Alias value for the added entry.·
+         * If provided as an input and the value already exists in Certificate.{i}, this commmand will fail.
+         * @param Certificate The X.509 certificate in Privacy-enhanced Electronic Mail (PEM) [RFC7468] format.
+         */
+        void AddCertificate(%in %mandatory string Alias, %in %mandatory string Certificate);
+
+        /**
+         * Each instance of this table represents information related to a X.509 certificate (see [RFC5280]) of a Controller or Certificate Authority.
+         * Instances are referenced from LocalAgent.Controller.{i}.Credential and LocalAgent.ControllerTrust.Credential.{i}.Credential.
+         * At most one entry in this table can exist with the same values for SerialNumber and Issuer, or with a given value for Alias. 
+         * The non-functional key parameter Alias is immutable and therefore MUST NOT change once it's been assigned.
+         */
+        object Certificate[] {
+            counted with CertificateNumberOfEntries;
+
+            /**
+             * [Alias] A non-volatile unique key used to reference this instance. Alias provides a mechanism for a Controller to label this instance for future reference.
+             * The following mandatory constraints MUST be enforced:
+             * The value MUST NOT be empty.
+             * The value MUST start with a letter.
+             * If the value is not assigned by the Controller at creation time, the Agent MUST assign a value with an "cpe-" prefix. 
+             * The value MUST NOT change once it's been assigned.
+             */
+            %unique %key %persistent string Alias;
+
+            /**
+             * Enable/Disable this Certificate instance.
+             */
+            bool Enable;
+     
+            /**
+             * The Serial Number field in an X.509 certificate, see [RFC5280].
+             */
+            string SerialNumber;
+
+            /**
+             * The Issuer field in an X.509 certificate, see [RFC5280]; i.e. the Distinguished Name (DN) of the entity who has signed the certificate.
+             */
+            string Issuer;
+
+            /**
+             * This command is issued to allow a Controller to request the value of a fingerprint calculated for the specified table entry using the input FingerprintAlgorithm.
+             * @param FingerprintAlgorithm The algorithm to be used to calculate the requested fingerprint.
+             *     The value MUST be one the Agent supports, as noted in SupportedFingerprintAlgorithms. Enumeration of:
+             *     SHA-1 (As specified in [RFC3174])
+             *     SHA-224 (As specified in [RFC6234])
+             *     SHA-256 (As specified in [RFC6234])
+             *     SHA-384 (As specified in [RFC6234])
+             *     SHA-512 (As specified in [RFC6234])
+             * @param Fingerprint The value of the fingerprint.
+             */
+            void GetFingerprint(%in %mandatory string FingerprintAlgorithm, %out string Fingerprint);
+           
+        }
+        
+        /**
+         * This object contains information that an Agent applies when establishing a trust relationship with a Controller.
+         */
+        object ControllerTrust {
+
+            /**
+             * Each list item MUST be the Path Name of a row in the Role table. If the referenced object is deleted, the corresponding item MUST be removed from the list.
+             * Comma-separated list (up to 1 items) of strings, each entry is a Role that is associated with Controllers whose identity cannot be authenticated. 
+             * The value of the UntrustedRole parameter is appended to the LocalAgent.Controller.{i}.AssignedRole parameter.
+             * In some instances, this policy is set by the Agent and cannot be modified by Controllers. If the Agent does not allow modification of this parameter,                           * the Agent MUST respond with an error to the request to set this parameter.
+             */
+            %persistent string UntrustedRole;
+
+            /**
+             * The value MUST be the Path Name of a row in the Role table. If the referenced object is deleted, the parameter value MUST be set to an empty string.
+             * The Role that is associated with Controllers indicate banned access.
+             * When assigned to a Controller or associated with an entry in the Credential table, this MUST be the only value of the BannedRole parameter of the
+             * LocalAgent.Controller.{i}.AssignedRole parameter.
+             * The Agent SHOULD refuse to accept USP messages from, or send USP messages to, any Controller that has this Role.
+             */
+            %persistent string BannedRole;
+
+            /**
+             * When true, Agent has active policy that allows for self-signed certificates and certificates from unknown Certificate Authorities 
+             * (CAs) to be trusted on first use (TOFU).
+             */
+            %persistent bool TOFUAllowed;
+
+            /**
+             * Inactivity timer in seconds.
+             * This timer is started when trust on first use (TOFU) policy is used to accept a Controller certificate. 
+             * If no USP Message is received before this timer elapses, the Agent MUST tear down the MTP connection and underlying (D)TLS session.
+             * A value of 0 means that the TOFU inactivity timer is effectively disabled.
+             */
+            %persistent uint32 TOFUInactivityTimer;
+
+            /**
+             * This command is issued to retrieve the instruction for the referenced challenge.
+             * There is at most one (1) outstanding RequestChallenge for a requesting Controller.
+             * As such, any new challenges with a different value of the ChallengeRef parameter are denied until a successful response to the outstanding challenge 
+             * is received by the Agent or the current RequestChallenge expires.
+             * When the value of the ChallengeRef parameter defined in the RequestChallenge does not exist, the Agent returns an "Invalid Value" error.
+             */
+            void RequestChallenge(%in %mandatory string ChallengeRef, %in int32 RequestExpiration, %out string Instruction, %out string InstructionType, %out string ValueType, %out string ChallengeID);
+
+            /**
+             * This command is issued to return the response of challenge.
+             * @param ChallengeID The challenge identifier the Controller uses to correlate the challenge request with a response.
+             * @param Value The value of the challenge that is specific to the type of challenge. The challenge value is provided by the external party to the Controller.
+             */
+            void ChallengeResponse(%in %mandatory string ChallengeID, %in %mandatory string Value);
+
+            object Role[] {
+                counted with RoleNumberOfEntries;
+
+                %unique %key %persistent string Alias;
+
+                bool Enable;
+
+                string Name;
+
+                object Permission[] {
+                    counted with PermissionNumberOfEntries;
+
+                    %unique %key %persistent string Alias;
+   
+                    bool Enable;
+ 
+                    uint32 Order;
+
+                    string Targets;
+
+                    string Param;
+
+                    string Obj;
+
+                    string InstantiatedObj;
+
+                    string CommandEvent;
+                }
+            }
+
+            object Credential[] {
+                counted with CredentialNumberOfEntries;
+
+                %unique %key %persistent string Alias;
+
+                bool Enable;
+
+                string Role;
+
+                string Credential;
+
+                string AllowedUses {
+                    on action validate call check_enum [ "", "MTP-only", "MTP-and-USP", "MTP-and-broker" ];
+                    default "";
+                }
+            }
+
+            object Challenge[] {
+                counted with ChallengeNumberOfEntries;
+
+                %unique %key %persistent string Alias;
+
+                string Description;
+ 
+                string Role;
+
+                bool Enable;
+
+                string Type {
+                    on action validate call check_enum [ "", "Passphrase" ];
+                    default "";
+                }
+
+                string Value;
+
+                string ValueType {
+                    on action validate call check_enum [ "", "text/plain", "image/jpeg" ];
+                    default "";
+                }
+
+                string Instruction;
+
+                string InstructionType {
+                    on action validate call check_enum [ "", "text/plain", "image/jpeg", "text/html" ];
+                    default "";
+                }
+
+                uint32 Retries;
+
+                int32 LockoutPeriod;
+            }
+        }
+    }
+}
+
+%populate {
+   on event "dm:object-changed" call local_agent_enabled
+        filter 'path == "LocalAgent." && parameters.Enable.to == true';
+
+    on event "dm:object-changed" call local_agent_disabled
+        filter 'path == "LocalAgent." && parameters.Enable.to == false';
+
+    on event "dm:object-changed" call MTP_InstanceChanged
+        filter 'object starts with "LocalAgent.MTP."';
+
+    on event "dm:instance-added" call MTP_InstanceAdded
+        filter 'object == "LocalAgent.MTP."';
+
+    on event "dm:object-changed" call threshold_changed
+        filter 'object starts with "LocalAgent.Threshold."';
+
+    on event "dm:instance-added" call threshold_added
+        filter 'object == "LocalAgent.Threshold."';
+
+    on event "dm:object-changed" call Controller_InstanceChanged
+        filter 'object matches "LocalAgent\.Controller\.[a-zA-Z0-9_-]*\.$"';
+
+    on event "dm:instance-added" call Controller_InstanceAdded
+        filter 'object == "LocalAgent.Controller."';
+
+    on event "dm:object-changed" call Controller_MTP_InstanceChanged
+        filter 'object matches "LocalAgent\.Controller\.[a-zA-Z0-9_-]*\.MTP\."';
+
+    on event "dm:instance-added" call Controller_MTP_InstanceAdded
+        filter 'object matches "LocalAgent.Controller.*.MTP."';
+
+    on event "dm:instance-added" call Subscription_Added
+        filter 'object starts with "LocalAgent.Subscription."';
+
+    on event "dm:object-changed" call Subscription_Changed
+        filter 'object matches "LocalAgent.Subscription."';
+
+    //on event "*" call print_event;
+}
+

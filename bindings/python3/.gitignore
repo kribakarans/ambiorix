@@ -1,0 +1,13 @@
+build/
+python_amx.egg-info/
+src/build/
+src/dist/
+src/python_amx.egg-info/
+test/__pycache__/
+*.gcov
+*.gcda
+*.gcno
+*.o
+*.d
+*.so
+output/*

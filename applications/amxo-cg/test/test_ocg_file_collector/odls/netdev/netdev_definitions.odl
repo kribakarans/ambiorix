@@ -1,0 +1,14 @@
+object NetDev {
+	bool RTNLTrace = true;
+}
+
+include "netdev_conversion_table.odl";
+include "netdev_link.odl";
+include "netdev_gre.odl";
+
+%populate {
+    on event "dm:object-changed" call on_rtnltrace_changed
+        filter 'path == "NetDev." && contains("parameters.RTNLTrace")';
+}
+
+/** @location sah_services_netdev /netdev.odl */

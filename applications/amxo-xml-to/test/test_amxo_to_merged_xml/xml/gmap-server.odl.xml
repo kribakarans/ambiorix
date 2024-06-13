@@ -1,0 +1,1085 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odl:datamodel-set xmlns="http://www.w3.org/1999/xhtml" xmlns:odl="http://www.softathome.com/odl">
+  <odl:locations>
+    <odl:location odl:file="/etc/amx/gmap-server/gmap-server.odl" odl:component="gmap-server" odl:path="/etc/amx/gmap-server/gmap-server.odl"/>
+    <odl:location odl:file="/etc/amx/gmap-server/gmap-server-definitions.odl" odl:component="gmap-server" odl:path="/etc/amx/gmap-server/gmap-server-definitions.odl"/>
+    <odl:location odl:file="/etc/amx/gmap-server/gmap-server-defaults.odl" odl:component="gmap-server" odl:path="/etc/amx/gmap-server/gmap-server-defaults.odl"/>
+  </odl:locations>
+  <odl:datamodel odl:source="/etc/amx/gmap-server/gmap-server-definitions.odl">
+    <odl:object odl:name="Devices" odl:path="Devices" odl:persistent="true">
+      <odl:defined odl:file="/etc/amx/gmap-server/gmap-server-definitions.odl" odl:line="6"/>
+      <odl:description>
+        <p>gMap root object </p>
+        <p/>
+      </odl:description>
+      <odl:version-description>6.0</odl:version-description>
+      <odl:object odl:name="Config" odl:path="Devices.Config" odl:persistent="true">
+        <odl:defined odl:file="/etc/amx/gmap-server/gmap-server-definitions.odl" odl:line="15"/>
+        <odl:description>
+          <p>Configuration root object </p>
+          <p>Each module can add configuration options under this object. All configuration options will be stored persistently </p>
+          <p/>
+        </odl:description>
+        <odl:version-description>6.0</odl:version-description>
+        <odl:function odl:name="create">
+          <odl:defined odl:file="/etc/amx/gmap-server/gmap-server-definitions.odl" odl:line="23"/>
+          <odl:return odl:type="bool"/>
+          <odl:description>
+            <p>Create a configuration group for a module </p>
+            <p/>
+          </odl:description>
+          <odl:version-description>6.0</odl:version-description>
+          <odl:argument odl:name="module" odl:type="string" odl:in="true" odl:mandatory="true">
+            <odl:description>module identifier</odl:description>
+          </odl:argument>
+        </odl:function>
+        <odl:function odl:name="set">
+          <odl:defined odl:file="/etc/amx/gmap-server/gmap-server-definitions.odl" odl:line="34"/>
+          <odl:return odl:type="void"/>
+          <odl:description>
+            <p>Add a configuration option for a module and set the value </p>
+            <p/>
+          </odl:description>
+          <odl:version-description>6.0</odl:version-description>
+          <odl:argument odl:name="module" odl:type="string" odl:in="true" odl:mandatory="true">
+            <odl:description>module identifier</odl:description>
+          </odl:argument>
+          <odl:argument odl:name="option" odl:type="string" odl:in="true" odl:mandatory="true">
+            <odl:description>the name of the configuration option</odl:description>
+          </odl:argument>
+          <odl:argument odl:name="value" odl:type="unknown" odl:in="true" odl:mandatory="true">
+            <odl:description>the configuration options value</odl:description>
+          </odl:argument>
+        </odl:function>
+        <odl:function odl:name="get">
+          <odl:defined odl:file="/etc/amx/gmap-server/gmap-server-definitions.odl" odl:line="44"/>
+          <odl:return odl:type="unknown"/>
+          <odl:description>
+            <p>Get a configuration option value </p>
+            <p/>
+          </odl:description>
+          <odl:version-description>6.0</odl:version-description>
+          <odl:argument odl:name="module" odl:type="string" odl:in="true" odl:mandatory="true">
+            <odl:description>module identifier</odl:description>
+          </odl:argument>
+          <odl:argument odl:name="option" odl:type="string" odl:in="true" odl:mandatory="true">
+            <odl:description>the name of the configuration option</odl:description>
+          </odl:argument>
+        </odl:function>
+        <odl:function odl:name="load">
+          <odl:defined odl:file="/etc/amx/gmap-server/gmap-server-definitions.odl" odl:line="53"/>
+          <odl:return odl:type="bool"/>
+          <odl:description>
+            <p>Load a configuration group </p>
+            <p/>
+          </odl:description>
+          <odl:version-description>6.0</odl:version-description>
+          <odl:argument odl:name="module" odl:type="string" odl:in="true" odl:mandatory="true">
+            <odl:description>module identifier</odl:description>
+          </odl:argument>
+        </odl:function>
+        <odl:function odl:name="save">
+          <odl:defined odl:file="/etc/amx/gmap-server/gmap-server-definitions.odl" odl:line="62"/>
+          <odl:return odl:type="bool"/>
+          <odl:description>
+            <p>Save a configuration group </p>
+            <p/>
+          </odl:description>
+          <odl:version-description>6.0</odl:version-description>
+          <odl:argument odl:name="module" odl:type="string" odl:in="true" odl:mandatory="true">
+            <odl:description>module identifier</odl:description>
+          </odl:argument>
+        </odl:function>
+        <odl:function odl:name="scanMibDir">
+          <odl:defined odl:file="/etc/amx/gmap-server/gmap-server-definitions.odl" odl:line="71"/>
+          <odl:return odl:type="void"/>
+          <odl:description>
+            <p>Scan a directory for MIBs </p>
+            <p/>
+          </odl:description>
+          <odl:version-description>6.0</odl:version-description>
+          <odl:argument odl:name="path" odl:type="string" odl:in="true" odl:mandatory="true">
+            <odl:description>the full path of the directory</odl:description>
+          </odl:argument>
+        </odl:function>
+      </odl:object>
+      <odl:object odl:name="Device" odl:path="Devices.Device" odl:template="true" odl:read-only="true" odl:persistent="true">
+        <odl:defined odl:file="/etc/amx/gmap-server/gmap-server-definitions.odl" odl:line="84"/>
+        <odl:description>
+          <p>List of discovered devices </p>
+          <p>The device objects contains instances of all discovered devices. A device can be the representation of an real world device (physical device) or a logical device. </p>
+          <p/>
+        </odl:description>
+        <odl:version-description>6.0</odl:version-description>
+        <odl:parameter odl:name="Key" odl:type="string" odl:read-only="true" odl:persistent="true">
+          <odl:defined odl:file="/etc/amx/gmap-server/gmap-server-definitions.odl" odl:line="94"/>
+          <odl:description>
+            <p>The unique key of the device </p>
+            <p>The unique key that is used to identify the device. This key is also used as the key for the instance. </p>
+            <p/>
+          </odl:description>
+          <odl:version-description>6.0</odl:version-description>
+        </odl:parameter>
+        <odl:parameter odl:name="Alias" odl:type="string" odl:key="true" odl:unique="true">
+          <odl:defined odl:file="/etc/amx/gmap-server/gmap-server-definitions.odl" odl:line="96"/>
+        </odl:parameter>
+        <odl:parameter odl:name="DiscoverySource" odl:type="string" odl:read-only="true" odl:persistent="true">
+          <odl:defined odl:file="/etc/amx/gmap-server/gmap-server-definitions.odl" odl:line="105"/>
+          <odl:description>
+            <p>The discovery source that initially created the instance. </p>
+            <p>The value of the parameter should indicate what discovered the device and added it to the gMap data model. The parameter is in the data model mainly for debugging/tracking purposes. </p>
+            <p/>
+          </odl:description>
+          <odl:version-description>6.0</odl:version-description>
+        </odl:parameter>
+        <odl:parameter odl:name="Name" odl:type="string" odl:read-only="true" odl:persistent="true">
+          <odl:defined odl:file="/etc/amx/gmap-server/gmap-server-definitions.odl" odl:line="114"/>
+          <odl:description>
+            <p>The selected name of the device. </p>
+            <p>Each device has a name to help the end-user to identify the device. The name of the device is elected out of the list of available names see {Devices.Device.Names} </p>
+            <p/>
+          </odl:description>
+          <odl:version-description>6.0</odl:version-description>
+        </odl:parameter>
+        <odl:parameter odl:name="DeviceType" odl:type="string" odl:read-only="true" odl:persistent="true">
+          <odl:defined odl:file="/etc/amx/gmap-server/gmap-server-definitions.odl" odl:line="123"/>
+          <odl:description>
+            <p>The selected device type of the device. </p>
+            <p>Each device can have a device type. The type of the device is selected out of the list of available device types see {Devices.Device.DeviceTypes} </p>
+            <p/>
+          </odl:description>
+          <odl:version-description>6.0</odl:version-description>
+        </odl:parameter>
+        <odl:parameter odl:name="Active" odl:type="bool" odl:read-only="true">
+          <odl:defined odl:file="/etc/amx/gmap-server/gmap-server-definitions.odl" odl:line="131"/>
+          <odl:description>
+            <p>Indicates that the device is currently active or not. </p>
+            <p>Is set to true if the device is active and reachable, to false in all other cases </p>
+            <p/>
+          </odl:description>
+          <odl:version-description>6.0</odl:version-description>
+        </odl:parameter>
+        <odl:parameter odl:name="Tags" odl:type="ssv_string" odl:persistent="true">
+          <odl:defined odl:file="/etc/amx/gmap-server/gmap-server-definitions.odl" odl:line="142"/>
+          <odl:description>
+            <p>Contains a list of space seperated tags </p>
+            <p>A tag can be used to identify the capabilities or functionalities of a device or to filter on devices using expressions. Data model MIBs are loaded into the device object (or unloaded) using expressions and the tags specified in this parameter. </p>
+            <p/>
+          </odl:description>
+          <odl:version-description>6.0</odl:version-description>
+        </odl:parameter>
+        <odl:parameter odl:name="FirstSeen" odl:type="datetime" odl:read-only="true" odl:persistent="true">
+          <odl:defined odl:file="/etc/amx/gmap-server/gmap-server-definitions.odl" odl:line="150"/>
+          <odl:description>
+            <p>Indicated first time the device was connected. </p>
+            <p>The time is indicated in GMT. </p>
+            <p/>
+          </odl:description>
+          <odl:version-description>7.0</odl:version-description>
+        </odl:parameter>
+        <odl:parameter odl:name="LastConnection" odl:type="datetime" odl:persistent="true" odl:volatile="true">
+          <odl:defined odl:file="/etc/amx/gmap-server/gmap-server-definitions.odl" odl:line="158"/>
+          <odl:description>
+            <p>Indicated the last time the device was active and connected. </p>
+            <p>The time is indicated in GMT. </p>
+            <p/>
+          </odl:description>
+          <odl:version-description>6.0</odl:version-description>
+        </odl:parameter>
+        <odl:parameter odl:name="LastChanged" odl:type="datetime" odl:persistent="true" odl:volatile="true">
+          <odl:defined odl:file="/etc/amx/gmap-server/gmap-server-definitions.odl" odl:line="166"/>
+          <odl:description>
+            <p>Indicated the last time the device was updated </p>
+            <p>The time is indicated in GMT. </p>
+            <p/>
+          </odl:description>
+          <odl:version-description>6.0</odl:version-description>
+        </odl:parameter>
+        <odl:parameter odl:name="Master" odl:type="string" odl:read-only="true" odl:persistent="true">
+          <odl:defined odl:file="/etc/amx/gmap-server/gmap-server-definitions.odl" odl:line="172"/>
+          <odl:description>
+            <p>Contains the key of the master device or is empty if the device is not set as alternative </p>
+            <p/>
+          </odl:description>
+          <odl:version-description>6.1</odl:version-description>
+        </odl:parameter>
+        <odl:object odl:name="Alternative" odl:path="Devices.Device.{i}.Alternative" odl:template="true" odl:read-only="true" odl:persistent="true">
+          <odl:defined odl:file="/etc/amx/gmap-server/gmap-server-definitions.odl" odl:line="178"/>
+          <odl:description>
+            <p>List of alternative devices. </p>
+            <p/>
+          </odl:description>
+          <odl:version-description>6.1</odl:version-description>
+        </odl:object>
+        <odl:object odl:name="Names" odl:path="Devices.Device.{i}.Names" odl:template="true" odl:persistent="true">
+          <odl:defined odl:file="/etc/amx/gmap-server/gmap-server-definitions.odl" odl:line="189"/>
+          <odl:description>
+            <p>Contains the list of available names </p>
+            <p>A name can be discovered by a module (client) or assigned directly by the end user. A name can be added using the function {Devices.Device.setName} and can be deleted using the function {Devices.Device.delName}. The device's name is elected from this list of available names. </p>
+            <p/>
+          </odl:description>
+          <odl:version-description>6.0</odl:version-description>
+          <odl:parameter odl:name="Name" odl:type="string" odl:read-only="true" odl:persistent="true">
+            <odl:defined odl:file="/etc/amx/gmap-server/gmap-server-definitions.odl" odl:line="195"/>
+            <odl:description>
+              <p>The name </p>
+              <p/>
+            </odl:description>
+            <odl:version-description>6.0</odl:version-description>
+          </odl:parameter>
+          <odl:parameter odl:name="Source" odl:type="string" odl:read-only="true" odl:persistent="true">
+            <odl:defined odl:file="/etc/amx/gmap-server/gmap-server-definitions.odl" odl:line="201"/>
+            <odl:description>
+              <p>The source that added the name to the data model. </p>
+              <p/>
+            </odl:description>
+            <odl:version-description>6.0</odl:version-description>
+          </odl:parameter>
+          <odl:parameter odl:name="Suffix" odl:type="string" odl:read-only="true" odl:persistent="true">
+            <odl:defined odl:file="/etc/amx/gmap-server/gmap-server-definitions.odl" odl:line="205"/>
+            <odl:description>
+              <p>The suffix in case of a duplicate name </p>
+              <p/>
+            </odl:description>
+          </odl:parameter>
+        </odl:object>
+        <odl:object odl:name="DeviceTypes" odl:path="Devices.Device.{i}.DeviceTypes" odl:template="true" odl:persistent="true">
+          <odl:defined odl:file="/etc/amx/gmap-server/gmap-server-definitions.odl" odl:line="218"/>
+          <odl:description>
+            <p>Contains the list of available types </p>
+            <p>A type can be discovered by a module (client) or assigned directly by the end user. A type can be added using the function {Devices.Device.setType} and can be deleted using the function {Devices.Device.delType}. The device's type is elected from this list of available types. </p>
+            <p/>
+          </odl:description>
+          <odl:version-description>6.0</odl:version-description>
+          <odl:parameter odl:name="Type" odl:type="string" odl:read-only="true" odl:persistent="true">
+            <odl:defined odl:file="/etc/amx/gmap-server/gmap-server-definitions.odl" odl:line="224"/>
+            <odl:description>
+              <p>Name of detected device type. </p>
+              <p/>
+            </odl:description>
+            <odl:version-description>6.0</odl:version-description>
+          </odl:parameter>
+          <odl:parameter odl:name="Source" odl:type="string" odl:read-only="true" odl:persistent="true">
+            <odl:defined odl:file="/etc/amx/gmap-server/gmap-server-definitions.odl" odl:line="230"/>
+            <odl:description>
+              <p>Source that added the device type </p>
+              <p/>
+            </odl:description>
+            <odl:version-description>6.0</odl:version-description>
+          </odl:parameter>
+        </odl:object>
+        <odl:object odl:name="UDevice" odl:path="Devices.Device.{i}.UDevice" odl:template="true" odl:read-only="true">
+          <odl:defined odl:file="/etc/amx/gmap-server/gmap-server-definitions.odl" odl:line="243"/>
+          <odl:description>
+            <p>The upper link devices list </p>
+            <p>The instances of UDevice are used to have a link to the logical upper device. The instances have no parameters or functions. Any device can only have upper link. Devices can be linked to each other using the function {Devices.link}, the link can be removed with the function {Devices.unlink} </p>
+            <p/>
+          </odl:description>
+          <odl:version-description>6.0</odl:version-description>
+          <odl:parameter odl:name="Type" odl:type="string" odl:read-only="true">
+            <odl:defined odl:file="/etc/amx/gmap-server/gmap-server-definitions.odl" odl:line="244"/>
+          </odl:parameter>
+          <odl:parameter odl:name="Alias" odl:type="string" odl:key="true" odl:unique="true">
+            <odl:defined odl:file="/etc/amx/gmap-server/gmap-server-definitions.odl" odl:line="245"/>
+          </odl:parameter>
+        </odl:object>
+        <odl:object odl:name="LDevice" odl:path="Devices.Device.{i}.LDevice" odl:template="true" odl:read-only="true">
+          <odl:defined odl:file="/etc/amx/gmap-server/gmap-server-definitions.odl" odl:line="257"/>
+          <odl:description>
+            <p>The lower link devices list </p>
+            <p>The instances of LDevice are used to have a link to the logical lower devices. The instances have no parameters or functions. Any device can have multiple lower links. Devices can be linked to each other using the function {Devices.link}, the link can be removed with the function {Devices.unlink} </p>
+            <p/>
+          </odl:description>
+          <odl:version-description>6.0</odl:version-description>
+          <odl:parameter odl:name="Type" odl:type="string" odl:read-only="true">
+            <odl:defined odl:file="/etc/amx/gmap-server/gmap-server-definitions.odl" odl:line="258"/>
+          </odl:parameter>
+          <odl:parameter odl:name="Alias" odl:type="string" odl:key="true" odl:unique="true">
+            <odl:defined odl:file="/etc/amx/gmap-server/gmap-server-definitions.odl" odl:line="259"/>
+          </odl:parameter>
+        </odl:object>
+        <odl:function odl:name="get">
+          <odl:defined odl:file="/etc/amx/gmap-server/gmap-server-definitions.odl" odl:line="279"/>
+          <odl:return odl:type="table">
+            <odl:description>A structure containing detailed information of the device.</odl:description>
+          </odl:return>
+          <odl:description>
+            <p>Get detailed information of the device </p>
+            <p>All information of the device is returned in structure. The sub-objects are returned in sub-structures. The upper devices and lower devices are not in the structure. Use {Devices.Device.topology} to get the hierarchy or topology from a device. </p>
+            <p>Access Control List  are checked prior to adding a parameter and its value to the structure that is returned. Only parameters for which the calling user has read access and execute access are added to the returned structure. </p>
+            <p/>
+          </odl:description>
+          <odl:version-description>6.0</odl:version-description>
+          <odl:argument odl:name="flags" odl:type="string" odl:in="true"/>
+        </odl:function>
+        <odl:function odl:name="set">
+          <odl:defined odl:file="/etc/amx/gmap-server/gmap-server-definitions.odl" odl:line="308"/>
+          <odl:return odl:type="bool">
+            <odl:description>true when no exception was encountered, false otherwise.</odl:description>
+          </odl:return>
+          <odl:description>
+            <p>Update all or some parameters of the device </p>
+            <p>Sub-objects can be updated, by adding a structure to the {device_t} structure with the name of the sub-object, containing the parameters of the sub-object that needs to be updated. Each new structure added can have extra structures. </p>
+            <p>Access Control Lists are checked prior to set the parameter's value, if no write access is granted, the parameter is skipped (silently discared) and the value is not updated. This is not causing the function to fail. </p>
+            <p>Sub-objects (sub-structures) or parameters that are not found in the object are ignored (silently discared) This is not causing the function to fail. </p>
+            <p>The root user can use this function to update read-only parameters. </p>
+            <p/>
+          </odl:description>
+          <odl:version-description>6.0</odl:version-description>
+          <odl:argument odl:name="parameters" odl:type="table" odl:in="true" odl:mandatory="true">
+            <odl:description>a {device_t} containing all parameters, that needs to be updated</odl:description>
+          </odl:argument>
+        </odl:function>
+        <odl:function odl:name="remove">
+          <odl:defined odl:file="/etc/amx/gmap-server/gmap-server-definitions.odl" odl:line="310"/>
+          <odl:return odl:type="bool"/>
+          <odl:argument odl:name="path" odl:type="string" odl:in="true" odl:mandatory="true"/>
+        </odl:function>
+        <odl:function odl:name="setActive">
+          <odl:defined odl:file="/etc/amx/gmap-server/gmap-server-definitions.odl" odl:line="331"/>
+          <odl:return odl:type="void"/>
+          <odl:description>
+            <p>Sets a device active or inactive </p>
+            <p>When setting a device active, an extra check is done. The device tree is traversed in the up direction to find a path where all devices are active, if such a path is found the device is set as active. In the down direction all devices are verified and check if they can be set to active or not. </p>
+            <p>When setting a device inactive, all lower devices are set inactive as well. </p>
+            <p/>
+          </odl:description>
+          <odl:version-description>6.0</odl:version-description>
+          <odl:argument odl:name="active" odl:type="bool" odl:in="true">
+            <odl:description>when true, the device is set active, when false the device is set inactive (default = true)</odl:description>
+          </odl:argument>
+        </odl:function>
+        <odl:function odl:name="hasTag">
+          <odl:defined odl:file="/etc/amx/gmap-server/gmap-server-definitions.odl" odl:line="361"/>
+          <odl:return odl:type="bool"/>
+          <odl:description>
+            <p>Verifies that a tag is set on a device in the traverse tree. </p>
+            <p>This function traverses the device tree in the direction indidcated by the traverse mode and checks that all tags has been set on at least one device that matches the expression. </p>
+            <p>A device with alternative devices set, will match the expression if the device itself matches or one of its alternatives are matching. </p>
+            <p>A master device contains a tag if the master device or one of its alternative devices contain the tag. </p>
+            <p>An alternative device, contains a tag if the master device or one if its alternatives contain the tag, unless </p>
+          </odl:description>
+          <odl:version-description>6.0</odl:version-description>
+          <odl:argument odl:name="tag" odl:type="string" odl:in="true" odl:mandatory="true">
+            <odl:description>space separated list of tags that needs to be verified</odl:description>
+          </odl:argument>
+          <odl:argument odl:name="expression" odl:type="string" odl:in="true">
+            <odl:description>the expression used for matching devices, the tags are only verified on matching devices (default = "")</odl:description>
+          </odl:argument>
+          <odl:argument odl:name="traverse" odl:type="string" odl:in="true">
+            <odl:description>the traverse mode (default = "this")</odl:description>
+          </odl:argument>
+        </odl:function>
+        <odl:function odl:name="setTag">
+          <odl:defined odl:file="/etc/amx/gmap-server/gmap-server-definitions.odl" odl:line="393"/>
+          <odl:return odl:type="void"/>
+          <odl:description>
+            <p>Sets tags to one or more devices. </p>
+            <p>This function traverses the device tree in the direction indidcated by the traverse mode and sets the given tags on all devices matching the expression. </p>
+            <p>A tag can only be added to a device once, if it is added again, nothing is done. </p>
+            <p>A device with alternative devices set, will match the expression if the device itself matches or one of its alternatives are matching. </p>
+            <p>When calling this function on a master device, the tag is only set on the master device, not on any alternative device. </p>
+            <p>When calling this function on an alternative device, the tag is set on the master device unless the traverse mode is set to "this" </p>
+            <p/>
+          </odl:description>
+          <odl:version-description>6.0</odl:version-description>
+          <odl:argument odl:name="tag" odl:type="string" odl:in="true" odl:mandatory="true">
+            <odl:description>space separated list of tags that needs to be set</odl:description>
+          </odl:argument>
+          <odl:argument odl:name="expression" odl:type="string" odl:in="true">
+            <odl:description>the expression used for matching devices, the tags are only set on matching devices (default = "")</odl:description>
+          </odl:argument>
+          <odl:argument odl:name="traverse" odl:type="string" odl:in="true">
+            <odl:description>the traverse mode (default = "this")</odl:description>
+          </odl:argument>
+        </odl:function>
+        <odl:function odl:name="clearTag">
+          <odl:defined odl:file="/etc/amx/gmap-server/gmap-server-definitions.odl" odl:line="425"/>
+          <odl:return odl:type="void"/>
+          <odl:description>
+            <p>Clears tags to one or more devices </p>
+            <p>This function traverses the device tree in the direction indidcated by the traverse mode and clears the given tags on all devices matching the expression. </p>
+            <p>Clearing a tag that was not set has no effect. </p>
+            <p>A device with alternative devices set, will match the expression if the device itself matches or one of its alternatives are matching. </p>
+            <p>Clearing a tag on a master device, will also clear the tags on all alternative devices. </p>
+            <p>Clearing a tag on an alternative device, will also clear it on the master and any other alternative device, unless </p>
+          </odl:description>
+          <odl:version-description>6.0</odl:version-description>
+          <odl:argument odl:name="tag" odl:type="string" odl:in="true" odl:mandatory="true">
+            <odl:description>space separated list of tags that needs to be cleared</odl:description>
+          </odl:argument>
+          <odl:argument odl:name="expression" odl:type="string" odl:in="true">
+            <odl:description>the expression used for matching devices, the tags are only cleared on matching devices (default = "")</odl:description>
+          </odl:argument>
+          <odl:argument odl:name="traverse" odl:type="string" odl:in="true">
+            <odl:description>the traverse mode (default = "this")</odl:description>
+          </odl:argument>
+        </odl:function>
+        <odl:function odl:name="getFirstParameter">
+          <odl:defined odl:file="/etc/amx/gmap-server/gmap-server-definitions.odl" odl:line="456"/>
+          <odl:return odl:type="unknown">
+            <odl:description>the value of the parameter or nothing when the parameter was not found</odl:description>
+          </odl:return>
+          <odl:description>
+            <p>Get the first parameter with the given name in the device tree of the device matching an expression. </p>
+            <p>Fetches the first encounter parameter with the a specified name in the device tree for a device matching the given expression and traversing the tree in the specified traverse mode </p>
+            <p>A master device matches the given expression if the device itself or one of its altrernative devices are matching. </p>
+            <p>If the master device does not contain the parameter, but one or more of its alternatives do contain the parameter, the value is taken of the first alternative device that contains the parameter. The alternatives are inspected in the order they were added. </p>
+            <p>When calling this function on an alternative device, the master device will be taken, unless the traverse mode is set to "this" </p>
+            <p/>
+          </odl:description>
+          <odl:version-description>6.0</odl:version-description>
+          <odl:argument odl:name="parameter" odl:type="string" odl:in="true" odl:mandatory="true">
+            <odl:description>the name of the parameter the needs to be fetched</odl:description>
+          </odl:argument>
+          <odl:argument odl:name="expression" odl:type="string" odl:in="true">
+            <odl:description>the expression used for matching devices, the tags are only set on matching devices (default = "")</odl:description>
+          </odl:argument>
+          <odl:argument odl:name="traverse" odl:type="string" odl:in="true">
+            <odl:description>the traverse mode (default = "down")</odl:description>
+          </odl:argument>
+        </odl:function>
+        <odl:function odl:name="getParameters">
+          <odl:defined odl:file="/etc/amx/gmap-server/gmap-server-definitions.odl" odl:line="484"/>
+          <odl:return odl:type="list">
+            <odl:description>a list of key value pairs, where the key is the key of device that has the parameter searched for and the value is the value of the parameter</odl:description>
+          </odl:return>
+          <odl:description>
+            <p>Get all parameters with the given name in the device tree of the devices matching an expression. </p>
+            <p>Fetches all parameters with the a specified name in the device tree for all devices matching the given expression </p>
+          </odl:description>
+          <odl:version-description>6.0</odl:version-description>
+          <odl:argument odl:name="parameter" odl:type="string" odl:in="true" odl:mandatory="true">
+            <odl:description>the name of the parameter the needs to be fetched</odl:description>
+          </odl:argument>
+          <odl:argument odl:name="expression" odl:type="string" odl:in="true">
+            <odl:description>the expression used for matching devices, the tags are only set on matching devices (default = "")</odl:description>
+          </odl:argument>
+          <odl:argument odl:name="traverse" odl:type="string" odl:in="true">
+            <odl:description>the traverse mode (default = "down")</odl:description>
+          </odl:argument>
+        </odl:function>
+        <odl:function odl:name="topology">
+          <odl:defined odl:file="/etc/amx/gmap-server/gmap-server-definitions.odl" odl:line="514"/>
+          <odl:return odl:type="unknown">
+            <odl:description>a structure containing the toppology tree</odl:description>
+          </odl:return>
+          <odl:description>
+            <p>Builds the device tree, starting from the specified device using a traverse mode. </p>
+            <p>The device topology is build starting from a specific device. The hierarchy is traversed using the traverse mode specified. Details of the devices are only added if the devices are matching the expression, other devices in the topology are only added if they are relevant for devices which match the expression. </p>
+            <p>The starting point device is always the top most device in the end result. </p>
+            <p>With the flags it is possible to specify what should be in the returned structure. Possible flags are: "no_recurse": do not recurse into the next level, if the device does not match the expression "no_details": do not provide details of the device, only the device tree containing the keys of the devices is returned. "no_actions": do not provide the list of actions for the devices "alternatives": provide detailed information of the alternative devices. </p>
+            <p/>
+          </odl:description>
+          <odl:version-description>6.0</odl:version-description>
+          <odl:argument odl:name="expression" odl:type="string" odl:in="true">
+            <odl:description>details for devices that are matching the expression are added to the end result (default = "")</odl:description>
+          </odl:argument>
+          <odl:argument odl:name="traverse" odl:type="string" odl:in="true">
+            <odl:description>the traverse mode (default = "down")</odl:description>
+          </odl:argument>
+          <odl:argument odl:name="flags" odl:type="string" odl:in="true">
+            <odl:description>a string containg flags, each flag is separated with the '|' symbol. The flags are used to modify the data structure returned.</odl:description>
+          </odl:argument>
+        </odl:function>
+        <odl:function odl:name="isLinkedTo">
+          <odl:defined odl:file="/etc/amx/gmap-server/gmap-server-definitions.odl" odl:line="540"/>
+          <odl:return odl:type="bool">
+            <odl:description>true when the device is linked to the searched device, false otherwise</odl:description>
+          </odl:return>
+          <odl:description>
+            <p>Searches the device tree to find out if the device is linked to another device </p>
+            <p>Traverses the device tree in the specified direction starting from a device and checks if the device is linked to another device. </p>
+            <p>For master devices, the alternative devices are used as well to traverse the tree, unless the traverse mode is set to "this" </p>
+            <p>When starting from an alternative device, the master device is taken as starting point. </p>
+            <p>The function will always return true if the provided device key is an alternative device or the master device. </p>
+            <p/>
+          </odl:description>
+          <odl:version-description>6.0</odl:version-description>
+          <odl:argument odl:name="device" odl:type="string" odl:in="true" odl:mandatory="true">
+            <odl:description>key of the device that is searched in the device tree</odl:description>
+          </odl:argument>
+          <odl:argument odl:name="traverse" odl:type="string" odl:in="true">
+            <odl:description>the traverse mode (default = "up exclusive")</odl:description>
+          </odl:argument>
+        </odl:function>
+        <odl:function odl:name="setName">
+          <odl:defined odl:file="/etc/amx/gmap-server/gmap-server-definitions.odl" odl:line="566"/>
+          <odl:return odl:type="bool">
+            <odl:description>true when the name is added, false when an error has occured</odl:description>
+          </odl:return>
+          <odl:description>
+            <p>Adds or changes a name of a device </p>
+            <p>This function creates a instance of the {Devices.Device.Names} object within the device object or modifies an an existing instance. </p>
+            <p>Optionally the name of the source that adds the name can be given, if no source is provided, the source "webui" is used. If a name was already available for the source, the name is overwritten with the new one. </p>
+            <p>After that the name is added or changed, the name selection algorithm is used to select the name of the device. </p>
+            <p/>
+          </odl:description>
+          <odl:version-description>6.0</odl:version-description>
+          <odl:argument odl:name="name" odl:type="string" odl:in="true" odl:mandatory="true">
+            <odl:description>a name that can be used for the device</odl:description>
+          </odl:argument>
+          <odl:argument odl:name="source" odl:type="string" odl:in="true">
+            <odl:description>the source that added the name (default = "webui")</odl:description>
+          </odl:argument>
+        </odl:function>
+        <odl:function odl:name="addName">
+          <odl:defined odl:file="/etc/amx/gmap-server/gmap-server-definitions.odl" odl:line="573"/>
+          <odl:return odl:type="bool"/>
+          <odl:description>
+            <p>(deprecated) See {Devices.Device.setName} </p>
+            <p/>
+          </odl:description>
+          <odl:version-description>6.0</odl:version-description>
+          <odl:argument odl:name="name" odl:type="string" odl:in="true" odl:mandatory="true"/>
+          <odl:argument odl:name="source" odl:type="string" odl:in="true"/>
+        </odl:function>
+        <odl:function odl:name="removeName">
+          <odl:defined odl:file="/etc/amx/gmap-server/gmap-server-definitions.odl" odl:line="596"/>
+          <odl:return odl:type="bool">
+            <odl:description>true when the name is deleted, false when an error has occured</odl:description>
+          </odl:return>
+          <odl:description>
+            <p>Remove a name from a device </p>
+            <p>This function removes the name for the given source from the device. If no source name is given the source "webui" is removed. </p>
+            <p>After that the name is removed, the name selection algorithm is used to select the name of the device. </p>
+            <p>The "default" source can not be removed. </p>
+            <p/>
+          </odl:description>
+          <odl:version-description>6.0</odl:version-description>
+          <odl:argument odl:name="source" odl:type="string" odl:in="true" odl:mandatory="true">
+            <odl:description>the name of the source that added the device name (default = "webui")</odl:description>
+          </odl:argument>
+        </odl:function>
+        <odl:function odl:name="delName">
+          <odl:defined odl:file="/etc/amx/gmap-server/gmap-server-definitions.odl" odl:line="603"/>
+          <odl:return odl:type="bool"/>
+          <odl:description>
+            <p>(deprecated) See {Devices.Device.removeName} </p>
+            <p/>
+          </odl:description>
+          <odl:version-description>6.0</odl:version-description>
+          <odl:argument odl:name="name" odl:type="string" odl:in="true" odl:mandatory="true"/>
+          <odl:argument odl:name="source" odl:type="string" odl:in="true"/>
+        </odl:function>
+        <odl:function odl:name="setType">
+          <odl:defined odl:file="/etc/amx/gmap-server/gmap-server-definitions.odl" odl:line="629"/>
+          <odl:return odl:type="bool">
+            <odl:description>true when the type is added, false when an error has occured</odl:description>
+          </odl:return>
+          <odl:description>
+            <p>Adds or changes a type of a device </p>
+            <p>This function creates a instance of the {Devices.Device.DeviceTypes} object within the device object or modifies an an existing instance. </p>
+            <p>Optionally the name of the source that adds the type can be given, if no source is provided, the source "webui" is used. If a type was already available for the source, the type is overwritten with the new one. </p>
+            <p>After that the type is added or changed, the type selection algorithm is used to select the type of the device. </p>
+            <p/>
+          </odl:description>
+          <odl:version-description>6.0</odl:version-description>
+          <odl:argument odl:name="type" odl:type="string" odl:in="true" odl:mandatory="true">
+            <odl:description>a type that can be used for the device</odl:description>
+          </odl:argument>
+          <odl:argument odl:name="source" odl:type="string" odl:in="true">
+            <odl:description>the source that added the type (default = "webui")</odl:description>
+          </odl:argument>
+        </odl:function>
+        <odl:function odl:name="removeType">
+          <odl:defined odl:file="/etc/amx/gmap-server/gmap-server-definitions.odl" odl:line="649"/>
+          <odl:return odl:type="bool">
+            <odl:description>true when the type is deleted, false when an error has occured</odl:description>
+          </odl:return>
+          <odl:description>
+            <p>Remove a type from a device </p>
+            <p>This function removes the type for the given source from the device. If no source name is given the source "webui" is removed. </p>
+            <p>After that the type is removed, the type selection algorithm is used to select the type of the device. </p>
+            <p/>
+          </odl:description>
+          <odl:version-description>6.0</odl:version-description>
+          <odl:argument odl:name="source" odl:type="string" odl:in="true" odl:mandatory="true">
+            <odl:description>the name of the source that added the device type (default = "webui")</odl:description>
+          </odl:argument>
+        </odl:function>
+        <odl:function odl:name="addAction">
+          <odl:defined odl:file="/etc/amx/gmap-server/gmap-server-definitions.odl" odl:line="668"/>
+          <odl:return odl:type="bool">
+            <odl:description>false when failed to mark a function as an action, true otherwise.</odl:description>
+          </odl:return>
+          <odl:description>
+            <p>Declare a device RPC function as an action of the device. </p>
+            <p>When a function is marked as an action, the function definition is included in the data returned by one of the get functions. </p>
+            <p/>
+          </odl:description>
+          <odl:version-description>6.1</odl:version-description>
+          <odl:argument odl:name="function" odl:type="string" odl:in="true" odl:mandatory="true">
+            <odl:description>name of the function, as defined in the data model</odl:description>
+          </odl:argument>
+          <odl:argument odl:name="name" odl:type="string" odl:in="true">
+            <odl:description>logical name for the action</odl:description>
+          </odl:argument>
+        </odl:function>
+        <odl:function odl:name="removeAction">
+          <odl:defined odl:file="/etc/amx/gmap-server/gmap-server-definitions.odl" odl:line="670"/>
+          <odl:return odl:type="bool"/>
+          <odl:argument odl:name="function" odl:type="string" odl:in="true" odl:mandatory="true"/>
+          <odl:argument odl:name="name" odl:type="string" odl:in="true"/>
+        </odl:function>
+        <odl:function odl:name="setInstance">
+          <odl:defined odl:file="/etc/amx/gmap-server/gmap-server-definitions.odl" odl:line="672"/>
+          <odl:return odl:type="bool"/>
+          <odl:argument odl:name="sub_object" odl:type="string" odl:in="true" odl:mandatory="true"/>
+          <odl:argument odl:name="key" odl:type="string" odl:in="true" odl:mandatory="true"/>
+          <odl:argument odl:name="data" odl:type="unknown" odl:in="true"/>
+        </odl:function>
+        <odl:function odl:name="removeInstance">
+          <odl:defined odl:file="/etc/amx/gmap-server/gmap-server-definitions.odl" odl:line="674"/>
+          <odl:return odl:type="bool"/>
+          <odl:argument odl:name="sub_object" odl:type="string" odl:in="true" odl:mandatory="true"/>
+          <odl:argument odl:name="key" odl:type="string" odl:in="true" odl:mandatory="true"/>
+          <odl:argument odl:name="data" odl:type="unknown" odl:in="true"/>
+        </odl:function>
+        <odl:function odl:name="setFunction">
+          <odl:defined odl:file="/etc/amx/gmap-server/gmap-server-definitions.odl" odl:line="691"/>
+          <odl:return odl:type="bool">
+            <odl:description>false when failed to change the function implementation, true when successfull.</odl:description>
+          </odl:return>
+          <odl:description>
+            <p>Set a RPC function implementation for a device </p>
+            <p>The implementation of any RPC function of a device available (defined) in the data model can be changed. By calling this function, each function call to the specified funcion name will be delgated to the client calling this function. The client must call {csiFinished} when the funciton call is finished. </p>
+            <p/>
+          </odl:description>
+          <odl:version-description>6.1</odl:version-description>
+          <odl:argument odl:name="function" odl:type="string" odl:in="true" odl:mandatory="true">
+            <odl:description>the function name as defined in the data model</odl:description>
+          </odl:argument>
+        </odl:function>
+        <odl:function odl:name="removeFunction">
+          <odl:defined odl:file="/etc/amx/gmap-server/gmap-server-definitions.odl" odl:line="707"/>
+          <odl:return odl:type="bool">
+            <odl:description>false when failed to remove the function implementation, true when successfull.</odl:description>
+          </odl:return>
+          <odl:description>
+            <p>Removes a RPC function implementation for a device </p>
+            <p>By calling this function the RPC implementation is reset (removed). Any client calling the RPC method will get an error back: pcb_error_function_not_implemented, unless a new implementation of the RPC is set. </p>
+            <p/>
+          </odl:description>
+          <odl:version-description>6.1</odl:version-description>
+          <odl:argument odl:name="function" odl:type="string" odl:in="true" odl:mandatory="true">
+            <odl:description>the function name as defined in the data model</odl:description>
+          </odl:argument>
+        </odl:function>
+        <odl:function odl:name="isImplemented">
+          <odl:defined odl:file="/etc/amx/gmap-server/gmap-server-definitions.odl" odl:line="720"/>
+          <odl:return odl:type="bool">
+            <odl:description>false when no implementation is available, true otherwise</odl:description>
+          </odl:return>
+          <odl:description>
+            <p>Checks if a RPC function has an implementation for a device </p>
+            <p/>
+          </odl:description>
+          <odl:version-description>9.1</odl:version-description>
+          <odl:argument odl:name="function" odl:type="string" odl:in="true" odl:mandatory="true">
+            <odl:description>the function name as defined in the data model</odl:description>
+          </odl:argument>
+        </odl:function>
+        <odl:function odl:name="setAlternative">
+          <odl:defined odl:file="/etc/amx/gmap-server/gmap-server-definitions.odl" odl:line="756"/>
+          <odl:return odl:type="bool">
+            <odl:description>true when the alternative is set, or false when an error occured.</odl:description>
+          </odl:return>
+          <odl:description>
+            <p>Sets a device as an alternative </p>
+            <p>As the same device can be discovered multiple times - example: a device connected to the gBox using ethernet and wifi - it is desirable that the end user (or even modules) get a unified view. By setting one device as the master and other device(s) as alternative(s), gMap creates a unified "device" - this is a "joined" device. </p>
+            <p>When setting a device as alternative, the devices stay in the data model as separate devices, each with their own topology links and data. The "merge" of all the devices is done when calling RPC functions. </p>
+            <p>When fetching the master device, (using gmap_device_get), either a merged data structure is returned or the master device with a list of the alternative devices. The topology links of the alternative devices will returned as topology links of the master device. </p>
+            <p>A master device will match an expression (sued in RPCs) when itself matches the expression or one of its alternatives are.matching </p>
+            <p>A query expression is evaluated on the individual devices and never on the "merged" device. A master device will only match a query expression if it matches the expresion by itself. The alternative devices are evaluated as separate devices when evaluatating a query expression. </p>
+            <p>The alternative devices can be accessed as individual devices as well. </p>
+            <p/>
+          </odl:description>
+          <odl:version-description>6.1</odl:version-description>
+          <odl:argument odl:name="alternative" odl:type="string" odl:in="true" odl:mandatory="true">
+            <odl:description>the key of the alternative device</odl:description>
+          </odl:argument>
+        </odl:function>
+        <odl:function odl:name="removeAlternative">
+          <odl:defined odl:file="/etc/amx/gmap-server/gmap-server-definitions.odl" odl:line="775"/>
+          <odl:return odl:type="bool">
+            <odl:description>true when the alternative is removed, or false when an error occured.</odl:description>
+          </odl:return>
+          <odl:description>
+            <p>Removes a device alternative </p>
+            <p>This function will remove the references from the devices. After this function the alternative device is again an individual device. </p>
+            <p/>
+          </odl:description>
+          <odl:version-description>6.1</odl:version-description>
+          <odl:argument odl:name="alternative" odl:type="string" odl:in="true" odl:mandatory="true">
+            <odl:description>the key of the alternative device</odl:description>
+          </odl:argument>
+        </odl:function>
+        <odl:function odl:name="isAlternative">
+          <odl:defined odl:file="/etc/amx/gmap-server/gmap-server-definitions.odl" odl:line="790"/>
+          <odl:return odl:type="bool">
+            <odl:description>true when the device is set as an alternative or false when it is not.</odl:description>
+          </odl:return>
+          <odl:description>
+            <p>Checks if a device is set as an alternative </p>
+            <p/>
+          </odl:description>
+          <odl:version-description>7.0</odl:version-description>
+          <odl:argument odl:name="alternative" odl:type="string" odl:in="true" odl:mandatory="true">
+            <odl:description>the key of the alternative device</odl:description>
+          </odl:argument>
+        </odl:function>
+        <odl:function odl:name="setAlternativeRules">
+          <odl:defined odl:file="/etc/amx/gmap-server/gmap-server-definitions.odl" odl:line="808"/>
+          <odl:return odl:type="bool">
+            <odl:description>true if the rules are valid and added else false</odl:description>
+          </odl:return>
+          <odl:description>
+            <p>Set the rule to detect alternative devices </p>
+            <p/>
+          </odl:description>
+          <odl:version-description>9.1</odl:version-description>
+          <odl:argument odl:name="rules" odl:type="list" odl:in="true" odl:mandatory="true"/>
+        </odl:function>
+        <odl:function odl:name="removeAlternativeRules">
+          <odl:defined odl:file="/etc/amx/gmap-server/gmap-server-definitions.odl" odl:line="821"/>
+          <odl:return odl:type="bool">
+            <odl:description>true if the rules are deleted else false</odl:description>
+          </odl:return>
+          <odl:description>
+            <p>Remove the rules to detect alternative devices </p>
+            <p/>
+          </odl:description>
+          <odl:version-description>9.1</odl:version-description>
+        </odl:function>
+      </odl:object>
+      <odl:object odl:name="Query" odl:path="Devices.Query" odl:template="true" odl:read-only="true">
+        <odl:defined odl:file="/etc/amx/gmap-server/gmap-server-definitions.odl" odl:line="835"/>
+        <odl:description>
+          <p>Contains the list of opened queries </p>
+          <p>Queries can be opened and used to get notifications, when a device starts matching the query, stops matching a query or when a device was matching a query and is updated </p>
+          <p>The same query can be opened multiple tmes, but is only visible once in the data model. See {Devices.openQuery}. For each call to {Devices.openQuery} a matching call to {Devices.closeQuery} must be done. </p>
+          <p/>
+        </odl:description>
+        <odl:version-description>6.0</odl:version-description>
+        <odl:parameter odl:name="Expression" odl:type="string" odl:read-only="true">
+          <odl:defined odl:file="/etc/amx/gmap-server/gmap-server-definitions.odl" odl:line="841"/>
+          <odl:description>
+            <p>The expression of the query </p>
+            <p/>
+          </odl:description>
+          <odl:version-description>6.0</odl:version-description>
+        </odl:parameter>
+        <odl:function odl:name="matchingDevices">
+          <odl:defined odl:file="/etc/amx/gmap-server/gmap-server-definitions.odl" odl:line="852"/>
+          <odl:return odl:type="list">
+            <odl:description>the list of keys of all matching devices.</odl:description>
+          </odl:return>
+          <odl:description>
+            <p>Gets the list of all matching devices. </p>
+            <p>Get the list of keys of the matching devices. </p>
+            <p/>
+          </odl:description>
+          <odl:version-description>6.0</odl:version-description>
+        </odl:function>
+      </odl:object>
+      <odl:function odl:name="createDevice">
+        <odl:defined odl:file="/etc/amx/gmap-server/gmap-server-definitions.odl" odl:line="890"/>
+        <odl:return odl:type="bool">
+          <odl:description>true when the device instance is created, false when an error has occured</odl:description>
+        </odl:return>
+        <odl:description>
+          <p>Creates a new device in the data model </p>
+          <p>This function creates a instance of the device template object. The key for the device must be unique and is used to identify the device. A set of tags can be provided at creation time, these tags are used to match the device against expressions and to add MIBs to the device object. </p>
+          <p>Optionally a discovery source can be specified (it is recommended to do so). This information can be used for debugging purposes. </p>
+          <p>During the creation of the device object, a default name is generated using the default implementation or a custom implementation. </p>
+          <p>A device object can be marked as persistent or not. The data of persistent devices will survive a reboot but not an upgrade. The links between devices are not stored in the persistent storage file. </p>
+          <p>When the creation of the device is successful, MIBs can already be added to the device object. </p>
+          <p/>
+        </odl:description>
+        <odl:version-description>6.0</odl:version-description>
+        <odl:argument odl:name="key" odl:type="string" odl:in="true" odl:mandatory="true">
+          <odl:description>the unique key for the device</odl:description>
+        </odl:argument>
+        <odl:argument odl:name="discovery_source" odl:type="string" odl:in="true">
+          <odl:description>a string indicating the discovery source that added the device to the data model (default = "")</odl:description>
+        </odl:argument>
+        <odl:argument odl:name="tags" odl:type="string" odl:in="true">
+          <odl:description>a space separated list of tags</odl:description>
+        </odl:argument>
+        <odl:argument odl:name="persistent" odl:type="bool" odl:in="true">
+          <odl:description>when set to true, the device data is stored to survive reboots</odl:description>
+        </odl:argument>
+        <odl:argument odl:name="default_name" odl:type="string" odl:in="true"/>
+        <odl:argument odl:name="values" odl:type="unknown" odl:in="true"/>
+      </odl:function>
+      <odl:function odl:name="destroyDevice">
+        <odl:defined odl:file="/etc/amx/gmap-server/gmap-server-definitions.odl" odl:line="914"/>
+        <odl:return odl:type="bool"/>
+        <odl:description>
+          <p>Removes a device from the data model </p>
+          <p>This function removes the device from the data model. The persistent stored data (if the device was marked persistent, is also removed. All links to other devices are removed as well, for the other devices the corresponding upper or lower edges are updated. </p>
+          <p>When a device with the given key is not found in the data model this function is doing nothing. </p>
+          <p>If the device is a master device, all alternative devices remain in the data model, but the reference to the master device is removed. </p>
+          <p>If the device is an alternative device, the master device is updated and the reference to the alternative device is removed. </p>
+          <p/>
+        </odl:description>
+        <odl:version-description>6.0</odl:version-description>
+        <odl:argument odl:name="key" odl:type="string" odl:in="true" odl:mandatory="true">
+          <odl:description>the unique key for the device</odl:description>
+        </odl:argument>
+      </odl:function>
+      <odl:function odl:name="find">
+        <odl:defined odl:file="/etc/amx/gmap-server/gmap-server-definitions.odl" odl:line="939"/>
+        <odl:return odl:type="list">
+          <odl:description>a variant map containing the expression ids as keys and  the list of keys of matching devices as value or a list of the keys of matching devices when only a single expression was proviced</odl:description>
+        </odl:return>
+        <odl:description>
+          <p>Searches devices in the data model and returns a list of keys of the matching devices </p>
+          <p>Using an expression this function is searching the data model for device that are matching the expression. A string list containing the keys of all matching devices is build and returned </p>
+          <p>Multiple expressions can be provided in a variant map. The key in the variant map is the expression id and the value is an expression. </p>
+          <p>Devices for which alternatives are set, match the expression if the device or one of its alternatives are matching. To change the behavior, provide the flags argument. Supported flags are: - alternatives: consider alternative devices as separate device. When this flag is set, alternative devices are added to the result list, if they are matching the expression. </p>
+          <p/>
+        </odl:description>
+        <odl:version-description>6.0</odl:version-description>
+        <odl:argument odl:name="expression" odl:type="unknown" odl:in="true">
+          <odl:description>either a variant containing a variant map with expression ids and expressions or a string containing a single expression, is used to search for devices</odl:description>
+        </odl:argument>
+        <odl:argument odl:name="flags" odl:type="string" odl:in="true">
+          <odl:description>Change the behaviour of expression matching (only flag supported is "alternatives")</odl:description>
+        </odl:argument>
+      </odl:function>
+      <odl:function odl:name="get">
+        <odl:defined odl:file="/etc/amx/gmap-server/gmap-server-definitions.odl" odl:line="967"/>
+        <odl:return odl:type="list">
+          <odl:description>a variant map containing the expression ids and as value a list of {device_t} of matching devices for the expression or single lust if {device_t} of matching devices.</odl:description>
+        </odl:return>
+        <odl:description>
+          <p>Searches devices in the data model and returns a list of {device_t} containing detailed information of matching devices </p>
+          <p>Using an expression this function is searching the data model for device that are matching the expression. A list containing the detailed information of all matching devices is build and returned </p>
+          <p>Multiple expressions can be provided in a variant map. The key in the variant map is the expression id and the value is an expression. </p>
+          <p>By default all the details of the devices (parameters and actions) are added, but no device topology is provided. To change the behavior, provide the flags argument. Supported flags are: - no_details: no parameters are added - no_actions: no actions are added - topology: the topology (down direction) starting from the device will be provided. - alternatives: provide details of the alternative devices as well. (Do not return joined result) </p>
+          <p/>
+        </odl:description>
+        <odl:version-description>6.0</odl:version-description>
+        <odl:argument odl:name="expression" odl:type="unknown" odl:in="true">
+          <odl:description>either a variant containing a variant map with expression ids and expressions or a string containing a single expression, is used to search for devices</odl:description>
+        </odl:argument>
+        <odl:argument odl:name="flags" odl:type="string" odl:in="true">
+          <odl:description>the flags is a string cointaining a combination of the following strings "no_details", "no_actions", "topology". They must be separated with a '|' sign.</odl:description>
+        </odl:argument>
+      </odl:function>
+      <odl:function odl:name="fetchDevice">
+        <odl:defined odl:file="/etc/amx/gmap-server/gmap-server-definitions.odl" odl:line="974"/>
+        <odl:return odl:type="table"/>
+        <odl:description>
+          <p>Quick look-up </p>
+          <p/>
+        </odl:description>
+        <odl:version-description>8.0</odl:version-description>
+        <odl:argument odl:name="key" odl:type="string" odl:in="true" odl:mandatory="true"/>
+        <odl:argument odl:name="flags" odl:type="string" odl:in="true"/>
+      </odl:function>
+      <odl:function odl:name="link">
+        <odl:defined odl:file="/etc/amx/gmap-server/gmap-server-definitions.odl" odl:line="1009"/>
+        <odl:return odl:type="bool">
+          <odl:description>true when the devices are linked togheter, false when an error occured</odl:description>
+        </odl:return>
+        <odl:description>
+          <p>Logically link devices together </p>
+          <p>Devices can be linked together in a hierarchical or logical way. This enables gMap to create a topology tree of the devices. A device has two edges, the lower edege and the upper edge. The hierarchy must be build top-down, that is the top most device must be the Home Gateay itself (gBox), the bottom most devices must be end devices. </p>
+          <p>A device can have multiple upper devices (a device put on the upper edge), and multiple lower devices (devices put on the lower edge) </p>
+          <p>When linking two device together (upper device and lower device), the lower edge of the upper device is modified so it contains a link to the lower device and the upper edge of the lower device is modified so it contains a link to the upper device. </p>
+          <p>This function removes the already existing upper links to other devices and create a single new link. If the lower device was already linked to the upper device all other links are removed and only a single link is kept. </p>
+          <p>Linking of the devices fail if one or both devices are not found in the data model </p>
+          <p/>
+        </odl:description>
+        <odl:version-description>6.0</odl:version-description>
+        <odl:argument odl:name="upper_device" odl:type="string" odl:in="true" odl:mandatory="true">
+          <odl:description>the key of the upper device</odl:description>
+        </odl:argument>
+        <odl:argument odl:name="lower_device" odl:type="string" odl:in="true" odl:mandatory="true">
+          <odl:description>the key of the lower device</odl:description>
+        </odl:argument>
+        <odl:argument odl:name="type" odl:type="string" odl:in="true">
+          <odl:description>the link type</odl:description>
+        </odl:argument>
+      </odl:function>
+      <odl:function odl:name="setLink">
+        <odl:defined odl:file="/etc/amx/gmap-server/gmap-server-definitions.odl" odl:line="1044"/>
+        <odl:return odl:type="bool">
+          <odl:description>true when the devices are linked togheter, false when an error occured</odl:description>
+        </odl:return>
+        <odl:description>
+          <p>Logically link devices together </p>
+          <p>Devices can be linked together in a hierarchical or logical way. This enables gMap to create a topology tree of the devices. A device has two edges, the lower edege and the upper edge. The hierarchy must be build top-down, that is the top most device must be the Home Gateay itself (gBox), the bottom most devices must be end devices. </p>
+          <p>A device can have multiple upper devices (a device put on the upper edge), and multiple lower devices (devices put on the lower edge) </p>
+          <p>When linking two device together (upper device and lower device), the lower edge of the upper device is modified so it contains a link to the lower device and the upper edge of the lower device is modified so it contains a link to the upper device. </p>
+          <p>This function adds a new link (if it was not existing yet), between the upper and lower device, but does not remove any other links to other devices. </p>
+          <p>Linking of the devices fail if one or both devices are not found in the data model </p>
+          <p/>
+        </odl:description>
+        <odl:version-description>6.0</odl:version-description>
+        <odl:argument odl:name="upper_device" odl:type="string" odl:in="true" odl:mandatory="true">
+          <odl:description>the key of the upper device</odl:description>
+        </odl:argument>
+        <odl:argument odl:name="lower_device" odl:type="string" odl:in="true" odl:mandatory="true">
+          <odl:description>the key of the lower device</odl:description>
+        </odl:argument>
+        <odl:argument odl:name="type" odl:type="string" odl:in="true">
+          <odl:description>the link type</odl:description>
+        </odl:argument>
+      </odl:function>
+      <odl:function odl:name="unlink">
+        <odl:defined odl:file="/etc/amx/gmap-server/gmap-server-definitions.odl" odl:line="1069"/>
+        <odl:return odl:type="bool">
+          <odl:description>true if unlinking the devices was successful, false if an error occured</odl:description>
+        </odl:return>
+        <odl:description>
+          <p>Logically unlink devices </p>
+          <p>When devices were linked togheter, they can be unlinked using this function. </p>
+          <p>When unlinking two device (upper device and lower device), the lower edge of the upper device is modified so that the link to the lower device is removed and the upper edge of the lower device is modified so that the link to the upper device is removed. If no such link was existing, this function does nothing. </p>
+          <p>Unlinking of the devices fail if one or both devices are not found in the data model </p>
+          <p/>
+        </odl:description>
+        <odl:version-description>6.0</odl:version-description>
+        <odl:argument odl:name="upper_device" odl:type="string" odl:in="true">
+          <odl:description>the key of the upper device</odl:description>
+        </odl:argument>
+        <odl:argument odl:name="lower_device" odl:type="string" odl:in="true">
+          <odl:description>the key of the lower device</odl:description>
+        </odl:argument>
+      </odl:function>
+      <odl:function odl:name="openQuery">
+        <odl:defined odl:file="/etc/amx/gmap-server/gmap-server-definitions.odl" odl:line="1091"/>
+        <odl:return odl:type="table">
+          <odl:description>a {query_t} structure containing information about the query and a list of the matching devices</odl:description>
+        </odl:return>
+        <odl:description>
+          <p>Opens a gmap query </p>
+          <p>This function creates a instance of the query template object or re-uses an existing query object which contains exactly the same expression. </p>
+          <p>After opening the query, a list of matching devices is available. Use function {Devices.Query.matchingDevices} to get the list of all matching device keys. </p>
+          <p>Optionally a name can be provided (named query), this name must be unique. </p>
+          <p>Each call to this function must have a matching call to {Devices.closeQuery} </p>
+          <p/>
+        </odl:description>
+        <odl:version-description>6.0</odl:version-description>
+        <odl:argument odl:name="expression" odl:type="string" odl:in="true" odl:mandatory="true">
+          <odl:description>the expression of the query</odl:description>
+        </odl:argument>
+        <odl:argument odl:name="name" odl:type="string" odl:in="true">
+          <odl:description>a name for the query (default the same value as the index)</odl:description>
+        </odl:argument>
+      </odl:function>
+      <odl:function odl:name="block">
+        <odl:defined odl:file="/etc/amx/gmap-server/gmap-server-definitions.odl" odl:line="1107"/>
+        <odl:return odl:type="void"/>
+        <odl:description>
+          <p>Block a certain device (key) of being discovered. </p>
+          <p>When it is undesired that a certain device is discovered and added to the data model, the key of that device can be blocked. The device key will be added to the list of blocked device keys. Whenever a module or a client creates a device with that key, the creation will fail. </p>
+          <p>A key can only be added to the blocked list only once, all other calls to this function with a device key already blocked have no effect. </p>
+          <p/>
+        </odl:description>
+        <odl:version-description>6.1</odl:version-description>
+        <odl:argument odl:name="key" odl:type="string" odl:in="true" odl:mandatory="true">
+          <odl:description>the device key that needs to be blocked</odl:description>
+        </odl:argument>
+      </odl:function>
+      <odl:function odl:name="unblock">
+        <odl:defined odl:file="/etc/amx/gmap-server/gmap-server-definitions.odl" odl:line="1123"/>
+        <odl:return odl:type="void">
+          <odl:description>true when the device is blocked, false otherwise.</odl:description>
+        </odl:return>
+        <odl:description>
+          <p>Unblock a certain device (key). </p>
+          <p>Whenever a device key was blocked, calling this function will remove it from the blocked list. Calling this function with a device key that was not blocked has no effect. </p>
+          <p>After this function returns, modules or clients can add the device to the data model. </p>
+          <p/>
+        </odl:description>
+        <odl:version-description>6.1</odl:version-description>
+        <odl:argument odl:name="key" odl:type="string" odl:in="true" odl:mandatory="true">
+          <odl:description>the device key that needs to be unblocked</odl:description>
+        </odl:argument>
+      </odl:function>
+      <odl:function odl:name="isBlocked">
+        <odl:defined odl:file="/etc/amx/gmap-server/gmap-server-definitions.odl" odl:line="1134"/>
+        <odl:return odl:type="bool"/>
+        <odl:description>
+          <p>Check that a the given device key is blocked. </p>
+          <p>This function will check that the provided device key was blocked. </p>
+          <p/>
+        </odl:description>
+        <odl:version-description>6.1</odl:version-description>
+        <odl:argument odl:name="key" odl:type="string" odl:in="true" odl:mandatory="true">
+          <odl:description>the device key that needs to verified</odl:description>
+        </odl:argument>
+      </odl:function>
+      <odl:function odl:name="closeQuery">
+        <odl:defined odl:file="/etc/amx/gmap-server/gmap-server-definitions.odl" odl:line="1146"/>
+        <odl:return odl:type="void"/>
+        <odl:description>
+          <p>Closes a gmap query </p>
+          <p>Closes a query that was opened with {Devices.openQuery}. </p>
+          <p/>
+        </odl:description>
+        <odl:version-description>6.0</odl:version-description>
+        <odl:argument odl:name="index" odl:type="uint32" odl:in="true" odl:mandatory="true">
+          <odl:description>the index of the query as returned by the {Devices.openQuery} function</odl:description>
+        </odl:argument>
+        <odl:argument odl:name="id" odl:type="uint32" odl:in="true" odl:mandatory="true">
+          <odl:description>the id of the query as returned by the {devices.closeQuery} function</odl:description>
+        </odl:argument>
+      </odl:function>
+      <odl:function odl:name="notify">
+        <odl:defined odl:file="/etc/amx/gmap-server/gmap-server-definitions.odl" odl:line="1160"/>
+        <odl:return odl:type="void"/>
+        <odl:description>
+          <p>Send a notification </p>
+          <p>Send a notification for the device with the specified key </p>
+          <p/>
+        </odl:description>
+        <odl:version-description>6.0</odl:version-description>
+        <odl:argument odl:name="key" odl:type="string" odl:in="true" odl:mandatory="true">
+          <odl:description>the device key</odl:description>
+        </odl:argument>
+        <odl:argument odl:name="id" odl:type="uint32" odl:in="true" odl:mandatory="true">
+          <odl:description>the notification identifier, must be unique withing gmap</odl:description>
+        </odl:argument>
+        <odl:argument odl:name="name" odl:type="string" odl:in="true">
+          <odl:description>user friendly notification name</odl:description>
+        </odl:argument>
+        <odl:argument odl:name="data" odl:type="unknown" odl:in="true">
+          <odl:description>data that must be attached to the notification</odl:description>
+        </odl:argument>
+      </odl:function>
+      <odl:function odl:name="csiFinished">
+        <odl:defined odl:file="/etc/amx/gmap-server/gmap-server-definitions.odl" odl:line="1173"/>
+        <odl:return odl:type="bool"/>
+        <odl:description>
+          <p>Indicate that a client side implementation is done </p>
+          <p>RPC functions of a device can be delegated to a gMap client application. Whenever the client has finished executing the RPC, it must call this function to indicate that the execution of the delegated function is done. </p>
+          <p/>
+        </odl:description>
+        <odl:version-description>6.1</odl:version-description>
+        <odl:argument odl:name="ID" odl:type="uint32" odl:in="true" odl:mandatory="true">
+          <odl:description>the unique id of the delegated RPC, each delegated RPC will have its own unique ID.</odl:description>
+        </odl:argument>
+        <odl:argument odl:name="status" odl:type="uint32" odl:in="true" odl:mandatory="true">
+          <odl:description>the exection status (done or error)</odl:description>
+        </odl:argument>
+        <odl:argument odl:name="retval" odl:type="unknown" odl:in="true" odl:mandatory="true">
+          <odl:description>the return value of the delegated RPC</odl:description>
+        </odl:argument>
+        <odl:argument odl:name="errors" odl:type="list" odl:in="true"/>
+      </odl:function>
+      <odl:function odl:name="import">
+        <odl:defined odl:file="/etc/amx/gmap-server/gmap-server-definitions.odl" odl:line="1175"/>
+        <odl:return odl:type="bool"/>
+      </odl:function>
+      <odl:function odl:name="export">
+        <odl:defined odl:file="/etc/amx/gmap-server/gmap-server-definitions.odl" odl:line="1177"/>
+        <odl:return odl:type="bool"/>
+      </odl:function>
+    </odl:object>
+  </odl:datamodel>
+</odl:datamodel-set>

@@ -1,0 +1,11 @@
+Source: amxo-cg
+Section: devel
+Priority: optional
+Maintainer: Peter.De.Herdt <peter.deherdt@softathome.com>
+
+Package: amxo-cg
+Architecture: amd64
+Depends: ${shlibs:Depends}
+Description: AMX ODL Compiler Generator
+ Object Definition Language Compiler/Generator
+ 

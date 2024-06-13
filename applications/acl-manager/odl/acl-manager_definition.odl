@@ -1,0 +1,59 @@
+%define {
+    /* 
+        ACL manager object.
+
+        This plugin is responsible for keeping track of ACLs and merging ACL
+        files for a given role to a master ACL file for that role
+    */
+    object ACLManager {
+        /*
+            Keeps track of the different roles that each have their own
+            permissions. A role can be a single role or a combination of
+            multiple roles.
+        */
+        %persistent object Role[] {
+            on action validate call role_instance_is_valid;
+            counted with RoleNumberOfEntries;
+
+            /*
+                Alias of the role.
+            */
+            %persistent %unique %key string Alias;
+
+            /*
+                Name of the role.
+            */
+            %persistent %unique %key string Name;
+
+            /*
+                Indicates whether the role is a single role or a combination
+                of multiple roles.
+
+                Must be one of "Single" or "Combined"
+            */
+            %persistent %read-only string Type {
+                default "Single";
+                on action validate call check_enum 
+                    ["Single", "Combined"];
+            }
+
+            /*
+                Comma-separated list of Role names that compose this Role. Must
+                be an empty string in case of a single role.
+            */
+            %read-only %persistent csv_string CombinedFrom;
+
+            /*
+                Update the master ACL file for the selected role.
+            */
+            void UpdateACL();
+        }
+    }
+}
+
+%populate {
+    on event "dm:instance-added" call aclm_role_added
+        filter 'path == "ACLManager.Role."';
+    on event "dm:instance-removed" call aclm_role_removed
+        filter 'path == "ACLManager.Role."';
+}

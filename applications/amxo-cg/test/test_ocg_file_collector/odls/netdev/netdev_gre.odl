@@ -1,0 +1,20 @@
+%define {
+    select NetDev {
+        object GRE[] {
+            string Type {
+                on action validate call check_enum ["gre", "gretap", "ip6gre", "ip6gretap"];
+                default "gretap";
+            }
+            int32 Link;
+            string Local;
+            string Remote;
+            string IFlags; // seq csum
+            string OFlags; // seq csum
+            uint32 IKey;
+            uint32 OKey;
+            string TTL="inherit"; // inherit or number
+            string TOS="inherit"; // inherit or number
+            bool PMTUDisc;
+        }        
+    }
+}

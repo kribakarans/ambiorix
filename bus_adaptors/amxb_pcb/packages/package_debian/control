@@ -1,0 +1,11 @@
+Source: mod-amxb-pcb
+Section: devel
+Priority: optional
+Maintainer: peter.deherdt <peter.deherdt@softathome.com>
+
+Package: mod-amxb-pcb
+Architecture: amd64
+Depends: ${shlibs:Depends}
+Description: PCB backend implementation for amxb
+  PCB Backend
+ 

@@ -1,0 +1,24 @@
+#!/usr/bin/amxrt
+
+%config {
+    // amxo parser config-options
+    import-dbg = true;
+
+    // Application specific settings
+    // persistent storage location
+    rw_data_path = "${prefix}/etc/config";
+
+    // main files
+    definition_file = "${name}_definition.odl";
+    save_file = "${rw_data_path}/${name}/${name}.odl";
+    defaults_file = "${name}_defaults.odl";
+}
+
+import "${name}.so" as "${name}";
+
+include "${definition_file}";
+?include "${save_file}":"${defaults_file}";
+
+%define {
+    entry-point la_threshold.threshold_main;
+}

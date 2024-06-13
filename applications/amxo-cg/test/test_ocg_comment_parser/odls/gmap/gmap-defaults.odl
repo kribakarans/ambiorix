@@ -1,0 +1,13 @@
+%config {
+    rw_data_path = "/tmp";
+    install_data_path = "/usr/lib";
+
+    gmap_save_path = "${rw_data_path}/gmap";
+    gmap_defaults_path = "${install_data_path}/gmap/config";
+}
+
+%populate {
+    object Devices {
+    }
+}
+/** @location sah_services_gmap /gmap-defaults.odl.m4 */

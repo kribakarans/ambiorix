@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odl:datamodel-set xmlns="http://www.w3.org/1999/xhtml" xmlns:odl="http://www.softathome.com/odl">
+  <odl:locations>
+    <odl:location odl:file="/etc/amx/gmap-server/mibs/ip.odl" odl:component="ip" odl:path="/etc/amx/gmap-server/mibs/ip.odl"/>
+  </odl:locations>
+  <odl:datamodel odl:source="/etc/amx/gmap-server/mibs/ip.odl">
+    <odl:object odl:name="ip" odl:path="ip" odl:mib="true">
+      <odl:defined odl:file="/etc/amx/gmap-server/mibs/ip.odl" odl:line="71"/>
+      <odl:description>
+        <p>MIB is loaded on all network devices that have (or had) an ip address </p>
+        <p>All devices matching expression: "ipv4 or ipv6" are extended with this MIB </p>
+        <p/>
+      </odl:description>
+      <odl:version-description>6.0</odl:version-description>
+      <odl:function odl:name="getAddress">
+        <odl:defined odl:file="/etc/amx/gmap-server/mibs/ip.odl" odl:line="83"/>
+        <odl:return odl:type="list">
+          <odl:description>a list of {ip_address_t} structures</odl:description>
+        </odl:return>
+        <odl:description>
+          <p>Get a list of ip address of the device </p>
+          <p>A device can contain multiple ip addresses (ipv4 and/or ipv6). </p>
+          <p/>
+        </odl:description>
+        <odl:version-description>6.0</odl:version-description>
+        <odl:argument odl:name="family" odl:type="string" odl:in="true">
+          <odl:description>"ipv4" to get the list of IPv4 address, "ipv6" to get the list of IPv6 address or empty to get all addresses (default = "")</odl:description>
+        </odl:argument>
+      </odl:function>
+      <odl:parameter odl:name="IPAddress" odl:type="string">
+        <odl:defined odl:file="/etc/amx/gmap-server/mibs/ip.odl" odl:line="90"/>
+        <odl:description>
+          <p>The prefered ip address of the device. </p>
+          <p/>
+        </odl:description>
+        <odl:version-description>6.0</odl:version-description>
+      </odl:parameter>
+      <odl:parameter odl:name="IPAddressSource" odl:type="string">
+        <odl:defined odl:file="/etc/amx/gmap-server/mibs/ip.odl" odl:line="96"/>
+        <odl:description>
+          <p>The source that added the prefered ip address of the device. </p>
+          <p/>
+        </odl:description>
+        <odl:version-description>6.0</odl:version-description>
+      </odl:parameter>
+      <odl:object odl:name="IPv4Address" odl:path="ip.IPv4Address" odl:template="true">
+        <odl:defined odl:file="/etc/amx/gmap-server/mibs/ip.odl" odl:line="103"/>
+        <odl:description>
+          <p>List of ipv4 addresses discovered for the device </p>
+          <p/>
+        </odl:description>
+        <odl:version-description>6.0</odl:version-description>
+        <odl:parameter odl:name="Address" odl:type="string">
+          <odl:defined odl:file="/etc/amx/gmap-server/mibs/ip.odl" odl:line="111"/>
+          <odl:description>
+            <p>The ipv4 address </p>
+            <p/>
+          </odl:description>
+          <odl:version-description>6.0</odl:version-description>
+        </odl:parameter>
+        <odl:parameter odl:name="Status" odl:type="string">
+          <odl:defined odl:file="/etc/amx/gmap-server/mibs/ip.odl" odl:line="117"/>
+          <odl:description>
+            <p>The status of the ipv4 address, can be reachable or error </p>
+            <p/>
+          </odl:description>
+          <odl:version-description>6.0</odl:version-description>
+        </odl:parameter>
+        <odl:parameter odl:name="Scope" odl:type="string">
+          <odl:defined odl:file="/etc/amx/gmap-server/mibs/ip.odl" odl:line="123"/>
+          <odl:description>
+            <p>The scope of the ipv4 address </p>
+            <p/>
+          </odl:description>
+          <odl:version-description>6.0</odl:version-description>
+        </odl:parameter>
+        <odl:parameter odl:name="AddressSource" odl:type="string">
+          <odl:defined odl:file="/etc/amx/gmap-server/mibs/ip.odl" odl:line="131"/>
+          <odl:description>
+            <p>An string containing an identifier or name. </p>
+            <p>Should give an indication of what added the ip address to the data model </p>
+            <p/>
+          </odl:description>
+          <odl:version-description>6.0</odl:version-description>
+        </odl:parameter>
+        <odl:parameter odl:name="Reserved" odl:type="bool">
+          <odl:defined odl:file="/etc/amx/gmap-server/mibs/ip.odl" odl:line="140"/>
+          <odl:description>
+            <p>Indicates if the IPv4 address is reserved for this device </p>
+            <p>This is only true when the IPv4 address is assigned to the device by the DHCPv4 server and the address is configured as a static lease. </p>
+            <p/>
+          </odl:description>
+          <odl:version-description>6.0</odl:version-description>
+        </odl:parameter>
+      </odl:object>
+      <odl:object odl:name="IPv6Address" odl:path="ip.IPv6Address" odl:template="true">
+        <odl:defined odl:file="/etc/amx/gmap-server/mibs/ip.odl" odl:line="148"/>
+        <odl:description>
+          <p>List of ipv4 addresses discovered for the device </p>
+          <p/>
+        </odl:description>
+        <odl:version-description>6.0</odl:version-description>
+        <odl:parameter odl:name="Address" odl:type="string">
+          <odl:defined odl:file="/etc/amx/gmap-server/mibs/ip.odl" odl:line="156"/>
+          <odl:description>
+            <p>The ipv4 address </p>
+            <p/>
+          </odl:description>
+          <odl:version-description>6.0</odl:version-description>
+        </odl:parameter>
+        <odl:parameter odl:name="Status" odl:type="string">
+          <odl:defined odl:file="/etc/amx/gmap-server/mibs/ip.odl" odl:line="162"/>
+          <odl:description>
+            <p>The status of the ipv4 address, can be reachable or error </p>
+            <p/>
+          </odl:description>
+          <odl:version-description>6.0</odl:version-description>
+        </odl:parameter>
+        <odl:parameter odl:name="Scope" odl:type="string">
+          <odl:defined odl:file="/etc/amx/gmap-server/mibs/ip.odl" odl:line="168"/>
+          <odl:description>
+            <p>The scope of the ipv4 address </p>
+            <p/>
+          </odl:description>
+          <odl:version-description>6.0</odl:version-description>
+        </odl:parameter>
+        <odl:parameter odl:name="AddressSource" odl:type="string">
+          <odl:defined odl:file="/etc/amx/gmap-server/mibs/ip.odl" odl:line="176"/>
+          <odl:description>
+            <p>An string containing an identifier or name. </p>
+            <p>Should give an indication of what added the ip address to the data model </p>
+            <p/>
+          </odl:description>
+          <odl:version-description>6.0</odl:version-description>
+        </odl:parameter>
+      </odl:object>
+    </odl:object>
+  </odl:datamodel>
+</odl:datamodel-set>

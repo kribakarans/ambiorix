@@ -1,0 +1,35 @@
+#!/usr/bin/amxrt
+
+%config {
+    name = "usp_agent";
+
+    // odl parser config options
+    import-dbg = true;
+
+    // amx-cg config options
+    rw_data_path = "${prefix}/etc/config";
+
+    //main files
+    definition_file = "${name}_definition.odl";
+    save_file = "${rw_data_path}/${name}/odl/${name}_save.odl";
+    defaults_file = "${name}_defaults.odl";
+    version_file = "${name}_software_version.odl";
+
+    sahtrace = {
+        type = "syslog",
+        level = 500
+    };
+    trace-zones = ["uspa", "usp_com", "uspl_trace"];
+}
+
+import "${name}.so" as "${name}";
+import "mod-dmext.so";
+
+#include "mod_sahtrace.odl";
+include "${definition_file}";
+&include "usp_agent-storage.odl";
+#include "${version_file}";
+
+%define {
+    entry-point usp_agent.usp_agent_main;
+}

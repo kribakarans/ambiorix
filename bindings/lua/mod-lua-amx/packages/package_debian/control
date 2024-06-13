@@ -1,0 +1,9 @@
+Source: mod-lua-amx
+Section: devel
+Priority: optional
+Maintainer: Softathome <support.opensource@softathome.com>
+
+Package: mod-lua-amx
+Architecture: amd64
+Depends: ${shlibs:Depends}
+Description: Ambiorix LUA extension

@@ -1,0 +1,5 @@
+**/output/*
+**/run_test
+mod-amxb-*.*
+/include_priv/amxb_dummy_version.h
+

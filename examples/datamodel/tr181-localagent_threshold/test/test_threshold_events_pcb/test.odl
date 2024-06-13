@@ -1,0 +1,72 @@
+%config {
+    // Application name
+    name = "test_dm";
+
+    uris = ["pcb:/tmp/test.sock"];
+    backends = ["/usr/bin/mods/amxb/mod-amxb-pcb.so"];
+
+    // amxrt config-options
+    auto-detect = false;
+    auto-connect = true;
+    daemon = false;
+    priority = 0;
+}
+
+%define {
+    object Ethernet {
+        bool WolSupported = false;
+
+        object Interface[] {
+            bool Enable = false;
+
+            string Status {
+                default "Down";
+                on action validate call check_enum ["Up", "Down", "Unknown", "Dormant", "NotPresent", "LowerLayerDown", "Error"];
+            }
+
+            %unique %key string Alias {
+                on action validate call check_maximum_length 64;
+            }
+
+            string Name {
+                on action validate call check_maximum_length 64;
+            }
+
+            uint32 LastChange;
+
+            csv_string LowerLayers {
+                on action validate call check_maximum_length 1024;
+            }
+
+            bool Upstream;
+
+            string MACAddress {
+                on action validate call check_maximum_length 17;
+            }
+
+            int32 MaxBitRate {
+                on action validate call check_minimum -1;
+            }
+
+            uint32 CurrentBitRate;
+
+            string DuplexMode {
+                default "Auto";
+                on action validate call check_enum ["Half", "Full", "Auto"];
+            }
+
+            bool EEECapability = false;
+
+            bool EEEEnable = false;
+
+            object Stats {
+                uint64 BytesSent;
+                uint64 BytesReceived;
+                uint64 PacketsSent;
+                uint64 PacketsReceived;
+                uint64 ErrorsSent;
+                uint64 ErrorsReceived;
+            }
+        }
+    }
+}

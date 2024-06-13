@@ -1,0 +1,6 @@
+%populate { 
+ 	object LocalAgent { 
+ 		parameter SoftwareVersion = "master"; 
+ 	} 
+ }
+

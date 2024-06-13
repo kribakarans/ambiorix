@@ -1,0 +1,16 @@
+%define {
+    select NetDev {
+       	object ConversionTable {
+            object Protocol[];
+            object Table[] {
+                on action destroy call table_destroy;
+            }
+            object Scope[];
+        }
+    }
+}
+
+%populate {
+    on event "dm:instance-added" call convert_entry_added
+        filter 'path == "NetDev.ConversionTable.Table."';
+}

@@ -1,0 +1,6 @@
+%populate {
+    object NetDev.Link {
+        instance add (0,"") {
+        }
+    }
+}

@@ -1,0 +1,24 @@
+%define {
+    select NetDev.Link {
+		object IPv6Route[] {
+			/* OIF=index of parent Link object. 
+			   But! there is also IIF, and nexthops for multipath 
+			   ... and OIF is not even a key param of Route. 
+			   Anyway, putting Route undex Link is convenient + aligns with NeMo principles
+			 */
+			uint8 DstLen;
+			string Table="main"; // unspec default main local | user defined from NetDev.ConversionTable.Table
+			string Protocol="boot"; // redirect kernel boot static | user defined from NetDev.ConversionTable.Protocol
+			string Scope="global"; // global site link host nowhere | user defined from NetDev.ConversionTable.Scope
+			string Type="unicast"; // unicast local broadcast anycast multicast blackhole unreachable prohibit throw nat
+			string Dst;
+			int32 Priority;
+			string Gateway;
+			string PrefSrc;
+			// metrics - support only a few. Adding more is easy
+			uint32 MTU;
+			uint32 AdvMSS;
+			uint32 HopLimit;
+		}
+    }
+}

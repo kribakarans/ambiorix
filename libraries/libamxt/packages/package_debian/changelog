@@ -1,0 +1,703 @@
+libamxt (1.0.0) unstable; urgency=medium
+
+  * Avoid g++ compiler warning for new .add_value variant function pointer
+
+ -- SAH bot <sahbot@softathome.com>  Tue, 30 Apr 2024 07:03:41 +0000
+
+libamxt (0.2.28) unstable; urgency=medium
+
+  * [cli]Always add last command at the bottom of the history
+
+ -- SAH bot <sahbot@softathome.com>  Fri, 01 Mar 2024 09:39:06 +0000
+
+libamxt (0.2.27) unstable; urgency=medium
+
+  * CLONE - Functional issues linked to parenthesis escaping in the data model
+
+ -- SAH bot <sahbot@softathome.com>  Tue, 06 Feb 2024 09:32:12 +0000
+
+libamxt (0.2.26) unstable; urgency=medium
+
+  * [amx-cli] Allow proper escaping of variable in cli for input and display
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DE HERDT <peter.deherdt@softathome.com>  Wed, 10 Jan 2024 10:34:51 +0000
+
+libamxt (0.2.25) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DE HERDT <peter.deherdt@softathome.com>  Wed, 29 Nov 2023 16:17:04 +0000
+
+libamxt (0.2.24) unstable; urgency=medium
+
+  * Ubus-cli does not start if no tty is available
+
+ -- SAH bot <sahbot@softathome.com>  Mon, 20 Nov 2023 11:07:18 +0000
+
+libamxt (0.2.23) unstable; urgency=medium
+
+  * Refactor libamxo - libamxp: move fd and connection management out of libamxo
+
+ -- SAH bot <sahbot@softathome.com>  Sun, 05 Nov 2023 19:47:28 +0000
+
+libamxt (0.2.22) unstable; urgency=medium
+
+  * Refactor libamxo - libamxp: move fd and connection management out of libamxo
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Sat, 04 Nov 2023 20:26:02 +0000
+
+libamxt (0.2.21) unstable; urgency=medium
+
+  * [amx-cli]List doesn't provide output when redirected to file
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 30 Oct 2023 10:00:45 +0000
+
+libamxt (0.2.20) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 17 Oct 2023 13:03:39 +0000
+
+libamxt (0.2.19) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 12 Oct 2023 10:44:45 +0000
+
+libamxt (0.2.18) unstable; urgency=medium
+
+  * [ubus-cli/ba-cli] Pasting multiple commands trims first letters
+  * amx-cli crash when unhandled key strokes are pressed
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 09 Oct 2023 06:14:21 +0000
+
+libamxt (0.2.17) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 22 Sep 2023 11:03:50 +0000
+
+libamxt (0.2.16) unstable; urgency=medium
+
+  * [CHR2fA] ubus-cli console generate a segmentation fault
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 21 Sep 2023 10:59:53 +0000
+
+libamxt (0.2.15) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 14 Sep 2023 18:17:33 +0000
+
+libamxt (0.2.14) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 08 Sep 2023 10:05:19 +0000
+
+libamxt (0.2.13) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 01 Sep 2023 06:01:37 +0000
+
+libamxt (0.2.12) unstable; urgency=medium
+
+  * Enforce coding style - no declarations after code
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 25 Jul 2023 06:46:47 +0000
+
+libamxt (0.2.11) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 19 Jul 2023 11:54:52 +0000
+
+libamxt (0.2.10) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 27 Jun 2023 17:12:12 +0000
+
+libamxt (0.2.9) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 20 Jun 2023 08:27:49 +0000
+
+libamxt (0.2.8) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 01 Jun 2023 18:57:25 +0000
+
+libamxt (0.2.7) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 24 May 2023 14:16:59 +0000
+
+libamxt (0.2.6) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 10 May 2023 09:08:09 +0000
+
+libamxt (0.2.5) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 08 May 2023 07:11:43 +0000
+
+libamxt (0.2.4) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 21 Apr 2023 16:46:00 +0000
+
+libamxt (0.2.3) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Sat, 08 Apr 2023 17:47:47 +0000
+
+libamxt (0.2.2) unstable; urgency=medium
+
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 28 Mar 2023 05:53:47 +0000
+
+libamxt (0.2.1) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 17 Mar 2023 13:30:55 +0000
+
+libamxt (0.2.0) unstable; urgency=medium
+
+  * Some control key sequences are incorrect defined
+
+ -- SAH bot <sahbot@softathome.com>  Wed, 15 Mar 2023 13:02:50 +0000
+
+libamxt (0.1.70) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 10 Mar 2023 22:25:15 +0000
+
+libamxt (0.1.69) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 22 Feb 2023 14:30:37 +0000
+
+libamxt (0.1.68) unstable; urgency=medium
+
+  * [WNC] Keyboard arrows not working within ubus-cli on serial
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 16 Feb 2023 10:17:56 +0000
+
+libamxt (0.1.67) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 13 Feb 2023 12:23:39 +0000
+
+libamxt (0.1.66) unstable; urgency=medium
+
+  * [AMX][CLI] Scripting: ubus-cli or ba-cli doesn't output anything without a pseudo-terminal
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 13 Feb 2023 10:41:29 +0000
+
+libamxt (0.1.65) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 30 Jan 2023 17:13:27 +0000
+
+libamxt (0.1.64) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 11 Jan 2023 20:37:27 +0000
+
+libamxt (0.1.63) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 14 Dec 2022 09:23:54 +0000
+
+libamxt (0.1.62) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 06 Dec 2022 14:04:34 +0000
+
+libamxt (0.1.61) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 21 Nov 2022 09:54:03 +0000
+
+libamxt (0.1.60) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Sat, 19 Nov 2022 12:16:22 +0000
+
+libamxt (0.1.59) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 15 Nov 2022 12:31:07 +0000
+
+libamxt (0.1.58) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 14 Nov 2022 07:42:47 +0000
+
+libamxt (0.1.57) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 03 Nov 2022 11:36:07 +0000
+
+libamxt (0.1.56) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 03 Nov 2022 10:40:15 +0000
+
+libamxt (0.1.55) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 20 Oct 2022 14:36:01 +0000
+
+libamxt (0.1.54) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 05 Oct 2022 18:46:44 +0000
+
+libamxt (0.1.53) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 05 Oct 2022 12:45:12 +0000
+
+libamxt (0.1.52) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 12 Sep 2022 12:55:23 +0000
+
+libamxt (0.1.51) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 29 Aug 2022 07:41:59 +0000
+
+libamxt (0.1.50) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 18 Aug 2022 13:07:46 +0000
+
+libamxt (0.1.49) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 17 Aug 2022 08:51:44 +0000
+
+libamxt (0.1.48) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 25 Jul 2022 06:45:58 +0000
+
+libamxt (0.1.47) unstable; urgency=medium
+
+  * A quoted string must always be interpreted as a string
+
+ -- SAH bot <sahbot@softathome.com>  Wed, 22 Jun 2022 09:27:08 +0000
+
+libamxt (0.1.46) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 01 Jun 2022 12:15:18 +0000
+
+libamxt (0.1.45) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 30 May 2022 08:36:03 +0000
+
+libamxt (0.1.44) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 23 May 2022 11:15:09 +0000
+
+libamxt (0.1.43) unstable; urgency=medium
+
+  * The command parser does not parse embedded string correctly
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 19 May 2022 15:18:21 +0000
+
+libamxt (0.1.42) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 25 Apr 2022 08:25:36 +0000
+
+libamxt (0.1.41) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 06 Apr 2022 10:06:20 +0000
+
+libamxt (0.1.40) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 15 Feb 2022 05:47:37 +0000
+
+libamxt (0.1.39) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 04 Feb 2022 15:27:29 +0000
+
+libamxt (0.1.38) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 25 Jan 2022 06:27:40 +0000
+
+libamxt (0.1.37) unstable; urgency=medium
+
+  * Command value parser ignores single or double quotes for values
+
+ -- SAH bot <sahbot@softathome.com>  Thu, 16 Dec 2021 16:40:26 +0000
+
+libamxt (0.1.36) unstable; urgency=medium
+
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 18 Nov 2021 10:19:52 +0000
+
+libamxt (0.1.35) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 16 Nov 2021 17:30:13 +0000
+
+libamxt (0.1.34) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 10 Nov 2021 12:45:56 +0000
+
+libamxt (0.1.33) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 28 Oct 2021 22:12:11 +0000
+
+libamxt (0.1.32) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 20 Oct 2021 18:46:49 +0000
+
+libamxt (0.1.31) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 07 Oct 2021 14:53:11 +0000
+
+libamxt (0.1.30) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 24 Sep 2021 14:27:07 +0000
+
+libamxt (0.1.29) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 23 Sep 2021 09:40:12 +0000
+
+libamxt (0.1.28) unstable; urgency=medium
+
+  * Generate junit xml files with unit-tests
+  * Issue: ambiorix/libraries/libamxt#6 Generate junit xml files with unit-tests
+
+ -- SAH bot <sahbot@softathome.com>  Tue, 07 Sep 2021 05:12:10 +0000
+
+libamxt (0.1.27) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 23 Aug 2021 10:33:22 +0000
+
+libamxt (0.1.26) unstable; urgency=medium
+
+  * Auto detect file descriptor of terminal
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 02 Aug 2021 12:02:26 +0000
+
+libamxt (0.1.25) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 09 Jul 2021 08:26:17 +0000
+
+libamxt (0.1.24) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 02 Jul 2021 18:42:01 +0000
+
+libamxt (0.1.23) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 28 Jun 2021 12:32:59 +0000
+
+libamxt (0.1.22) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 21 Jun 2021 07:30:04 +0000
+
+libamxt (0.1.21) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 18 Jun 2021 22:28:29 +0000
+
+libamxt (0.1.20) unstable; urgency=medium
+
+  * [tr181 plugins][makefile] Dangerous clean target for all tr181 components
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 08 Jun 2021 08:43:58 +0000
+
+libamxt (0.1.19) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 01 Jun 2021 06:40:23 +0000
+
+libamxt (0.1.18) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 31 May 2021 08:39:17 +0000
+
+libamxt (0.1.17) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 21 May 2021 11:13:08 +0000
+
+libamxt (0.1.16) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Sun, 09 May 2021 20:16:10 +0000
+
+libamxt (0.1.15) unstable; urgency=medium
+
+  * Use common macros from libamxc
+  * Update dependencies in .gitlab-ci.yml
+  * Enable auto opensourcing
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 04 May 2021 07:41:31 +0000
+
+libamxt (0.1.14) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 23 Apr 2021 18:34:06 +0000
+
+libamxt (0.1.13) unstable; urgency=medium
+
+  * Fixes multiline input
+  * Fixes multiline input and history
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 21 Apr 2021 08:57:18 +0000
+
+libamxt (0.1.12) unstable; urgency=medium
+
+  *  remove fakeroot dependency on host to build WRT image 
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 15 Apr 2021 19:58:40 +0000
+
+libamxt (0.1.11) unstable; urgency=medium
+
+  * Move copybara to baf
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 08 Apr 2021 20:19:00 +0000
+
+libamxt (0.1.9) unstable; urgency=medium
+
+  * Updates versions of libamxc and libamxp for CI/CD
+
+ -- Peter De Herdt <peter.deherdt@softathome.com>  Fri, 26 Mar 2021 23:27:47 +0000
+
+libamxt (0.1.8) unstable; urgency=medium
+
+  * Step-up versions of libamxc and libamxp for CI
+
+ -- Peter De Herdt <peter.deherdt@softathome.com>  Wed, 10 Mar 2021 10:42:23 +0000
+
+libamxt (0.1.7) unstable; urgency=medium
+
+  * Migrate to new licenses format (baf)
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 25 Feb 2021 13:30:00 +0000
+
+libamxt (0.1.6) unstable; urgency=medium
+
+  * Step-up versions of libamxc and libamxp for CI
+
+ -- Peter De Herdt <peter.deherdt@softathome.com>  Sun, 14 Feb 2021 08:01:58 +0000
+
+libamxt (0.1.5) unstable; urgency=medium
+
+  * Updates versions of libamxc,libamxp for CI/CD pipelines
+
+ -- Peter De Herdt <peter.deherdt@softathome.com>  Thu, 28 Jan 2021 09:19:37 +0000
+
+libamxt (0.1.4) unstable; urgency=medium
+
+  * Auto generate makefiles using build agnositc file (baf)
+  * Adds and updates control key sequences
+  * Re-organizes source files
+  * Only include objects in static library
+  * Do not auto-cast text between quotes
+  * Fixes seg-fault in amxt_tty_read
+
+ -- Peter De Herdt <peter.deherdt@softathome.com>  Mon, 18 Jan 2021 17:46:40 +0000
+
+libamxt (0.1.3) unstable; urgency=medium
+
+  * Restrict history size
+
+ -- Peter De Herdt <peter.deherdt@softathome.com>  Sun, 10 Jan 2021 20:25:32 +0000
+
+libamxt (0.1.2) unstable; urgency=medium
+
+  * Adds options to completion
+  * Parameter completion
+  * Logging
+  * Silent feature
+  * Step up version of libamxc and libamxp
+  * Re-organizes cmd function header files
+  * Improved value parsing
+  * Adds tests
+  * Changes amxt_cmd_pop_part implementation
+  * Adds option parsing
+
+ -- Peter De Herdt <peter.deherdt@softathome.com>  Mon, 04 Jan 2021 11:29:47 +0000
+
+libamxt (0.1.1) unstable; urgency=medium
+
+  * Updates makefiles
+
+ -- Peter De Herdt <peter.deherdt@softathome.com>  Mon, 30 Nov 2020 15:36:40 +0000
+
+libamxt (0.1.0) unstable; urgency=medium
+
+  * Add variant move callback to tty variant
+
+ -- Peter De Herdt <peter.deherdt@softathome.com>  Sun, 29 Nov 2020 15:50:09 +0000
+
+libamxt (0.0.10) unstable; urgency=medium
+
+- update readme
+- Fix debian package dependencies
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 17 Nov 2020 16:05:12 +0000
+
+libamxt (0.0.9) unstable; urgency=medium
+
+  * tty_write_raw - no resolving
+  * config option api tests
+
+ -- Peter De Herdt <peter.deherdt@softathome.com>  Sun, 15 Nov 2020 12:02:23 +0000
+
+libamxt (0.0.8) unstable; urgency=medium
+
+  * Configuration variables
+  * Command line resolves configuration variables and environment variables
+  * Improve multi-line prompt support
+
+ -- Peter De Herdt <peter.deherdt@softathome.com>  Fri, 13 Nov 2020 15:24:23 +0000
+
+libamxt (0.0.7) unstable; urgency=medium
+
+  * command parse tests
+
+ -- Peter De Herdt <peter.deherdt@softathome.com>  Wed, 11 Nov 2020 16:48:21 +0000
+
+libamxt (0.0.6) unstable; urgency=medium
+
+  * Refactor parsing api
+  * Fixes install target
+  * Fixes package build
+
+ -- Peter De Herdt <peter.deherdt@softathome.com>  Mon, 09 Nov 2020 16:19:42 +0000
+
+libamxt (0.0.5) unstable; urgency=medium
+
+  * Command parsing
+  * Refactor lib amxt
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Sun, 08 Nov 2020 20:45:23 +0000
+
+libamxt (0.0.4) unstable; urgency=medium
+
+  * Gitlab ci/cd - use templates
+  * Implementation - applies changes in api of amxc
+  * Makefile - parse version
+
+ -- sah4009 <peter.deherdt@softathome.com>  Mon, 24 Feb 2020 13:41:57 +0000
+
+libamxt (0.0.3) unstable; urgency=medium
+
+  * define colors
+  * write formatted string 
+  * Adds utility functions
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Sat, 08 Feb 2020 19:00:20 +0000
+
+libamxt (0.0.2) unstable; urgency=medium
+
+  * Add utility functions
+  * Add tests for eventloop wrappers functions
+  * Add eventloop wrapper functions
+  * Add amxt_tty_t variant type
+  * Add history save and load functions
+  * Adds tests for eventloop wrappers functions
+  * Adds eventloop wrapper functions
+  * Makes it possible to change the output fd
+
+ -- sah4009 <peter.deherdt@softathome.com>  Wed, 05 Feb 2020 10:27:33 +0000
+
+libamxt (0.0.0) unstable; urgency=medium
+
+  * Initial version
+
+ -- Peter De Herdt <peter.deherdt@softathome.com>  Wed, 15 Jan 2020 13:32:49 +0000
+ 

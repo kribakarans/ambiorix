@@ -1,0 +1,68 @@
+%define {
+    %persistent object Greeter {
+        %persistent %read-only uint32 MaxHistory {
+            on action validate call check_minimum 1;
+            default 10;
+        }
+
+        string State {
+            default "Idle";
+            on action validate call check_enum ["Idle", "Start", "Running", "Stop"];
+            on action validate call check_change;
+        }
+
+        string say(%in %mandatory string from,
+                   %in %mandatory string message,
+                   %in bool retain = false);
+
+        uint32 setMaxHistory(%in %mandatory uint32 max);
+
+        bool save(%in %strict string file = "${save_file}");
+        bool load(%in %strict string file = "${save_file}");
+
+        %persistent %read-only object History[] {
+            counted with HistorySize;
+            
+            %template uint32 clear(%in bool force = false);
+
+            %persistent %read-only string From {
+                on action validate call check_maximum_length 64;
+            }
+            %persistent %read-only string Message {
+                on action validate call check_maximum_length 256;
+            }
+            %persistent bool Retain = false;
+        }
+
+        %read-only object Statistics {
+            void periodic_inform(%in uint32 secs);
+            void reset();
+
+            on action read call stats_read;
+            on action list call stats_list;
+            on action describe call stats_describe;
+        }
+    }
+}
+
+%populate {
+    on event "dm:object-changed" call enable_greeter
+        filter 'object == "Greeter." && 
+                parameters.State.from == "Idle" && 
+                parameters.State.to == "Start"';
+
+    on event "dm:object-changed" call disable_greeter
+        filter 'object == "Greeter." && 
+                parameters.State.from == "Running" && 
+                parameters.State.to == "Stop"';
+}
+
+%populate {
+    object Greeter.History {
+        instance add (0,"") {
+            !read-only parameter From = "odl parser";
+            !read-only parameter Message = "Welcome to the Greeter App";
+            parameter Retain = true;
+        }
+    }
+}

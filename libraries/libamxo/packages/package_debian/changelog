@@ -1,0 +1,1342 @@
+libamxo (5.0.0) unstable; urgency=medium
+
+  * Add `+=` syntax for appending lists in config sections
+  * The amxo parser struct contains unused fields and should be removed
+
+ -- SAH bot <sahbot@softathome.com>  Tue, 30 Apr 2024 09:50:16 +0000
+
+libamxo (4.3.8) unstable; urgency=medium
+
+  * Update reference to mod-dmext
+
+ -- SAH bot <sahbot@softathome.com>  Fri, 19 Apr 2024 15:45:03 +0000
+
+libamxo (4.3.7) unstable; urgency=medium
+
+  * Fix test dependencies
+
+ -- SAH bot <sahbot@softathome.com>  Thu, 18 Apr 2024 12:14:27 +0000
+
+libamxo (4.3.6) unstable; urgency=medium
+
+  * Fix nested list parsed as not-nested list
+
+ -- SAH bot <sahbot@softathome.com>  Thu, 21 Mar 2024 20:12:10 +0000
+
+libamxo (4.3.5) unstable; urgency=medium
+
+  * fix string literal with leading/trailing spaces parsed as without
+
+ -- SAH bot <sahbot@softathome.com>  Thu, 21 Mar 2024 20:00:26 +0000
+
+libamxo (4.3.4) unstable; urgency=medium
+
+  * Update documentation on mutable unique keys
+
+ -- SAH bot <sahbot@softathome.com>  Fri, 08 Mar 2024 13:12:09 +0000
+
+libamxo (4.3.3) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DE HERDT <peter.deherdt@softathome.com>  Wed, 10 Jan 2024 11:38:40 +0000
+
+libamxo (4.3.2) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DE HERDT <peter.deherdt@softathome.com>  Wed, 13 Dec 2023 05:30:36 +0000
+
+libamxo (4.3.1) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DE HERDT <peter.deherdt@softathome.com>  Tue, 12 Dec 2023 17:13:58 +0000
+
+libamxo (4.3.0) unstable; urgency=medium
+
+  * Add parameter constraints to generated xml files
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DE HERDT <peter.deherdt@softathome.com>  Wed, 06 Dec 2023 13:36:48 +0000
+
+libamxo (4.2.6) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DE HERDT <peter.deherdt@softathome.com>  Wed, 29 Nov 2023 19:05:38 +0000
+
+libamxo (4.2.5) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DE HERDT <peter.deherdt@softathome.com>  Tue, 21 Nov 2023 15:32:40 +0000
+
+libamxo (4.2.4) unstable; urgency=medium
+
+  * pwhm datamodel load failure after reboot
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DE HERDT <peter.deherdt@softathome.com>  Fri, 17 Nov 2023 17:11:04 +0000
+
+libamxo (4.2.3) unstable; urgency=medium
+
+  * [Amxo] Cannot create synchronization template without adding "{i}." to the objects
+
+ -- Peter DE HERDT <peter.deherdt@softathome.com>  Tue, 14 Nov 2023 17:47:41 +0000
+
+libamxo (4.2.2) unstable; urgency=medium
+
+  * Refactor libamxo - libamxp: move fd and connection management out of libamxo
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 06 Nov 2023 08:39:23 +0000
+
+libamxo (4.2.1) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 30 Oct 2023 10:39:43 +0000
+
+libamxo (4.2.0) unstable; urgency=medium
+
+  * Make it possible to declare synchronization templates in odl files
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 24 Oct 2023 13:17:49 +0000
+
+libamxo (4.1.1) unstable; urgency=medium
+
+  * [libamxo]Update odl documentation and API regarding object synchronisation
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 19 Oct 2023 17:38:50 +0000
+
+libamxo (4.1.0) unstable; urgency=medium
+
+  * [libamxo]Make it possible to define object synchronisation in odl
+  * [WiFi] Cannot use a WiFi password containing the character "
+  * Update dependencies in .gitlab-ci.yml
+  * Issue ST-1184 [amxb][amxc][amxo][amxrt] Fix typos in documentation
+  * [amxb][amxc][amxo][amxrt] Fix typos in documentation
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 17 Oct 2023 15:49:14 +0000
+
+libamxo (4.0.11) unstable; urgency=medium
+
+  * Fix license headers in files
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 12 Oct 2023 11:56:27 +0000
+
+libamxo (4.0.10) unstable; urgency=medium
+
+  * Improve and optimize some parts for speed
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 09 Oct 2023 06:40:20 +0000
+
+libamxo (4.0.9) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 25 Sep 2023 06:10:12 +0000
+
+libamxo (4.0.8) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 21 Sep 2023 11:20:50 +0000
+
+libamxo (4.0.7) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 14 Sep 2023 18:37:29 +0000
+
+libamxo (4.0.6) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 08 Sep 2023 10:25:50 +0000
+
+libamxo (4.0.5) unstable; urgency=medium
+
+  * ODL parser fails to open file in root directory
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 01 Sep 2023 06:28:29 +0000
+
+libamxo (4.0.4) unstable; urgency=medium
+
+  * Update - extend odl documentation
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 18 Aug 2023 11:23:51 +0000
+
+libamxo (4.0.3) unstable; urgency=medium
+
+  * Update documentation for amxo_parser_get_config()
+
+ -- SAH bot <sahbot@softathome.com>  Tue, 25 Jul 2023 11:32:31 +0000
+
+libamxo (4.0.2) unstable; urgency=medium
+
+  * It is not possible to declare events in a mib
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 25 Jul 2023 07:06:56 +0000
+
+libamxo (4.0.1) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 19 Jul 2023 12:12:28 +0000
+
+libamxo (4.0.0) unstable; urgency=medium
+
+  * [USP] GSDM should return whether commands are (a)sync
+
+ -- SAH bot <sahbot@softathome.com>  Mon, 10 Jul 2023 19:38:03 +0000
+
+libamxo (3.1.8) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 27 Jun 2023 17:33:17 +0000
+
+libamxo (3.1.7) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 20 Jun 2023 08:51:52 +0000
+
+libamxo (3.1.6) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 14 Jun 2023 20:55:55 +0000
+
+libamxo (3.1.5) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 01 Jun 2023 19:19:41 +0000
+
+libamxo (3.1.4) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 24 May 2023 14:45:51 +0000
+
+libamxo (3.1.3) unstable; urgency=medium
+
+  * Use index paths when sending events after an odl file is parsed
+
+ -- SAH bot <sahbot@softathome.com>  Fri, 12 May 2023 13:27:38 +0000
+
+libamxo (3.1.2) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 10 May 2023 09:32:20 +0000
+
+libamxo (3.1.1) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 08 May 2023 07:39:29 +0000
+
+libamxo (3.1.0) unstable; urgency=medium
+
+  * gsdm missing arguments for commands and events
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 03 May 2023 06:48:22 +0000
+
+libamxo (3.0.0) unstable; urgency=medium
+
+  * Remove deprecated odl syntax and pcb compatibility syntax
+  * ODL syntax documentation must be updated
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 21 Apr 2023 17:17:12 +0000
+
+libamxo (2.1.2) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Sat, 08 Apr 2023 18:07:46 +0000
+
+libamxo (2.1.1) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 28 Mar 2023 07:42:10 +0000
+
+libamxo (2.1.0) unstable; urgency=medium
+
+  * AMX : make it possible to to define event handlers directly under object
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 28 Mar 2023 06:12:08 +0000
+
+libamxo (2.0.55) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 27 Mar 2023 08:45:18 +0000
+
+libamxo (2.0.54) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 17 Mar 2023 13:51:20 +0000
+
+libamxo (2.0.53) unstable; urgency=medium
+
+  * [odl] Regression conditional include does not take second if first is an empty directory
+
+ -- SAH bot <sahbot@softathome.com>  Tue, 14 Mar 2023 12:00:09 +0000
+
+libamxo (2.0.52) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+  * [amxo] Saving and restoring the odl (config) section gives errors.
+  * When odl includes an empty directory no error should be printed
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 13 Mar 2023 08:08:05 +0000
+
+libamxo (2.0.51) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 02 Mar 2023 09:10:22 +0000
+
+libamxo (2.0.50) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 28 Feb 2023 09:11:11 +0000
+
+libamxo (2.0.49) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 22 Feb 2023 15:12:27 +0000
+
+libamxo (2.0.48) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 16 Feb 2023 10:40:23 +0000
+
+libamxo (2.0.47) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 13 Feb 2023 12:43:41 +0000
+
+libamxo (2.0.46) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 13 Feb 2023 11:27:17 +0000
+
+libamxo (2.0.45) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 30 Jan 2023 17:37:47 +0000
+
+libamxo (2.0.44) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 13 Jan 2023 12:01:51 +0000
+
+libamxo (2.0.43) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 11 Jan 2023 20:57:54 +0000
+
+libamxo (2.0.42) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 14 Dec 2022 09:57:24 +0000
+
+libamxo (2.0.41) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 07 Dec 2022 08:19:35 +0000
+
+libamxo (2.0.40) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 25 Nov 2022 14:40:28 +0000
+
+libamxo (2.0.39) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 21 Nov 2022 13:25:29 +0000
+
+libamxo (2.0.38) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Sat, 19 Nov 2022 12:33:37 +0000
+
+libamxo (2.0.37) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 15 Nov 2022 13:02:06 +0000
+
+libamxo (2.0.36) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 14 Nov 2022 08:01:24 +0000
+
+libamxo (2.0.35) unstable; urgency=medium
+
+  * Write errors and warning to system log
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 03 Nov 2022 12:10:19 +0000
+
+libamxo (2.0.34) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 24 Oct 2022 11:10:29 +0000
+
+libamxo (2.0.33) unstable; urgency=medium
+
+  * It must be possible for a function resolver to known for which action an action callback function is needed
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 20 Oct 2022 14:56:33 +0000
+
+libamxo (2.0.32) unstable; urgency=medium
+
+  * [USP][CDROUTER] GetSupportedDM on Device.LocalAgent. using a single object, first_level_only true, all options presents no event
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 12 Oct 2022 12:41:49 +0000
+
+libamxo (2.0.31) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 06 Oct 2022 19:13:09 +0000
+
+libamxo (2.0.30) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 05 Oct 2022 19:05:07 +0000
+
+libamxo (2.0.29) unstable; urgency=medium
+
+  * It mustbe possible to define empty object or empty array in config section
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 20 Sep 2022 15:15:02 +0000
+
+libamxo (2.0.28) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+  * libamxo build failed because when_true_status() macro is redefined.
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 12 Sep 2022 13:17:37 +0000
+
+libamxo (2.0.27) unstable; urgency=medium
+
+  * amx gmap-client modules do not wait for "requires"
+
+ -- SAH bot <sahbot@softathome.com>  Tue, 30 Aug 2022 10:36:23 +0000
+
+libamxo (2.0.26) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 29 Aug 2022 08:07:17 +0000
+
+libamxo (2.0.25) unstable; urgency=medium
+
+  * [amx] custom param read handler called more often than expected
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 24 Aug 2022 09:41:34 +0000
+
+libamxo (2.0.24) unstable; urgency=medium
+
+  * [GL-B1300] Various components failing to open Service in firewall due to high load and multiple interface toggling
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 18 Aug 2022 13:33:15 +0000
+
+libamxo (2.0.23) unstable; urgency=medium
+
+  * It must be possible to extend composite config options
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 17 Aug 2022 09:53:03 +0000
+
+libamxo (2.0.22) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Johan JACOBS <johan.jacobs_ext@softathome.com>  Fri, 05 Aug 2022 09:37:41 +0000
+
+libamxo (2.0.21) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 25 Jul 2022 09:15:51 +0000
+
+libamxo (2.0.20) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+  * Issue: ambiorix/libraries/libamxo#76 The object write  action is not called during parsing of odl files
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 13 Jul 2022 12:13:43 +0000
+
+libamxo (2.0.19) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 28 Jun 2022 10:35:47 +0000
+
+libamxo (2.0.18) unstable; urgency=medium
+
+  * Add support for mutable keys
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 21 Jun 2022 11:59:15 +0000
+
+libamxo (2.0.17) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 09 Jun 2022 11:47:07 +0000
+
+libamxo (2.0.16) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 01 Jun 2022 12:37:01 +0000
+
+libamxo (2.0.15) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 30 May 2022 09:00:27 +0000
+
+libamxo (2.0.14) unstable; urgency=medium
+
+  * [amxo-cg] segfault when parsing long comments
+
+ -- SAH bot <sahbot@softathome.com>  Wed, 25 May 2022 03:55:13 +0000
+
+libamxo (2.0.13) unstable; urgency=medium
+
+  * [Gitlab CI][Unit tests][valgrind] Pipeline doesn't stop when memory leaks are detected
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 23 May 2022 11:45:57 +0000
+
+libamxo (2.0.12) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 12 May 2022 11:21:21 +0000
+
+libamxo (2.0.11) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 05 May 2022 11:44:41 +0000
+
+libamxo (2.0.10) unstable; urgency=medium
+
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 25 Apr 2022 09:17:14 +0000
+
+libamxo (2.0.9) unstable; urgency=medium
+
+  * ODL parser sometimes gets confused
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 25 Apr 2022 08:47:57 +0000
+
+libamxo (2.0.8) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 06 Apr 2022 10:51:55 +0000
+
+libamxo (2.0.7) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 17 Mar 2022 11:16:59 +0000
+
+libamxo (2.0.6) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Matthias FRANCK <matthias.franck_ext@softathome.com>  Wed, 09 Mar 2022 08:42:39 +0000
+
+libamxo (2.0.5) unstable; urgency=medium
+
+  * Run tests with sah-ci image
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 15 Feb 2022 16:56:09 +0000
+
+libamxo (2.0.4) unstable; urgency=medium
+
+  * Update implementation of amxo_parser_get_config, amxo_parser_set_config, amxo_parser_claim_config
+  * Update documentation on AMXO_ODL_LOADED
+  * Issue: ambiorix/libraries/libamxo#72 Update documentation on AMXO_ODL_LOADED
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 15 Feb 2022 15:01:29 +0000
+
+libamxo (2.0.3) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Johan JACOBS <johan.jacobs_ext@softathome.com>  Mon, 14 Feb 2022 12:15:51 +0000
+
+libamxo (2.0.2) unstable; urgency=medium
+
+  * Copybara replaces too many lib_ occurences
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 07 Feb 2022 13:14:53 +0000
+
+libamxo (2.0.1) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 04 Feb 2022 15:54:38 +0000
+
+libamxo (2.0.0) unstable; urgency=medium
+
+  * [prplOS][ambiorix] Several component failing to start on NEC mips xrx500 target
+  * Cannot load unknown instance parameter with "populate-behavior.unknown-parameter=add"
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 03 Feb 2022 17:03:59 +0000
+
+libamxo (1.4.13) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 25 Jan 2022 06:47:54 +0000
+
+libamxo (1.4.12) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 14 Dec 2021 12:22:59 +0000
+
+libamxo (1.4.11) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 08 Dec 2021 13:16:01 +0000
+
+libamxo (1.4.10) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 29 Nov 2021 15:05:58 +0000
+
+libamxo (1.4.9) unstable; urgency=medium
+
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 25 Nov 2021 12:05:53 +0000
+
+libamxo (1.4.8) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 22 Nov 2021 15:54:16 +0000
+
+libamxo (1.4.7) unstable; urgency=medium
+
+  * Fixes regression due to adding any action
+
+ -- SAH bot <sahbot@softathome.com>  Thu, 18 Nov 2021 13:02:17 +0000
+
+libamxo (1.4.6) unstable; urgency=medium
+
+  * Make it possible to set an action callback for all actions
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 18 Nov 2021 11:11:24 +0000
+
+libamxo (1.4.5) unstable; urgency=medium
+
+  * Missing brackets in function resolver data causes segmentation fault
+  * The function name must be passed as private data to subscriptions taken from an odl file
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 16 Nov 2021 17:49:51 +0000
+
+libamxo (1.4.4) unstable; urgency=medium
+
+  * ODL parser should pass function type to resolvers
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 10 Nov 2021 15:10:07 +0000
+
+libamxo (1.4.3) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 10 Nov 2021 13:07:45 +0000
+
+libamxo (1.4.2) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 28 Oct 2021 22:33:48 +0000
+
+libamxo (1.4.1) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 20 Oct 2021 19:06:30 +0000
+
+libamxo (1.4.0) unstable; urgency=medium
+
+  * Introduces function to add wait-for-write fd to event loop
+
+ -- SAH bot <sahbot@softathome.com>  Fri, 15 Oct 2021 09:39:00 +0000
+
+libamxo (1.3.10) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 08 Oct 2021 13:20:19 +0000
+
+libamxo (1.3.9) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 08 Oct 2021 10:48:07 +0000
+
+libamxo (1.3.8) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 08 Oct 2021 07:45:04 +0000
+
+libamxo (1.3.7) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 24 Sep 2021 15:50:01 +0000
+
+libamxo (1.3.6) unstable; urgency=medium
+
+  * Saved odl files with mib extensions can not be loaded
+  * it must be possible to indicate that an instance parameter must be saved in the header
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 23 Sep 2021 09:59:48 +0000
+
+libamxo (1.3.5) unstable; urgency=medium
+
+
+ -- SAH bot <sahbot@softathome.com>  Tue, 07 Sep 2021 05:56:13 +0000
+
+libamxo (1.3.4) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 23 Aug 2021 11:05:21 +0000
+
+libamxo (1.3.3) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 02 Aug 2021 12:20:06 +0000
+
+libamxo (1.3.2) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 22 Jul 2021 11:23:50 +0000
+
+libamxo (1.3.1) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 12 Jul 2021 17:26:11 +0000
+
+libamxo (1.3.0) unstable; urgency=medium
+
+  * Make it possible to declare required objects from remote processes
+
+ -- SAH bot <sahbot@softathome.com>  Mon, 12 Jul 2021 09:30:38 +0000
+
+libamxo (1.2.11) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 09 Jul 2021 09:30:26 +0000
+
+libamxo (1.2.10) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 05 Jul 2021 06:53:57 +0000
+
+libamxo (1.2.9) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Sun, 04 Jul 2021 17:22:45 +0000
+
+libamxo (1.2.8) unstable; urgency=medium
+
+  * Generation of version.h files should not be .PHONY
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 02 Jul 2021 18:58:30 +0000
+
+libamxo (1.2.7) unstable; urgency=medium
+
+  * ODL parser is sending the add (intstance) events in the wrong order
+  * Make it possible to load and keep modules when no symbols are resolved
+  * Update dependencies in .gitlab-ci.yml
+  * Issue: ambiorix/libraries/libamxo#59 After loading post-includes data model eventing is disabled
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 28 Jun 2021 12:56:26 +0000
+
+libamxo (1.2.6) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 21 Jun 2021 07:53:30 +0000
+
+libamxo (1.2.5) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 18 Jun 2021 22:50:10 +0000
+
+libamxo (1.2.4) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 15 Jun 2021 08:43:53 +0000
+
+libamxo (1.2.3) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 11 Jun 2021 09:51:54 +0000
+
+libamxo (1.2.2) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 11 Jun 2021 05:39:00 +0000
+
+libamxo (1.2.1) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 10 Jun 2021 18:18:57 +0000
+
+libamxo (1.2.0) unstable; urgency=medium
+
+  * A hook must be added for counter parameters
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 10 Jun 2021 12:18:46 +0000
+
+libamxo (1.1.7) unstable; urgency=medium
+
+  * [tr181 plugins][makefile] Dangerous clean target for all tr181 components
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 08 Jun 2021 09:09:25 +0000
+
+libamxo (1.1.6) unstable; urgency=medium
+
+  * TM NET Build issue with libamxo
+
+ -- SAH bot <sahbot@softathome.com>  Thu, 03 Jun 2021 08:06:13 +0000
+
+libamxo (1.1.5) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 01 Jun 2021 07:06:22 +0000
+
+libamxo (1.1.4) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 31 May 2021 09:31:58 +0000
+
+libamxo (1.1.3) unstable; urgency=medium
+
+  * Recursive includes when parsing odl files can cause a segmentation fault
+  * Extend event filter parser to resolve variables
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 21 May 2021 12:02:38 +0000
+
+libamxo (1.1.2) unstable; urgency=medium
+
+  * Issue: ambiorix/libraries/libamxo#50 When a new instance is added the correct index and name of the object must be passed to the hook function
+
+ -- SAH bot <sahbot@softathome.com>  Wed, 12 May 2021 15:29:21 +0000
+
+libamxo (1.1.1) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Sun, 09 May 2021 20:32:01 +0000
+
+libamxo (1.1.0) unstable; urgency=medium
+
+  * Comments in an odl file must be extracted and passed to a hook functions
+  * ODL populate section does not resolve config variables
+  * Use common macros from libamxc
+  * Removes core dumps
+  * Update dependencies in .gitlab-ci.yml
+  * Enable auto opensourcing
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 04 May 2021 08:00:16 +0000
+
+libamxo (1.0.4) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 23 Apr 2021 18:44:41 +0000
+
+libamxo (1.0.3) unstable; urgency=medium
+
+  * Save persistent protected and private parameters
+  * Add configuration option to disable function resolving
+  * It must be possible to add user flags to functions
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 21 Apr 2021 09:10:31 +0000
+
+libamxo (1.0.2) unstable; urgency=medium
+
+  *  remove fakeroot dependency on host to build WRT image 
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 15 Apr 2021 20:07:55 +0000
+
+libamxo (1.0.1) unstable; urgency=medium
+
+  * parsing multiple odl files with import causes a segmentation fault 
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 15 Apr 2021 10:57:27 +0000
+
+libamxo (1.0.0) unstable; urgency=medium
+
+  * Loading empty directory must return 2 (not found
+  * When including an empty directory the parser must fail
+  * When saving an odl file all names must be quoted
+  * Move copybara to baf
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 08 Apr 2021 20:40:59 +0000
+
+libamxo (0.8.1) unstable; urgency=medium
+
+  * Make it possible to call entry-points in reverse order
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 31 Mar 2021 13:58:37 +0000
+
+libamxo (0.8.0) unstable; urgency=medium
+
+  * Add amxo_parser_load_mib function
+  * Always save persistent instance regardless of template object attributes
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 29 Mar 2021 17:35:54 +0000
+
+libamxo (0.7.2) unstable; urgency=medium
+
+  * Rename keyword flags to userflags
+  * Clean-up resolvers after reading odl files
+  * it must be possible to include a directory
+  * It must be possible to add and remove flags to parameters in odl files
+  * Send dm:instance-added events when creating instances from odl file
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 26 Mar 2021 23:31:30 +0000
+
+libamxo (0.7.1) unstable; urgency=medium
+
+  * Step-up versions of libamxc, libamxp and libamxd for CI
+  * The function table resolve should provide a function name to default add instance action
+  * Handle data model events before post includes
+  * Removes commented code
+
+ -- Peter De Herdt <peter.deherdt@softathome.com>  Wed, 10 Mar 2021 12:10:06 +0000
+
+libamxo (0.7.0) unstable; urgency=medium
+
+  * It must be possible to include odl files that are loaded after invoking the entry points
+  * Migrate to new licenses format (baf)
+
+ -- Peter De Herdt <peter.deherdt@softathome.com>  Thu, 25 Feb 2021 13:55:02 +0000
+
+libamxo (0.6.7) unstable; urgency=medium
+
+  * Step-up versions of libamx,libamxp,libamxd for CI
+
+ -- Peter De Herdt <peter.deherdt@softathome.com>  Sun, 14 Feb 2021 08:19:17 +0000
+
+libamxo (0.6.6) unstable; urgency=medium
+
+  * It must be possible to get a list of open listen sockets
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Sun, 31 Jan 2021 16:11:02 +0000
+
+libamxo (0.6.5) unstable; urgency=medium
+
+  * Update versions of libamxc,libamxp,libamxd for CI/CD pipelines
+  * correct documentation error on "on action validate"
+
+ -- Peter De Herdt <peter.deherdt@softathome.com>  Thu, 28 Jan 2021 09:03:39 +0000
+
+libamxo (0.6.4) unstable; urgency=medium
+
+  * Generate makefiles using build agnostic file (baf)
+  * Only include objects in static library
+
+ -- Peter De Herdt <peter.deherdt@softathome.com>  Mon, 18 Jan 2021 17:26:52 +0000
+
+libamxo (0.6.3) unstable; urgency=medium
+
+  * Fixes listen sockets
+
+ -- Peter De Herdt <peter.deherdt@softathome.com>  Fri, 08 Jan 2021 15:13:35 +0000
+
+libamxo (0.6.2) unstable; urgency=medium
+
+  * Support for listen and accept sockets
+  * PCB odl parsing incompatibility
+  * Conditional jump or move depends on uninitialised value(s)
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 04 Jan 2021 15:14:36 +0000
+
+libamxo (0.6.1) unstable; urgency=medium
+
+  * Update makefiles
+  * Adds in attribute for fuinction arguments if no in and no out is set
+
+ -- Peter De Herdt <peter.deherdt@softathome.com>  Mon, 30 Nov 2020 16:08:52 +0000
+
+libamxo (0.6.0) unstable; urgency=medium
+
+  * Update dependency versions in gitlab CI yml file
+
+ -- Peter De Herdt <peter.deherdt@softathome.com>  Sun, 29 Nov 2020 16:55:07 +0000
+
+libamxo (0.5.5) unstable; urgency=medium
+
+  * Fix debian package dependencies
+  * Update readme
+
+ -- Peter De Herdt <peter.deherdt@softathome.com>  Wed, 25 Nov 2020 19:28:36 +0000
+
+libamxo (0.5.4) unstable; urgency=medium
+
+  * Stores connection uri
+  * Updates gitlab CI/CD yml file
+
+ -- Peter De Herdt <peter.deherdt@softathome.com>  Mon, 16 Nov 2020 12:50:11 +0000
+
+libamxo (0.5.3) unstable; urgency=medium
+
+  * Add function to lookup connection context by file descriptor
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Sun, 01 Nov 2020 21:55:50 +0000
+
+libamxo (0.5.2) unstable; urgency=medium
+
+  * Set protected attribute as valid for parameters, functions and objects
+
+ -- Peter De Herdt <peter.deherdt@softathome.com>  Wed, 28 Oct 2020 17:49:15 +0000
+
+libamxo (0.5.1) unstable; urgency=medium
+
+  * Paths in directory configuration list can contain variables
+  * Not all toolchain support secure_getenv
+  * Remove mibs using mib expression
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 28 Oct 2020 05:48:33 +0000
+
+libamxo (0.5.0) unstable; urgency=medium
+
+  * Scan mib dir feature
+  * Apply mib feature
+  * Protected attribute for objects, functions and parameters
+  * Updates odl documentation - adds protected keyword and attribute
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 19 Oct 2020 19:29:35 +0000
+
+libamxo (0.4.1) unstable; urgency=medium
+
+  * Add support for 8 and 16 bit integers
+  * Fixes segmentation fault when empty filename is passed to odl parser
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 14 Oct 2020 07:25:50 +0000
+
+libamxo (0.4.0) unstable; urgency=medium
+
+  * Update code style
+  * Removed dead code
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 02 Oct 2020 14:08:40 +0000
+
+libamxo (0.3.4) unstable; urgency=medium
+
+  * Make it possible to extend object definitions
+  * Adds select keyword for %define section
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 17 Sep 2020 20:44:44 +0000
+
+libamxo (0.3.3) unstable; urgency=medium
+
+  * ODL parser behavior configuration option names are not in line with other configuration options
+  * When defining a function or parameter in an existing instance object the %instance attribute must be set automatically
+  * Update ODL documentation
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 17 Sep 2020 13:46:03 +0000
+
+libamxo (0.3.2) unstable; urgency=medium
+
+  * Pass version_prefix to make command
+
+ -- Steven VAN WEYNSBERGHE <steven.vanweynsberghe@softathome.com>  Thu, 03 Sep 2020 14:13:30 +0000
+
+libamxo (0.3.1) unstable; urgency=medium
+
+  * Fixes g++ compilation warnings and errors
+  * Add version prefix to support legacy build system
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 03 Sep 2020 06:13:30 +0000
+
+libamxo (0.3.0) unstable; urgency=medium
+
+  * Needs libamxd v1.0.0 or higher
+  * Apply API changes of libamxd
+  * Removes uneeded references to libamxb in unit tests
+
+ -- Peter De Herdt <peter.deherdt@softathome.com>  Sat, 29 Aug 2020 21:21:19 +0000
+
+libamxo (0.2.7) unstable; urgency=medium
+
+  * Makes new parameter validation and read action implementations available in ODL
+
+ -- Peter De Herdt <peter.deherdt@softathome.com>  Sun, 23 Aug 2020 15:52:30 +0000
+
+libamxo (0.2.6) unstable; urgency=medium
+
+  * set correct MAJOR number on libraries for internal builds
+
+ -- Peter De Herdt <peter.deherdt@softathome.com>  Thu, 20 Aug 2020 13:03:54 +0000
+
+libamxo (0.2.5) unstable; urgency=medium
+
+  *  Fixes fetching next connection if last was reached
+
+ -- Peter De Herdt <peter.deherdt@softathome.com>  Sun, 16 Aug 2020 10:04:36 +0000
+
+libamxo (0.2.4) unstable; urgency=medium
+
+  * Event names can be added in object body definitions
+  * `%unique` parameter attribute is not taken into account
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 13 Aug 2020 13:35:45 +0000
+
+libamxo (0.2.3) unstable; urgency=medium
+
+  * Update contributing guide
+  * Support for unique key
+
+ -- Peter De Herdt <peter.deherdt@softathome.com>  Tue, 04 Aug 2020 05:51:17 +0000
+
+libamxo (0.2.2) unstable; urgency=medium
+
+  * Fixes string variable resolving
+  * list action must not be in quotes
+  * Fixes memory leak
+
+ -- Peter De Herdt <peter.deherdt@softathome.com>  Mon, 27 Jul 2020 11:42:31 +0000
+
+libamxo (0.2.1) unstable; urgency=medium
+
+  * ODL Syntax: regular expressions must be explicitly indicated using "regexp()"
+  * Import resolver also checks none-prefixed symbols 
+  * Only delete action data if the action is owned by the parameter or object on which it is executed.
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 24 Jul 2020 12:24:06 +0000
+
+libamxo (0.2.0) unstable; urgency=medium
+
+  * Save data model or configuration options API's
+  * Configuration options can be declared global
+  * Parser configuration options to change behavior of the odl parser
+  * Conditional includes
+  * Adds RAW_VERSION to makefile.inc, VERSION must be X.Y.Z or X.Y.Z-HASH
+  * Updates tests, renamed macro YY_ASSERT macro
+  * Completes odl parsing tests
+  * Fix: Compilation issue with fortified  musl
+  * Fix: Too long functions
+  * Fix: Scanbuild warnings
+  * Fix: Memory leak (detected with unittests)
+  * Fix: Object type detection
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 22 Jul 2020 18:49:21 +0000
+
+libamxo (0.1.3) unstable; urgency=medium
+
+  * Full path can be added to function name when registering functions to ftab resolver
+  * Documentation update (ftab API)
+  * Documentation update (odl)
+  * Supports %key attributes for parameters
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 16 Jul 2020 09:27:41 +0000
+
+libamxo (0.1.2) unstable; urgency=medium
+
+  * Use new string split API from libamxc
+  * Adds alias names for parameter validation functions
+  * Update README.md
+  * Updates make files for SAH legacy build system
+  * Fixes ignoring return value of chdir
+  * Key-values inconsistencies
+
+ -- Peter De Herdt <peter.deherdt@softathome.com>  Mon, 13 Jul 2020 06:19:40 +0000
+
+libamxo (0.1.1) unstable; urgency=medium
+
+  * Fixes tests - take new event data structure into account
+
+ -- Peter De Herdt <peter.deherdt@softathome.com>  Mon, 06 Jul 2020 09:12:28 +0000
+
+libamxo (0.1.0) unstable; urgency=medium
+
+  * Uses logical expression (libamxp) for event filtering instead of regexp filtering
+  * Uses std=c11 instead of std=c18
+  * Update odl.md
+
+ -- Peter De Herdt <peter.deherdt@softathome.com>  Sun, 05 Jul 2020 16:59:16 +0000
+
+libamxo (0.0.11) unstable; urgency=medium
+
+  * Scrubs Component.* files
+
+ -- Peter De Herdt <peter.deherdt@softathome.com>  Tue, 30 Jun 2020 07:47:51 +0000
+
+libamxo (0.0.10) unstable; urgency=medium
+
+  * Support for legacy SAH build system
+
+ -- Peter De Herdt <peter.deherdt@softathome.com>  Mon, 29 Jun 2020 16:24:14 +0000
+
+libamxo (0.0.9) unstable; urgency=medium
+
+  * Support for csv_string and ssv_string variant type
+  * Copybara file
+  * Build libraries in target specific output directory
+
+ -- sah4009 <peter.deherdt@softathome.com>  Fri, 26 Jun 2020 18:01:17 +0000
+
+libamxo (0.0.8) unstable; urgency=medium
+
+  * Fixes object attributes
+
+ -- sah4009 <peter.deherdt@softathome.com>  Tue, 23 Jun 2020 16:54:16 +0000
+
+libamxo (0.0.7) unstable; urgency=medium
+
+  * Define mib objects
+  * Extend objects with mibs (define and populate section)
+  * Define datetime type
+  * Datetime type can be used as function return type, parameter type and function argument type
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 22 Jun 2020 10:49:07 +0000
+
+libamxo (0.0.6) unstable; urgency=medium
+
+  * Event subscription callback with filter
+  * Validates objects and parameters while parsing
+  * Adds deprecated "write with" construct
+  * Support for complex types in config section
+  * Adds pcb backwards compatibility (constraint keyword)
+  * Adds PCB compatibility actions on parameters and objects
+  * Adds actions to objects
+  * Adds actions for parameters and set default in definition block
+  * Extends connections API
+  * Extends valid odl test
+  * Updates odl documentation
+  * update license to BSD+patent
+  * Ignore sign-compare in generated flex file
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 16 Jun 2020 11:08:11 +0000
+
+libamxo (0.0.5) unstable; urgency=medium
+
+  * Fixes compiler error (musl)
+  * Fixes pipeline testing (first compile lib)
+  * Creates unit test results file (ELK)
+  * Adds more tests and fixes
+  * Adds API documentation
+
+ -- sah4009 <peter.deherdt@softathome.com>  Thu, 04 Jun 2020 13:09:26 +0000
+
+libamxo (0.0.4) unstable; urgency=medium
+
+  * ODL documentation in markdown
+  * Automatic instance counter definition
+  * Function override in definition, does not fail, provides warning
+  * PCB ODL compatibility
+
+ -- sah4009 <peter.deherdt@softathome.com>  Thu, 28 May 2020 06:47:15 +0000
+
+libamxo (0.0.3) unstable; urgency=medium
+
+  * Adds support for shebang
+  * Single line comments can now also start with '#'
+
+ -- sah4009 <peter.deherdt@softathome.com>  Tue, 26 May 2020 10:29:50 +0000
+
+libamxo (0.0.2) unstable; urgency=medium
+
+  * Complete Import resolver
+  * Definition of entry points
+  * Adds dlopen flags support
+  * Removes duplicate hook function typedefs
+
+ -- sah4009 <peter.deherdt@softathome.com>  Tue, 26 May 2020 08:27:35 +0000
+
+libamxo (0.0.1) unstable; urgency=medium
+
+  * Tests
+  * Line tracking
+  * Auto-resolve order option - support for '*' (any)
+  * Less string copy and memory allocation during parsing (flex/bison)
+  * Parser hooks
+  * Adds parser hooks
+  * Recursive include protection
+
+ -- sah4009 <peter.deherdt@softathome.com>  Sun, 24 May 2020 09:59:44 +0000
+
+libamxo (0.0.0) unstable; urgency=medium
+
+  * Initial version, not feature complete
+
+ -- sah4009 <peter.deherdt@softathome.com>  Mon, 18 May 2020 12:47:00 +0000
+ 

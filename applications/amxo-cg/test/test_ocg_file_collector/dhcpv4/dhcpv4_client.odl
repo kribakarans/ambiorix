@@ -1,0 +1,37 @@
+%define {
+
+    select DHCPv4.Client {
+        bool Enable;
+        %unique %key string Alias;
+        string Interface;
+        %read-only string Status;
+        %read-only string DHCPStatus;
+        %read-only string IPAddress;
+        %read-only string SubnetMask;
+        %read-only csv_string IPRouters;
+        %read-only csv_string DNSServers;
+        %read-only int32 LeaseTimeRemaining;
+        bool PassthroughEnable;
+        string PassthroughDHCPPool;
+
+        object SentOption[] {
+            counted with SentOptionNumberOfEntries;
+
+            bool Eanble;
+            %unique %key string Alias;
+            uint32 Tag;
+            string Value;
+        }
+
+        object ReqOption[] {
+            counted with ReqOptionNumberOfEntries;
+
+            bool Enable;
+            uint32 Order;
+            %unique %key string Alias;
+            uint32 Tag;
+            string Value;
+        }
+
+    }
+}

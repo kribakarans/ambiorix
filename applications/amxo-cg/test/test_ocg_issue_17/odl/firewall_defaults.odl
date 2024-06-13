@@ -1,0 +1,14 @@
+%populate {
+    object Firewall {
+        object Chain {
+            instance add(Alias=L_Low, Name=L_Low) {
+                parameter Enable = true;
+            }
+            object L_Low.Rule {
+                instance add() {
+                    parameter Name = "foo";
+                }
+            }
+        }
+    }
+}

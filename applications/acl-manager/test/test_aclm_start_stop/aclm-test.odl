@@ -1,0 +1,5 @@
+%config {    
+    acl_dir = "./none/existing/runtime/dir";
+    acl_install_dir = "./acldir";
+    inotify-enabled = true;
+}

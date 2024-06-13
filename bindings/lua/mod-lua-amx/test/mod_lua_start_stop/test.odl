@@ -1,0 +1,26 @@
+%define {
+    object Test {
+        string MyFunc(%in %mandatory string message) <!LUA:
+            function(object, args)
+                print(args.message);
+                return args.message
+            end
+        !>;
+
+        string MyParam {
+            on action validate call check_change <!LUA:
+                function(object, param, reason, args, retval)
+                    return 0, retval
+                end
+            !>;            
+        }
+    }
+}
+
+%populate {
+    on event "dm:object-changed" call enable_greeter <!LUA:
+        function(object, event, data)
+            print(event);
+        end        
+    !>;
+}

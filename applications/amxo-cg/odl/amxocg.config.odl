@@ -1,0 +1,37 @@
+%config {
+    amxo-cg = {
+        translate = {
+            "'DHCPv4Server.'" = "Device.DHCPv4.Server.",
+            "'DHCPv4Client.'" = "Device.DHCPv4.",
+            "'Bridging.'" = "Device.Bridging.",
+            "'Buttons.'" = "Device.Buttons.",
+            "'ManagementServer.'" = "Device.CWMPManagementServer.",
+            "'DeviceInfo.'" = "Device.DeviceInfo.",
+            "'DNS.'" = "Device.DNS.",
+            "'DNSSD.'" = "Device.DNS.SD.",
+            "'Ethernet.'" = "Device.Ethernet.",
+            "'Firewall.'" = "Device.Firewall.",
+            "'Hosts.'" = "Device.Hosts.",
+            "'IP.'" = "Device.IP.",
+            "'LEDs.'" = "Device.LEDs.",
+            "'Logical.'" = "Device.Logical.",
+            "'NeighborDiscovery.'" = "Device.NeighborDiscovery.",
+            "'QoS.'" = "Device.QoS.",
+            "'RouterAdvertisement.'"= "Device.RouterAdvertisement.",
+            "'Routing.'" = "Device.Routing.",
+            "'Schedules.'" = "Device.Schedules.",
+            "'WiFiScheduler.'" = "Device.X_PRPL-COM_WiFiScheduler.",
+            "'Security.'" = "Device.Security.",
+            "'SSH.'" = "Device.SSH.",
+            "'Time.'" = "Device.Time.",
+            "'UnixDomainSockets.'" = "Device.UnixDomainSockets.",
+            "'UserInterface.'" = "Device.UserInterface.",
+            "'Users.'" = "Device.Users.",
+            "'USPServices.'" = "Device.USPServices.",
+            "'MultiSettings.'" = "Device.X_PRPL-COM_MultiSettings.",
+            "'PersistentConfiguration.'" = "Device.X_PRPL-COM_PersistentConfiguration.",
+            "'NAT.'" = "Device.NAT."
+        },
+        skip-protected = true
+    };
+}

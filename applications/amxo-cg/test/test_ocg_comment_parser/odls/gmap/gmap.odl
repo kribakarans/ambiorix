@@ -1,0 +1,21 @@
+#!/usr/bin/amxrt
+
+%config {
+    // Application name
+    name = "gmap";
+
+    // amxo parser config-options
+    import-dbg = true;
+
+    // Application specific settings
+    // persistent storage location
+    rw_data_path = "${prefix}/etc/config";
+
+    // main files
+    definition_file = "${name}-definitions.odl";
+    save_file = "${rw_data_path}/${name}/${name}.odl";
+    defaults_file = "${name}-defaults.odl";
+}
+
+include "${definition_file}";
+include "${defaults_file}";

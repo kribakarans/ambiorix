@@ -1,0 +1,11 @@
+Source: libamxut
+Section: devel
+Priority: optional
+Maintainer: Softathome <support.opensource@softathome.com>
+
+Package: libamxut
+Architecture: amd64
+Depends: ${shlibs:Depends}
+Description: Unit Test Utility Library
+ Unit Test Utility Library
+ 

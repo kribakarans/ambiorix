@@ -1,0 +1,13 @@
+variables:
+  BUILD_DEPS: libamxc libamxj libamxd libamxb libamxp libamxa sah-lib-pcb-dev
+  TEST_DEPS: psmisc libamxj libyajl-dev amxrt sah-services-pcb-bus-dev sah-lib-mtk-dev sah-services-pcb-app-dev sah-services-pcb-cli-dev mod-dmproxy mod-amxb-ubus
+  BUILD_TARGET: mod-amxb-pcb
+  PC_DOC_GEN: "off"
+  PC_CHECK_UNIT_TEST: "off"
+  PC_PAGES: "off"
+  PC_DOC_GEN: "off"
+  PC_CROSS_COMPILATION: "off"
+
+
+include:
+  - remote: 'https://gitlab.com/soft.at.home/ci/gitlab-ci/raw/main/ambiorix-default-pipeline.yml'

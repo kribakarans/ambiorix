@@ -1,0 +1,17 @@
+include "../../odl/ssh_server_definition.odl";
+
+%populate {
+    object SSH.Server {
+        instance add (0,"") {
+            parameter Enable = true;
+            parameter Port = 2222;
+        }
+        instance add (0,"") {
+            parameter Port = 2223;
+        }
+    }
+}
+
+%populate {
+    on event "*" call print_event;
+}

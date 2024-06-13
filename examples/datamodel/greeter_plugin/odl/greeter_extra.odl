@@ -1,0 +1,34 @@
+%define {
+    select Greeter {
+        /*
+            Echos back the data.
+
+            This method is added to demonstrate odl resolver instructions.
+
+            @param data Some data
+            
+            @return
+            The data
+        */
+        variant echo(%in %mandatory variant data)<!import:${name}:_function_dump!>;
+
+        /*
+            Echos back the data after some time
+
+            This method is added to demonstrate odl deferred function return.
+
+            This RPC methods is not blocking. It will start a timer, goes back to 
+            the eventloop. When the timer expires, a response is sent.
+
+            The same could be done with any asynchronous operation, the RPC methods
+            starts the operation, and when done sends back a response
+
+            @param data Some data
+            @param time time in seconds before the function returns
+            
+            @return
+            The data
+        */
+        %async variant deferred_echo(%in %mandatory variant data, %in uint32 time);
+    }
+}

@@ -1,0 +1,17 @@
+%define {
+    select NetDev.Link {
+		object Neigh[] {
+			on action destroy call neigh_destroy;
+			string Family="ipv4"; // ipv4 ipv6
+			string Flags; // proxy router
+			string Dst;
+			string LLAddress;
+			string State="permanent"; // incomplete reachable stale delay probe failed noarp permanent
+		}
+    }
+}
+
+%populate {
+    on event "dm:object-changed" call neigh_changed
+        filter 'path matches "NetDev\.Link\.[0-9]+\.Neigh\.[0-9]+\.$"';
+}

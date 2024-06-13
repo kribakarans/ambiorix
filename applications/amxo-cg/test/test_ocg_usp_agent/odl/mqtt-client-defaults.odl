@@ -1,0 +1,9 @@
+%populate {
+    object MQTT.Client {
+        instance add (0, "cpe-mqtt-uspagent") {
+            parameter BrokerAddress="broker.hivemq.com";
+            parameter Enable = false;
+            parameter ClientId = "";
+        }
+    }
+}

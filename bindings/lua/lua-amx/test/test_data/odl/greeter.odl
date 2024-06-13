@@ -1,0 +1,5 @@
+%config {
+    dm-events-before-start = true;
+}
+
+&include "greeter_definition.odl";

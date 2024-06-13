@@ -1,0 +1,11 @@
+Source: amxb-inspect
+Section: devel
+Priority: optional
+Maintainer: Peter.De.Herdt <peter.deherdt@softathome.com>
+
+Package: amxb-inspect
+Architecture: amd64
+Depends: ${shlibs:Depends}
+Description: AMXB Backend inspector
+ Verifies a AMXB back-end shared object
+ 

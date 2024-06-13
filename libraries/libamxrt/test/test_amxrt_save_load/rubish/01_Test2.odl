@@ -1,0 +1,6 @@
+%populate {
+	object 'Test2' {
+		parameter 'Text' = "";
+		parameter 'Number' = 123;
+	}
+}

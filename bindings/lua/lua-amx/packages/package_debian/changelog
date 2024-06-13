@@ -1,0 +1,125 @@
+lua-amx (0.5.5) unstable; urgency=medium
+
+
+ -- SAH bot <sahbot@softathome.com>  Tue, 07 May 2024 10:15:23 +0000
+
+lua-amx (0.5.4) unstable; urgency=medium
+
+
+ -- SAH bot <sahbot@softathome.com>  Mon, 18 Mar 2024 15:59:10 +0000
+
+lua-amx (0.5.3) unstable; urgency=medium
+
+
+ -- SAH bot <sahbot@softathome.com>  Mon, 18 Mar 2024 15:36:57 +0000
+
+lua-amx (0.5.2) unstable; urgency=medium
+
+
+ -- SAH bot <sahbot@softathome.com>  Sun, 17 Mar 2024 18:01:21 +0000
+
+lua-amx (0.5.1) unstable; urgency=medium
+
+
+ -- SAH bot <sahbot@softathome.com>  Sun, 17 Mar 2024 17:42:21 +0000
+
+lua-amx (0.5.0) unstable; urgency=medium
+
+  * [AMX] Lua bindings should only connect to default sockets when the backend is loaded
+
+ -- SAH bot <sahbot@softathome.com>  Tue, 20 Feb 2024 16:41:03 +0000
+
+lua-amx (0.4.1) unstable; urgency=medium
+
+  * Add example lua script
+
+ -- SAH bot <sahbot@softathome.com>  Thu, 14 Dec 2023 08:21:29 +0000
+
+lua-amx (0.4.0) unstable; urgency=medium
+
+  * ambiorix lua bindings must be extended
+
+ -- Peter DE HERDT <peter.deherdt@softathome.com>  Wed, 06 Dec 2023 15:53:13 +0000
+
+lua-amx (0.4.0) unstable; urgency=medium
+
+  * ambiorix lua bindings must be extended
+
+ -- Peter DE HERDT <peter.deherdt@softathome.com>  Wed, 06 Dec 2023 15:49:00 +0000
+
+lua-amx (0.3.15) unstable; urgency=medium
+
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 13 Oct 2023 06:05:55 +0000
+
+lua-amx (0.3.14) unstable; urgency=medium
+
+  * Fix return values and throwing errors
+
+ -- SAH bot <sahbot@softathome.com>  Tue, 30 May 2023 07:51:42 +0000
+
+lua-amx (0.3.13) unstable; urgency=medium
+
+
+ -- SAH bot <sahbot@softathome.com>  Thu, 25 May 2023 06:08:23 +0000
+
+lua-amx (0.3.12) unstable; urgency=medium
+
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 24 May 2023 19:31:31 +0000
+
+lua-amx (0.3.11) unstable; urgency=medium
+
+
+ -- SAH bot <sahbot@softathome.com>  Fri, 12 May 2023 13:29:31 +0000
+
+lua-amx (0.3.10) unstable; urgency=medium
+
+  * Fix conditions when `luaL_setfuncs` should be set
+
+ -- SAH bot <sahbot@softathome.com>  Mon, 20 Feb 2023 15:00:54 +0000
+
+lua-amx (0.3.9) unstable; urgency=medium
+
+
+ -- SAH bot <sahbot@softathome.com>  Fri, 17 Feb 2023 13:36:33 +0000
+
+lua-amx (0.3.8) unstable; urgency=medium
+
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 16 Feb 2023 13:20:13 +0000
+
+lua-amx (0.3.7) unstable; urgency=medium
+
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 14 Feb 2023 07:38:51 +0000
+
+lua-amx (0.3.6) unstable; urgency=medium
+
+  * Add amxb_set_config support to lua bindings
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 31 Jan 2023 08:35:22 +0000
+
+lua-amx (0.3.5) unstable; urgency=medium
+
+  * [Gitlab CI][Unit tests][valgrind] Pipeline doesn't stop when memory leaks are detected
+  * [Gitlab CI][Unit tests][valgrind] Pipeline doesn't stop when memory leaks are detected
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 19 Jan 2023 08:20:49 +0000
+
+lua-amx (0.3.4) unstable; urgency=medium
+
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 12 Jan 2023 08:07:15 +0000
+
+lua-amx (0.3.3) unstable; urgency=medium
+
+  * Add debian packages for amx lua bindings
+
+ -- SAH bot <sahbot@softathome.com>  Fri, 09 Dec 2022 10:58:21 +0000
+
+lua-amx (0.3.2) unstable; urgency=medium
+
+  * Example script can't find lamx_wait_for
+
+ -- SAH bot <sahbot@softathome.com>  Mon, 28 Nov 2022 14:32:31 +0000

@@ -1,0 +1,38 @@
+%config {
+    test = "Text \"with\" single and double \'quotes\'";
+    test_with_leading_and_trailing_spaces = " text ";
+}
+
+%define {
+    %persistent object MainObject {
+        %persistent object InstanceObject[] {
+            %persistent string TextA = "";
+            %persistent string TextB = "";
+            %persistent string TextC = "";
+            %persistent string TextD = "";
+            %persistent string TextLeadingTrailingSpaces1 = "";
+            %persistent string TextLeadingTrailingSpaces2 = "";
+        }
+    }
+}
+
+%populate {
+    object MainObject.InstanceObject {
+        instance add(0, "default") {
+            parameter TextA = "\"Hello\"";
+            parameter TextB = '\"Hello\"';
+            parameter TextC = 'A\'B';
+            parameter TextD = 'A\"B';
+            parameter TextLeadingTrailingSpaces1 = " Test ";
+            parameter TextLeadingTrailingSpaces2 = ' Test ';
+        }
+        instance add(0, "test") {
+            parameter TextA = "${test}";
+            parameter TextB = '\$\{test\}';
+            parameter TextC = '$(test)';
+            parameter TextD = "\$\(test\)";
+            parameter TextLeadingTrailingSpaces1 = " ${test_with_leading_and_trailing_spaces} ";
+            parameter TextLeadingTrailingSpaces2 = "${test_with_leading_and_trailing_spaces}";
+        }
+    }
+}

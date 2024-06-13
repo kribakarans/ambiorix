@@ -1,0 +1,864 @@
+libamxp (2.0.0) unstable; urgency=medium
+
+  * Avoid g++ compiler warning for new .add_value variant function pointer
+
+ -- SAH bot <sahbot@softathome.com>  Tue, 30 Apr 2024 07:40:58 +0000
+
+libamxp (1.4.2) unstable; urgency=medium
+
+  * Fix typo in documentation
+
+ -- Peter DE HERDT <peter.deherdt@softathome.com>  Tue, 30 Apr 2024 07:23:55 +0000
+
+libamxp (1.4.1) unstable; urgency=medium
+
+  * Expose getter and eval binary expression tree functions
+
+ -- SAH bot <sahbot@softathome.com>  Thu, 18 Apr 2024 16:59:27 +0000
+
+libamxp (1.4.0) unstable; urgency=medium
+
+  * [AMX] Add ends with expression operator
+
+ -- SAH bot <sahbot@softathome.com>  Thu, 01 Feb 2024 15:17:33 +0000
+
+libamxp (1.3.2) unstable; urgency=medium
+
+  * [WNC-CHR2][LCM] SoftwareModules cannot be found
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DE HERDT <peter.deherdt@softathome.com>  Wed, 10 Jan 2024 10:09:05 +0000
+
+libamxp (1.3.1) unstable; urgency=medium
+
+  * Update and extend documentation
+
+ -- Peter DE HERDT <peter.deherdt@softathome.com>  Wed, 29 Nov 2023 15:43:30 +0000
+
+libamxp (1.3.0) unstable; urgency=medium
+
+  * Refactor libamxo - libamxp: move fd and connection management out of libamxo
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Sat, 04 Nov 2023 20:01:34 +0000
+
+libamxp (1.2.12) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 17 Oct 2023 12:06:27 +0000
+
+libamxp (1.2.11) unstable; urgency=medium
+
+  * [libamxp]Memory when parsing invalid list value
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 12 Oct 2023 10:15:15 +0000
+
+libamxp (1.2.10) unstable; urgency=medium
+
+  * Develop generic prpl voiceactivation module
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 09 Oct 2023 05:50:19 +0000
+
+libamxp (1.2.9) unstable; urgency=medium
+
+  * Fix license headers in files
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 22 Sep 2023 10:28:20 +0000
+
+libamxp (1.2.8) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 14 Sep 2023 17:51:27 +0000
+
+libamxp (1.2.7) unstable; urgency=medium
+
+  * amxp singal pipefds should be closed when spawning child processes
+  * [libamxp]Scheduler api should be more tolerant regarding spaces in days of week list
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 08 Sep 2023 09:39:14 +0000
+
+libamxp (1.2.6) unstable; urgency=medium
+
+  * [libamxp] When enable or disable a scheduler it is possible that signals are not emitted or triggered
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 01 Sep 2023 05:41:16 +0000
+
+libamxp (1.2.5) unstable; urgency=medium
+
+  * Expression function contains should be able to use a list of values
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 25 Jul 2023 06:22:23 +0000
+
+libamxp (1.2.4) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 19 Jul 2023 11:21:33 +0000
+
+libamxp (1.2.3) unstable; urgency=medium
+
+  * Segmentation fault can occur when timers are added or deleted from within a timer callback
+
+ -- SAH bot <sahbot@softathome.com>  Tue, 27 Jun 2023 09:35:04 +0000
+
+libamxp (1.2.2) unstable; urgency=medium
+
+  * When a schedule item is changed and is currently started send a stop event
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 20 Jun 2023 07:58:22 +0000
+
+libamxp (1.2.1) unstable; urgency=medium
+
+  * Scheduler does not take correct duration into account when multiple schedules expire at the same moment
+
+ -- SAH bot <sahbot@softathome.com>  Fri, 26 May 2023 11:43:10 +0000
+
+libamxp (1.2.0) unstable; urgency=medium
+
+  * [libamxp]Provide API for cron expression parsing and calculating next occurence
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 24 May 2023 13:40:17 +0000
+
+libamxp (1.1.5) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 10 May 2023 08:44:52 +0000
+
+libamxp (1.1.4) unstable; urgency=medium
+
+  * Check if htables are initialized
+
+ -- SAH bot <sahbot@softathome.com>  Wed, 03 May 2023 19:41:32 +0000
+
+libamxp (1.1.3) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 21 Apr 2023 16:23:00 +0000
+
+libamxp (1.1.2) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Sat, 08 Apr 2023 17:11:51 +0000
+
+libamxp (1.1.1) unstable; urgency=medium
+
+  * Improvements in amxp regarding amxp_dir_scan, timer documentation and slot disconnects
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 17 Mar 2023 13:13:20 +0000
+
+libamxp (1.1.0) unstable; urgency=medium
+
+  * [prpl][tr181-upnp] UPnP.Discovery and UPnP.Description are not implemented
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 10 Mar 2023 21:59:45 +0000
+
+libamxp (1.0.3) unstable; urgency=medium
+
+  * unbound does not start after reboot in tagged mode
+  * [CDROUTER][IPv6] Box sends 2 ICMPv6 RA when a RS is received on LAN
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 22 Feb 2023 14:13:17 +0000
+
+libamxp (1.0.2) unstable; urgency=medium
+
+  * [SSH][AMX] Processes spawned by dropbear instance managed SSH Manager ignores SIGINT
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 16 Feb 2023 10:00:42 +0000
+
+libamxp (1.0.1) unstable; urgency=medium
+
+  * Fix memory leakj wehn empty expression is used
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 13 Feb 2023 11:51:04 +0000
+
+libamxp (1.0.0) unstable; urgency=medium
+
+  * Improve logical expression parser
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 13 Feb 2023 10:09:25 +0000
+
+libamxp (0.11.12) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+  * unblock a signal when disabling it with amxp_syssig_enable
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 30 Jan 2023 16:48:13 +0000
+
+libamxp (0.11.11) unstable; urgency=medium
+
+  * 0-timeout timer postponed when starting another longer timer
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 11 Jan 2023 20:16:58 +0000
+
+libamxp (0.11.10) unstable; urgency=medium
+
+  * [multisettings] Using triggers is not effective
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 14 Dec 2022 08:32:41 +0000
+
+libamxp (0.11.9) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 06 Dec 2022 13:44:24 +0000
+
+libamxp (0.11.8) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 21 Nov 2022 09:34:32 +0000
+
+libamxp (0.11.7) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Sat, 19 Nov 2022 11:57:19 +0000
+
+libamxp (0.11.6) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 15 Nov 2022 12:09:40 +0000
+
+libamxp (0.11.5) unstable; urgency=medium
+
+  * Compile regular expressions and validate expressions only once
+  * Investigate and fix klocwork reports for ambiorix libs and tools
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 14 Nov 2022 07:19:50 +0000
+
+libamxp (0.11.4) unstable; urgency=medium
+
+  * Add ^= expression operator
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 03 Nov 2022 11:09:45 +0000
+
+libamxp (0.11.3) unstable; urgency=medium
+
+  * Add function to check if string is safe to build expressions with
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 03 Nov 2022 10:11:45 +0000
+
+libamxp (0.11.2) unstable; urgency=medium
+
+
+ -- SAH bot <sahbot@softathome.com>  Fri, 14 Oct 2022 11:32:03 +0000
+
+libamxp (0.11.1) unstable; urgency=medium
+
+  * Apply change owner when uid or gid is different from zero
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 05 Oct 2022 13:51:03 +0000
+
+libamxp (0.11.0) unstable; urgency=medium
+
+  * Add directory utility functions
+  * When signals are triggered in a recursive way it can lead to segfaults
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 05 Oct 2022 12:00:55 +0000
+
+libamxp (0.10.6) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 12 Sep 2022 12:26:18 +0000
+
+libamxp (0.10.5) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 29 Aug 2022 07:18:59 +0000
+
+libamxp (0.10.4) unstable; urgency=medium
+
+  * [GL-B1300] Various components failing to open Service in firewall due to high load and multiple interface toggling
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 18 Aug 2022 12:50:15 +0000
+
+libamxp (0.10.3) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 17 Aug 2022 08:30:11 +0000
+
+libamxp (0.10.2) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 25 Jul 2022 06:25:41 +0000
+
+libamxp (0.10.1) unstable; urgency=medium
+
+  * [amx] crash on amxp signal read
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 01 Jun 2022 11:53:38 +0000
+
+libamxp (0.10.0) unstable; urgency=medium
+
+  * It must be possible to suspend handling of signals for a specific signal manager
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 30 May 2022 08:19:53 +0000
+
+libamxp (0.9.19) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+  * [Gitlab CI][Unit tests][valgrind] Pipeline doesn't stop when...
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 23 May 2022 10:46:30 +0000
+
+libamxp (0.9.18) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 19 May 2022 14:54:46 +0000
+
+libamxp (0.9.17) unstable; urgency=medium
+
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 25 Apr 2022 08:07:45 +0000
+
+libamxp (0.9.16) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 06 Apr 2022 09:28:45 +0000
+
+libamxp (0.9.15) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 15 Feb 2022 05:22:42 +0000
+
+libamxp (0.9.14) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 04 Feb 2022 14:45:07 +0000
+
+libamxp (0.9.13) unstable; urgency=medium
+
+  * amxp_signal_has_slots only checks the first slot
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 25 Jan 2022 06:16:09 +0000
+
+libamxp (0.9.12) unstable; urgency=medium
+
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 16 Nov 2021 17:13:04 +0000
+
+libamxp (0.9.11) unstable; urgency=medium
+
+  * When signal is deleted in slot, the remaining slots must be called
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 10 Nov 2021 12:17:48 +0000
+
+libamxp (0.9.10) unstable; urgency=medium
+
+  * Restarting timers can lead to early sigalrm
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 28 Oct 2021 21:48:41 +0000
+
+libamxp (0.9.9) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 20 Oct 2021 18:25:19 +0000
+
+libamxp (0.9.8) unstable; urgency=medium
+
+  * Update implementation of ~= operator
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 07 Oct 2021 14:19:09 +0000
+
+libamxp (0.9.7) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 24 Sep 2021 13:04:38 +0000
+
+libamxp (0.9.6) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 23 Sep 2021 09:11:47 +0000
+
+libamxp (0.9.5) unstable; urgency=medium
+
+  * Disconnecting slots in slot callback function can lead to segmentation fault
+  * When child process is killed it stays in <defunc>
+  * Adds support for bbf in operator ~=
+  * Generate junit xml files with unit-tests
+  * Issue: ambiorix/libraries/libamxp#36 Generate junit xml files with unit-tests
+
+ -- SAH bot <sahbot@softathome.com>  Mon, 06 Sep 2021 13:00:12 +0000
+
+libamxp (0.9.4) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 23 Aug 2021 10:09:46 +0000
+
+libamxp (0.9.3) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 09 Jul 2021 07:50:18 +0000
+
+libamxp (0.9.2) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 02 Jul 2021 18:24:24 +0000
+
+libamxp (0.9.1) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 28 Jun 2021 12:13:54 +0000
+
+libamxp (0.9.0) unstable; urgency=medium
+
+  * Make it possible to defer function calls
+
+ -- SAH bot <sahbot@softathome.com>  Mon, 21 Jun 2021 07:07:18 +0000
+
+libamxp (0.8.0) unstable; urgency=medium
+
+  * When using an amxc_set_t it must be possible to evaluate a flag expression with it
+  * Issue: 21 Deleting signal manager from callback function causes segmentation fault
+  * Expressions with True or False should give matches
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 18 Jun 2021 16:06:10 +0000
+
+libamxp (0.7.4) unstable; urgency=medium
+
+  * [tr181 plugins][makefile] Dangerous clean target for all tr181 components
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 08 Jun 2021 08:15:41 +0000
+
+libamxp (0.7.3) unstable; urgency=medium
+
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 01 Jun 2021 06:19:31 +0000
+
+libamxp (0.7.2) unstable; urgency=medium
+
+  * Extend starts with compare operator for expressions
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 31 May 2021 08:22:45 +0000
+
+libamxp (0.7.1) unstable; urgency=medium
+
+  * Fix typos in amxp_subproc.h
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 21 May 2021 10:57:14 +0000
+
+libamxp (0.7.0) unstable; urgency=medium
+
+  * Make it possible to use expressions in variant paths
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Sun, 09 May 2021 20:00:57 +0000
+
+libamxp (0.7.0) unstable; urgency=medium
+
+  * Make it possible to use expressions in variant paths
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Sun, 09 May 2021 19:46:58 +0000
+
+libamxp (0.6.12) unstable; urgency=medium
+
+  * Use common macros from libamxc
+  * Enable auto opensourcing
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 04 May 2021 07:17:25 +0000
+
+libamxp (0.6.11) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 23 Apr 2021 18:23:33 +0000
+
+libamxp (0.6.10) unstable; urgency=medium
+
+  * Double free when deleting signal in slot callback function 
+  *  remove fakeroot dependency on host to build WRT image 
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 15 Apr 2021 19:51:58 +0000
+
+libamxp (0.6.9) unstable; urgency=medium
+
+  * Move copybara to baf
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 08 Apr 2021 20:09:24 +0000
+
+libamxp (0.6.8) unstable; urgency=medium
+
+  * when right value of in comparator is a csv_string or a ssv_string they must function as an list
+
+ -- Peter De Herdt <peter.deherdt@softathome.com>  Wed, 24 Mar 2021 10:55:20 +0000
+
+libamxp (0.6.7) unstable; urgency=medium
+
+  * Step-up version of libamxc for CI
+  * Process controller - launch and monitor child processes and track children
+  * Process info - fetch process information from /proc/<pid>/stat
+  * Blocks SIGINT for child processes
+
+ -- Peter De Herdt <peter.deherdt@softathome.com>  Wed, 10 Mar 2021 10:47:09 +0000
+
+libamxp (0.6.6) unstable; urgency=medium
+
+  * Removing a signal from within a slot causes a segmentation fault
+  * Migrate to new licenses format (baf)
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 25 Feb 2021 13:18:56 +0000
+
+libamxp (0.6.5) unstable; urgency=medium
+
+  * Step up version of libamxc
+  * Add doxygen documentation to public API's
+
+ -- Peter De Herdt <peter.deherdt@softathome.com>  Sun, 14 Feb 2021 07:46:45 +0000
+
+libamxp (0.6.4) unstable; urgency=medium
+
+  * Updates version of libamxc for Ci/CD pipelines
+
+ -- Peter De Herdt <peter.deherdt@softathome.com>  Thu, 28 Jan 2021 08:22:59 +0000
+
+libamxp (0.6.3) unstable; urgency=medium
+
+  * generate make files using build agnostic file (baf)
+  * Only include objects in static library
+
+ -- Peter De Herdt <peter.deherdt@softathome.com>  Mon, 18 Jan 2021 14:28:36 +0000
+
+libamxp (0.6.2) unstable; urgency=medium
+
+  * Step up libamxc version
+  * Check return value of fork systemcall
+
+ -- Peter De Herdt <peter.deherdt@softathome.com>  Mon, 04 Jan 2021 11:16:22 +0000
+
+libamxp (0.6.1) unstable; urgency=medium
+
+  * Updates makefiles
+
+ -- Peter De Herdt <peter.deherdt@softathome.com>  Mon, 30 Nov 2020 15:15:35 +0000
+
+libamxp (0.6.0) unstable; urgency=medium
+
+  * Adds move calback function to variant siginfo
+  * Adds documentation for amxp_timer_t (doxygen)
+
+ -- Peter De Herdt <peter.deherdt@softathome.com>  Sun, 29 Nov 2020 15:35:39 +0000
+
+libamxp (0.5.4) unstable; urgency=medium
+
+  * Update readme
+  * Fix debian package dependencies
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 25 Nov 2020 18:54:17 +0000
+
+libamxp (0.5.3) unstable; urgency=medium
+
+  * - Adds documentation for expression API
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 16 Nov 2020 10:55:40 +0000
+
+libamxp (0.5.2) unstable; urgency=medium
+
+  * Adds bool function contains
+  * Checks if the get_field function is available
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 27 Oct 2020 17:32:44 +0000
+
+libamxp (0.5.1) unstable; urgency=medium
+
+  *  Step up version of libamxc to v0.7.2
+
+ -- Peter De Herdt <peter.deherdt@softathome.com>  Mon, 19 Oct 2020 18:45:57 +0000
+
+libamxp (0.5.0) unstable; urgency=medium
+
+  * Update code style
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 02 Oct 2020 13:27:47 +0000
+
+libamxp (0.4.5) unstable; urgency=medium
+
+  * Fixes parallel building
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 17 Sep 2020 13:17:54 +0000
+
+libamxp (0.4.4) unstable; urgency=medium
+
+### Fixes
+
+  * add version_prefix to make command
+
+ -- Steven Van Weynsberghe <steven.vanweynsberghe@softathome.com>  Thu, 03 Sep 2020 13:46:01 +0000
+
+libamxp (0.4.3) unstable; urgency=medium
+
+### Fixes
+
+  * Fixes g++ compilation warnings and errors
+
+### Changes
+
+  * Add version prefix to support legacy build system
+
+ -- Peter De Herdt <peter.deherdt@softathome.com>  Thu, 03 Sep 2020 05:46:01 +0000
+
+libamxp (0.4.2) unstable; urgency=medium
+
+  * set correct MAJOR number on libraries for internal builds
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 20 Aug 2020 12:39:45 +0000
+
+libamxp (0.4.1) unstable; urgency=medium
+
+  * Fixes issue #11 - segmentation fault in `amxp_sigmngr_trigger_signal`
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Sun, 16 Aug 2020 09:02:40 +0000
+
+libamxp (0.4.0) unstable; urgency=medium
+
+  * Adds bool functions support
+  * Adds value functions support
+  * Adda support for lists in expressions
+  * Adds in comperator
+  * Slots with different private data may connect
+  * Do not call functions when expression is being verified
+  * Solves most of the shift/reduce and reduce/reduce warnings
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 13 Aug 2020 10:53:53 +0000
+
+libamxp (0.3.6) unstable; urgency=medium
+
+  * Issue #8 - expression containing constants without comparison are invalid
+  * Update contributing guide
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 03 Aug 2020 06:17:14 +0000
+
+libamxp (0.3.5) unstable; urgency=medium
+
+  * Improves empty expression evaluation
+
+ -- Peter De Herdt <peter.deherdt@softathome.com>  Mon, 27 Jul 2020 11:24:11 +0000
+
+libamxp (0.3.4) unstable; urgency=medium
+
+  * Refactor the use of regular expressions
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 24 Jul 2020 11:16:15 +0000
+
+libamxp (0.3.3) unstable; urgency=medium
+
+  * Adds RAW_VERSION to makefile.inc, VERSION must be X.Y.Z or X.Y.Z-HASH
+  * Removes unused macros
+
+ -- Peter De Herdt <peter.deherdt@softathome.com>  Wed, 22 Jul 2020 18:27:46 +0000
+
+libamxp (0.3.2) unstable; urgency=medium
+
+  * Expression fields (Paths ) can start with a dot '.'
+  * Fixes memory leak, when unloading
+  * Fixes fortified compilation with musl
+
+ -- Peter De Herdt <peter.deherdt@softathome.com>  Fri, 17 Jul 2020 19:01:23 +0000
+
+libamxp (0.3.1) unstable; urgency=medium
+
+  * Update makefiles for SAH legacy build systems
+  * Updates API documentation
+  * amxp main header file
+  * Reset timerval to 0 when no active timers available
+  * signal/slot documentation
+
+ -- Peter De Herdt <peter.deherdt@softathome.com>  Mon, 13 Jul 2020 05:20:30 +0000
+
+libamxp (0.3.0) unstable; urgency=medium
+
+  * Expression parser support for long text between quotes 
+  * Adds support for expression filtering when connecting to named signals
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 06 Jul 2020 07:22:32 +0000
+
+libamxp (0.2.0) unstable; urgency=medium
+
+  * Logical expression parser and evaluator
+  * Logical expression evaluator status codes in enum
+  * Slot filtering uses logical expression evaluator instead of regexp filtering
+  * Uses std=gnu11 instead of std=gnu18 to support older toolchains and compilers
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Sun, 05 Jul 2020 15:03:17 +0000
+
+libamxp (0.1.15) unstable; urgency=medium
+
+  * Scrubs Component.* files
+
+ -- Peter De Herdt <peter.deherdt@softathome.com>  Tue, 30 Jun 2020 07:48:10 +0000
+
+libamxp (0.1.14) unstable; urgency=medium
+
+  * Support for legacy SAH build system
+
+ -- Peter De Herdt <peter.deherdt@softathome.com>  Mon, 29 Jun 2020 16:24:36 +0000
+
+libamxp (0.1.13) unstable; urgency=medium
+
+  * Timer implementation
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 29 Jun 2020 10:55:27 +0000
+
+libamxp (0.1.12) unstable; urgency=medium
+
+  * Install libraries into target specific output directory
+  * Copybara file
+
+ -- sah4009 <peter.deherdt@softathome.com>  Fri, 26 Jun 2020 16:58:10 +0000
+
+libamxp (0.1.11) unstable; urgency=medium
+
+  * Update license to BSD+patent
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 16 Jun 2020 10:50:55 +0000
+
+libamxp (0.1.10) unstable; urgency=medium
+
+  * Triggers filtered slots when signal has no data
+  * Unit test data collection for ELK
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 10 Jun 2020 06:15:26 +0000
+
+libamxp (0.1.9) unstable; urgency=medium
+
+  * Makes it possible to disable signal handling of a signal manager
+
+ -- sah4009 <peter.deherdt@softathome.com>  Thu, 28 May 2020 06:32:01 +0000
+
+libamxp (0.1.8) unstable; urgency=medium
+
+  * Regexp matching for slots uses extended regexps
+
+ -- sah4009 <peter.deherdt@softathome.com>  Wed, 27 May 2020 08:02:40 +0000
+
+libamxp (0.1.7) unstable; urgency=medium
+
+  * Trigger matching regexp slots when no signal with name is found
+
+ -- sah4009 <peter.deherdt@softathome.com>  Fri, 03 Apr 2020 16:39:43 +0000
+
+libamxp (0.1.6) unstable; urgency=medium
+
+  * Slot filtering using regular expressions
+  * Slot connect using regular expression
+  * API Documentation updated and extended
+
+ -- sah4009 <peter.deherdt@softathome.com>  Tue, 31 Mar 2020 08:31:50 +0000
+
+libamxp (0.1.5) unstable; urgency=medium
+
+  * Connect slots to signals using regular expression (Posix BRE)
+  * Trigger slots depending on filter on singal data (only composite variants)
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 25 Mar 2020 14:35:27 +0000
+
+libamxp (0.1.4) unstable; urgency=medium
+
+  * Make it possible to create signal managers on the stack
+
+ -- sah4009 <peter.deherdt@softathome.com>  Wed, 04 Mar 2020 11:38:47 +0000
+
+libamxp (0.1.3) unstable; urgency=medium
+
+  * DOC - doxygen documentation for signal and slots
+  * CI/CD - Support ELK reporting
+  * CI/CD - Documentation generation
+  * CI/CD - Push HTML scan build and coverage reports to HTTP server
+  * Subproc status and sigchild handling
+  * Fix reaping zombie processes using sigchld for complex multithreaded applications
+  * Fix include for Yocto compilation
+
+ -- sah4009 <peter.deherdt@softathome.com>  Sun, 01 Mar 2020 21:37:13 +0000
+
+libamxp (0.1.2) unstable; urgency=medium
+
+  * subproc_wait functions and synchronous start wrappers
+  * tests for subproc_wait and synchronous start wrappers
+  * makefile - add major version in so name
+  * exmaples
+
+ -- sah4009 <peter.deherdt@softathome.com>  Mon, 24 Feb 2020 19:48:18 +0000
+
+libamxp (0.1.1) unstable; urgency=medium
+
+  * .gitignore - ignores core file from tests
+  * .gitlab-ci - use templates 
+  * makefile -Wl,-soname in linking, no version in soname
+
+ -- sah4009 <peter.deherdt@softathome.com>  Mon, 24 Feb 2020 10:43:59 +0000
+
+libamxp (0.1.0) unstable; urgency=medium
+
+  * Compiler error when building with yocto - use <sys/wait.h> instead of <wait.h>
+  * Test coverage - more tests added
+  * README.md is updated
+  * Signal/slots - opaque handle cna be passed as private data to slots
+  * Example applications updated 
+  * Function `amxp_sigmnr_find_signal`
+  * Function `amxp_signal_has_slots`
+
+ -- sah4009 <peter.deherdt@softathome.com>  Tue, 18 Feb 2020 10:47:20 +0000
+
+libamxp (0.0.5) unstable; urgency=medium
+
+  * Fixes symbolic link in debian package
+  * Fixes makefiles for archlinux pkgbuild support
+
+ -- sah4009 <peter.deherdt@softathome.com>  Tue, 21 Jan 2020 08:19:23 +0000
+
+libamxp (0.0.4) unstable; urgency=medium
+
+  * Adds sub-process launcher and observer (child processes)
+  * Header file include clean-up
+  * System signals available through amxp signal/slot mechanism
+
+ -- Peter De Herdt <peter.deherdt@softathome.com>  Thu, 09 Jan 2020 09:45:36 +0000
+
+libamxp (0.0.3) unstable; urgency=medium
+
+  * signal improvements and refactoring
+  * Make amxp_slot_t type private
+  * Removed dependency to amxj
+  * Use queue to asynchronous trigger signals (emit)
+  * Add  (all) signal, make it possible to connect to all
+
+ -- sah4009 <peter.deherdt@softathome.com>  Sun, 24 Nov 2019 20:35:06 +0000
+
+libamxp (0.0.2) unstable; urgency=medium
+
+  * Debian package generation
+
+ -- sah4009 <peter.deherdt@softathome.com>  Fri, 25 Oct 2019 17:24:33 +0000
+
+libamxp (0.0.1) unstable; urgency=medium
+
+  * observer pattern - signal & slot
+
+ -- DE HERDT peter <peter.deherdt@softathome.com>  Sat, 19 Oct 2019 16:29:17 +0100
+ 

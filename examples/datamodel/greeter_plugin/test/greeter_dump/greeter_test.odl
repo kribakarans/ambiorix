@@ -1,0 +1,14 @@
+include "../../odl/greeter_definition.odl";
+
+%config {
+    define-behavior = { 
+        existing-object = "update"
+    };
+}
+
+%define {
+    object Greeter {
+        variant echo(%in %mandatory variant data);
+        variant deferred_echo(%in %mandatory variant data, %in uint32 time);
+    }
+}

@@ -1,0 +1,11 @@
+%config {
+    %global odl = {
+        load-dm-events = false,
+        dm-save = true,
+        dm-save-on-changed = true,
+        dm-save-delay = 1000,
+        directory = "${storage-path}/odl"
+    };
+}
+
+?include "${storage-path}/odl/":"${defaults_dir}/odl/";

@@ -1,0 +1,41 @@
+%define {
+    select DHCPv4.Server.Pool {
+        bool Enable;
+        %read-only string Status;
+        %unique %key string Alias;
+        uint32 Order;
+        string Interface;
+        string VendorClassID;
+        bool VendorClassIDExclude;
+        string VendorClassIDMode;
+        string ClientID;
+        bool ClientIDExclude;
+        string UserClassID;
+        bool UserClassIDExclude;
+        string Chaddr;
+        string ChaddrMask;
+        bool ChaddrExclude;
+        string AllowedDevices;
+        string MinAddress;
+        string MaxAddress;
+        string ReservedAddresses;
+        string SubnetMask;
+        string DNSServers;
+        string IPRouters;
+        int32 LeaseTime;
+    }
+
+    select DHCPv4.Server.Pool.StaticAddress {
+        bool Enable;
+        %unique %key string Alias;
+        string Chaddr;
+        string Yiaddr;
+    }
+
+    select DHCPv4.Server.Pool.Option {
+        bool Enable;
+        %unique %key string Alias;
+        uint32 Tag;
+        string Value;
+    }
+}

@@ -1,0 +1,35 @@
+%define {
+    select NetDev.Link {
+        object Stats {
+            on action read call stats_read;
+            on action list call stats_list;
+            on action describe call stats_describe;
+            on action destroy call stats_destroy;
+
+            // regardless the field width of 64 bits, these counters may wrap around 0 on 2^32 anyway.
+            /*
+            volatile read-only uint64 RxPackets;
+            volatile read-only uint64 TxPackets;
+            volatile read-only uint64 RxBytes;
+            volatile read-only uint64 TxBytes;
+            volatile read-only uint64 RxErrors;
+            volatile read-only uint64 TxErrors;
+            volatile read-only uint64 RxDropped;
+            volatile read-only uint64 TxDropped;
+            volatile read-only uint64 Multicast;
+            volatile read-only uint64 Collisions;
+            volatile read-only uint64 RxLengthErrors;
+            volatile read-only uint64 RxOverErrors;
+            volatile read-only uint64 RxCrcErrors;
+            volatile read-only uint64 RxFrameErrors;
+            volatile read-only uint64 RxFifoErrors;
+            volatile read-only uint64 RxMissedErrors;
+            volatile read-only uint64 TxAbortedErrors;
+            volatile read-only uint64 TxCarrierErrors;
+            volatile read-only uint64 TxFifoErrors;
+            volatile read-only uint64 TxHeartbeatErrors;
+            volatile read-only uint64 TxWindowErrors;
+            */
+        }
+    }
+}

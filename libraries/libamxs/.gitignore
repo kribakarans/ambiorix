@@ -1,0 +1,8 @@
+**/output/*
+**/run_test
+*.swp
+*.swo
+*.out
+tags
+libamxs-*.*
+libamxs_*.*

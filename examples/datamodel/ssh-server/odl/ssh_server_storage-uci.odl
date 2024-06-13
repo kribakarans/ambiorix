@@ -1,0 +1,10 @@
+%config {
+    %global uci = {
+        load-dm-events = false,
+        dm-load = false,
+        dm-save = false,
+        packages = "${rw_data_path}/dropbear"
+    };
+}
+
+include "mod_dmuci.odl";

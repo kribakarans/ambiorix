@@ -1,0 +1,6 @@
+{
+    "Greeter": {
+        "%Order": 1,
+        "%ACL": "0xFFF"
+    }
+}

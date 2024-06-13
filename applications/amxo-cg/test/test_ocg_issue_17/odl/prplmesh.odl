@@ -1,0 +1,90 @@
+%define {
+    object Device {
+        object WiFi {
+            object DataElements {
+                object Network {
+                    %read-only string ID = "0";
+                    %read-only datetime TimeStamp = "2020-08-31T11:22:39Z";
+                    %read-only string ControllerID = "0";
+                    object Device[] {
+                        counted with NumberOfDevices;
+                    }
+
+                    object AccessPoint[] {
+                        counted with NumberOfAccessPoints;
+                    }
+
+                    void AccessPointCommit();
+
+                    void ClientSteering(
+                        %in %mandatory string station_mac,
+                        %in %mandatory string target_bssid
+                    );
+                }
+            }
+        }
+    }
+}
+
+%define {
+    select Device.WiFi.DataElements.Network.Device {
+        object Radio [] {
+            counted with NumberOfRadios;
+        }
+    }
+}
+
+%define {
+    select Device.WiFi.DataElements.Network.Device.Radio {
+        %read-only string ID = "00:00:00:00:00:00";
+        bool Enabled = false;
+        %read-only uint32 Noise = 0;
+        %read-only uint32 Utilization = 0;
+        %read-only uint32 Transmit = 0;
+        %read-only uint32 ReceiveSelf = 0;
+        %read-only uint32 ReceiveOther = 0;
+        object CurrentOperatingClasses [] {
+            %read-only datetime TimeStamp = "2020-08-31T11:22:39Z";
+            %read-only uint32 Class = 0;
+            %read-only uint32 Channel = 0;
+            %read-only int32 TxPower = 0;
+            counted with NumberOfCurrOpClass;
+        }
+
+        %template %instance bool ScanTrigger(
+            %in %mandatory string channels_list,
+            %in %mandatory uint32 channels_num
+        );
+
+        object Capabilities;
+
+        object BSS [] {
+            counted with NumberOfBSS;
+        }
+
+        object BackhaulSTA {
+            %read-only string MACAddress = "";
+        }
+
+        %read-only object ScanResult [] {
+            counted with ScanResultNumberOfEntries;
+        }
+
+        %read-only object CACStatus {
+            %read-only datetime TimeStamp = "2020-08-31T11:22:39Z";
+
+            %read-only object AvailableChannels [] {
+
+                %read-only uint32 OperatingClass = 0 {
+                    on action validate call check_range [0, 255];
+                }
+
+                %read-only uint32 Channel = 0 {
+                    on action validate call check_range [0, 255];
+                }
+
+                counted with NumberOfAvailableChannels;
+            }
+        }
+    }
+}

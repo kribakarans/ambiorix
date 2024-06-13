@@ -1,0 +1,6 @@
+!amx silent true
+!amx alias exit "!amx exit"
+!amx alias quit "!amx exit"
+!amx alias printenv "!amx variable"
+!amx alias setenv "!amx variable"
+!amx silent false

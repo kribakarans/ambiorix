@@ -1,0 +1,8 @@
+**/output/*
+**/run_test
+libamxj-*.*
+libamxj_*.*
+test/**/*.json
+examples/oci/oci_reader
+examples/oci/oci_reader.d
+examples/oci/oci_reader.o

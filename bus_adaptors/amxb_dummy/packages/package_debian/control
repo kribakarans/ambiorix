@@ -1,0 +1,11 @@
+Source: mod-amxb-dummy
+Section: devel
+Priority: optional
+Maintainer: Softathome <support.opensource@softathome.com>
+
+Package: mod-amxb-dummy
+Architecture: amd64
+Depends: ${shlibs:Depends}
+Description: DUMMY backend implementation for amxb
+  DUMMYBackend
+ 

@@ -1,0 +1,7 @@
+variables:
+  TEST_DEPS: libamxo
+  BUILD_DEPS: libamxc libamxp libamxb libamxd
+  BUILD_TARGET: libamxs
+
+include:
+  - remote: 'https://gitlab.com/soft.at.home/ci/gitlab-ci/raw/main/ambiorix-default-pipeline.yml'

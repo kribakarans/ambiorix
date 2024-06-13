@@ -1,0 +1,6 @@
+%define {
+    object Test {
+        string Text;
+        uint32 Number;
+    }
+}

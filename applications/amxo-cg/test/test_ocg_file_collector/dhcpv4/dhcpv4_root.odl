@@ -1,0 +1,14 @@
+%define {
+    object DHCPv4 {
+        object Client[] {
+            counted with ClientNumberOfEntries;
+        }
+        object Server;
+        object Relay;
+    }
+}
+
+include "dhcpv4_client.odl";
+include "dhcpv4_server.odl";
+include "dhcpv4_relay.odl";
+

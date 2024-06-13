@@ -1,0 +1,18 @@
+{
+    "Device": {
+        "%Order": 1,
+        "%ACL": "0xFFF"
+    },
+    "LocalAgent": {
+        "%Order": 2,
+        "%ACL": "0xFFF"
+    },
+    "Greeter": {
+        "%Order": 1,
+        "%ACL": "0xC81",
+        "History": {
+            "%Order": 2,
+            "%ACL": "0x0"
+        }
+    }
+}

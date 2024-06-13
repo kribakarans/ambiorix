@@ -1,0 +1,28 @@
+!amx silent true
+
+# -----------------------------------------------------
+# pcb - cli
+# -----------------------------------------------------
+
+!amx variable cli-name = "pcb-cli"
+!addon load mod_ba /usr/lib/amx/amx-cli/mod-ba-cli.so
+backend add /usr/bin/mods/amxb/mod-amxb-pcb.so
+connection open pcb:/var/run/pcb_sys
+!addon select mod_ba cli
+
+!amx variable acl-enabled=false
+!amx variable acl-dir="/cfg/etc/acl/"
+
+!amx alias printenv "!amx variable"
+!amx alias setenv "!amx variable"
+!amx alias mode-cli "!addon select mod_ba cli"
+!amx alias connections "!addon select mod_ba connection"
+!amx alias exit "!amx exit"
+!amx alias quit "!amx exit"
+!amx alias protected "connections; access pcb:/var/run/pcb_sys protected; mode-cli"
+!amx alias public "connections; access pcb:/var/run/pcb_sys public; mode-cli"
+
+!history clear
+!history load /tmp/pcb_cli.history
+
+!amx silent false

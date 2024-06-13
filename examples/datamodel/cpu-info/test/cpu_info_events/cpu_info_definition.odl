@@ -1,0 +1,36 @@
+%define {
+    object CPUMonitor {
+        on action destroy call cpu_monitor_cleanup;
+        %read-only %volatile uint64 Usage {
+            on action read call read_usage;
+            on action destroy call cleanup_usage;
+        }
+
+        uint32 Interval = 0;
+        bool PeriodicInform = false;
+
+        event "cpu:usage";
+        
+        %read-only object CPU[] {
+            on action read call cpu_read;
+            on action list call cpu_list;
+            on action describe call cpu_describe;
+            on action destroy call cpu_cleanup;
+        }
+    }
+}
+
+%populate {
+    on event "*" call print_event;
+
+    on event "dm:object-changed" call update_timer
+       filter 'object == "CPUMonitor." && contains("parameters.Interval")';
+
+    on event "dm:object-changed" call enable_periodic_inform
+       filter 'object == "CPUMonitor." && 
+               parameters.PeriodicInform.to == true';
+
+    on event "dm:object-changed" call disable_periodic_inform
+       filter 'object == "CPUMonitor." && 
+               parameters.PeriodicInform.to == false';
+}

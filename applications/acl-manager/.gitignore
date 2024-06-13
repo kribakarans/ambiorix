@@ -1,0 +1,6 @@
+**/output/*
+**/run_test
+**/merged/*
+**/vgcore*
+core
+openwrt/

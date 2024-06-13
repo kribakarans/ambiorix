@@ -1,0 +1,9 @@
+Source: libamxs
+Section: devel
+Priority: optional
+Maintainer: matthias.vangestel <matthias.v.gestel@gmail.com>
+
+Package: libamxs
+Architecture: amd64
+Depends: ${shlibs:Depends}
+Description: Data Model Synchronization API

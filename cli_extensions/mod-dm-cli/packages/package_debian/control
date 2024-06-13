@@ -1,0 +1,11 @@
+Source: mod-dm-cli
+Section: devel
+Priority: optional
+Maintainer: peter.deherdt <peter.deherdt@softathome.com>
+
+Package: mod-dm-cli
+Architecture: amd64
+Depends: ${shlibs:Depends}
+Description: Ambiorix CLI extension
+  Allows loading Ambiorix data models in the CLI
+  

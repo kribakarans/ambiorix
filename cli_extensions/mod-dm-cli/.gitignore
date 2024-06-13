@@ -1,0 +1,5 @@
+**/output/*
+mod_*.so
+test/**/run_test
+test/**/core
+test/**/saved.odl

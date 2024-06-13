@@ -1,0 +1,10 @@
+**/output/*
+**/run_test
+mod-*.*
+*.swp
+test/pcb_greeter/*.o
+test/pcb_greeter/*.so
+test/pcb_greeter/*.d
+test/amxb_pcb_e2e/test_config.odl
+test/amxb_pcb_e2e/mod-amxb-test-pcb.so
+include_priv/amxb_pcb_version.h

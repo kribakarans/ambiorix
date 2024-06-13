@@ -1,0 +1,8 @@
+variables:
+  TEST_DEPS: libamxo
+  DOC_GEN_CMD: "make doc"
+  BUILD_TARGET: libamxa
+  BUILD_DEPS: libamxc libamxj libamxd libamxb
+
+include:
+  - remote: 'https://gitlab.com/soft.at.home/ci/gitlab-ci/raw/main/ambiorix-default-pipeline.yml'

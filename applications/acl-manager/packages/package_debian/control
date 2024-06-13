@@ -1,0 +1,11 @@
+Source: acl-manager
+Section: devel
+Priority: optional
+Maintainer: Johan Jacobs <johan.jacobs_ext@softathome.com>
+
+Package: acl-manager
+Architecture: amd64
+Depends: ${shlibs:Depends}
+Description: ACL manager plugin
+ The ACL manager will monitor the ACL directory and merge
+ ACL files together to create a single master ACL file per role.

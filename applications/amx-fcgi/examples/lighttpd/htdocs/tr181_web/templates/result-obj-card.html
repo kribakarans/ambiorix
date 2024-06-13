@@ -1,0 +1,27 @@
+ <div class="card" dm-object="{0}">
+  <div id="HEADING{1}" class="card-header">
+    <div class="input-group dm-object">
+      <div class="mb-0">
+        <button type="button" class="btn btn-link btn-small" data-toggle="collapse" data-target="#OBJ{1}">{0}</button>
+      </div>
+      <span class="btn-right-allign" dm-object="{0}">
+        <button  type="button" class="badge badge-info btn btn-secondary btn-small border-dark" btn-action="delete" data-toggle="tooltip" data-placement="top" title="collapse">
+          <span class="fa fa-trash"></span>
+        </button> 
+        <button  type="button" class="badge badge-info btn btn-secondary btn-small border-dark" btn-action="get" data-toggle="tooltip" data-placement="top" title="collapse">
+          <span class="fa fa-arrow-right"></span>
+        </button> 
+      </span>
+  </div>
+  <div id="OBJ{1}" class="collapse" aria-labelledby="HEADING{1}" data-parent="#RESULT" dm-object="{0}">
+    <div class="card-body">
+      <table class="table table-striped table-bordered table-hover table-sm">
+        <thead>
+          <tr> <th scope="col">Parameter</th> <th scope="col">Value</th> <th scope="col"></th> </tr>
+        </thead>
+        <tbody dm-path="{0}"qq>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

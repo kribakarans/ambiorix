@@ -1,0 +1,28 @@
+%config {
+    // Application name
+    name = "netdev";
+
+    // amxo parser config-options
+    import-dbg = true;
+
+    // SAHTRACE
+    sahtrace = {
+        type = "stdout",
+        level = 500
+    };
+    trace-zones = [ "netlink", "netdev" ];
+
+    definitions_file = "${name}_definitions.odl";
+}
+
+include "${definitions_file}";
+
+%define {
+    mib TestMib {
+        string Text;
+    }
+
+    object Dummy {
+        extend with mib TestMib;
+    }
+}

@@ -1,0 +1,13 @@
+!amx silent false
+
+# init start
+
+# defining aliases
+
+!amx alias exit "!amx exit"
+!amx alias quit "!amx exit"
+!amx alias printenv "!amx variable"
+!amx alias setenv "!amx variable"
+
+#init done
+

@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+
+<!----------------------------------------------------------------------------->
+<head>
+    <title>Connection Database</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="/bootstrap/4.6.0/css/bootstap.min.css">   
+    <link rel="stylesheet" href="/dataTables/1.13.6/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="/conndb/css/conndb.css">
+
+    <script src="/jquery/3.5.1/js/jquery.min.js"></script>
+    <script src="/bootstrap/4.6.0/js/bootstap.bundle.min.js"></script>
+    <script src="/dataTables/1.13.6/js/jquery.dataTables.min.js"></script>
+
+    <script src="/templates/1.0.0/js/templates.js"></script>
+    <script src="/tr181model/1.0.0/js/tr181model.js"></script>
+
+    <script type="text/javascript" src="/conndb/js/conndbview.js"></script>
+    <script type="text/javascript" src="/conndb/js/conndbview-service.js"></script>
+    <script type="text/javascript" src="/conndb/js/conndbview-connection.js"></script>
+    <script type="text/javascript" src="/conndb/js/conndbctrl.js"></script>
+</head>
+<!----------------------------------------------------------------------------->
+
+<!----------------------------------------------------------------------------->
+<body style="background-color:#EFEFEF;">
+    <!----------------------------------------------------------------------------->
+  <div class="container-fluid">
+    <div class="row content" style ="flex-direction: column">
+
+    </div>
+  </div>
+  <!----------------------------------------------------------------------------->
+
+  <!----------------------------------------------------------------------------->
+    <script type="text/javascript">
+        if (!String.prototype.format) {
+            String.prototype.format = function() {
+                let args = arguments;
+                return this.replace(/{(\d+)}/g, 
+                    function(match, number) { 
+                        return typeof args[number] != 'undefined'
+                                ? args[number]:match;
+                    }
+                );
+            }
+        }
+
+        window.onload = function() {
+            conndbview.init();
+        }
+
+    </script>
+  <!----------------------------------------------------------------------------->
+</body>
+<!----------------------------------------------------------------------------->
+
+</html>

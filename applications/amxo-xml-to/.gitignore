@@ -1,0 +1,4 @@
+**/output/*
+amxo-xml-to*
+include_priv/version.h
+**/run_test

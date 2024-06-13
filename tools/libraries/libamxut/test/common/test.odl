@@ -1,0 +1,25 @@
+%define {
+    object Test {
+        %read-only string StringParameter = "Default initial string value";
+        %read-only csv_string CsvStringParameter = "Banana,Apple";
+        %read-only ssv_string SsvStringParameter = "Grape Prune";
+        %read-only uint8 Uint8parameter = 255;
+        %read-only int8 Int8parameter = -128;
+        %read-only uint16 Uint16parameter = 65535;
+        %read-only int16 Int16parameter = -32768;
+        %read-only uint32 Uint32parameter = 4294967295;
+        %read-only int32 Int32parameter = -2147483648;
+        %read-only uint64 Uint64parameter = 123456789101112;
+        %read-only uint64 Uint64parameterMax = 18446744073709551614;
+        %read-only int64 Int64parameter = -9223372036854775808;
+        %read-only bool BoolParameter = True;
+    }
+
+    object MyStreet {
+        object MyHouse {
+            object MyDoor {
+                %read-only string Color = "blue";
+            }
+        }
+    }
+}

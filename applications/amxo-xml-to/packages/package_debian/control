@@ -1,0 +1,10 @@
+Source: amxo-xml-to
+Section: devel
+Priority: optional
+Maintainer: peter.deherdt <peter.deherdt@softathome.com>
+
+Package: amxo-xml-to
+Architecture: amd64
+Depends: ${shlibs:Depends}
+Description: Ambiorix XML converter
+ 

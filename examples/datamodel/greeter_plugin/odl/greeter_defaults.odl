@@ -1,0 +1,24 @@
+%populate {
+    object Greeter.History {
+        instance add (0,"") {
+            !read-only parameter From = "odl parser";
+            !read-only parameter Message = "Welcome to the Greeter App";
+            parameter Retain = true;
+
+            object Info {
+                instance add(0, "Info1") {
+                    parameter Text = "This is the default welcome message";
+                }
+                instance add(0, "Info2") {
+                    parameter Text = "The message is added using the odl defaults file";
+                }
+                instance add(0, "Info3") {
+                    parameter Text = "The info instances can be changed";
+                }
+                instance add(0, "Info4") {
+                    parameter Text = "New info instances can be added, existing can be deleted";
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,294 @@
+amxo-cg (1.4.3) unstable; urgency=medium
+
+  * Take counter parameter attributes into account
+
+ -- SAH bot <sahbot@softathome.com>  Tue, 07 May 2024 09:10:23 +0000
+
+amxo-cg (1.4.2) unstable; urgency=medium
+
+  * Fix instance counter position
+
+ -- SAH bot <sahbot@softathome.com>  Fri, 26 Apr 2024 15:43:09 +0000
+
+amxo-cg (1.4.1) unstable; urgency=medium
+
+  * Parameters must also be notated in xml using supported path notation
+
+ -- SAH bot <sahbot@softathome.com>  Tue, 16 Apr 2024 10:52:55 +0000
+
+amxo-cg (1.4.0) unstable; urgency=medium
+
+  * [AMX][Documentation] Allow to configure the proxied datamodel path in documentation
+
+ -- SAH bot <sahbot@softathome.com>  Tue, 12 Mar 2024 12:50:16 +0000
+
+amxo-cg (1.3.0) unstable; urgency=medium
+
+  * Add parameter constraints to generated xml files
+
+ -- Peter DE HERDT <peter.deherdt@softathome.com>  Wed, 06 Dec 2023 14:14:33 +0000
+
+amxo-cg (1.2.14) unstable; urgency=medium
+
+  * Fix license headers in files
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 12 Oct 2023 13:48:43 +0000
+
+amxo-cg (1.2.13) unstable; urgency=medium
+
+  * Fixes unit tests, removed deprecated syntax in tests
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 21 Apr 2023 21:13:22 +0000
+
+amxo-cg (1.2.12) unstable; urgency=medium
+
+  * amxo-cg fails to build correct include tree when parsing error occurs
+
+ -- SAH bot <sahbot@softathome.com>  Tue, 28 Feb 2023 12:30:14 +0000
+
+amxo-cg (1.2.11) unstable; urgency=medium
+
+  * [PRPL] amxo-cg does not compile with libxml2 version 2.10.2
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 28 Feb 2023 10:29:57 +0000
+
+amxo-cg (1.2.10) unstable; urgency=medium
+
+  * [doc generation][NumberOfEntries field is not correctly put under the correct Object
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 18 Jan 2023 09:32:04 +0000
+
+amxo-cg (1.2.9) unstable; urgency=medium
+
+  * Files passed with -i option are not handled as include files
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 16 Nov 2022 12:22:33 +0000
+
+amxo-cg (1.2.8) unstable; urgency=medium
+
+  * Ignore deprecated declarations
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 14 Nov 2022 10:49:07 +0000
+
+amxo-cg (1.2.7) unstable; urgency=medium
+
+  * Issue: ambiorix/applications/amxo-cg#21 Variant return type is not properly converted to doc
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 20 Oct 2022 15:38:38 +0000
+
+amxo-cg (1.2.6) unstable; urgency=medium
+
+  * Use amxp functions for scanning directories
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 07 Oct 2022 11:42:11 +0000
+
+amxo-cg (1.2.5) unstable; urgency=medium
+
+  * [Gitlab CI][Unit tests][valgrind] Pipeline doesn't stop when...
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 23 May 2022 14:21:08 +0000
+
+amxo-cg (1.2.4) unstable; urgency=medium
+
+  * Issue: ambiorix/applications/amxo-cg#20 Add STAGINGDIR to CFLAGS and LDFLAGS
+
+ -- SAH bot <sahbot@softathome.com>  Thu, 02 Dec 2021 15:40:02 +0000
+
+amxo-cg (1.2.3) unstable; urgency=medium
+
+  * amxo-cg crashes when trying to parse prplMesh ODL files
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 10 Nov 2021 20:04:57 +0000
+
+amxo-cg (1.2.2) unstable; urgency=medium
+
+  * amxo-cg sometimes doesn't properly detect passed filename
+  * Parse odl files in order given on commandline
+
+ -- SAH bot <sahbot@softathome.com>  Fri, 22 Oct 2021 11:18:14 +0000
+
+amxo-cg (1.2.1) unstable; urgency=medium
+
+  * Parsing defaults values fails if parent is referenced by Alias
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 13 Oct 2021 12:13:49 +0000
+
+amxo-cg (1.2.0) unstable; urgency=medium
+
+  * Extra info needed in generated xml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 23 Aug 2021 11:27:23 +0000
+
+amxo-cg (1.1.6) unstable; urgency=medium
+
+  * Not passing any input files results in exit code 0
+
+ -- SAH bot <sahbot@softathome.com>  Tue, 06 Jul 2021 12:49:49 +0000
+
+amxo-cg (1.1.5) unstable; urgency=medium
+
+  * Generation of version.h files should not be .PHONY
+  * Issue: ambiorix/applications/amxo-cg#14 Parameters defined using `counted with` are not present in XML output
+
+ -- SAH bot <sahbot@softathome.com>  Thu, 17 Jun 2021 07:43:20 +0000
+
+amxo-cg (1.1.4) unstable; urgency=medium
+
+  * Issue: ambiorix/applications/amxo-cg#13 Missing reference to libxml2-dev in README
+  * Issue: ambiorix/applications/amxo-cg#14 Parameters defined using `counted with` are not present in XML output
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 10 Jun 2021 14:34:55 +0000
+
+amxo-cg (1.1.3) unstable; urgency=medium
+
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 08 Jun 2021 17:48:12 +0000
+
+amxo-cg (1.1.2) unstable; urgency=medium
+
+  * [tr181 plugins][makefile] Dangerous clean target for all tr181 components
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 08 Jun 2021 11:29:51 +0000
+
+amxo-cg (1.1.1) unstable; urgency=medium
+
+  * Include tree is not build correctly
+  * add command line reset option
+  * Update README
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 21 May 2021 12:41:18 +0000
+
+amxo-cg (1.1.0) unstable; urgency=medium
+
+  * Generate xml/html documentation from odl files
+  * Fixes test makefile
+  * amxo-cg does not exit with status code different from 0 when odl contains errors
+  *  It must be possible to add saved files
+  * Enable auto opensourcing
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Sun, 09 May 2021 20:58:00 +0000
+
+amxo-cg (1.0.4) unstable; urgency=medium
+
+  * Disable function resolving
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 21 Apr 2021 10:35:14 +0000
+
+amxo-cg (1.0.3) unstable; urgency=medium
+
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 16 Apr 2021 11:14:47 +0000
+
+amxo-cg (1.0.2) unstable; urgency=medium
+
+  *  remove fakeroot dependency on host to build WRT image 
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 15 Apr 2021 20:18:29 +0000
+
+amxo-cg (1.0.1) unstable; urgency=medium
+
+  * VERSION_PREFIX is needed in buildfiles 
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 15 Apr 2021 11:08:40 +0000
+
+amxo-cg (1.0.0) unstable; urgency=medium
+
+  * Move copybara to baf
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 08 Apr 2021 22:08:57 +0000
+
+amxo-cg (0.2.5) unstable; urgency=medium
+
+  * Migrate to new licenses format (baf)
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 26 Feb 2021 18:06:28 +0000
+
+amxo-cg (0.2.4) unstable; urgency=medium
+
+  * Auto generate make files using build agnostic file (baf)
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 19 Jan 2021 08:26:47 +0000
+
+amxo-cg (0.2.3) unstable; urgency=medium
+
+  * Add contributing.md
+
+ -- Matthias Franck <matthias.franck_ext@softathome.com>  Tue, 05 Jan 2021 09:46:36 +0000
+
+amxo-cg (0.2.2) unstable; urgency=medium
+
+  * Update readme
+  * Fix debian package dependencies
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Sun, 29 Nov 2020 18:54:18 +0000
+
+amxo-cg (0.2.1) unstable; urgency=medium
+
+  * Update gitlab CI/CD yml file
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 16 Nov 2020 14:29:58 +0000
+
+amxo-cg (0.2.0) unstable; urgency=medium
+
+  * Update code style
+
+ -- Peter De Herdt <peter.deherdt@softathome.com>  Fri, 02 Oct 2020 17:16:30 +0000
+
+amxo-cg (0.1.2) unstable; urgency=medium
+
+  * fix clean target
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 22 Sep 2020 06:11:37 +0000
+
+amxo-cg (0.1.1) unstable; urgency=medium
+
+  * Fixes g++ warnings and errors
+
+ -- Peter De Herdt <peter.deherdt@softathome.com>  Fri, 04 Sep 2020 16:52:10 +0000
+
+amxo-cg (0.1.0) unstable; urgency=medium
+
+  * Apply API changes of libamxd
+  * Needs libamxd version 1.0.0 or higher
+  * Common macros moved to libamxc
+
+ -- Peter De Herdt <peter.deherdt@softathome.com>  Sun, 30 Aug 2020 09:19:48 +0000
+
+amxo-cg (0.0.5) unstable; urgency=medium
+
+- Adds RAW_VERSION to makefile.inc, VERSION must be X.Y.Z or X.Y.Z-HASH
+- Compilation issue with frotified musl
+
+ -- Peter De Herdt <peter.deherdt@softathome.com>  Wed, 29 Jul 2020 10:40:40 +0000
+
+amxo-cg (0.0.4) unstable; urgency=medium
+
+  * Uses std=c11 instead of std=c18, to support older toolchains and compilers
+
+ -- Peter De Herdt <peter.deherdt@softathome.com>  Mon, 06 Jul 2020 08:46:10 +0000
+
+amxo-cg (0.0.3) unstable; urgency=medium
+
+  * Add copybara file
+  * update license to BSD+patent
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 30 Jun 2020 08:35:09 +0000
+
+amxo-cg (0.0.2) unstable; urgency=medium
+
+  * Install target, removes strip from install (yocto)
+
+ -- sah4009 <peter.deherdt@softathome.com>  Mon, 08 Jun 2020 09:16:26 +0000
+
+amxo-cg (0.0.1) unstable; urgency=medium
+
+  * Verbose parse logging
+  * Data model methods C function template generator
+
+ -- sah4009 <peter.deherdt@softathome.com>  Thu, 24 May 2020 19:16:00 +0000
+
+amxo-cg (0.0.0) unstable; urgency=medium
+
+  * Initial version
+
+ -- sah4009 <peter.deherdt@softathome.com>  Thu, 21 May 2020 21:20:48 +0000

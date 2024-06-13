@@ -1,0 +1,16 @@
+%config {
+    uris = [
+        "pcb:/tmp/local"
+    ];
+
+}
+
+%define {
+    object Phonebook {
+        object Contact[] {
+            string FirstName;
+            string LastName;
+            %read-only string Plugin = "PAMX";
+        }
+    }
+}

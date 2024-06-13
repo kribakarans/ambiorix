@@ -1,0 +1,9 @@
+%populate {
+	object 'Test' {
+		object 'Table' {
+			instance add(1) {
+				parameter 'Text' = "Hallo";
+			}
+		}
+	}
+}

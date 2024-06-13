@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!----------------------------------------------------------------------------->
+<head>
+  <title>AMX HTTP TR-181</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="/bootstrap/4.6.0/css/bootstap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">  
+  <link rel="stylesheet" href="/tr181_web/css/tr181ui.css">
+  <link rel="stylesheet" href="/animate/4.1.1/css/animate.min.css">
+
+  <script src="/jquery/3.5.1/js/jquery.min.js"></script>
+  <script src="/bootstrap/4.6.0/js/bootstap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js"></script>
+
+  <script src="/templates/1.0.0/js/templates.js"></script>
+  <script src="/tr181model/1.0.0/js/tr181model.js"></script>
+
+  <script src="/tr181_web/js/tr181view.js"></script>
+  <script src="/tr181_web/js/tr181view-input.js"></script>
+  <script src="/tr181_web/js/tr181view-result.js"></script>
+  <script src="/tr181_web/js/tr181ctrl.js"></script>
+  <script src="/tr181_web/js/tr181ctrl-input.js"></script>
+  <script src="/tr181_web/js/tr181ctrl-result.js"></script>
+</head>
+<!----------------------------------------------------------------------------->
+
+<!----------------------------------------------------------------------------->
+<body>
+  <!----------------------------------------------------------------------------->
+  <div class="container-fluid">
+    <div class="row content">
+
+    </div>
+  </div>
+  <!----------------------------------------------------------------------------->
+
+  <!----------------------------------------------------------------------------->
+  <script type="text/javascript">
+    if (!String.prototype.format) {
+        String.prototype.format = function() {
+            let args = arguments;
+            return this.replace(/{(\d+)}/g, 
+                function(match, number) { 
+                    return typeof args[number] != 'undefined'
+                            ? args[number]:match;
+                }
+            );
+        }
+    }
+
+    if (!$.fn.enterkey) {
+        $.fn.enterKey = function (fnc) {
+            return this.each(
+                function () {
+                    $(this).keypress(
+                        function (ev) {
+                            let keycode = (ev.keyCode ? ev.keyCode : ev.which);
+                            if (keycode == '13') {
+                                fnc.call(this, ev);
+                            }
+                        }
+                    );
+                }
+            );
+        }
+    }
+
+    document.uuid = function() {
+      return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+        var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+        return v.toString(16);
+      });
+    }
+
+    document.get_cookie = function(name, def_val) {
+      const value = `; ${document.cookie}`;
+      const parts = value.split(`; ${name}=`);
+      if (parts.length === 2) {
+        try {
+          return JSON.parse(parts.pop().split(';').shift());
+        }
+        catch(err) {
+          return JSON.parse(def_val);
+        }
+      } else {
+        return JSON.parse(def_val);
+      }
+    }
+
+    document.set_cookie = function(name, value) {
+      if (value) {
+        document.cookie = '{0}={1}'.format(name, value);
+      } else {
+        document.cookie = '{0}=false'.format(name);
+      }
+    }
+
+    window.onload = function() {
+      document.event_stream = tr181model.open_event_stream(document.uuid());
+      tr181view.init(tr181ctrl.execute_request);
+    }
+
+    $( window ).resize(
+      function() {
+        let height = $(window).height();
+        $('.sidenav').height(height);
+      }
+    );
+
+  </script>
+  <!----------------------------------------------------------------------------->
+</body>
+<!----------------------------------------------------------------------------->
+
+</html>

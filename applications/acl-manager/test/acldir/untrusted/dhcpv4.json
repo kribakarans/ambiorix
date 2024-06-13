@@ -1,0 +1,9 @@
+{
+    "DHCPv4.": {
+        "Order": 1,
+        "Param": "rwxn",
+        "Obj": "rwx-",
+        "InstantiatedObj": "rwxn",
+        "CommandEvent": "rwxn"
+    }
+}

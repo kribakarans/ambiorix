@@ -1,0 +1,11 @@
+Source: amxrt
+Section: devel
+Priority: optional
+Maintainer: Peter.De.Herdt <peter.deherdt@softathome.com>
+
+Package: amxrt
+Architecture: amd64
+Depends: ${shlibs:Depends}
+Description: Ambiorix ODL runtime
+ Ambiorix runtine - launches odl files
+ 

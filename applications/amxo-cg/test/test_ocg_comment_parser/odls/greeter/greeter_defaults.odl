@@ -1,0 +1,10 @@
+%populate {
+    object Greeter.History {
+        instance add (0,"") {
+            extend with mib TestMib;
+            !read-only parameter From = "odl parser";
+            !read-only parameter Message = "Welcome to the Greeter App";
+            parameter Retain = true;
+        }
+    }
+}

@@ -1,0 +1,15 @@
+%define {
+    select Greeter {
+        /*
+            Echos back the data.
+
+            This method is added to demonstrate odl resolver instructions.
+
+            @param data Some data
+            
+            @return
+            The data
+        */
+        variant echo(%in %mandatory variant data);
+    }
+}

@@ -1,0 +1,12 @@
+Source: mod-ba-cli
+Section: devel
+Priority: optional
+Maintainer: peter.deherdt <peter.deherdt@softathome.com>
+
+Package: mod-ba-cli
+Architecture: amd64
+Depends: ${shlibs:Depends}, amx-cli
+Description: Command line interface with support for multiple back-ends
+  Ambiorix CLI add-on
+  Adds data model functionality
+ 

@@ -1,0 +1,9 @@
+# this is a comment -> next invoke "!help record" command
+!help record
+
+# Yet another comment line with variable MyVar = ${MyVar}
+# Yet another comment line with env var USER = $(USER)
+
+!help
+
+# All done 

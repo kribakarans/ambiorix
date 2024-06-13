@@ -1,0 +1,7 @@
+output
+amxrt_*
+amxrt-*
+amxrt
+test/*/run_test
+include_priv/version.h
+test/test_amxrt_save_load/rubish/**

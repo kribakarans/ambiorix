@@ -1,0 +1,12 @@
+Source: libamxt
+Section: devel
+Priority: optional
+Maintainer: peter.deherdt <peter.deherdt@softathome.com>
+
+Package: libamxt
+Architecture: amd64
+Depends: ${shlibs:Depends}
+Description: Generic Patterns 
+ This c-library provides a re-usable C-API for terminal based interactive 
+ interfaces for any application
+ 

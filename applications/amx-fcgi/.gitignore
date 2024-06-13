@@ -1,0 +1,7 @@
+output/**
+examples/lighttpd/logs/*.log
+**/run_test
+.vscode
+*.insync
+*.insyncdl
+**/openwrt/

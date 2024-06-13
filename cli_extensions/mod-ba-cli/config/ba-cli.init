@@ -1,0 +1,55 @@
+!amx silent true
+
+#                   _  ___  ____
+#  _ __  _ __ _ __ | |/ _ \/ ___|
+# | '_ \| '__| '_ \| | | | \___ \
+# | |_) | |  | |_) | | |_| |___) |
+# | .__/|_|  | .__/|_|\___/|____/
+# |_|        |_| based on OpenWrt
+# -----------------------------------------------------
+# Bus Agnostic CLI
+# -----------------------------------------------------
+
+#
+# Add config options for backends
+!amx variable ubus = { watch-ubus-events = true }
+
+#
+# Load Ambiorix Bus Agnostic CLI
+!addon load mod_ba /usr/lib/amx/amx-cli/mod-ba-cli.so
+
+# Load all available back-ends
+backend autoload /usr/bin/mods/amxb/
+
+# Open connectings ...
+connection autoconnect
+
+# Set mode cli
+!addon select mod_ba cli
+
+# Disable ACL verification by default
+
+!amx variable connection="*"
+!amx variable acl-enabled=false
+!amx variable acl-dir="/cfg/etc/acl/"
+
+# Define some aliases
+!amx alias printenv "!amx variable"
+!amx alias setenv "!amx variable"
+!amx alias mode-cli "!addon select mod_ba cli"
+!amx alias connections "!addon select mod_ba connection"
+!amx alias pcb-connection "connections; select pcb:/var/run/pcb_sys; mode-cli;"
+!amx alias ubus-connection "connections; select ubus:/var/run/ubus/ubus.sock; mode-cli;"
+!amx alias any-connection "connections; select *; mode-cli;"
+!amx alias ubus-protected "connections; access ubus:/var/run/ubus/ubus.sock protected; mode-cli"
+!amx alias ubus-public "connections; access ubus:/var/run/ubus/ubus.sock public; mode-cli"
+!amx alias pcb-protected "connections; access pcb:/var/run/pcb_sys protected; mode-cli"
+!amx alias pcb-public "connections; access pcb:/var/run/pcb_sys public; mode-cli"
+!amx alias exit "!amx exit"
+!amx alias quit "!amx exit"
+
+# Reset history
+!history clear
+!history load /tmp/ba_cli.history
+
+!amx silent false

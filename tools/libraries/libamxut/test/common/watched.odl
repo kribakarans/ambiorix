@@ -1,0 +1,9 @@
+%define {
+    object Something {
+        bool Param = True;
+    }
+}
+
+%populate {
+    on event "dm:object-changed" call test_amxut_dm_event;
+}

@@ -1,0 +1,217 @@
+%define {
+    /*
+        Greeter data model example.
+
+        This example is mainly used to demonstrate some Ambiorix data model
+        features. 
+    */
+    %persistent object Greeter {
+        /*
+            The maximum number of history instance objects that can be created.
+
+            When the maximum number of instances is reached the oldest entry
+            will be removed when a new one is added.
+
+            Only non retain history instances are removed.
+        */
+        %persistent %read-only uint32 MaxHistory = 10 {
+            on action validate call check_minimum 1;
+        }
+
+        /*
+            Current state of the Greeter data model.
+
+            Demonstrates a state machine like parameter.
+
+            Users can only set the state to "Start" if the current state is 
+            "Idle" or to "Stop" when the current state is "Running".
+
+            The "say" method will only work when the state is "Running".
+        */
+        string State {
+            default "Idle";
+            on action validate call check_enum ["Idle", "Start", "Running", "Stop"];
+            on action validate call check_change;
+        }
+
+        /*
+            Adds a new message.
+
+            This method will create a new message instance if possible.
+
+            If the maximum instances is reached, the oldest not retained message
+            will be deleted, before the new message is added.
+
+            if no messages are deleted and the maximum is reached, no new instance
+            is added.
+
+            @param from who added the message
+            @param message the message itself
+            @param retain should the message be retained
+
+            @return
+            echos the message itself.
+        */
+        string say(%in %mandatory string from,
+                   %in %mandatory string message,
+                   %in bool retain = false);
+
+        /*
+            Changes the maximum history parameter.
+
+            When the new maximum is lower than the current set maximum, it 
+            is possible the messages are deleted. 
+
+            Only non retained messages will be deleted automatically.
+
+            If it is not possible to delete enough messages, the new maximum will
+            be set to the number of messages in the history.
+
+            @param max the new maximum
+
+            @return 
+            The set maximum
+        */
+        uint32 setMaxHistory(%in %mandatory uint32 max);
+
+        /*
+            Save all persistent data in an odl file.
+
+            Creates a file in odl format and stores all persistent data model
+            data in that file.
+
+            The file can be loaded with the "load" function
+
+            @param file the file name
+
+            @return 
+            true when successfull
+        */
+        bool save(%in %strict string file = "${save_file}");
+
+        /*
+            Loads a previously stored odl file.
+
+            Before loading the file, the full data model is reset.
+
+            @param file the file name
+
+            @return 
+            true when successful
+        */
+        bool load(%in %strict string file = "${save_file}");
+
+        event 'MyEvent!';
+
+        void send_event(%in %mandatory variant data);
+
+        /*
+            Keeps track of the last messages.
+
+            Each message is added to the data model as an instance object of
+            this object.
+
+            The maximum number of instances that can be created can be changed
+            by changing the "Greeter.MaxHistory" parameter.
+
+            The number of instances is stored in parameter "Greeter.HistorySize",
+            this parameter demonstrates the automatic instance counter feature.
+        */
+        %persistent %read-only object History[] {
+            counted with NumberOfHistoryEntries;
+            
+            /*
+                Deletes the history instance objects.
+
+                When "force" is set to true, the retained instances will be
+                deleted as well.
+
+                @param force when true also delete retained instances
+
+                @return 
+                the number of instances deleted
+            */
+            %template uint32 clear(%in bool force = false);
+
+            /*
+                Who added the message.
+            */
+            %persistent %read-only string From {
+                on action validate call check_maximum_length 64;
+            }
+            /*
+                The message.
+            */
+            %persistent %read-only string Message {
+                on action validate call check_maximum_length 256;
+            }
+            /*
+                Can it be deleted automatically.
+
+                When this parameter is set to "true", the instance will not be
+                automatically deleted.
+            */
+            %persistent bool Retain = false;
+
+            object Info[] {
+                counted with NumberOfInfoEntries;
+                %unique %key string Alias;
+                string Text = "";
+                uint32 Number = 0;
+                int32 SignedNumber = -100;
+                ssv_string Flags = "";
+                bool Disabled = false;
+                %volatile datetime UTC {
+                    on action read call read_utc_time;
+                }
+                %volatile datetime Local {
+                    on action read call read_local_time;
+                }
+            }
+        }
+
+        /*
+            This object contains some statistics.
+
+            The object parameters are not defined in the odl and are provided
+            dynamically and reflect the internal C structure greeter_stats_t
+        */
+        %read-only object Statistics {
+            /*
+                Starts a periodic inform.
+
+                Demonstrates the periodic inform data model feature.
+                
+                After this function is called with "secs" set to a non-zero 
+                value, periodic inform events of the "Statistics" object are sent
+                at a regular interval specified with the "secs" parameter.
+
+                @param secs the interval, when set to 0, periodic inform stops.
+            */
+            void periodic_inform(%in uint32 secs);
+            /*
+                Resets the statistics counters.
+            */
+            void reset();
+
+            on action read call stats_read;
+            on action list call stats_list;
+            on action describe call stats_describe;
+        }
+    }
+}
+
+%populate {
+    on event "dm:object-changed" call enable_greeter
+        filter 'object == "Greeter." && 
+                parameters.State.from == "Idle" && 
+                parameters.State.to == "Start"';
+
+    on event "dm:object-changed" call disable_greeter
+        filter 'object == "Greeter." && 
+                parameters.State.from == "Running" && 
+                parameters.State.to == "Stop"';
+
+    // Remove this line to disable printing of all events
+    on event "*" call print_event;
+}

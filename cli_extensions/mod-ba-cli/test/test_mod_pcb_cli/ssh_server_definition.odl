@@ -1,0 +1,56 @@
+%define {
+    %persistent object SSH {
+
+        %persistent bool Enable = true;
+
+        %persistent object Server[] {
+            counted with ServerNumberOfEntries;
+
+            %unique %key string Alias;
+
+            %read-only string Status = "Disabled" {
+                on action validate call check_enum
+                    [ "Disabled", "Running", "Stopped", "Error" ];
+            }
+
+            %persistent bool Enable = false;
+            
+            %persistent bool AllowRootLogin = true;
+            %persistent bool AllowPasswordLogin = true;
+            %persistent bool AllowRootPasswordLogin = false;
+            
+            %persistent uint32 ActivationDuration = 0;
+            %read-only datetime ActivationDate;
+            
+            %persistent uint32 Port = 22;
+            %persistent string SourcePrefix = "";
+
+            %read-only uint32 PID = 0;
+            %read-only uint32 ActiveSessions = 0;
+
+            %protected string TestParam = "";
+            %private uint32 TestNumber = 0;
+
+            uint32 close_sessions();
+            uint32 test_function(%in string foo, %in uint32 bar);
+
+            %protected void pfunc(%in string foo, %out uint32 bar);
+
+            %protected object TestObject {
+                string Text;
+                %volatile uint32 Number;
+            }
+
+            object TestReference {
+                string Reference;
+            }
+
+            event "test-event";
+        }
+
+        %persistent object S {
+            string Test;
+        }
+    }
+
+}

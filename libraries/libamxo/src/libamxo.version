@@ -1,0 +1,6 @@
+AMXO_1.0 { 
+    global: 
+      amxo_*;
+    local:
+      *yy*;
+};

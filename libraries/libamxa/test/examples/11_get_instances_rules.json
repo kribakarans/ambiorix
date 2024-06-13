@@ -1,0 +1,18 @@
+{
+    "DHCPv4.Client.": {
+        "Order": 1,
+        "InstantiatedObj": "rwxn"
+    },
+    "DHCPv4.Server.Pool.": {
+        "Order": 2,
+        "InstantiatedObj": "-wxn"
+    },
+    "DHCPv4.Client.1.": {
+        "Order": 3,
+        "InstantiatedObj": "-wxn"
+    },
+    "DHCPv4.Client.2.SentOption.": {
+        "Order": 4,
+        "InstantiatedObj": "-wxn"
+    }
+}

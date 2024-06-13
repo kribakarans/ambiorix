@@ -1,0 +1,11 @@
+variables:
+  BUILD_DEPS: libamxc libamxj libamxp libamxd libamxo libamxb libamxrt libevent-dev libcap-ng-dev libyajl-dev liburiparser-dev
+  BUILD_TARGET: amxrt
+  PC_DOC_GEN: "off"
+  PC_PAGES: "off"
+  TEST_DEPS: "valgrind libamxrt libubox ubus mod-amxb-ubus libevent-dev libcap-ng-dev libyajl-dev liburiparser-dev"
+  SAH_NTE_IMAGE: $SAH_CI_IMAGE
+
+include:
+  - remote: 'https://gitlab.com/soft.at.home/ci/gitlab-ci/raw/main/ambiorix-default-pipeline.yml'
+

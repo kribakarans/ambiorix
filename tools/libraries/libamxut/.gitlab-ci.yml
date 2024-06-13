@@ -1,0 +1,9 @@
+variables:
+  DOC_GEN_CMD: "make doc"
+  BUILD_DEPS: libamxc libamxc libamxp libamxb libamxd libamxo libamxj sah-lib-sahtrace-dev mod-amxb-dummy
+  BUILD_TARGET: libamxut
+  TEST_DEPS: amxb-dummy valgrind
+
+include:
+  - remote: 'https://gitlab.com/soft.at.home/ci/gitlab-ci/raw/main/ambiorix-default-pipeline.yml'
+

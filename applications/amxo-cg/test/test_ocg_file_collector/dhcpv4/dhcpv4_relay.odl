@@ -1,0 +1,28 @@
+%define {
+    select DHCPv4.Relay {
+        bool Enable;
+        %read-only string Status;
+        
+        object Forwarding[] {
+            counted with ForwardingNumberOfEntries;
+            
+            bool Enable;
+            %read-only string Status;
+            %unique %key string Alias;
+            uint32 Order;
+            string Interface;
+            string VendorClassID;
+            bool VendorClassIDExclude;
+            string VendorClassIDMode;
+            string ClientID;
+            bool ClientIDExclude;
+            string UserClassID;
+            bool UserClassIDExclude;
+            string Chaddr;
+            string ChaddrMask;
+            bool ChaddrExclude;
+            bool LocallyServed;
+            string DHCPServeRIPAddress;
+        }
+    }
+}

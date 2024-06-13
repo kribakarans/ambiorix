@@ -1,0 +1,221 @@
+/* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+.row.content {height: 100%}
+
+
+/* Set gray background color and 100% height */
+.sidenav {
+    background-color: #f1f1f1;
+    height: auto;
+}
+
+.sidenav .dropdown-menu {
+    background-color: #f1f1f1;
+    border: 0px;
+    border-radius: 10px;
+    padding: 0px;
+}
+
+.sidenav .dropdown-item {
+    border-radius: 5px;
+    color: #f1f1f1;
+}
+
+.card-header {
+    padding-top:8px;
+    padding-bottom:8px;
+    padding-left:2px;
+    padding-right:2px;
+}
+
+.sidenav .dropdown-item:hover {
+    color: black;
+}
+
+.sidenav .dropdown button {
+    color: #f1f1f1;
+}
+
+.sidenav .card {
+    width: 90%;
+    background-color: lightgray;
+    margin: auto
+}
+
+.dm-object {
+    width: 100%;
+    background-color: lightyellow;
+}
+
+.dm-object .mb-0 {
+    width: 100%;
+}
+
+.dm-object .mb-0 button {
+    width: 100%;
+}
+
+.dm-object .btn-right-allign {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-right:6px;
+}
+
+.btn-right-allign {
+    position: absolute;
+    right: 0;
+}
+
+.spacing {
+    padding: 2px;
+}
+
+.action-get {
+    background-color: #61affe;
+}
+
+.action-set {
+    background-color: #50e3c2;
+}
+
+.action-add {
+    background-color: #49cc90;
+}
+
+.action-delete {
+    background-color: #f93e3e;
+}
+
+.action-cmd {
+    background-color: #49cc90;
+}
+
+.action-sub {
+    background-color: #50e3c2;
+}
+
+.action-upload {
+    background-color: #ff00ff;
+}
+
+.action-download {
+    background-color: #61affe;
+}
+
+
+thead {
+    background-color: lightgray;
+}
+
+#CONFIG {
+    background-color: lightyellow;
+}
+
+pre {
+    outline: 1px solid #ccc; 
+    padding: 5px; 
+    margin: 5px;
+    background-color: black;
+    color: yellow;
+}
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    margin-right: 5px;
+    width: 60px;
+    height: 24px;
+}
+  
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+  
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+input:checked + .slider {
+    background-color: #2196F3;
+}
+  
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+  
+input:checked + .slider:before {
+    -webkit-transform: translateX(36px);
+    -ms-transform: translateX(36px);
+    transform: translateX(36px);
+}
+  
+/* Rounded sliders */
+.slider.round {
+    border-radius: 24px;
+}
+  
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.text-ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.text-truncate:hover{
+    overflow: visible; 
+    white-space: normal;
+}
+
+.title {
+    width: 100%;
+}
+
+.hcenter {
+    width: 50%;
+    margin:0 auto;
+}
+
+.toggle-button {
+    position:inherit;
+    left:-15px;
+    background-color:#f1f1f1;
+    color: #000000;
+    border:0px;
+    border-radius:0px;
+}
+  
+/* On small screens, set height to 'auto' for sidenav and grid */
+@media screen and (max-width: 767px) {
+    .sidenav {
+    height: auto;
+    padding: 15px;
+    }
+    .row.content {height: auto;} 
+}

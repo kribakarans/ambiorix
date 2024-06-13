@@ -1,0 +1,11 @@
+variables:
+  UTEST_COMPILE_FIRST: "yes"
+  UTEST_TEST_COV_CMD: "make coverage"
+  DOC_GEN_CMD: "make doc"
+  BUILD_TARGET: libamxo
+  BUILD_DEPS: libamxc libamxd libamxp libamxs flex bison
+  TEST_DEPS: valgrind libamxut mod-amxb-dummy
+  SAH_NTE_IMAGE: $SAH_CI_IMAGE
+
+include:
+  - remote: 'https://gitlab.com/soft.at.home/ci/gitlab-ci/raw/main/ambiorix-default-pipeline.yml'

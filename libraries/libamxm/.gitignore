@@ -1,0 +1,5 @@
+**/output/*
+**/run_test
+test/*/*.so
+libamxm-*.*
+libamxm_*.*

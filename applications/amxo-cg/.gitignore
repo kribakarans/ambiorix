@@ -1,0 +1,10 @@
+amxo-cg*
+output
+include_priv/version.h
+src/amx_odl_parser
+run_test
+test/test_ocg_comment_parser/odls/gmap/gmap.odl.c
+test/test_ocg_comment_parser/odls/gmap/gmap.odl.xml
+test/test_ocg_comment_parser/odls/greeter/greeter.odl.c
+test/test_ocg_comment_parser/odls/greeter/greeter.odl.xml
+test/**/*.odl.xml

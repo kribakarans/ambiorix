@@ -1,0 +1,13 @@
+{
+    "DHCPv4.": {
+        "Order": 1,
+        "Param": "rwxn",
+        "Obj": "rwxn",
+        "InstantiatedObj": "rwxn",
+        "CommandEvent": "rwxn"
+    },
+    "DHCPv4.Server.Pool.[Alias == \"cpe-LAN\"].Chaddr": {
+        "Order": 100,
+        "Param": "----"
+    }
+}

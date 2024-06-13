@@ -1,0 +1,11 @@
+**/output/*
+amx-cli
+amx-cli_*
+amx-cli-*
+include_priv/version.h
+**/run_test
+**/test_record.rec
+**/test_history.cli
+**/test_module.d
+**/test_module.o
+**/mod-test-cli.so

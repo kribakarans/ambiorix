@@ -1,0 +1,75 @@
+%config {
+    TestOption = 123;
+    TestTable = {
+        key1 = 1,
+        key2 = "text"
+    };
+    TestArray = [ 1, "text"];
+}
+
+%define {
+    object Greeter {
+        uint32 MaxHistory = 10;
+        string State {
+            default "Idle";
+            on action validate call check_enum ["Idle", "Start", "Running", "Stop"];
+        }
+
+        string test_func(%in string data, %out uint32 number);
+        string test_func2(%mandatory %in string data, %out uint32 number);
+
+        %read-only object History[] {
+            string From;
+            %read-only string Message;
+            bool Retain = false;
+
+            string test_func(%in string data, %out uint32 number);
+            
+            object Info[] {
+                counted with NumberOfInfoEntries;
+                %unique %key string Alias;
+                string Text = "";
+                %protected string PText = "";
+                %private string PrivText = "";
+                %read-only string RText = "";
+            }
+        }
+    }
+}
+
+%populate {
+    object Greeter.History {
+        instance add (0,"") {
+            parameter From = "odl parser";
+            parameter Message = "Welcome to the Greeter App";
+            parameter Retain = true;
+
+            object Info {
+                instance add(0, "Info1") {
+                    parameter Text = "This is the default welcome message";
+                }
+                instance add(0, "Info2") {
+                    parameter Text = "The message is added using the odl defaults file";
+                }
+                instance add(0, "Info3") {
+                    parameter Text = "The info instances can be changed";
+                }
+                instance add(0, "Info4") {
+                    parameter Text = "New info instances can be added, existing can be deleted";
+                }
+            }
+        }
+
+        instance add (0,"") {
+            parameter From = "odl parser";
+            parameter Message = "Second entry";
+            parameter Retain = true;
+
+            %read-only object Info {
+                instance add(0, "Info1") {
+                    parameter Text = "Extra info for second entry";
+                }
+            }
+        }
+    }
+}

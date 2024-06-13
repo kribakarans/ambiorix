@@ -1,0 +1,45 @@
+%populate {
+    object LocalAgent {
+        parameter Enable = true;
+
+        object MTP {
+            instance add (0, "mqtt-agent") {
+                parameter Enable = true;
+                parameter Protocol = MQTT;
+
+                object MQTT {
+                    parameter Reference = "MQTT.Client.cpe-mqtt-uspagent.";
+                }
+            }
+        }
+        object Controller {
+            instance add (0, "controller-1") {
+                parameter EndpointID = "proto::Controller-96488e4d5ca6";
+                parameter Enable = true;
+                parameter AssignedRole = "LocalAgent.ControllerTrust.Role.1";
+                object MTP {
+                    instance add (0, "mqtt-1") {
+                        parameter Enable = true;
+                        parameter Protocol = "MQTT";
+                        object MQTT {
+                            parameter Reference = "MQTT.Client.mqtt-1.";
+                        }
+                    }
+                }
+            }
+        }
+        object ControllerTrust {
+            parameter UntrustedRole = "LocalAgent.ControllerTrust.Role.1";
+            object Role {
+                instance add (0, "untrusted") {
+                    parameter Name = "world";
+                    parameter Enable = true;
+                }
+                instance add (0, "fullAccess") {
+                    parameter Name = "root";
+                    parameter Enable = true;
+                }
+            }
+        }
+    }
+}

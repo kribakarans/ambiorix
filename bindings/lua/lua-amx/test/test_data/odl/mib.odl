@@ -1,0 +1,9 @@
+%define {
+    mib TestMib {
+        string Extra;
+    }
+
+    mib ErrorMib {
+        string From;
+    }
+}

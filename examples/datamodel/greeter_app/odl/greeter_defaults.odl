@@ -1,0 +1,9 @@
+%populate {
+    object Greeter.History {
+        instance add (0,"") {
+            !read-only parameter From = "odl parser";
+            !read-only parameter Message = "Welcome to the Greeter App";
+            parameter Retain = true;
+        }
+    }
+}

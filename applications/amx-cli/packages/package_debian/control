@@ -1,0 +1,11 @@
+Source: amx-cli
+Section: devel
+Priority: optional
+Maintainer: Peter.De.Herdt <peter.deherdt@softathome.com>
+
+Package: amx-cli
+Architecture: amd64
+Depends: ${shlibs:Depends}
+Description: Ambiorix Command Line Interface
+ Ambiorix Command Line Interface
+ 

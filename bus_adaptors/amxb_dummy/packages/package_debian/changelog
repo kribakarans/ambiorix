@@ -1,0 +1,36 @@
+mod-amxb-dummy (1.0.4) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Johan JACOBS <johan.jacobs_ext@softathome.com>  Mon, 06 May 2024 12:02:39 +0000
+
+mod-amxb-dummy (1.0.3) unstable; urgency=medium
+
+  * Add missing symlinks to debian package
+
+ -- SAH bot <sahbot@softathome.com>  Thu, 29 Feb 2024 21:30:41 +0000
+
+mod-amxb-dummy (1.0.2) unstable; urgency=medium
+
+  * Fix licenses
+
+ -- SAH bot <sahbot@softathome.com>  Thu, 29 Feb 2024 19:24:21 +0000
+
+mod-amxb-dummy (1.0.1) unstable; urgency=medium
+
+  * [CI] Update for opensource
+
+ -- SAH bot <sahbot@softathome.com>  Tue, 23 May 2023 11:56:29 +0000
+
+mod-amxb-dummy (1.0.0) unstable; urgency=medium
+
+  * Move dummy backend to separate component
+
+ -- SAH bot <sahbot@softathome.com>  Wed, 17 May 2023 14:06:00 +0000
+
+mod-amxb-dummy (0.0.0) unstable; urgency=medium
+
+  * Initial release
+
+ -- SoftAtHome <support.opensource@softathome.com>  Sat, 19 Oct 2019 16:29:17 +0100
+ 

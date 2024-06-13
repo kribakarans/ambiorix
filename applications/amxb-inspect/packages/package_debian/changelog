@@ -1,0 +1,168 @@
+amxb-inspect (1.2.1) unstable; urgency=medium
+
+  * Fix license headers in files
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 12 Oct 2023 16:30:38 +0000
+
+amxb-inspect (1.2.0) unstable; urgency=medium
+
+  * Check get_instances function of back-end
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 03 May 2022 11:07:14 +0000
+
+amxb-inspect (1.1.1) unstable; urgency=medium
+
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 29 Oct 2021 05:13:41 +0000
+
+amxb-inspect (1.1.0) unstable; urgency=medium
+
+  * amxb inspect must verify functions `has` and `capabilities`
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 13 Oct 2021 12:34:51 +0000
+
+amxb-inspect (1.0.6) unstable; urgency=medium
+
+  * amxb-inspect must verify wait_for function
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 22 Jul 2021 12:21:36 +0000
+
+amxb-inspect (1.0.5) unstable; urgency=medium
+
+  * make clean does not clean the output directory
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 28 Jun 2021 14:18:19 +0000
+
+amxb-inspect (1.0.4) unstable; urgency=medium
+
+  * Enable auto-opensourcing
+
+ -- SAH bot <sahbot@softathome.com>  Wed, 09 Jun 2021 14:29:15 +0000
+
+amxb-inspect (1.0.3) unstable; urgency=medium
+
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 08 Jun 2021 17:59:22 +0000
+
+amxb-inspect (1.0.2) unstable; urgency=medium
+
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 16 Apr 2021 11:14:37 +0000
+
+amxb-inspect (1.0.1) unstable; urgency=medium
+
+  *  remove fakeroot dependency on host to build WRT image 
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 15 Apr 2021 20:20:10 +0000
+
+amxb-inspect (1.0.0) unstable; urgency=medium
+
+  * Move copybara to baf
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 08 Apr 2021 22:09:29 +0000
+
+amxb-inspect (0.3.0) unstable; urgency=medium
+
+  * Migrate to new licenses format (baf)
+  * Check if read-raw is available
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 26 Feb 2021 18:02:38 +0000
+
+amxb-inspect (0.2.1) unstable; urgency=medium
+
+  * Auto generate make files using build agnostic file (baf)
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 19 Jan 2021 07:51:55 +0000
+
+amxb-inspect (0.2.0) unstable; urgency=medium
+
+  * Add contributing.md
+  * Adds function verification (listen, accept, list)
+
+ -- Peter De Herdt <peter.deherdt@softathome.com>  Fri, 08 Jan 2021 17:59:57 +0000
+
+amxb-inspect (0.1.3) unstable; urgency=medium
+
+  * Update readme
+  * Fix debian package dependencies
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Sun, 29 Nov 2020 18:49:36 +0000
+
+amxb-inspect (0.1.2) unstable; urgency=medium
+
+  * Update gitlab CI/CD yml file
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 16 Nov 2020 14:37:07 +0000
+
+amxb-inspect (0.1.1) unstable; urgency=medium
+
+  * Check describe function
+
+ -- Peter De Herdt <peter.deherdt@softathome.com>  Tue, 03 Nov 2020 07:37:16 +0000
+
+amxb-inspect (0.1.0) unstable; urgency=medium
+
+  * Update code style
+
+ -- Peter De Herdt <peter.deherdt@softathome.com>  Fri, 02 Oct 2020 17:03:10 +0000
+
+amxb-inspect (0.0.8) unstable; urgency=medium
+
+  * Adds check for get_supported and set_config funtions
+
+ -- Peter De Herdt <peter.deherdt@softathome.com>  Fri, 18 Sep 2020 05:39:07 +0000
+
+amxb-inspect (0.0.7) unstable; urgency=medium
+
+  * Fixes g++ compiler warnings and errors
+
+ -- Peter De Herdt <peter.deherdt@softathome.com>  Fri, 04 Sep 2020 16:59:52 +0000
+
+amxb-inspect (0.0.6) unstable; urgency=medium
+
+  * Checks if back-end has basic data model operator functions
+
+ -- Peter De Herdt <peter.deherdt@softathome.com>  Sat, 22 Aug 2020 16:18:03 +0000
+
+amxb-inspect (0.0.5) unstable; urgency=medium
+
+  * Version checking min and max supported
+  * Version parsing in makefile
+  * Compilation issue with frotified musl
+  * Adds RAW_VERSION to makefile.inc, VERSION must be X.Y.Z or X.Y.Z-HASH
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 29 Jul 2020 10:13:39 +0000
+
+amxb-inspect (0.0.4) unstable; urgency=medium
+
+  * Uses std=c11 instead of std=c18, to support older toolchains and compilers
+
+ -- Peter De Herdt <peter.deherdt@softathome.com>  Mon, 06 Jul 2020 09:27:18 +0000
+
+amxb-inspect (0.0.3) unstable; urgency=medium
+
+- Add copybara file
+- update license to BSD+patent
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 30 Jun 2020 08:34:31 +0000
+
+amxb-inspect (0.0.2) unstable; urgency=medium
+
+  * Uses default pipeline
+  * Adds build dependency
+  * Adds unrustify 
+
+ -- sah4009 <Peter.deherdt@telenet.be>  Sun, 24 May 2020 08:54:39 +0000
+
+amxb-inspect (0.0.1) unstable; urgency=medium
+
+  * Fixes sigemptyset and sigaction, use correct POSIX version (_GNU_SOURCE)
+  * Adds package creation
+
+ -- sah4009 <Peter.deherdt@telenet.be>  Thu, 27 Feb 2020 10:14:37 +0000
+
+amxb-inspect (0.0.0) unstable; urgency=medium
+
+  * Initial version
+
+ -- sah4009 <Peter.deherdt@telenet.be>  Wed, 26 Feb 2020 21:20:48 +0000

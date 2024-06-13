@@ -1,0 +1,21 @@
+%define {
+    select DHCPv4.Server.Pool.Client {
+        %unique %key string Alias; 
+        %read-only string Chaddr;
+        %read-only bool Active;
+
+        object IPv4Address[] {
+            counted with IPv4AddressNumberOfEntries;
+
+            %read-only string IPAddress;
+            %read-only datetime LeaseTimeRemaining;
+        }
+
+        object Option[] {
+            counted wth OptionNumberOfEntries;
+
+            %read-only uint32 Tag;
+            %read-only string Value;
+        }
+    }
+}

@@ -1,0 +1,26 @@
+!amx silent true
+
+# -----------------------------------------------------
+# amx rbus - cli
+# -----------------------------------------------------
+
+!amx variable cli-name = "rbus-cli"
+!addon load mod_ba /usr/lib/amx/amx-cli/mod-ba-cli.so
+backend add /usr/bin/mods/amxb/mod-amxb-rbus.so
+connection open rbus:/tmp/rtrouted
+!addon select mod_ba cli
+
+!amx variable acl-enabled=false
+!amx variable acl-dir="/cfg/etc/acl/"
+
+!amx alias printenv "!amx variable"
+!amx alias setenv "!amx variable"
+!amx alias exit "!amx exit"
+!amx alias quit "!amx exit"
+!amx alias protected "!addon select mod_ba; connection access rbus:/tmp/rtrouted protected;!addon select mod_ba cli"
+!amx alias public "!addon select mod_ba; connection access rbus:/tmp/rtrouted public; !addon select mod_ba cli"
+
+!history clear
+!history load /tmp/rbus_cli.history
+
+!amx silent false

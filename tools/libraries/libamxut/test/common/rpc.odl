@@ -1,0 +1,6 @@
+%define {
+    select Test {
+        void TestMethod();
+    }
+
+}

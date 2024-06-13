@@ -1,0 +1,59 @@
+%define {
+    %persistent object SSH {
+
+        %persistent bool Enable = true;
+
+        %persistent object Server[] {
+            on action destroy call cleanup_server;
+
+            %unique %key string Alias;
+
+            %read-only string Status = "Disabled" {
+                on action validate call check_enum
+                    [ "Disabled", "Running", "Stopped", "Error" ];
+            }
+
+            %persistent bool Enable = false;
+            
+            %persistent bool AllowRootLogin = true;
+            %persistent bool AllowPasswordLogin = true;
+            %persistent bool AllowRootPasswordLogin = false;
+            
+            %persistent uint32 ActivationDuration = 0;
+            %read-only datetime ActivationDate;
+            
+            %persistent uint32 Port = 22;
+            %persistent string SourcePrefix = "";
+
+            %read-only uint32 PID = 0;
+            %read-only uint32 ActiveSessions = 0;
+
+            uint32 close_sessions();
+        }
+    }
+}
+
+%populate {
+    on event "app:start" call app_start;
+
+    on event "dm:object-changed" call ssh_toggle
+        filter 'path == "SSH." && contains("parameters.Enable")';
+
+    on event "dm:instance-added" call ssh_server_added
+        filter 'path == "SSH.Server."';
+
+    on event "dm:object-changed" call ssh_server_enable_changed
+        filter 'path matches "SSH\.Server\.[0-9]+\." && 
+                contains("parameters.Enable")';
+
+    on event "dm:object-changed" call ssh_server_duration_changed
+        filter 'path matches "SSH\.Server\.[0-9]+\." && 
+                contains("parameters.ActivationDuration")';
+
+    on event "dm:object-changed" call ssh_server_settings_changed
+        filter 'path matches "SSH\.Server\.[0-9]+\." and
+                (contains("parameters.AllowRootLogin") or
+                 contains("parameters.AllowRootPasswordLogin") or
+                 contains("parameters.AllowPasswordlogin") or
+                 contains("parameters.Port") )';
+}

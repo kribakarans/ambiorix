@@ -1,0 +1,52 @@
+<div id="SIDENAV" class="col-sm-4 sidenav position-fixed overflow-auto">
+    <div class="spacing"></div>
+    <div class="input-group text-center">
+        <div class="d-flex align-items-center">
+            <span class="badge badge-secondary">{0}</span>
+            <div class="spacing"></div>
+            <button id="LOGOUT" class="btn btn-outline-primary fa fa-sign-out" type="button"></button>
+        </div>
+        <div class="btn-right-allign">
+            <button class="btn btn-outline-primary fa fa-wrench" type="button" data-toggle="collapse" data-target="#CONFIG" aria-expanded="false" aria-controls="multiCollapseExample2"></button>
+            <div class="spacing"></div>
+        </div>
+    </div>
+
+    <div id="CONFIG" class="collapse">
+    </div>
+
+    <div class="input-group text-center">
+        <h4 class="text-ellipsis text-center title">TR181 REST API POC</h4>
+    </div>
+
+    <div class="spacing"></div>
+    <div class="input-group">
+        <span class="dropdown">
+        <button type="button" id="ACTION" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            GET
+        </button>
+        <span class="spacing"></span>
+        <div class="dropdown-menu" aria-labelledby="ACTION">
+            <button class="dropdown-item action-get" type="button">GET</button>
+            <button class="dropdown-item action-set" type="button">SET</button>
+            <button class="dropdown-item action-add" type="button">ADD</button>
+            <button class="dropdown-item action-delete" type="button">DELETE</button>
+            <button class="dropdown-item action-cmd" type="button">CMD</button>
+            <button class="dropdown-item action-sub" type="button">SUB</button>
+            <button class="dropdown-item action-upload" type="button">UPLOAD</button>
+            <button class="dropdown-item action-download" type="button">DOWNLOAD</button>
+        </div>
+        </span>
+        <input id="PATH" type="text" class="form-control" placeholder="DM Path ...">
+        <input id="FILENAME" type="text" class="form-control" placeholder="Filename ...">
+        <input id="FILE" type="file" class="form-file">
+        <button id="EXEC" class="btn btn-outline-primary fa fa-arrow-right" type="button"></button>
+    </div>
+    <div class="spacing"></div>
+    <div>
+        <button id="RUNBATCH" type="button" class="btn btn-primary btn-block">Run Batch</button>
+    </div>
+    <div class="spacing"></div>
+    <div id="PARAMS">
+    </div> 
+</div>

@@ -1,0 +1,37 @@
+#include "global_amxb_timeouts.odl";
+
+%config {
+    // Application name
+    name = "acl-manager";
+
+    acl_install_dir = "${prefix}/etc/acl";
+    acl_dir = "${prefix}/cfg/etc/acl";
+    inotify-enabled = true;
+
+    // main files
+    definition_file = "${name}_definition.odl";
+
+    // Other options
+    system-signals = [ 17 ]; // enable SIGCHILD
+
+    sahtrace = {
+        type = "syslog",
+        level = 200
+    };
+    trace-zones = {
+        "acl-manager" = 200
+    };
+}
+
+import "${name}.so" as "${name}";
+
+include "${definition_file}";
+#include "mod_sahtrace.odl";
+
+%define {
+    entry-point acl-manager.aclm_main;
+}
+
+%populate {
+    //on event "*" call print_event;
+}

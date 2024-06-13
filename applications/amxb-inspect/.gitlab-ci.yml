@@ -1,0 +1,11 @@
+variables:
+  BUILD_DEPS: libamxb
+  BUILD_TARGET: amxb-inspect
+  PC_DOC_GEN: "off"
+  PC_CHECK_UNIT_TEST: "off"
+  PC_PAGES: "off"
+  PC_CROSS_COMPILATION: "off"
+
+include:
+  - remote: 'https://gitlab.com/soft.at.home/ci/gitlab-ci/raw/main/ambiorix-default-pipeline.yml'
+

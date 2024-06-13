@@ -1,0 +1,4 @@
+**/output/*
+**/run_test
+test/greeter_persistent_storage/*.odl
+src/amx-greeter-app

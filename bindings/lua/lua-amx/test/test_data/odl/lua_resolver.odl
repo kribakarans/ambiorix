@@ -1,0 +1,61 @@
+%define {
+    object MyObject {
+        on action validate call myvalidate <!LUA:
+            function(object, param, reason, args, retval)
+                return 0,retval
+            end
+        !>;
+
+        string myfunction(%in %mandatory string text) <!LUA:
+            function(object, args)
+                print(args.text)
+
+                return args.text
+            end
+        !>;
+
+        string errorfunction(%in %mandatory string text) <!LUA:
+            function(object, args)
+                print(args.text)
+
+                error("Failed");
+                return args.text
+            end
+        !>;
+
+        string MyParam = "" {
+            on action validate call myvalidate <!LUA:
+                function(object, param, reason, args, retval)
+                    return 0,retval
+                end
+            !>;
+        }
+
+        string MyParam2 = "" {
+            on action validate call myvalidate <!LUA:
+                function(object, param, reason, args, retval)
+                    error("FAILED")
+                end
+            !>;
+
+        }
+    }
+}
+
+%populate {
+    on event "*" call print_event <!LUA:
+        function(object, event, data)
+            if object then 
+                print("Received " .. event .. " from " .. object:get_name())
+            else
+                print("Received " .. event)
+            end
+        end
+    !>;
+
+    on event "*" call print_event <!LUA:
+        function(object, event, data)
+            error("ERROR")
+        end
+    !>;
+}

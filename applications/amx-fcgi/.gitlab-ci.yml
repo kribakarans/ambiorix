@@ -1,0 +1,7 @@
+variables:
+  BUILD_TARGET: amx-fcgi
+  PC_PACKAGE_DEPS: libamxc libamxj libamxm libamxp libamxd libamxo libamxb libamxa libfcgi-dev sah-lib-sahtrace-dev
+  PC_DOC_CHECK: "off"
+
+include:
+  - remote: 'https://gitlab.com/soft.at.home/ci/gitlab-ci/raw/main/ambiorix-default-pipeline.yml'

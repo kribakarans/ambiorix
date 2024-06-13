@@ -1,0 +1,29 @@
+object B {
+    object object_B {
+        string param_B = "I am B";
+        uint32 number_B = 456;
+    }
+
+    object B_template[] {
+        uint32 param_B = 42;
+        string flag = "BB";
+    }
+
+    %read-only string param_B_ro = "I am RO";
+
+    uint32 param_B = 666;
+
+    object B_template_sub[] {
+        string param_B = "I am B template sub";
+        object B_sub {
+            string text_B = "I am B sub";
+            uint32 number_B = 44;
+        }
+    }
+}
+
+%populate {
+    object B.B_template {
+        instance add(1) {}
+    }
+}

@@ -1,0 +1,13 @@
+%define {
+    object Firewall {
+        object Chain[] {
+            %unique %key string Alias;
+            bool Enable;
+            string Name;
+            object Rule[] {
+                %unique %key string Alias;
+                string Name;
+            }
+        }
+    }
+}

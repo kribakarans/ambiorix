@@ -1,0 +1,5 @@
+%config {
+    acl_dir = "../acldir";
+    acl_install_dir = "../acl_install_dir";
+    inotify-enabled = true;
+}

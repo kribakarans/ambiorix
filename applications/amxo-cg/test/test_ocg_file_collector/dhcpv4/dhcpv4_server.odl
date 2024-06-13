@@ -1,0 +1,24 @@
+%define {
+    select DHCPv4.Server {
+        bool Enable;
+
+        object Pool[] {
+            counted with PoolNumberOfEntries;
+
+            object StaticAddress[] {
+                counted with StaticAddressNumberOfEntries;
+            }
+
+            object Option[] {
+                counted with OptionNumberOfEntries;
+            }
+
+            object Client[] {
+                counted with ClientNumberOfEntries;
+            }
+        }
+    }
+}
+
+include "dhcpv4_server_pool.odl";
+include "dhcpv4_server_pool_client.odl";

@@ -1,0 +1,61 @@
+#!/usr/bin/amxrt
+
+%config {
+    name = "conversion";
+    uris = [
+        "pcb:/tmp/local"
+        ];
+}
+
+import "${name}.so" as "${name}";
+
+%define {
+    object Conversion {
+        string String;
+        ssv_string SSV;
+        csv_string CSV;
+        bool Bool;
+        bool FalseBool;
+        uint8 UInt8;
+        uint16 UInt16;
+        uint32 UInt32;
+        uint64 UInt64;
+        int8  Int8;
+        int16 Int16;
+        int32 Int32;
+        int64 Int64;
+        double Double;
+        datetime Timestamp;
+
+        variant get_timestamp();
+
+        bool set_timestamp(%mandatory %in variant timestamp);
+
+        variant convert(%mandatory %in variant var);
+
+    }
+}
+
+%populate {
+    object Conversion {
+        parameter String = "String";
+        parameter SSV = "one two three";
+        parameter CSV = "one,two,three";
+        parameter Bool = True;
+        parameter FalseBool = False;
+        parameter UInt8 = 8;
+        parameter UInt16 = 16;
+        parameter UInt32 = 32;
+        parameter UInt64 = 64;
+        parameter  Int8 = 8;
+        parameter Int16 = 16;
+        parameter Int32 = 32;
+        parameter Int64 = 64;
+        parameter Double = 8;
+
+    }
+}
+
+%define {
+    entry-point conversion.conversion_main;
+}

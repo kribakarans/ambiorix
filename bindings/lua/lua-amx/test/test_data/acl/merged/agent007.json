@@ -1,0 +1,16 @@
+{
+    "Greeter": {
+        "%Order": 1,
+        "%ACL": "0xC81",
+        "History": {
+            "[From != 'agent007']": {
+                "%Order": 3,
+                "%ACL": "0x0"
+            },
+            "[From == 'agent007']": {
+                "%Order": 2,
+                "%ACL": "0xFFF"
+            }
+        }
+    }
+}

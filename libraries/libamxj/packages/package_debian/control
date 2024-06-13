@@ -1,0 +1,12 @@
+Source: libamxj
+Section: devel
+Priority: optional
+Maintainer: peter.deherdt <peter.deherdt@softathome.com>
+
+Package: libamxj
+Architecture: amd64
+Depends: ${shlibs:Depends}, libyajl-dev
+Description: JSON Variant Parser & Generator 
+ Read JSON files and put it in a Variant
+ Write variant to JSON file
+ 

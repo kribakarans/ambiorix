@@ -1,0 +1,38 @@
+!amx silent true
+
+# Load Ambiorix Bus Agnostic CLI
+!addon load amxba /usr/lib/amx/amx-cli/mod-ba-cli.so
+
+# Load PCB back-end
+backend add /usr/bin/mods/amxb/mod-amxb-pcb.so
+
+# Loading uBus back-end
+backend add /usr/bin/mods/amxb/mod-amxb-ubus.so
+
+# Connecting to PCB sysbus ...
+connection open pcb:/var/run/pcb_sys
+
+# Connecting to uBus ...
+connection open ubus:
+
+# Set mode baapi
+!addon select amxba pcbcli
+
+# Define some aliases
+!amx alias printenv "!amx variable"
+!amx alias setenv "!amx variable"
+
+!amx alias mode-pcb-cli "!addon select amxba pcbcli"
+
+!amx alias connections "!addon select amxba connection"
+!amx alias pcb-connection "connections; select pcb:/var/run/pcb_sys; mode-pcb-cli;"
+!amx alias ubus-connection "connections; select ubus:; mode-pcb-cli;"
+
+!amx alias exit "!amx exit"
+!amx alias quit "!amx exit"
+
+# Reset history
+!history clear
+!history load /tmp/ba-cli.history
+
+!amx silent false
