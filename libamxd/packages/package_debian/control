@@ -1,0 +1,10 @@
+Source: libamxd
+Section: devel
+Priority: optional
+Maintainer: peter.deherdt <peter.deherdt@softathome.com>
+
+Package: libamxd
+Architecture: amd64
+Depends: ${shlibs:Depends}
+Description: Hierarchical Object Data model 
+ Generic hierarchical object data model

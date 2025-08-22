@@ -1,0 +1,5 @@
+%config {
+    mylist = [ "monday", "tuesday" ];
+}
+
+include "testodl_included_from_somewhere.odl";

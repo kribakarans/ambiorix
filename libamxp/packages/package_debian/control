@@ -1,0 +1,13 @@
+Source: libamxp
+Section: devel
+Priority: optional
+Maintainer: peter.deherdt <peter.deherdt@softathome.com>
+
+Package: libamxp
+Architecture: amd64
+Depends: ${shlibs:Depends}
+Description: Generic Patterns 
+ This c-library provides a generic and re-usable C-API interface
+ for common patterns:
+   - observer pattern - signal & slot
+ 

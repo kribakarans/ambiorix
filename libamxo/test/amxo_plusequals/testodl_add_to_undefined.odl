@@ -1,0 +1,5 @@
+%config {
+    mystring += "adding to something not defined before";
+    mybool_true += true;
+    mybool_false += false;
+}

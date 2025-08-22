@@ -1,0 +1,10 @@
+Source: libamxa
+Section: devel
+Priority: optional
+Maintainer: Johan Jacobs <johan.jacobs_ext@softathome.com>
+
+Package: libamxa
+Architecture: amd64
+Depends: ${shlibs:Depends}
+Description: Access control verification
+ 

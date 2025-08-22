@@ -1,0 +1,288 @@
+libamxrt (0.5.1) unstable; urgency=medium
+
+  * amxrt app exits immediately on LXC due to capdrop error
+
+ -- SAH bot <sahbot@softathome.com>  Tue, 16 Apr 2024 10:50:37 +0000
+
+libamxrt (0.5.0) unstable; urgency=medium
+
+  * Pass configuration to libamxb
+
+ -- SAH bot <sahbot@softathome.com>  Thu, 11 Apr 2024 14:36:35 +0000
+
+libamxrt (0.4.2) unstable; urgency=medium
+
+
+ -- SAH bot <sahbot@softathome.com>  Thu, 29 Feb 2024 19:16:28 +0000
+
+libamxrt (0.4.1) unstable; urgency=medium
+
+  * Amxrt should connect to bus systems before daemonizing
+
+ -- SAH bot <sahbot@softathome.com>  Tue, 20 Feb 2024 08:29:33 +0000
+
+libamxrt (0.4.0) unstable; urgency=medium
+
+  * Improve save and load functionality
+
+ -- SAH bot <sahbot@softathome.com>  Sat, 03 Feb 2024 10:00:30 +0000
+
+libamxrt (0.3.10) unstable; urgency=medium
+
+  * [BaRt] Failed to handle multiple keys
+
+ -- SAH bot <sahbot@softathome.com>  Wed, 17 Jan 2024 21:38:48 +0000
+
+libamxrt (0.3.9) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DE HERDT <peter.deherdt@softathome.com>  Wed, 10 Jan 2024 11:50:04 +0000
+
+libamxrt (0.3.8) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DE HERDT <peter.deherdt@softathome.com>  Wed, 13 Dec 2023 05:40:07 +0000
+
+libamxrt (0.3.7) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DE HERDT <peter.deherdt@softathome.com>  Tue, 12 Dec 2023 17:23:56 +0000
+
+libamxrt (0.3.6) unstable; urgency=medium
+
+  * [amxrt] Need to load backends from multiple directories
+
+ -- SAH bot <sahbot@softathome.com>  Thu, 07 Dec 2023 08:41:57 +0000
+
+libamxrt (0.3.5) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DE HERDT <peter.deherdt@softathome.com>  Wed, 06 Dec 2023 13:48:27 +0000
+
+libamxrt (0.3.4) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DE HERDT <peter.deherdt@softathome.com>  Wed, 29 Nov 2023 19:22:26 +0000
+
+libamxrt (0.3.3) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DE HERDT <peter.deherdt@softathome.com>  Tue, 21 Nov 2023 15:43:02 +0000
+
+libamxrt (0.3.2) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DE HERDT <peter.deherdt@softathome.com>  Fri, 17 Nov 2023 17:20:34 +0000
+
+libamxrt (0.3.1) unstable; urgency=medium
+
+  * [amxrt][no-root-user][capability drop] failed to add capabilities for a forked process
+  * [AMX] Only detect sockets for loaded backends
+  * [amxrt] Need to load backends from multiple directories
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DE HERDT <peter.deherdt@softathome.com>  Tue, 14 Nov 2023 18:02:12 +0000
+
+libamxrt (0.3.0) unstable; urgency=medium
+
+  * Refactor libamxo - libamxp: move fd and connection management out of libamxo
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 06 Nov 2023 08:50:26 +0000
+
+libamxrt (0.2.24) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 30 Oct 2023 10:46:49 +0000
+
+libamxrt (0.2.23) unstable; urgency=medium
+
+  * Include extensions directory in ODL
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 25 Oct 2023 05:28:17 +0000
+
+libamxrt (0.2.22) unstable; urgency=medium
+
+  * [libamxo]Make it possible to define object synchronisation in odl
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 19 Oct 2023 17:49:41 +0000
+
+libamxrt (0.2.21) unstable; urgency=medium
+
+  * [libamxo]Make it possible to define object synchronisation in odl
+  * Issue ST-1184 [amxb][amxc][amxo][amxrt] Fix typos in documentation
+  * [amxb][amxc][amxo][amxrt] Fix typos in documentation
+
+ -- SAH bot <sahbot@softathome.com>  Tue, 17 Oct 2023 21:56:43 +0000
+
+libamxrt (0.2.20) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 12 Oct 2023 12:53:12 +0000
+
+libamxrt (0.2.19) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 09 Oct 2023 07:55:49 +0000
+
+libamxrt (0.2.18) unstable; urgency=medium
+
+  * Remove duplicate CI variable
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 29 Sep 2023 05:22:44 +0000
+
+libamxrt (0.2.17) unstable; urgency=medium
+
+  * [tr181-device] Crash during boot
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 25 Sep 2023 12:06:19 +0000
+
+libamxrt (0.2.16) unstable; urgency=medium
+
+  * Fix license headers in files
+  * Update dependencies in .gitlab-ci.yml
+  * [Ambiorix] Build error on KPN SW2 caused by opensource_libcapng=gen_v0.8.2
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 25 Sep 2023 07:00:29 +0000
+
+libamxrt (0.2.15) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 21 Sep 2023 12:13:13 +0000
+
+libamxrt (0.2.14) unstable; urgency=medium
+
+  * Create directory before user privilege and capability dropping
+
+ -- SAH bot <sahbot@softathome.com>  Tue, 19 Sep 2023 08:10:36 +0000
+
+libamxrt (0.2.13) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 14 Sep 2023 19:24:19 +0000
+
+libamxrt (0.2.12) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 08 Sep 2023 11:09:48 +0000
+
+libamxrt (0.2.11) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 01 Sep 2023 07:05:52 +0000
+
+libamxrt (0.2.10) unstable; urgency=medium
+
+  * - Refactor libamxrt for compatibility with prplmesh
+
+ -- SAH bot <sahbot@softathome.com>  Wed, 23 Aug 2023 06:03:28 +0000
+
+libamxrt (0.2.9) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 18 Aug 2023 12:00:54 +0000
+
+libamxrt (0.2.8) unstable; urgency=medium
+
+  * Do not remove readme file when opesourcing
+
+ -- SAH bot <sahbot@softathome.com>  Fri, 28 Jul 2023 13:21:52 +0000
+
+libamxrt (0.2.7) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 28 Jul 2023 10:34:25 +0000
+
+libamxrt (0.2.6) unstable; urgency=medium
+
+  * Enforce coding style - no declarations after code
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 25 Jul 2023 07:44:24 +0000
+
+libamxrt (0.2.5) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 19 Jul 2023 12:47:53 +0000
+
+libamxrt (0.2.4) unstable; urgency=medium
+
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 11 Jul 2023 06:30:38 +0000
+
+libamxrt (0.2.3) unstable; urgency=medium
+
+  * [AMX] Add be data-uris to top level data-uris
+
+ -- SAH bot <sahbot@softathome.com>  Thu, 06 Jul 2023 09:39:24 +0000
+
+libamxrt (0.2.2) unstable; urgency=medium
+
+  * [AMX] Define default sockets in backends
+
+ -- SAH bot <sahbot@softathome.com>  Wed, 05 Jul 2023 11:24:48 +0000
+
+libamxrt (0.2.1) unstable; urgency=medium
+
+  * [AMX] Crash with new libamxrt
+
+ -- SAH bot <sahbot@softathome.com>  Wed, 28 Jun 2023 11:59:00 +0000
+
+libamxrt (0.2.0) unstable; urgency=medium
+
+  * [amx][capabilities] Add support for reduced capabilities in ambiorix
+
+ -- SAH bot <sahbot@softathome.com>  Tue, 27 Jun 2023 18:10:32 +0000
+
+libamxrt (0.1.2) unstable; urgency=medium
+
+
+ -- SAH bot <sahbot@softathome.com>  Wed, 21 Jun 2023 06:37:55 +0000
+
+libamxrt (0.1.1) unstable; urgency=medium
+
+  * When using libamxrt a segfault can occur when closing the application
+
+ -- SAH bot <sahbot@softathome.com>  Mon, 19 Jun 2023 16:50:03 +0000
+
+libamxrt (0.1.0) unstable; urgency=medium
+
+  * Add API documentation
+
+ -- SAH bot <sahbot@softathome.com>  Mon, 19 Jun 2023 07:26:40 +0000
+
+libamxrt (0.0.2) unstable; urgency=medium
+
+  * Opensource component
+
+ -- SAH bot <sahbot@softathome.com>  Thu, 15 Jun 2023 12:37:02 +0000
+
+libamxrt (0.0.1) unstable; urgency=medium
+
+
+ -- SAH bot <sahbot@softathome.com>  Thu, 15 Jun 2023 08:30:37 +0000
+
+libamxrt (0.0.0) unstable; urgency=medium
+
+  * Initial implementation
+
+ -- SAH bot <sahbot@softathome.com>  Mon, 12 Jun 2023 07:16:00 +0000

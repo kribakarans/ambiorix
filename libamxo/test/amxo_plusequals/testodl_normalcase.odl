@@ -1,0 +1,7 @@
+%config {
+    mylist = [ "foo" ];
+}
+
+%config {
+    %global mylist += [ "bar" ];
+}

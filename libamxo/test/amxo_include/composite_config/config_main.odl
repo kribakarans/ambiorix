@@ -1,0 +1,9 @@
+%config {
+    ubus = {
+        watch-ubus-events = true
+    };
+}
+
+requires "Test1";
+
+include "./config_include.odl";

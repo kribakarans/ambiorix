@@ -1,0 +1,5 @@
+**/output/*
+**/run_test
+.gdb_history
+libamxd-*.*
+libamxd_*.*

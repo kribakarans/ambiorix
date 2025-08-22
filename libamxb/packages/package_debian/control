@@ -1,0 +1,12 @@
+Source: libamxb
+Section: devel
+Priority: optional
+Maintainer: matthias.vangestel <matthias.v.gestel@gmail.com>
+
+Package: libamxb
+Architecture: amd64
+Depends: ${shlibs:Depends}
+Description: Bus Agnostic API
+ High level bus agnostic API.
+ Uses back-ends for the real implementation
+ 

@@ -1,0 +1,15 @@
+Source: libamxm
+Section: devel
+Priority: optional
+Maintainer: matthias.vangestel <matthias.v.gestel@gmail.com>
+
+Package: libamxm
+Architecture: amd64
+Depends: ${shlibs:Depends}
+Description: Modular support
+ This c-library provides a generic and re-usable interface
+ for loading in modular shared objects:
+   - dynamic passing of functions between executable and so
+   - module namespace support
+   - uses a hash table for fast lookup
+ 

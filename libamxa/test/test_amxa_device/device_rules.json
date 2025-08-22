@@ -1,0 +1,16 @@
+{
+    "Device.": {
+        "Order": 1,
+        "Param": "r---",
+        "Obj": "rw-n",
+        "InstantiatedObj": "rw-n",
+        "CommandEvent": "r-xn"
+    },
+    "Device.InterfaceStack.": {
+        "Order": 2,
+        "Param": "r---",
+        "Obj": "r--n",
+        "InstantiatedObj": "r---",
+        "CommandEvent": "r---"
+    }
+}

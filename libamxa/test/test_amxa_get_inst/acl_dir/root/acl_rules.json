@@ -1,0 +1,26 @@
+{
+    "DHCPv4.Client.": {
+        "Order": 1,
+        "InstantiatedObj": "----"
+    },
+    "DHCPv4.Server.Pool.": {
+        "Order": 2,
+        "InstantiatedObj": "r---"
+    },
+    "DHCPv4.Server.Pool.*.StaticAddress.": {
+        "Order": 3,
+        "InstantiatedObj": "----"
+    },
+    "DHCPv4.Server.Pool.*.Client.*.IPv4Address.1.": {
+        "Order": 4,
+        "InstantiatedObj": "----"
+    },
+    "DHCPv4.Relay.Forwarding.": {
+        "Order": 5,
+        "InstantiatedObj": "r---"
+    },
+    "DHCPv4.Relay.Forwarding.*.Alias": {
+        "Order": 6,
+        "InstantiatedObj": "----"
+    }
+}

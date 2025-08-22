@@ -1,0 +1,201 @@
+/****************************************************************************
+**
+** SPDX-License-Identifier: BSD-2-Clause-Patent
+**
+** SPDX-FileCopyrightText: Copyright (c) 2023 SoftAtHome
+**
+** Redistribution and use in source and binary forms, with or without modification,
+** are permitted provided that the following conditions are met:
+**
+** 1. Redistributions of source code must retain the above copyright notice,
+** this list of conditions and the following disclaimer.
+**
+** 2. Redistributions in binary form must reproduce the above copyright notice,
+** this list of conditions and the following disclaimer in the documentation
+** and/or other materials provided with the distribution.
+**
+** Subject to the terms and conditions of this license, each copyright holder
+** and contributor hereby grants to those receiving rights under this license
+** a perpetual, worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+** (except for failure to satisfy the conditions of this license) patent license
+** to make, have made, use, offer to sell, sell, import, and otherwise transfer
+** this software, where such license applies only to those patent claims, already
+** acquired or hereafter acquired, licensable by such copyright holder or contributor
+** that are necessarily infringed by:
+**
+** (a) their Contribution(s) (the licensed copyrights of copyright holders and
+** non-copyrightable additions of contributors, in source or binary form) alone;
+** or
+**
+** (b) combination of their Contribution(s) with the work of authorship to which
+** such Contribution(s) was added by such copyright holder or contributor, if,
+** at the time the Contribution is added, such addition causes such combination
+** to be necessarily infringed. The patent license shall not apply to any other
+** combinations which include the Contribution.
+**
+** Except as expressly stated above, no rights or licenses from any copyright
+** holder or contributor is granted under this license, whether expressly, by
+** implication, estoppel or otherwise.
+**
+** DISCLAIMER
+**
+** THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+** AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+** IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+** ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDERS OR CONTRIBUTORS BE
+** LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+** DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+** SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+** CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+** OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE
+** USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+**
+****************************************************************************/
+%define {
+    object Device {
+
+	    /**
+	    * Root data model version, e.g. 2.4. For a vendor-defined root data model, this is the standard Broadband Forum model on which the vendor-defined model is based. Possible patterns:
+	    * 2\.\d+
+      	* @version V1.0
+      	*/
+        %read-only string RootDataModelVersion = "2.14" {
+            on action validate call matches_regexp "^2\.[0-9]+$";
+            on action validate call check_maximum 32;
+        }
+
+        /**
+        * Boot event indicating that the Device was rebooted.
+        * @version V1.0
+        */
+        event Boot;
+
+        /**
+        * Reboot the entity associated with the containing Device.
+        * @version V1.0
+        */
+        void Reboot();
+
+        /**
+        * Factory reset the entity associated with the containing Device.
+        * @version V1.0
+        */
+        void FactoryReset();
+
+        /**
+        * [ASYNC] This diagnostics test is vendor-specific and MAY include testing hardware, software, and/or firmware.
+        * @version V1.0
+        */
+        htable SelfTestDiagnostics();
+
+        /**
+        * [ASYNC] This diagnostic command is used to record packet capture data on a valid (layer 2 or above) interface in libpcap or pcapng format.
+        * @param Interface The value MUST be the Path Name of a table row. A reference to a (layer 2 or above) interface object that will be the target of this packet capture diagnostic.
+        * @param Format This indicates whether the network trace will be recorded in libpcap [LIBPCAP] or pcapng format, and is dependent on the underlying method of performing a network trace. Enumeration of:
+        * libpcap (The packet data is recorded in libpcap [LIBPCAP] format)
+        * pcapng (The packet data is recorded in pcapng format)
+        * @param Duration The duration in seconds to copy packets to the file target. The diagnostic completes when either the Duration, PacketCount, or ByteCount conditions are met.
+        * @param PacketCount The maximum number of packets to record to the file target. A value of zero (0) indicates no limit. The diagnostic completes when the Duration, ByteCount, or PacketCount conditions are met.
+        * @param ByteCount The maximum number of bytes to record to the file target. A value of zero (0) indicates no limit. The diagnostic completes when Duration, PacketCount or ByteCount conditions are met.
+        * @param FileTarget The [URL] specifying the destination file location. HTTP and HTTPS transports MUST be supported. Other transports MAY be supported.
+        * @param FilterExpression A ([BPF]) formatted expression used to restrict the types of network packets that are recorded to FileTarget.
+        * @param Username Username to be used by the Agent to authenticate with the file location. This string is set to an empty string if no authentication is required.
+        * @param Password Password to be used by the Agent to authenticate with the file location. This string is set to an empty string if no authentication is required.
+        * When read, this parameter returns an empty string, regardless of the actual value. When read, this parameter returns an empty string, regardless of the actual value.
+        * @version V1.0
+        */
+        htable PacketCaptureDiagnostics(string Interface, string Format, uint32 Duration,
+                                        uint32 PacketCount, uint32 ByteCount, string FileTarget,
+                                        string FilterExpression, string UserName, string Password);
+
+        /**
+        * [ASYNC] Schedule an async timer operation. A scheduled timer MUST persist across reboots.
+        * NOTE: This command changed from synchronous to asynchronous in version 2.14.
+        * @param DelaySeconds [MANDATORY] The number of seconds from the time this command is invoked until the Agent responds with an OperationComplete Event notification (based on the associated subscriptions).
+        * @version V1.0
+        */
+	    void ScheduleTimer(uint32 DelaySeconds);
+
+        /**
+        * This table contains information about the relationships between the multiple layers of interface objects ([Section 4.3/TR-181i2]). In particular, it contains information on which interfaces run on top of which other interfaces.
+        * This table is auto-generated by the CPE based on the LowerLayers parameters on individual interface objects.
+	    * Each table row represents a "link" between two interface objects, a higher-layer interface object (referenced by HigherLayer) and a lower-layer interface object (referenced by LowerLayer). Consequently, if a referenced interface object is deleted, the CPE MUST delete the corresponding InterfaceStack row(s) that had referenced it.
+	    * At most one entry in this table can exist with the same values for HigherLayer and LowerLayer, or with a given value for Alias. The non-functional key parameter Alias is immutable and therefore MUST NOT change once it's been assigned.
+        * @version V1.0
+        */
+        %read-only object InterfaceStack[] {
+
+            /**
+            * The number of entries in the InterfaceStack table.
+            * @version V1.0
+            */
+            counted with InterfaceStackNumberOfEntries;
+
+            /**
+            *[Alias] A non-volatile unique key used to reference this instance. Alias provides a mechanism for a Controller to label this instance for future reference.
+            * The following mandatory constraints MUST be enforced:
+            * The value MUST NOT be empty.
+            * The value MUST start with a letter.
+            * If the value is not assigned by the Controller at creation time, the Agent MUST assign a value with an "cpe-" prefix.
+ 	        * The value MUST NOT change once it's been assigned.
+ 	        * @version V1.0
+ 	        */
+            %unique %key string Alias;
+
+            /**
+            * A reference to the interface object corresponding to the higher layer of the relationship, i.e. the interface which runs on top of the interface identified by the corresponding instance of LowerLayer.
+            * When the referenced higher layer interface is deleted, the CPE MUST delete the table row.
+            * @version V1.0
+            */
+            %read-only string HigherLayer{
+                on action validate call check_maximum 256;
+            }
+
+            /**
+            * A reference to the interface object corresponding to the lower layer of the relationship, i.e. the interface which runs below the interface identified by the corresponding instance of HigherLayer.
+            * When the referenced lower layer interface is deleted, the CPE MUST delete the table row.
+            * @version V1.0
+            */
+            %read-only string LowerLayer{
+                on action validate call check_maximum 256;
+            }
+
+            /**
+            * The value of the Alias parameter for the interface object referenced by HigherLayer.
+            * @version V1.0
+            */
+            %read-only string HigherAlias{
+                on action validate call check_maximum 64;
+            }
+
+            /**
+            * The value of the Alias parameter for the interface object referenced by LowerLayer.
+            * @version V1.0
+            */
+            %read-only string LowerAlias{
+                on action validate call check_maximum 64;
+            }
+        }
+
+    }
+}
+
+%define {
+    select Device {
+        object Node[] {
+            %unique %key string Alias;
+            string Type;
+        }
+    }
+}
+
+%define {
+    select Device {
+        object Phonebook {
+            object Contact[] {
+                string FirstName;
+                string LastName;
+            }
+        }
+    }
+}

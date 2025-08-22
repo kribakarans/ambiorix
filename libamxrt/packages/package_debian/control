@@ -1,0 +1,12 @@
+Source: libamxrt
+Section: devel
+Priority: optional
+Maintainer: peter.deherdt <peter.deherdt@softathome.com>
+
+Package: libamxrt
+Architecture: amd64
+Depends: ${shlibs:Depends}
+Description: Ambiorix Run Time API 
+ The run-time api makes it easy to create event-driven ambiorix applications
+ 
+ 

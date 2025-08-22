@@ -1,0 +1,11 @@
+%config {
+    mylist = [ ["sub", "list"] ];
+    mystring = "hello";
+    myint = 4500;
+}
+
+%config {
+    %global mystring +=" world";
+    %global mylist+=[ ["different", "sublist" ], 2, "hello", true ];
+    %global myint+= 4501;
+}

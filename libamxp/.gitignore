@@ -1,0 +1,6 @@
+**/output/*
+**/run_test
+libamxp-*.*
+libamxp_*.*
+test/**/*.json
+test/**/core

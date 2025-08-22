@@ -1,0 +1,24 @@
+{
+    "DHCPv4": {
+        "Client": {
+            "*": {
+                "SentOption": {
+                    "*": {
+                        "Tag": {
+                            "%Order": 3,
+                            "%ACL": "0x23"
+                        },
+                        "Order": {
+                            "%Order": 4,
+                            "%ACL": "0x23"
+                        }
+                    },
+                    "%Order": 2,
+                    "%ACL": "0x0"
+                }
+            }
+        },
+        "%Order": 1,
+        "%ACL": "0xFFF"
+    }
+}

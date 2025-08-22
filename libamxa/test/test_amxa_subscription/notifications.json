@@ -1,0 +1,126 @@
+{
+    "notif-obj-changed-1": {
+        "notification": "dm:object-changed",
+        "object": "DHCPv4.Server.Pool.1.Client.1.",
+        "parameters": {
+            "Chaddr": {
+                "from": "",
+                "to": "test"
+            },
+            "Active": {
+                "from": false,
+                "to": true
+            }
+        },
+        "path": "DHCPv4.Server.Pool.1.Client.1."
+    },
+    "notif-obj-changed-2": {
+        "notification": "dm:object-changed",
+        "object": "DHCPv4.",
+        "parameters": {
+            "ClientNumberOfEntries": {
+                "from": 0,
+                "to": 1
+            },
+            "Dummy": {
+                "from": "foo",
+                "to": "bar"
+            }
+        },
+        "path": "DHCPv4."
+    },
+    "notif-obj-changed-3": {
+        "notification": "dm:object-changed",
+        "object": "DHCPv4.Client.1.",
+        "parameters": {
+            "Enable": {
+                "from": false,
+                "to": true
+            },
+            "Status": {
+                "from": "Disabled",
+                "to": "Enabled"
+            }
+        },
+        "path": "DHCPv4.Client.1."
+    },
+    "notif-inst-added-1": {
+        "index": 2,
+        "keys": {
+        },
+        "name": "test",
+        "notification": "dm:instance-added",
+        "object": "DHCPv4.Client.",
+        "parameters": {
+            "Alias": "test",
+            "Enable": false,
+            "Status": "Disabled"
+        },
+        "path": "DHCPv4.Client."
+    },
+    "notif-inst-added-2": {
+        "index": 1,
+        "keys": {
+        },
+        "name": "test",
+        "notification": "dm:instance-added",
+        "object": "DHCPv4.Client.1.SentOption.",
+        "path": "DHCPv4.Client.1.SentOption."
+    },
+    "notif-inst-added-3": {
+        "index": 1,
+        "keys": {
+        },
+        "name": "test",
+        "notification": "dm:instance-added",
+        "object": "DHCPv4.Server.Pool.",
+        "path": "DHCPv4.Server.Pool."
+    },
+    "notif-inst-removed-1": {
+        "index": 2,
+        "keys": {
+        },
+        "name": "test",
+        "notification": "dm:instance-removed",
+        "object": "DHCPv4.Client.",
+        "parameters": {
+            "Alias": "test",
+            "Enable": false,
+            "Status": "Disabled"
+        },
+        "path": "DHCPv4.Client."
+    },
+    "notif-inst-removed-2": {
+        "index": 1,
+        "keys": {
+        },
+        "name": "test",
+        "notification": "dm:instance-removed",
+        "object": "DHCPv4.Client.1.SentOption.",
+        "path": "DHCPv4.Client.1.SentOption."
+    },
+    "notif-inst-removed-3": {
+        "index": 1,
+        "keys": {
+        },
+        "name": "test",
+        "notification": "dm:instance-removed",
+        "object": "DHCPv4.Server.Pool.1.Client.",
+        "path": "DHCPv4.Server.Pool.1.Client."
+    },
+    "notif-event-1" : {
+        "DummyData": [
+            9,
+            8,
+            8,
+            6
+        ],
+        "notification": "dhcpv4:dummy-event",
+        "object": "DHCPv4.Client.1.",
+        "path": "DHCPv4.Client.1."
+    },
+    "notif-oper-comp-1" : {
+        "notification": "OperationComplete",
+        "path": "DHCPv4.Client.1.Renew"
+    }
+}

@@ -1,0 +1,9 @@
+%config {
+    myint = 123;
+    mystring = "hello";
+}
+
+%config {
+    %global myint+= "1";
+    %global mystring += 123;
+}

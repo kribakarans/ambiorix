@@ -1,0 +1,10 @@
+%populate {
+    synchronize 'A.' <-> 'B.' {
+        object 'A_template_sub.' <-> 'B_template_sub.' {
+            parameter 'param_A' <-> 'param_B';
+            object 'A_sub.' <-> 'B_sub.' {
+                parameter 'text_A' <-> 'text_B';
+            }
+        }
+    }
+}

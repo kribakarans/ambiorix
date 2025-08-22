@@ -1,0 +1,17 @@
+{
+    "DHCPv4.": {
+        "Order": 1,
+        "Param": "rwxn",
+        "Obj": "rwxn",
+        "InstantiatedObj": "rwxn",
+        "CommandEvent": "rwxn"
+    },
+    "DHCPv4.Server.Pool.*.DummyFunc()": {
+        "Order": 2,
+        "CommandEvent": "--x-"
+    },
+    "DHCPv4.Client.": {
+        "Order": 3,
+        "CommandEvent": "----"
+    }
+}

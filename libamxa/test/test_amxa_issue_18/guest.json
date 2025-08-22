@@ -1,0 +1,16 @@
+{
+    "Greeter.": {
+        "Order": 1,
+        "Param": "r---",
+        "Obj": "r---",
+        "InstantiatedObj": "r---",
+        "CommandEvent": "r---"
+    },
+    "Greeter.History.": {
+        "Order": 2,
+        "Param": "----",
+        "Obj": "----",
+        "InstantiatedObj": "----",
+        "CommandEvent": "----"
+    }
+}

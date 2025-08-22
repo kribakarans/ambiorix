@@ -1,0 +1,8 @@
+**/output/*
+**/run_test
+**/*_merged.json
+**/vgcore*
+.vscode/*
+core
+libamxa-*.*
+libamxa_*.*

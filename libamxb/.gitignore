@@ -1,0 +1,5 @@
+**/output/*
+**/run_test
+libamxb-*.*
+libamxb_*.*
+include_priv/amxb_version.h

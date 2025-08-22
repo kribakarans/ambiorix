@@ -1,0 +1,41 @@
+%config {
+    prefix_ = "X_TEST-COM_";
+}
+
+%define {
+    object A {
+        object A_template[] {
+            uint32 uint_A = 1;
+            string string_A = "I am A";
+            string '${prefix_}string_A' = "I am A";
+            %read-only string ReadOnlyText = "1234";
+        }
+
+        uint32 param_A = 2;
+    }
+
+    object B {
+        object B_template[] {
+            uint32 uint_B = 3;
+            string string_B = "I am B";
+            string '${prefix_}string_B' = "I am B";
+            %read-only string ReadOnlyText = "5678";
+        }
+
+        uint32 param_B = 4;
+    }
+
+    object '${prefix_}C' {
+        string '${prefix_}string_C' = "Test 1";
+        object '${prefix_}C_template'[] {
+            string '${prefix_}string_C' = "Test 1";
+        }
+    }
+
+    object '${prefix_}D' {
+        string '${prefix_}string_D' = "Test 2";
+        object '${prefix_}D_template'[] {
+            string '${prefix_}string_D' = "Test 2";
+        }
+    }
+}

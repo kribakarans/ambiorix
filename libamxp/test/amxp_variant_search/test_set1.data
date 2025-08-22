@@ -1,0 +1,33 @@
+{
+    "00:01:02:03:44:f0": [
+    ],
+    "94:83:c4:06:da:66": [
+        {
+            "Extender": true,
+            "MACAddress": "00:01:02:03:44:f0"
+        },
+        {
+            "BytesReceived": 0,
+            "BytesSent": 0,
+            "ErrorsReceived": 0,
+            "ErrorsSent": 0,
+            "EstMACDataRateDownlink": 0,
+            "EstMACDataRateUplink": 0,
+            "Extender": false,
+            "Hostname" : "Mi9T-MiTelefon",
+            "IPV4Address": "192.168.3.122",
+            "IPV6Address": "0",
+            "LastConnectTime ": 0,
+            "LastDataDownlinkRate" : 0,
+            "LastDataUplinkRate" : 0,
+            "MACAddress" : "00:00:55:3b:05",
+            "PacketsReceived": 0,
+            "PacketsSent": 0,
+            "RetransCount": 0,
+            "SignalStrength": 0,
+            "TimeStamp": "2021-04-22T17:18:38.785719944Z",
+            "UtilizationReceive": 0,
+            "UtilizationTransmit": 0
+        }
+    ]
+} 

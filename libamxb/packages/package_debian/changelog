@@ -1,0 +1,1467 @@
+libamxb (4.9.3) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DE HERDT <peter.deherdt@softathome.com>  Tue, 30 Apr 2024 08:13:01 +0000
+
+libamxb (4.9.2) unstable; urgency=medium
+
+  * [AMX] Config variable not reset when backends are freed
+  * Allow multiple registrations for the same bus context
+
+ -- SAH bot <sahbot@softathome.com>  Thu, 18 Apr 2024 11:57:52 +0000
+
+libamxb (4.9.1) unstable; urgency=medium
+
+
+ -- SAH bot <sahbot@softathome.com>  Thu, 11 Apr 2024 14:26:31 +0000
+
+libamxb (4.9.0) unstable; urgency=medium
+
+  * Make timeouts configurable.
+
+ -- SAH bot <sahbot@softathome.com>  Thu, 11 Apr 2024 14:12:38 +0000
+
+libamxb (4.8.3) unstable; urgency=medium
+
+  * Improve documentation on data model discovery
+
+ -- SAH bot <sahbot@softathome.com>  Thu, 28 Mar 2024 07:15:14 +0000
+
+libamxb (4.8.2) unstable; urgency=medium
+
+  * [cli]It must be possible to connect to ipv6 lla
+
+ -- SAH bot <sahbot@softathome.com>  Mon, 05 Feb 2024 21:49:27 +0000
+
+libamxb (4.8.1) unstable; urgency=medium
+
+  * [amx][cli] Add syntax to filter parameters list - fix version check unit test
+
+ -- SAH bot <sahbot@softathome.com>  Fri, 26 Jan 2024 12:40:23 +0000
+
+libamxb (4.8.0) unstable; urgency=medium
+
+  * [amx][cli] Add syntax to filter parameters list
+
+ -- SAH bot <sahbot@softathome.com>  Fri, 26 Jan 2024 12:24:33 +0000
+
+libamxb (4.7.26) unstable; urgency=medium
+
+  * Update amxb_set documentation
+
+ -- SAH bot <sahbot@softathome.com>  Fri, 26 Jan 2024 12:12:35 +0000
+
+libamxb (4.7.25) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+  * update documentation for amxb_wait_for_object
+  * update documentation for amxb_wait_for_object
+
+ -- Peter DE HERDT <peter.deherdt@softathome.com>  Wed, 10 Jan 2024 11:10:08 +0000
+
+libamxb (4.7.24) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DE HERDT <peter.deherdt@softathome.com>  Tue, 12 Dec 2023 22:47:13 +0000
+
+libamxb (4.7.23) unstable; urgency=medium
+
+  * [AMX] Add extra NULL pointer checks
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DE HERDT <peter.deherdt@softathome.com>  Tue, 12 Dec 2023 16:18:59 +0000
+
+libamxb (4.7.22) unstable; urgency=medium
+
+  * Inconsistent status types in amxb_get_multiple and amxb_set_multiple
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DE HERDT <peter.deherdt@softathome.com>  Wed, 06 Dec 2023 12:45:53 +0000
+
+libamxb (4.7.21) unstable; urgency=medium
+
+  * [AMX] Cache size is not updated correctly
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DE HERDT <peter.deherdt@softathome.com>  Wed, 29 Nov 2023 18:38:22 +0000
+
+libamxb (4.7.20) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DE HERDT <peter.deherdt@softathome.com>  Tue, 21 Nov 2023 14:57:16 +0000
+
+libamxb (4.7.19) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DE HERDT <peter.deherdt@softathome.com>  Tue, 21 Nov 2023 11:37:57 +0000
+
+libamxb (4.7.18) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DE HERDT <peter.deherdt@softathome.com>  Fri, 17 Nov 2023 12:37:05 +0000
+
+libamxb (4.7.17) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Sat, 04 Nov 2023 20:48:45 +0000
+
+libamxb (4.7.16) unstable; urgency=medium
+
+  * [libamxb]Possible memory leak when async request are open on local datamodel when exiting
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 30 Oct 2023 10:12:33 +0000
+
+libamxb (4.7.15) unstable; urgency=medium
+
+  * [libamxb]Segfault when local async-call in progress and conection lost to bus system
+
+ -- SAH bot <sahbot@softathome.com>  Thu, 26 Oct 2023 11:10:01 +0000
+
+libamxb (4.7.14) unstable; urgency=medium
+
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 24 Oct 2023 10:54:38 +0000
+
+libamxb (4.7.13) unstable; urgency=medium
+
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 23 Oct 2023 16:53:52 +0000
+
+libamxb (4.7.12) unstable; urgency=medium
+
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 23 Oct 2023 16:40:14 +0000
+
+libamxb (4.7.11) unstable; urgency=medium
+
+  * [libamxb]Segfault when local async-call in progress and conection lost to bus system
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 23 Oct 2023 13:48:41 +0000
+
+libamxb (4.7.10) unstable; urgency=medium
+
+  * [libamxb]Memory leak - closed pending asynchronous request are not freed when disconnecting
+  * Update dependencies in .gitlab-ci.yml
+  * Issue ST-1184 [amxb][amxc][amxo][amxrt] Fix typos in documentation
+  * [amxb][amxc][amxo][amxrt] Fix typos in documentation
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 17 Oct 2023 14:05:56 +0000
+
+libamxb (4.7.9) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 12 Oct 2023 12:17:46 +0000
+
+libamxb (4.7.8) unstable; urgency=medium
+
+  * Don't return listen context from who_has
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 09 Oct 2023 06:58:38 +0000
+
+libamxb (4.7.7) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 25 Sep 2023 06:20:38 +0000
+
+libamxb (4.7.6) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 21 Sep 2023 11:41:29 +0000
+
+libamxb (4.7.5) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 14 Sep 2023 18:48:29 +0000
+
+libamxb (4.7.4) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 08 Sep 2023 10:35:29 +0000
+
+libamxb (4.7.3) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 01 Sep 2023 06:38:44 +0000
+
+libamxb (4.7.2) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 18 Aug 2023 11:34:29 +0000
+
+libamxb (4.7.1) unstable; urgency=medium
+
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 28 Jul 2023 10:06:26 +0000
+
+libamxb (4.7.0) unstable; urgency=medium
+
+  * Make the AMX Bus Rust API safe-to-use
+
+ -- SAH bot <sahbot@softathome.com>  Fri, 28 Jul 2023 05:58:24 +0000
+
+libamxb (4.6.9) unstable; urgency=medium
+
+  * Enforce coding style - no declarations after code
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 25 Jul 2023 07:16:53 +0000
+
+libamxb (4.6.8) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 19 Jul 2023 12:23:25 +0000
+
+libamxb (4.6.7) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 10 Jul 2023 21:36:54 +0000
+
+libamxb (4.6.6) unstable; urgency=medium
+
+  * Plugins crashing because of segfault in ambiorix
+
+ -- SAH bot <sahbot@softathome.com>  Fri, 30 Jun 2023 15:10:19 +0000
+
+libamxb (4.6.5) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 27 Jun 2023 17:44:29 +0000
+
+libamxb (4.6.4) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 20 Jun 2023 09:04:32 +0000
+
+libamxb (4.6.3) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 14 Jun 2023 21:08:15 +0000
+
+libamxb (4.6.2) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 01 Jun 2023 19:34:03 +0000
+
+libamxb (4.6.1) unstable; urgency=medium
+
+
+ -- SAH bot <sahbot@softathome.com>  Wed, 31 May 2023 11:56:21 +0000
+
+libamxb (4.6.0) unstable; urgency=medium
+
+  * [AMX] Ambiorix should return the same error codes regardless of the used bus
+
+ -- SAH bot <sahbot@softathome.com>  Wed, 31 May 2023 11:32:09 +0000
+
+libamxb (4.5.11) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+  * Documentation is missing for the get_instances operator
+  * Issue: ambiorix/libraries/libamxb#68 Documentation is missing for the get_instances operator
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 24 May 2023 15:03:11 +0000
+
+libamxb (4.5.10) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 10 May 2023 11:03:41 +0000
+
+libamxb (4.5.9) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 08 May 2023 07:59:31 +0000
+
+libamxb (4.5.8) unstable; urgency=medium
+
+  * gsdm missing arguments for commands and events
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 03 May 2023 06:59:39 +0000
+
+libamxb (4.5.7) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 21 Apr 2023 17:28:10 +0000
+
+libamxb (4.5.6) unstable; urgency=medium
+
+  * [AMX] Unable to unsubscribe from search path
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 17 Apr 2023 08:22:13 +0000
+
+libamxb (4.5.5) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Sat, 08 Apr 2023 18:18:20 +0000
+
+libamxb (4.5.4) unstable; urgency=medium
+
+  * [TR069-manager] [wnc] No ManagementServer object for wnc
+
+ -- SAH bot <sahbot@softathome.com>  Fri, 07 Apr 2023 15:09:32 +0000
+
+libamxb (4.5.3) unstable; urgency=medium
+
+  * [amx pcb]Who has on search paths with pcb back-end is not working
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 03 Apr 2023 08:57:57 +0000
+
+libamxb (4.5.2) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 28 Mar 2023 07:52:14 +0000
+
+libamxb (4.5.1) unstable; urgency=medium
+
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 28 Mar 2023 06:37:09 +0000
+
+libamxb (4.5.0) unstable; urgency=medium
+
+  * [AMX] Take bus access into account for GSDM
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 28 Mar 2023 06:21:10 +0000
+
+libamxb (4.4.8) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 27 Mar 2023 08:54:50 +0000
+
+libamxb (4.4.7) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 17 Mar 2023 14:01:12 +0000
+
+libamxb (4.4.6) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 13 Mar 2023 08:19:24 +0000
+
+libamxb (4.4.5) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 02 Mar 2023 09:46:26 +0000
+
+libamxb (4.4.4) unstable; urgency=medium
+
+  * Object path verification should be done when subscribing
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 28 Feb 2023 09:35:02 +0000
+
+libamxb (4.4.3) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 22 Feb 2023 15:29:37 +0000
+
+libamxb (4.4.2) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 16 Feb 2023 10:53:23 +0000
+
+libamxb (4.4.1) unstable; urgency=medium
+
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 13 Feb 2023 13:11:05 +0000
+
+libamxb (4.4.0) unstable; urgency=medium
+
+  * [USP] Requirements for Get further clarified
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 13 Feb 2023 12:58:41 +0000
+
+libamxb (4.3.12) unstable; urgency=medium
+
+  * [USP] Requirements for Get changed
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 30 Jan 2023 17:52:47 +0000
+
+libamxb (4.3.11) unstable; urgency=medium
+
+  * [AMXB] subscribing on different paths, still triggers all events cb
+  * [AMX][USP] A get on a protected parameter with public bus access must fail
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 18 Jan 2023 08:58:26 +0000
+
+libamxb (4.3.10) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 13 Jan 2023 12:13:05 +0000
+
+libamxb (4.3.9) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 11 Jan 2023 21:10:48 +0000
+
+libamxb (4.3.8) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 14 Dec 2022 10:11:14 +0000
+
+libamxb (4.3.7) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 07 Dec 2022 08:30:04 +0000
+
+libamxb (4.3.6) unstable; urgency=medium
+
+  * Fix wrong usage of function amxd_path_setf
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 28 Nov 2022 10:30:05 +0000
+
+libamxb (4.3.5) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 21 Nov 2022 13:35:40 +0000
+
+libamxb (4.3.4) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Sat, 19 Nov 2022 12:43:37 +0000
+
+libamxb (4.3.3) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 15 Nov 2022 13:24:29 +0000
+
+libamxb (4.3.2) unstable; urgency=medium
+
+  * Make it possible to wait for instances
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 14 Nov 2022 08:10:55 +0000
+
+libamxb (4.3.1) unstable; urgency=medium
+
+  * Issue: Investigate and fix klocwork reports
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 03 Nov 2022 12:28:17 +0000
+
+libamxb (4.3.0) unstable; urgency=medium
+
+  * [ACS][V12] Setting of VOIP in a single SET does not enable VoiceProfile
+
+ -- SAH bot <sahbot@softathome.com>  Wed, 26 Oct 2022 12:24:22 +0000
+
+libamxb (4.2.28) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 24 Oct 2022 11:20:02 +0000
+
+libamxb (4.2.27) unstable; urgency=medium
+
+  * [ACS][V12] Setting of VOIP in a single SET does not enable VoiceProfile
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 20 Oct 2022 15:06:51 +0000
+
+libamxb (4.2.26) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 12 Oct 2022 12:57:03 +0000
+
+libamxb (4.2.25) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 06 Oct 2022 19:22:33 +0000
+
+libamxb (4.2.24) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 05 Oct 2022 19:16:17 +0000
+
+libamxb (4.2.23) unstable; urgency=medium
+
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 21 Sep 2022 16:38:07 +0000
+
+libamxb (4.2.22) unstable; urgency=medium
+
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 21 Sep 2022 13:35:55 +0000
+
+libamxb (4.2.21) unstable; urgency=medium
+
+  * Asynchonous call on local deferred function does not fill retval
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 20 Sep 2022 15:30:43 +0000
+
+libamxb (4.2.20) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 12 Sep 2022 13:28:09 +0000
+
+libamxb (4.2.19) unstable; urgency=medium
+
+  * [AMX] Allow back-ends to modify their config section
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 29 Aug 2022 08:18:09 +0000
+
+libamxb (4.2.18) unstable; urgency=medium
+
+  * Performing an amxb_async_call on a local deferred data model method doesn't return correctly
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 24 Aug 2022 10:02:47 +0000
+
+libamxb (4.2.17) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 18 Aug 2022 13:45:38 +0000
+
+libamxb (4.2.16) unstable; urgency=medium
+
+  * [USP] MQTT IMTP connection cannot handle bus requests
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 17 Aug 2022 10:34:04 +0000
+
+libamxb (4.2.15) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Johan JACOBS <johan.jacobs_ext@softathome.com>  Fri, 05 Aug 2022 09:20:42 +0000
+
+libamxb (4.2.14) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 25 Jul 2022 09:26:41 +0000
+
+libamxb (4.2.13) unstable; urgency=medium
+
+  * Invoke of method with out arguments on local data model creates wrong result variant
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 13 Jul 2022 12:24:55 +0000
+
+libamxb (4.2.12) unstable; urgency=medium
+
+  * Issue: ambiorix/libraries/libamxb#63 Doxygen documentation tags must be added to back-end interface stuct and function signatures
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 11 Jul 2022 08:06:53 +0000
+
+libamxb (4.2.11) unstable; urgency=medium
+
+  * Adds lookup cache for amxb_who_has
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 05 Jul 2022 08:35:19 +0000
+
+libamxb (4.2.10) unstable; urgency=medium
+
+  * Reference following using key addressing fails
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 28 Jun 2022 10:46:25 +0000
+
+libamxb (4.2.9) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 21 Jun 2022 12:09:15 +0000
+
+libamxb (4.2.8) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 09 Jun 2022 12:08:14 +0000
+
+libamxb (4.2.7) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 01 Jun 2022 12:46:20 +0000
+
+libamxb (4.2.6) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 30 May 2022 09:10:37 +0000
+
+libamxb (4.2.5) unstable; urgency=medium
+
+  * [Gitlab CI][Unit tests][valgrind] Pipeline doesn't stop when memory leaks are detected
+  * Use reference index when a reference path is provided
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 23 May 2022 11:58:21 +0000
+
+libamxb (4.2.4) unstable; urgency=medium
+
+  * [Ambiorix] Implementation of reference following decorator
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 12 May 2022 11:31:10 +0000
+
+libamxb (4.2.3) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 05 May 2022 11:55:44 +0000
+
+libamxb (4.2.2) unstable; urgency=medium
+
+  * Incorrect check for get_instances back-end function
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 03 May 2022 07:30:13 +0000
+
+libamxb (4.2.1) unstable; urgency=medium
+
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 25 Apr 2022 09:43:48 +0000
+
+libamxb (4.2.0) unstable; urgency=medium
+
+  * Implement amxb_get_multiple
+  * Add support for get_instances operator
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 25 Apr 2022 09:36:11 +0000
+
+libamxb (4.1.7) unstable; urgency=medium
+
+  * Constructor functions that add custom expression function must be run at level higher then 101
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 06 Apr 2022 11:04:27 +0000
+
+libamxb (4.1.6) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 17 Mar 2022 12:08:57 +0000
+
+libamxb (4.1.5) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Matthias FRANCK <matthias.franck_ext@softathome.com>  Wed, 09 Mar 2022 08:30:35 +0000
+
+libamxb (4.1.4) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 15 Feb 2022 17:08:46 +0000
+
+libamxb (4.1.3) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Johan JACOBS <johan.jacobs_ext@softathome.com>  Mon, 14 Feb 2022 12:33:14 +0000
+
+libamxb (4.1.2) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 04 Feb 2022 16:21:01 +0000
+
+libamxb (4.1.1) unstable; urgency=medium
+
+  * Fixes test version cehcking
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 25 Jan 2022 07:39:19 +0000
+
+libamxb (4.1.0) unstable; urgency=medium
+
+  * Implement amxb_set_multiple
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 25 Jan 2022 07:23:52 +0000
+
+libamxb (4.0.2) unstable; urgency=medium
+
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 16 Dec 2021 09:22:48 +0000
+
+libamxb (4.0.1) unstable; urgency=medium
+
+  * Fixes version check test due to upstep of major version
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 15 Dec 2021 11:46:46 +0000
+
+libamxb (4.0.0) unstable; urgency=medium
+
+  * Remove deprecated functions
+  * Add support for allow partial with set operator
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 15 Dec 2021 11:24:09 +0000
+
+libamxb (3.5.14) unstable; urgency=medium
+
+  * amxb_who_has function must take local data model into account
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 08 Dec 2021 13:27:27 +0000
+
+libamxb (3.5.13) unstable; urgency=medium
+
+  * No events received when subscribing on native ubus objects
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 02 Dec 2021 09:57:03 +0000
+
+libamxb (3.5.12) unstable; urgency=medium
+
+  * Fixes subscription on search paths
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 30 Nov 2021 10:47:56 +0000
+
+libamxb (3.5.11) unstable; urgency=medium
+
+  * Fixes segmentation fault when deleting subscription object
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 29 Nov 2021 16:26:43 +0000
+
+libamxb (3.5.10) unstable; urgency=medium
+
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 29 Nov 2021 15:57:10 +0000
+
+libamxb (3.5.9) unstable; urgency=medium
+
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 29 Nov 2021 15:42:22 +0000
+
+libamxb (3.5.8) unstable; urgency=medium
+
+  * Improve and refactor subscriptions
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 29 Nov 2021 15:15:10 +0000
+
+libamxb (3.5.7) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 23 Nov 2021 12:22:43 +0000
+
+libamxb (3.5.6) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+  * Issue: ambiorix/libraries/libamxb#47 When unsubscribing slot disconnect must be done on a specific signal
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 16 Nov 2021 17:58:47 +0000
+
+libamxb (3.5.5) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 10 Nov 2021 15:19:58 +0000
+
+libamxb (3.5.4) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 28 Oct 2021 22:44:31 +0000
+
+libamxb (3.5.3) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 20 Oct 2021 19:16:48 +0000
+
+libamxb (3.5.2) unstable; urgency=medium
+
+  * Extend the back-end interface to make it possible for a back-end to announce its capabilities and provide object discovery
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 13 Oct 2021 11:40:06 +0000
+
+libamxb (3.5.1) unstable; urgency=medium
+
+  * Fixes version check tests
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 11 Oct 2021 07:55:52 +0000
+
+libamxb (3.5.0) unstable; urgency=medium
+
+  * Extend the back-end interface to make it possible for a back-end to announce its capabilities and provide object discovery
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 11 Oct 2021 07:36:15 +0000
+
+libamxb (3.4.7) unstable; urgency=medium
+
+  * Resolve search paths for objects if parent instance exists
+  * Use longest possible path for bus operations
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 08 Oct 2021 14:00:19 +0000
+
+libamxb (3.4.6) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 24 Sep 2021 15:59:20 +0000
+
+libamxb (3.4.5) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 23 Sep 2021 10:07:56 +0000
+
+libamxb (3.4.4) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Johan JACOBS <johan.jacobs_ext@softathome.com>  Fri, 10 Sep 2021 12:36:44 +0000
+
+libamxb (3.4.3) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 23 Aug 2021 11:12:57 +0000
+
+libamxb (3.4.2) unstable; urgency=medium
+
+  * Make it possible to invoke RPC methods that are not under an object
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 02 Aug 2021 12:28:04 +0000
+
+libamxb (3.4.1) unstable; urgency=medium
+
+  * Fixes version check tests
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 22 Jul 2021 11:55:39 +0000
+
+libamxb (3.4.0) unstable; urgency=medium
+
+  * Update documentation
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 22 Jul 2021 11:32:27 +0000
+
+libamxb (3.3.2) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 12 Jul 2021 17:35:13 +0000
+
+libamxb (3.3.1) unstable; urgency=medium
+
+
+ -- SAH bot <sahbot@softathome.com>  Mon, 12 Jul 2021 08:00:20 +0000
+
+libamxb (3.3.0) unstable; urgency=medium
+
+  * Add wait for feature to bus agnostic api
+
+ -- SAH bot <sahbot@softathome.com>  Mon, 12 Jul 2021 07:50:23 +0000
+
+libamxb (3.2.6) unstable; urgency=medium
+
+  * Add OBJECTS and INSTANCES flags for amxb_invoke_list
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 09 Jul 2021 09:39:07 +0000
+
+libamxb (3.2.5) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 05 Jul 2021 07:02:21 +0000
+
+libamxb (3.2.4) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Sun, 04 Jul 2021 17:31:35 +0000
+
+libamxb (3.2.3) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 02 Jul 2021 19:14:24 +0000
+
+libamxb (3.2.2) unstable; urgency=medium
+
+  * Generation of version.h files should not be .PHONY
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 28 Jun 2021 13:40:26 +0000
+
+libamxb (3.2.1) unstable; urgency=medium
+
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 21 Jun 2021 13:34:36 +0000
+
+libamxb (3.2.0) unstable; urgency=medium
+
+  * It must be possible to store pending asynchronous invoke requests in a list
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 21 Jun 2021 12:48:00 +0000
+
+libamxb (3.1.9) unstable; urgency=medium
+
+  * Memory leak in amxb_resolve in case of failure
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Sat, 19 Jun 2021 05:44:09 +0000
+
+libamxb (3.1.8) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 15 Jun 2021 09:18:52 +0000
+
+libamxb (3.1.7) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 11 Jun 2021 11:02:21 +0000
+
+libamxb (3.1.6) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 11 Jun 2021 05:49:08 +0000
+
+libamxb (3.1.5) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 10 Jun 2021 18:29:44 +0000
+
+libamxb (3.1.4) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 10 Jun 2021 12:32:47 +0000
+
+libamxb (3.1.3) unstable; urgency=medium
+
+  * [tr181 plugins][makefile] Dangerous clean target for all tr181 components
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 08 Jun 2021 09:22:16 +0000
+
+libamxb (3.1.2) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 01 Jun 2021 07:19:22 +0000
+
+libamxb (3.1.1) unstable; urgency=medium
+
+  * List operator should take temple info flag into account
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 31 May 2021 10:05:16 +0000
+
+libamxb (3.1.0) unstable; urgency=medium
+
+  * It must be possible to keep track of subscriptions
+
+ -- SAH bot <sahbot@softathome.com>  Tue, 25 May 2021 09:34:07 +0000
+
+libamxb (3.0.8) unstable; urgency=medium
+
+  * Fixes memoryleak when connection is closed
+  * amxb_subscribe and amxb_unsubscribe asymmetry
+  * Improve who has functionality
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 21 May 2021 12:15:04 +0000
+
+libamxb (3.0.7) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Sun, 09 May 2021 20:45:34 +0000
+
+libamxb (3.0.6) unstable; urgency=medium
+
+  * Use common macros from libamxc
+  * Update dependencies in .gitlab-ci.yml
+  * Enable auto opensourcing
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 04 May 2021 08:12:00 +0000
+
+libamxb (3.0.5) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 23 Apr 2021 18:49:07 +0000
+
+libamxb (3.0.4) unstable; urgency=medium
+
+  * Loading a back-end multiple times should not fail
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 21 Apr 2021 09:10:45 +0000
+
+libamxb (3.0.3) unstable; urgency=medium
+
+  * Step up version of libamxd for CI/CD 
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Sun, 18 Apr 2021 15:17:18 +0000
+
+libamxb (3.0.2) unstable; urgency=medium
+
+  *  remove fakeroot dependency on host to build WRT image 
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 15 Apr 2021 20:11:04 +0000
+
+libamxb (3.0.1) unstable; urgency=medium
+
+  * VERSION_PREFIX is needed in buildfiles 
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 15 Apr 2021 10:57:48 +0000
+
+libamxb (3.0.0) unstable; urgency=medium
+
+  * Fixes amxb_list on local datamodel
+  * Build-in data model RPC methods can conflict with domain specific RPCs
+  * Move copybara to baf
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 08 Apr 2021 20:45:19 +0000
+
+libamxb (2.1.3) unstable; urgency=medium
+
+  * Updates versions of libamxc,libamxp and libamxd for CI/CD
+  * Subscription on native ubus objects fail
+  * Add amxb_async_call
+
+ -- Peter De Herdt <peter.deherdt@softathome.com>  Fri, 26 Mar 2021 23:40:32 +0000
+
+libamxb (2.1.2) unstable; urgency=medium
+
+  * Step-up version of libamxc, libamxp and libamxd for CI
+
+ -- Peter De Herdt <peter.deherdt@softathome.com>  Wed, 10 Mar 2021 12:02:58 +0000
+
+libamxb (2.1.1) unstable; urgency=medium
+
+  * Migrate to new licenses format (baf)
+  * Add missing error pragmas for dependencies
+
+ -- Peter De Herdt <peter.deherdt@softathome.com>  Thu, 25 Feb 2021 14:14:38 +0000
+
+libamxb (2.1.0) unstable; urgency=medium
+
+  * Add a function to read raw data from a backend context
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 19 Feb 2021 07:41:48 +0000
+
+libamxb (2.0.6) unstable; urgency=medium
+
+  * Step-up versions of libamxc,libamxp,libamxd for CI
+  * Add doxygen documentation to public API functions
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Sat, 06 Feb 2021 17:59:47 +0000
+
+libamxb (2.0.5) unstable; urgency=medium
+
+  * Updates versions of libamxd for CI/CD pipelines
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Sat, 30 Jan 2021 17:59:47 +0000
+
+libamxb (2.0.4) unstable; urgency=medium
+
+  * Updates versions of libamxc,libamxp,libamxd for CI/CD pipelines
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Sat, 23 Jan 2021 17:59:47 +0000
+
+libamxb (2.0.3) unstable; urgency=medium
+
+  * Generate makefiles using build agnostic file (baf)
+  * Operator del always returns an array of deleted objects when no objects deleted
+  * Only include objects in static library
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Sat, 16 Jan 2021 17:59:47 +0000
+
+libamxb (2.0.2) unstable; urgency=medium
+
+  * Fixes static code analyzes warnings (clang)
+  * Adds tests and fixes found issues
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Sat, 09 Jan 2021 17:59:47 +0000
+
+libamxb (2.0.1) unstable; urgency=medium
+
+  * Rename functions, remove _v2, define macro
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Sat, 09 Jan 2021 09:43:06 +0000
+
+libamxb (2.0.0) unstable; urgency=medium
+
+  * API Changes: all operations support USP style paths
+  * List operation is asynchronous and can be used with empty path
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 08 Jan 2021 15:22:52 +0000
+
+libamxb (1.6.1) unstable; urgency=medium
+
+  * Updates dependency versions
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 30 Nov 2020 16:12:24 +0000
+
+libamxb (1.6.0) unstable; urgency=medium
+
+  * Update dependencies in gitlab CI yml file
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Sun, 29 Nov 2020 16:59:22 +0000
+
+libamxb (1.5.5) unstable; urgency=medium
+
+  * It must be possible to retrieve a bus context
+  * Adds doxygen documentation tags
+  * Get supported - USP specification uses first_level_only instead of recursive
+  
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 25 Nov 2020 19:06:57 +0000
+
+libamxb (1.5.4) unstable; urgency=medium
+
+  * Fixes makefile INCDIRS
+  * Fixes doc target
+  * Update readme
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 20 Nov 2020 14:07:33 +0000
+
+libamxb (1.5.3) unstable; urgency=medium
+
+  * Find bus ctx for object path
+  * Updates gitlab CI/CD yml file
+  * It is currently not possible to get direct parameters from root objects with amxb_get
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 16 Nov 2020 12:58:15 +0000
+
+libamxb (1.5.2) unstable; urgency=medium
+
+  * Add describe operator (extends back-end interface)
+  * Replaces secure_getenv with getenv
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 27 Oct 2020 17:56:30 +0000
+
+libamxb (1.5.1) unstable; urgency=medium
+
+  * Step-up version of libamxc v0.7.2 
+  * Step-up version of libamxd v1.1.2
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 19 Oct 2020 19:16:04 +0000
+
+libamxb (1.5.0) unstable; urgency=medium
+
+  * Updates code style
+  * amxb_get: recursive parameter search
+  * Refactor amxb_get, add recursive depth
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 02 Oct 2020 13:47:54 +0000
+
+libamxb (1.4.7) unstable; urgency=medium
+
+  * Subscribe object paths must be in index addressing
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 23 Sep 2020 11:13:42 +0000
+
+libamxb (1.4.6) unstable; urgency=medium
+
+  * Subscribe/unsubscribe should not segfault
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 21 Sep 2020 21:19:08 +0000
+
+libamxb (1.4.5) unstable; urgency=medium
+
+  * Add unit-tests
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 17 Sep 2020 13:50:52 +0000
+
+libamxb (1.4.4) unstable; urgency=medium
+
+  * Improve code search_path expression function - use amxd_path_t
+  * It must be possible to pass configuration options to the back-ends
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Sun, 13 Sep 2020 20:15:52 +0000
+
+libamxb (1.4.3) unstable; urgency=medium
+
+  * Add support for get_supported_dm USP request
+  
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Sat, 05 Sep 2020 19:32:30 +0000
+
+libamxb (1.4.2) unstable; urgency=medium
+
+- pass verion_prefix to make command
+
+ -- Steven Van Weynsberghe <steven.vanweynsberghe@softathome.com>  Thu, 03 Sep 2020 14:19:22 +0000
+
+libamxb (1.4.1) unstable; urgency=medium
+
+- Fixes g++ compilation warnings and errors
+- Add version prefix to support legacy build system
+- Removes test dependencies - use mocks
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 03 Sep 2020 06:19:22 +0000
+
+libamxb (1.4.0) unstable; urgency=medium
+
+  * Common macros moved to libamxc (v0.6.9)
+  * Needs libamxd v1.0.0 or higher
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Sat, 29 Aug 2020 21:06:37 +0000
+
+libamxb (1.3.1) unstable; urgency=medium
+
+  * Uniforms local/remote requests 
+  * Fixes back-end function calls-backs
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Sat, 22 Aug 2020 12:39:27 +0000
+
+libamxb (1.3.0) unstable; urgency=medium
+
+  * Extend back-end interface to make it possible that back-ends provide their own basic operators
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 21 Aug 2020 18:26:50 +0000
+
+libamxb (1.2.2) unstable; urgency=medium
+
+  * set correct MAJOR number on libraries for internal builds
+  * Small code cleanups
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 20 Aug 2020 13:15:03 +0000
+
+libamxb (1.2.1) unstable; urgency=medium
+
+  * Improves subscriptions on local data model
+  * Tests on local data model
+  * Tests for basic operators (get/set/add/del/subscribe)
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Sun, 16 Aug 2020 14:32:03 +0000
+
+libamxb (1.2.0) unstable; urgency=medium
+
+  * Adds expression value function `search_path`
+  * Adds support for threshold events
+  * function `amxb_get` takes extra argument `search_path`
+  * function `amxb_unsubscribe` takes extra argument `priv`
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 13 Aug 2020 12:43:24 +0000
+
+libamxb (1.1.3) unstable; urgency=medium
+
+  * Update contributing guide
+ 
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 04 Aug 2020 06:22:47 +0000
+
+libamxb (1.1.2) unstable; urgency=medium
+
+  * Adds RAW_VERSION to makefile.inc, VERSION must be X.Y.Z or X.Y.Z-HASH
+  * Compilation issue with fortified  musl
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 22 Jul 2020 19:06:50 +0000
+
+libamxb (1.1.1) unstable; urgency=medium
+
+  * Uses new string_split API from libamxc
+  * Update makefiles for SAH legacy build systems
+  * Adds missing header file
+  * Fixes linking flag
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 13 Jul 2020 06:00:10 +0000
+
+libamxb (1.1.0) unstable; urgency=medium
+
+  * Support expressions in subscribe function
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 06 Jul 2020 07:56:00 +0000
+
+libamxb (1.0.10) unstable; urgency=medium
+
+  * Uses std=c11 instead of std=c18 to support older compilers and toolchains
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Sun, 05 Jul 2020 17:16:18 +0000
+
+libamxb (1.0.9) unstable; urgency=medium
+
+  * Scrubs Component.* files
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 30 Jun 2020 07:46:39 +0000
+
+libamxb (1.0.8) unstable; urgency=medium
+
+  * Support for legacy SAH build system
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 29 Jun 2020 16:23:11 +0000
+
+libamxb (1.0.7) unstable; urgency=medium
+
+- Copybara file
+- Adds primitives add and del instance
+- Install libraries into target specific directory
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 26 Jun 2020 17:45:58 +0000
+
+libamxb (1.0.6) unstable; urgency=medium
+
+  * Adds operations primitives `get`, `set`, `call`
+  * Collects unit test results
+  * Data model indirection local vs remote
+  * update license to BSD+patent
+  * Stops testing when test fails, preserve error code
+
+ -- sah4009 <peter.deherdt@softathome.com>  Tue, 16 Jun 2020 12:46:36 +0000
+
+libamxb (1.0.5) unstable; urgency=medium
+
+  * Link tests with libamxd
+  * Adds publish function
+
+ -- sah4009 <peter.deherdt@softathome.com>  Fri, 03 Apr 2020 16:50:04 +0000
+
+libamxb (1.0.4) unstable; urgency=medium
+
+  * Adds doxygen documentation generation in pipeline
+  * Adds doxygen documentation tags to some functions
+
+ -- sah4009 <peter.deherdt@softathome.com>  Tue, 31 Mar 2020 08:59:47 +0000
+
+libamxb (1.0.3) unstable; urgency=medium
+
+  * Debug feature - no dlclose when environment variable AMXB_NO_DLCLOSE is set
+  * Adds data model to connection context when register is called using the connection context
+  * Function arguments and function argument verification on function call
+
+ -- sah4009 <peter.deherdt@softathome.com>  Tue, 17 Mar 2020 14:29:28 +0000
+
+libamxb (1.0.2) unstable; urgency=medium
+
+  * Register data model
+  * Re-organized header files
+
+ -- sah4009 <peter.deherdt@softathome.com>  Tue, 10 Mar 2020 10:12:08 +0000
+
+libamxb (1.0.1) unstable; urgency=medium
+
+  * Register data model function: 'amxb_register'
+  * Function table size test
+  * Reorganized include files
+  * Back-end version check
+
+ -- sah4009 <peter.deherdt@softathome.com>  Mon, 09 Mar 2020 07:43:23 +0000
+
+libamxb (1.0.0) unstable; urgency=medium
+
+  * API - new functions `amxb_new_invoke` and `amxb_free_invoke`
+  * New structure amxb_invoke_t
+  * New back-end functions (optional) `amxb_be_new_invoke_fn_t` and `amxb_be_free_invoke_fn_t`
+  * API - modified invoke method mechanism, make it possible for back-end to prepare method invocation
+  * Use container of to get parent structure (removes the need of keeping pointers)
+  * Fix loading/unloading of back-ends, differences in dlopen dlcose behaviour
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 03 Mar 2020 15:07:38 +0000
+
+libamxb (0.1.2) unstable; urgency=medium
+
+  * Fix loading/unloading, differences in dlopen dlcose behaviour
+
+ -- sah4009 <peter.deherdt@softathome.com>  Thu, 27 Feb 2020 22:34:54 +0000
+
+libamxb (0.1.1) unstable; urgency=medium
+
+  * Adds extra public version apis
+  * Fixes version check tests
+
+ -- sah4009 <peter.deherdt@softathome.com>  Wed, 26 Feb 2020 21:20:48 +0000
+
+libamxb (0.1.0) unstable; urgency=medium
+
+  * Strict checking if loaded back-end is supported
+  * Changed back-end information retrieval
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 25 Feb 2020 17:39:45 +0000
+
+libamxb (0.0.4) unstable; urgency=medium
+
+  * gitlab ci/cd - Uses yml template files
+  * makefile - version parsing in makefile
+  * README.md - correct build container image reference
+
+ -- sah4009 <peter.deherdt@softathome.com>  Mon, 24 Feb 2020 12:07:25 +0000
+
+libamxb (0.0.3) unstable; urgency=medium
+
+  * Fixes dlclose issue - 
+  * Corrects -Wl,-soname in linking, no version in soname
+
+ -- sah4009 <peter.deherdt@softathome.com>  Fri, 21 Feb 2020 08:28:10 +0000
+
+libamxb (0.0.2) unstable; urgency=medium
+
+  * Function 'amxb_subscribe' subscribe for notifications on object
+  * Function 'amxb_unsubscribe' unsubscribe for notifications on object
+  * Function 'amxb_be_load_multiple' load multiple back-ends
+  * Function 'amxb_wait_for_request' wait until asynchronous invoke is done or timeout occurs
+  * Update README.md
+  * Split source file into multiple source files
+  * Updated tests
+
+
+ -- sah4009 <peter.deherdt@softathome.com>  Thu, 20 Feb 2020 12:17:27 +0000
+
+libamxb (0.0.1) unstable; urgency=medium
+
+  * Updates README.md
+  * Updates CONTRIBUTING.md
+  * Returns correct error codes (connect)
+  * Adds asynchronous functions and callback definitions
+  * Adds callback functionality to synchronous invoke
+  * Adds bus return value (async_invoke and invoke)
+  * Print error when dlopen fails
+  * Adds unit tests
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 13 Feb 2020 13:10:26 +0000
+
+libamxb (0.0.1) unstable; urgency=medium
+
+  * Initial release of amxb
+
+ -- VAN GESTEL matthias <matthias.v.gestel@gmail.com>  Wed, 15 Jan 2020 16:50:00 +0100

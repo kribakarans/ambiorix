@@ -1,0 +1,873 @@
+libamxa (0.11.0) unstable; urgency=medium
+
+  * [amx][cli] Add syntax to filter parameters list
+
+ -- SAH bot <sahbot@softathome.com>  Fri, 26 Jan 2024 20:54:00 +0000
+
+libamxa (0.10.33) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DE HERDT <peter.deherdt@softathome.com>  Wed, 10 Jan 2024 11:27:48 +0000
+
+libamxa (0.10.32) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DE HERDT <peter.deherdt@softathome.com>  Tue, 12 Dec 2023 23:18:34 +0000
+
+libamxa (0.10.31) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DE HERDT <peter.deherdt@softathome.com>  Tue, 12 Dec 2023 16:41:09 +0000
+
+libamxa (0.10.30) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DE HERDT <peter.deherdt@softathome.com>  Wed, 06 Dec 2023 13:04:33 +0000
+
+libamxa (0.10.29) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DE HERDT <peter.deherdt@softathome.com>  Wed, 29 Nov 2023 18:55:49 +0000
+
+libamxa (0.10.28) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DE HERDT <peter.deherdt@softathome.com>  Tue, 21 Nov 2023 15:23:09 +0000
+
+libamxa (0.10.27) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DE HERDT <peter.deherdt@softathome.com>  Fri, 17 Nov 2023 12:52:06 +0000
+
+libamxa (0.10.26) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DE HERDT <peter.deherdt@softathome.com>  Tue, 14 Nov 2023 17:36:04 +0000
+
+libamxa (0.10.25) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Sat, 04 Nov 2023 21:05:50 +0000
+
+libamxa (0.10.24) unstable; urgency=medium
+
+  * ACL checking broken for add  without search path
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 30 Oct 2023 14:31:32 +0000
+
+libamxa (0.10.23) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+  * - [prpl][libamxa] Create an object using a search path isn't allowed
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 30 Oct 2023 10:31:20 +0000
+
+libamxa (0.10.22) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 24 Oct 2023 11:14:31 +0000
+
+libamxa (0.10.21) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 23 Oct 2023 20:42:46 +0000
+
+libamxa (0.10.20) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 23 Oct 2023 15:19:52 +0000
+
+libamxa (0.10.19) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 19 Oct 2023 17:29:52 +0000
+
+libamxa (0.10.18) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 17 Oct 2023 15:40:41 +0000
+
+libamxa (0.10.17) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 12 Oct 2023 12:34:38 +0000
+
+libamxa (0.10.16) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 09 Oct 2023 07:26:39 +0000
+
+libamxa (0.10.15) unstable; urgency=medium
+
+  * Fix license headers in files
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 25 Sep 2023 06:30:08 +0000
+
+libamxa (0.10.14) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 21 Sep 2023 11:50:51 +0000
+
+libamxa (0.10.13) unstable; urgency=medium
+
+  * - [ACL][libamxa] When a search path is allowed but not its fixed part amxa_get fail
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 14 Sep 2023 19:05:43 +0000
+
+libamxa (0.10.12) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 08 Sep 2023 10:43:30 +0000
+
+libamxa (0.10.11) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 01 Sep 2023 06:47:46 +0000
+
+libamxa (0.10.10) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 18 Aug 2023 11:44:13 +0000
+
+libamxa (0.10.9) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 28 Jul 2023 10:15:09 +0000
+
+libamxa (0.10.8) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 28 Jul 2023 10:02:40 +0000
+
+libamxa (0.10.7) unstable; urgency=medium
+
+  * Enforce coding style - no declarations after code
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 25 Jul 2023 07:26:36 +0000
+
+libamxa (0.10.6) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 19 Jul 2023 12:32:08 +0000
+
+libamxa (0.10.5) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 10 Jul 2023 21:46:51 +0000
+
+libamxa (0.10.4) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 04 Jul 2023 10:36:33 +0000
+
+libamxa (0.10.3) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 27 Jun 2023 17:53:32 +0000
+
+libamxa (0.10.2) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 20 Jun 2023 09:17:51 +0000
+
+libamxa (0.10.1) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 14 Jun 2023 21:36:59 +0000
+
+libamxa (0.10.0) unstable; urgency=medium
+
+  * [USP] GSDM events need to be filtered out
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 01 Jun 2023 19:46:45 +0000
+
+libamxa (0.9.2) unstable; urgency=medium
+
+  * Update documentation
+
+ -- SAH bot <sahbot@softathome.com>  Tue, 30 May 2023 09:24:19 +0000
+
+libamxa (0.9.1) unstable; urgency=medium
+
+  * [USP] Add specific error codes for get instances
+
+ -- SAH bot <sahbot@softathome.com>  Thu, 25 May 2023 16:23:04 +0000
+
+libamxa (0.9.0) unstable; urgency=medium
+
+  * [Security][USP] Add ACLs for get instances to USP agent
+
+ -- SAH bot <sahbot@softathome.com>  Wed, 24 May 2023 20:31:32 +0000
+
+libamxa (0.8.28) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 24 May 2023 15:14:39 +0000
+
+libamxa (0.8.27) unstable; urgency=medium
+
+  * [USP] Must be able to call methods with named path
+
+ -- SAH bot <sahbot@softathome.com>  Tue, 23 May 2023 07:06:07 +0000
+
+libamxa (0.8.26) unstable; urgency=medium
+
+  * [HTTPManager][Login][acl-manager] After firstboot acl group doesn't exist
+
+ -- SAH bot <sahbot@softathome.com>  Wed, 17 May 2023 09:48:09 +0000
+
+libamxa (0.8.25) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 10 May 2023 11:13:19 +0000
+
+libamxa (0.8.24) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 08 May 2023 08:07:26 +0000
+
+libamxa (0.8.23) unstable; urgency=medium
+
+  * - [HTTPManager][Login][amx-fcgi] Create a session
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 03 May 2023 07:21:30 +0000
+
+libamxa (0.8.22) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 21 Apr 2023 17:42:19 +0000
+
+libamxa (0.8.21) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 17 Apr 2023 08:36:47 +0000
+
+libamxa (0.8.20) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Sat, 08 Apr 2023 18:25:13 +0000
+
+libamxa (0.8.19) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 03 Apr 2023 09:05:34 +0000
+
+libamxa (0.8.18) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 28 Mar 2023 08:01:22 +0000
+
+libamxa (0.8.17) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 28 Mar 2023 06:46:39 +0000
+
+libamxa (0.8.16) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 27 Mar 2023 09:04:09 +0000
+
+libamxa (0.8.15) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 17 Mar 2023 14:11:21 +0000
+
+libamxa (0.8.14) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 13 Mar 2023 08:28:20 +0000
+
+libamxa (0.8.13) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 02 Mar 2023 09:55:34 +0000
+
+libamxa (0.8.12) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 28 Feb 2023 09:44:04 +0000
+
+libamxa (0.8.11) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 22 Feb 2023 15:41:17 +0000
+
+libamxa (0.8.10) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 16 Feb 2023 11:02:25 +0000
+
+libamxa (0.8.9) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 13 Feb 2023 13:33:59 +0000
+
+libamxa (0.8.8) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 30 Jan 2023 21:31:42 +0000
+
+libamxa (0.8.7) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 18 Jan 2023 09:08:31 +0000
+
+libamxa (0.8.6) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 13 Jan 2023 12:22:20 +0000
+
+libamxa (0.8.5) unstable; urgency=medium
+
+  * [AMX][USP] Only filter objects when at least one parameter was filtered
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 11 Jan 2023 21:24:54 +0000
+
+libamxa (0.8.4) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 14 Dec 2022 10:22:53 +0000
+
+libamxa (0.8.3) unstable; urgency=medium
+
+  * [USP] Allow invoking commands without braces
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 07 Dec 2022 08:39:19 +0000
+
+libamxa (0.8.2) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 28 Nov 2022 10:39:18 +0000
+
+libamxa (0.8.1) unstable; urgency=medium
+
+  * Invalid ACL file must result in an error
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 21 Nov 2022 13:43:35 +0000
+
+libamxa (0.8.0) unstable; urgency=medium
+
+  * [AMX] Extend libamxa for easier verification of RPC methods
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Sat, 19 Nov 2022 16:38:18 +0000
+
+libamxa (0.7.3) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 15 Nov 2022 14:10:49 +0000
+
+libamxa (0.7.2) unstable; urgency=medium
+
+  * Investigate and fix klocwork reports for ambiorix libs and tools
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 14 Nov 2022 08:23:03 +0000
+
+libamxa (0.7.1) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 03 Nov 2022 12:42:19 +0000
+
+libamxa (0.7.0) unstable; urgency=medium
+
+  * [ACS][V12] Setting of VOIP in a single SET does not enable VoiceProfile
+
+ -- SAH bot <sahbot@softathome.com>  Wed, 26 Oct 2022 13:17:24 +0000
+
+libamxa (0.6.4) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 24 Oct 2022 11:28:16 +0000
+
+libamxa (0.6.3) unstable; urgency=medium
+
+  * [ACS][V12] Setting of VOIP in a single SET does not enable VoiceProfile
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 20 Oct 2022 15:16:15 +0000
+
+libamxa (0.6.2) unstable; urgency=medium
+
+
+ -- SAH bot <sahbot@softathome.com>  Fri, 14 Oct 2022 11:48:38 +0000
+
+libamxa (0.6.1) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 12 Oct 2022 13:07:02 +0000
+
+libamxa (0.6.0) unstable; urgency=medium
+
+  * [ACLManager] Create ACL user to handle secure acl checking
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 06 Oct 2022 19:31:02 +0000
+
+libamxa (0.5.5) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 05 Oct 2022 19:24:09 +0000
+
+libamxa (0.5.4) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 21 Sep 2022 16:49:27 +0000
+
+libamxa (0.5.3) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 21 Sep 2022 16:01:12 +0000
+
+libamxa (0.5.2) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 20 Sep 2022 15:42:44 +0000
+
+libamxa (0.5.1) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 12 Sep 2022 13:37:55 +0000
+
+libamxa (0.5.0) unstable; urgency=medium
+
+  * Add public function to check if getting a parameter is allowed
+
+ -- SAH bot <sahbot@softathome.com>  Mon, 12 Sep 2022 07:52:54 +0000
+
+libamxa (0.4.25) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 29 Aug 2022 08:32:01 +0000
+
+libamxa (0.4.24) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 24 Aug 2022 10:13:46 +0000
+
+libamxa (0.4.23) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 18 Aug 2022 13:55:23 +0000
+
+libamxa (0.4.22) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 17 Aug 2022 10:44:38 +0000
+
+libamxa (0.4.21) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Johan JACOBS <johan.jacobs_ext@softathome.com>  Fri, 05 Aug 2022 10:07:40 +0000
+
+libamxa (0.4.20) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 25 Jul 2022 09:36:33 +0000
+
+libamxa (0.4.19) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 13 Jul 2022 12:45:23 +0000
+
+libamxa (0.4.18) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 11 Jul 2022 08:16:37 +0000
+
+libamxa (0.4.17) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 05 Jul 2022 08:51:15 +0000
+
+libamxa (0.4.16) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 28 Jun 2022 10:55:49 +0000
+
+libamxa (0.4.15) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 21 Jun 2022 12:25:15 +0000
+
+libamxa (0.4.14) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 09 Jun 2022 12:17:54 +0000
+
+libamxa (0.4.13) unstable; urgency=medium
+
+  * [ACL manager] Update documentation for the acl manager in confluence
+
+ -- SAH bot <sahbot@softathome.com>  Thu, 09 Jun 2022 08:38:45 +0000
+
+libamxa (0.4.12) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 01 Jun 2022 12:57:50 +0000
+
+libamxa (0.4.11) unstable; urgency=medium
+
+  * amxa_get() should return -1 when no access rights
+
+ -- SAH bot <sahbot@softathome.com>  Tue, 31 May 2022 06:43:16 +0000
+
+libamxa (0.4.10) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 30 May 2022 09:20:18 +0000
+
+libamxa (0.4.9) unstable; urgency=medium
+
+  * [Gitlab CI][Unit tests][valgrind] Pipeline doesn't stop when memory leaks are detected
+  * Update dependencies in .gitlab-ci.yml
+  * Issue: ambiorix/libraries/libamxa#24 Implement amxa_get
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 23 May 2022 12:11:10 +0000
+
+libamxa (0.4.8) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 12 May 2022 11:40:58 +0000
+
+libamxa (0.4.7) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 05 May 2022 12:07:35 +0000
+
+libamxa (0.4.6) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 03 May 2022 07:39:55 +0000
+
+libamxa (0.4.5) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 25 Apr 2022 09:56:25 +0000
+
+libamxa (0.4.4) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 06 Apr 2022 11:17:50 +0000
+
+libamxa (0.4.3) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 17 Mar 2022 14:38:30 +0000
+
+libamxa (0.4.2) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Matthias FRANCK <matthias.franck_ext@softathome.com>  Wed, 09 Mar 2022 08:57:33 +0000
+
+libamxa (0.4.1) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 15 Feb 2022 17:20:26 +0000
+
+libamxa (0.4.0) unstable; urgency=medium
+
+  * Implement amxa_set_multiple
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Johan JACOBS <johan.jacobs_ext@softathome.com>  Mon, 14 Feb 2022 14:08:36 +0000
+
+libamxa (0.3.16) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 07 Feb 2022 13:38:45 +0000
+
+libamxa (0.3.15) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 04 Feb 2022 16:41:42 +0000
+
+libamxa (0.3.14) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 03 Feb 2022 17:27:02 +0000
+
+libamxa (0.3.13) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 25 Jan 2022 10:43:50 +0000
+
+libamxa (0.3.12) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 16 Dec 2021 09:38:31 +0000
+
+libamxa (0.3.11) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 15 Dec 2021 11:57:29 +0000
+
+libamxa (0.3.10) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 08 Dec 2021 13:40:37 +0000
+
+libamxa (0.3.9) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 02 Dec 2021 10:07:36 +0000
+
+libamxa (0.3.8) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 30 Nov 2021 10:58:40 +0000
+
+libamxa (0.3.7) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 29 Nov 2021 16:39:36 +0000
+
+libamxa (0.3.6) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 29 Nov 2021 16:07:21 +0000
+
+libamxa (0.3.5) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 29 Nov 2021 15:25:27 +0000
+
+libamxa (0.3.4) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 25 Nov 2021 12:23:36 +0000
+
+libamxa (0.3.3) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 23 Nov 2021 12:35:12 +0000
+
+libamxa (0.3.2) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 18 Nov 2021 11:27:38 +0000
+
+libamxa (0.3.1) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Tue, 16 Nov 2021 18:08:18 +0000
+
+libamxa (0.3.0) unstable; urgency=medium
+
+  * It must be possible to filter get_supported messages based on ACL filters
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 10 Nov 2021 15:33:35 +0000
+
+libamxa (0.2.11) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 29 Oct 2021 04:34:25 +0000
+
+libamxa (0.2.10) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 20 Oct 2021 19:25:41 +0000
+
+libamxa (0.2.9) unstable; urgency=medium
+
+  * Don't clean acls in amxa_resolve_search_paths
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Wed, 13 Oct 2021 11:48:49 +0000
+
+libamxa (0.2.8) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Mon, 11 Oct 2021 08:54:17 +0000
+
+libamxa (0.2.7) unstable; urgency=medium
+
+  * Remove object if all parameters are filtered out
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 08 Oct 2021 14:12:34 +0000
+
+libamxa (0.2.6) unstable; urgency=medium
+
+  * When parameter paths are added to the filter list, they have a dot suffix
+  * Resolving search paths can fail for paths with a Device. prefix
+
+ -- Johan JACOBS <johan.jacobs_ext@softathome.com>  Fri, 01 Oct 2021 07:19:06 +0000
+
+libamxa (0.2.5) unstable; urgency=medium
+
+  * It is possible to bypass acl verification in object tree
+
+ -- SAH bot <sahbot@softathome.com>  Mon, 27 Sep 2021 11:44:10 +0000
+
+libamxa (0.2.4) unstable; urgency=medium
+
+  * Resolving search paths is not needed if fixed part does not exist in acls
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Fri, 24 Sep 2021 17:35:04 +0000
+
+libamxa (0.2.3) unstable; urgency=medium
+
+  * [ACL] Make sure ACL verification works for Device path
+
+ -- SAH bot <sahbot@softathome.com>  Thu, 23 Sep 2021 13:45:13 +0000
+
+libamxa (0.2.2) unstable; urgency=medium
+
+  * [ACL] [BAF] Configure default ACL directory variable in baf templates
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Peter DEHERDT <peter.deherdt@softathome.com>  Thu, 23 Sep 2021 10:18:20 +0000
+
+libamxa (0.2.1) unstable; urgency=medium
+
+  * Add libamxo as an open source test dependency
+  * Opensource component
+
+ -- SAH bot <sahbot@softathome.com>  Wed, 15 Sep 2021 11:43:07 +0000
+
+libamxa (0.2.0) unstable; urgency=medium
+
+  * Add function to check if get message is allowed
+
+ -- SAH bot <sahbot@softathome.com>  Tue, 14 Sep 2021 09:36:48 +0000
+
+libamxa (0.1.1) unstable; urgency=medium
+
+  * Update dependencies in .gitlab-ci.yml
+
+ -- Johan JACOBS <johan.jacobs_ext@softathome.com>  Fri, 10 Sep 2021 13:02:24 +0000
+
+libamxa (0.1.0) unstable; urgency=medium
+
+  * It must be possible to determine whether it is allowed to make a subscription
+  * It must be possible to determine whether it is allowed to invoke a data model RPC
+  * It must be possible to determine if a set operation is allowed
+  * It must be possible to determine whether an add or delete operation is allowed
+  * Update documentation to explain access inheritance
+  * It must be possible to check if search paths are allowed
+  * It must be possible to filter get messages based on ACL filters
+  * Add ACL files merger and validator
+  * Improve the description of distributed ACL verification
+  * Memory leak in amxa_parse_files [fix]
+  * Search path resolution is not done correctly for parameter paths
+
+ -- Johan Jacobs <johan.jacobs_ext@softathome.com>  Mon, 23 Aug 2021 06:35:20 +0000
+
+libamxa (0.0.0) unstable; urgency=medium
+
+  * Initial version, not feature complete
+
+ -- Johan Jacobs <johan.jacobs_ext@softathome.com>  Fri, 02 Jul 2021 09:15:20 +0000
+
