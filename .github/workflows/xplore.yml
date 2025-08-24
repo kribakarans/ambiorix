@@ -41,7 +41,7 @@ jobs:
           sudo apt-get install -y --no-install-recommends universal-ctags
 
           echo "Clone Xplore ..."
-          git clone https://gitlab.com/klabkode/devkit/xplore/xplore-monaco-static.git /tmp/xplore
+          git clone https://gitlab.com/klabkode/devkit/xplore/xplore-xref.git /tmp/xplore
 
       - name: Setup Pages
         id: pages
@@ -58,7 +58,7 @@ jobs:
           )
 
           echo "Build Xplore ..."
-          xplore-build "AMBIORIX" "https://github.com/kribakarans/ambiorix/"
+          xplore-build-xref "AMBIORIX" "https://github.com/kribakarans/ambiorix/"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
